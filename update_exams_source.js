@@ -105,42 +105,91 @@ console.log(`✓ Đã quét thành công ${feExams.length} bộ đề FE với t
 // 3. Đọc templates và cẩm nang
 const guideMarkdown = fs.existsSync('PMG201c_Templates.md') ? fs.readFileSync('PMG201c_Templates.md', 'utf8') : '';
 
-// 8 Khung mẫu thi chuẩn EOS
+// 10 Khung mẫu thi chuẩn EOS (bao gồm 2 mẫu Câu 1 riêng biệt cho Đề Mở và Đề Đóng)
 const templates = [
   {
-    id: 'charter',
-    name: '1. Project Charter (Tôn chỉ dự án)',
+    id: 'charter_open',
+    name: '1.1 [CÂU 1] Project Charter - Đề Mở (Tự chọn đề)',
     category: 'Initiation',
-    content: `PROJECT CHARTER
-1. Project Name: [Tên dự án]
-2. Project Purpose / Description: [Mô tả ngắn gọn dự án làm gì, giải quyết vấn đề gì]
-3. Customer / Sponsor: [Tên khách hàng / Nhà tài trợ, VD: FPT University]
-4. Project Objectives & Success Criteria (SMART):
-   - Objective 1: [Mục tiêu cụ thể + con số đo lường + thời hạn]
-   - Objective 2: [Mục tiêu cụ thể + con số đo lường + thời hạn]
-5. Timeframe: [Từ tháng/năm đến tháng/năm, VD: 01/2026 - 05/2026 (4 months)]
+    content: `REQUEST 1: PROJECT CHARTER STATEMENT
+
+1. Project Name:
+   FPT University Student Learning Management (SLM) System
+
+2. Project Purpose & Justifications:
+   - Purpose: The purpose of the SLM project is to build an integrated, cloud-based learning management portal that centralizes coursework management, grading workflows, and online assignment tracking for both faculty members and students.
+   - Justification 1: Currently, learning materials and assignment submissions are fragmented across multiple unofficial channels, resulting in lost submissions, grading inconsistencies, and high administrative overhead.
+   - Justification 2: The university requires an automated, audit-ready grading repository that connects directly with the central Academic Portal to generate real-time grade transcripts and attendance analytics.
+   - Justification 3: Provides 24/7 self-service access for students to monitor their continuous academic standing, submit homework, and receive immediate instructor feedback.
+
+3. Customer and Project Sponsor:
+   - Customer: Over 25,000 university students, 600 academic lecturers, and department academic officers at FPT University.
+   - Sponsor: Academic Affairs Directorate and the Board of Trustees of FPT University (authorizes capital expenditure and project charter).
+
+4. Project Objectives (SMART):
+   - Objective 1: Develop and launch 4 core modules (Course Catalog, Assignment Submission, Gradebook, and Attendance Tracker) within a 4-month timeframe.
+   - Objective 2: Ensure system stability with 99.8% server uptime and page response times below 1.5 seconds under 3,000 concurrent student connections.
+   - Objective 3: Achieve a minimum of 90% positive adoption and satisfaction rating from surveyed lecturers and students within the first semester of rollout.
+
+5. Project Constraints:
+   - Scope Constraint:
+     + In-scope: Software UI/UX design, backend RESTful APIs, database migration, role-based access control, UAT verification, and end-user training guides.
+     + Out-of-scope: University tuition fee payment gateway processing, physical classroom attendance hardware installation, and third-party commercial LMS licensing.
+   - Time Constraint: The project schedule is strictly time-boxed to 16 calendar weeks (4 months), commencing on February 1, 2026, and completing on May 25, 2026.
+   - Cost Constraint: Total expenditure is capped at $15,000 (equivalent to VND 375,000,000), covering labor costs, cloud server hosting, and security auditing.
+   - Quality Constraint: Zero Severity-1 (blocker) and Severity-2 (critical) defects allowed at release. Must comply with ISO/IEC 25010 software quality standards and GDPR personal data protection principles.
+
 6. Project Milestones:
-   - Milestone 1 - Initiation: [Thời gian] - Complete Project Charter & Stakeholder analysis.
-   - Milestone 2 - Planning: [Thời gian] - Complete WBS, Schedule, and Budget plan.
-   - Milestone 3 - Execution: [Thời gian] - Complete System Development & Testing.
-   - Milestone 4 - Closure: [Thời gian] - Final product handover & Project sign-off.
-7. Constraints:
-   - Scope: Must deliver all core features defined in the requirements.
-   - Time: Must be completed strictly within [số tháng/tuần].
-   - Cost: Total budget must not exceed [số tiền].
-   - Quality: System must pass 100% of UAT test cases with zero critical bugs.
-8. Project Roles & Team Members:
-   - Project Sponsor: [Họ tên] - Approves budget, charter, and scope changes.
-   - Project Manager: [Họ tên] - Leads planning, execution, and daily team tracking.
-   - Business Analyst: [Họ tên] - Collects and documents software requirements.
-   - Lead Developer: [Họ tên] - Designs system architecture and leads coding.
-   - QA / Tester: [Họ tên] - Writes test cases and executes quality assurance.
-9. Assumptions:
-   - All necessary server infrastructure and third-party APIs are available on schedule.
-   - Team members are committed full-time throughout the project lifecycle.
-10. High-level Risks:
-    - Scope creep due to frequent customer requirement modifications.
-    - Potential delay in third-party service integration.`
+   - Milestone 1 (Project Kick-off & Charter Approval): End of Week 2.
+   - Milestone 2 (Detailed Architecture & WBS Baselined): End of Week 4.
+   - Milestone 3 (Core Module Code Freeze & Alpha Testing): End of Week 10.
+   - Milestone 4 (Beta Testing & UAT Acceptance Sign-off): End of Week 14.
+   - Milestone 5 (Production Handover & Project Closure): End of Week 16.
+
+7. Key Roles & Assigned Headcount:
+   - Project Manager: 1 lead (Responsible for triple constraint management and CCB governance).
+   - Business Analyst: 1 senior (Translates academic regulations into technical user stories).
+   - Software Engineers: 2 Full-stack Developers (Spring Boot & React framework).
+   - QA / Automation Tester: 1 engineer (Executes regression, security, and load testing).`
+  },
+  {
+    id: 'charter_closed',
+    name: '1.2 [CÂU 1] Project Charter - Đề Đóng (Theo kịch bản)',
+    category: 'Initiation',
+    content: `QUESTION 1: NARRATIVE PROJECT CHARTER STATEMENT
+
+1. Project Title:
+   [Điền chính xác tên dự án trong kịch bản đề cho, VD: "Flavours of Vietnam" Local Food and Culture Festival 2026]
+
+2. Project Purpose & Justifications:
+   - Purpose: [Trích xuất mục đích chính từ đoạn văn kịch bản đề bài].
+   - Reason 1 (Strategic Impact): [Trích xuất bài toán thực tế hoặc mục tiêu thúc đẩy kinh tế/du lịch đề bài nêu].
+   - Reason 2 (Target Beneficiaries): [Trích xuất đối tượng hưởng lợi trực tiếp từ dự án].
+   - Reason 3 (Community / Brand Value): [Lợi ích quảng bá hoặc kết nối cộng đồng].
+
+3. Customer and Project Sponsor:
+   - Customer: [Đối tượng người tham gia / người thụ hưởng dịch vụ trong đề bài].
+   - Project Sponsor(s): [Cơ quan / Đơn vị cấp vốn ngân sách và nhà tài trợ thương mại theo đúng con số trong đề].
+
+4. Project Constraints (Extracted strictly from Scenario):
+   - Scope Constraint:
+     + In-Scope: [Các hạng mục đề bài liệt kê cụ thể cần tổ chức/xây dựng].
+     + Out-of-Scope: [Các hạng mục đề bài nêu rõ KHÔNG THUỘC phạm vi dự án].
+   - Time Constraint: [Thời gian chuẩn bị và thời gian triển khai thực tế theo đúng kịch bản đề bài].
+   - Cost / Budget Constraint: [Tổng kinh phí đề cho, phân bổ nguồn vốn, ghi rõ không được vượt quá].
+   - Quality & Regulatory Constraint: [Các giấy phép cần xin, tiêu chuẩn an toàn, vệ sinh, PCCC, hoặc điểm hài lòng yêu cầu].
+
+5. Project Objectives & Success Criteria:
+   - Objective 1: [Chỉ số định lượng người tham gia hoặc hoàn thành theo đề].
+   - Objective 2: [Chỉ số an toàn, bảo mật: 0 tai nạn, 0 sự cố].
+   - Objective 3: [Chỉ số đánh giá sau sự kiện: điểm khảo sát >= 4.0/5.0].
+
+6. High-level Milestones:
+   - Milestone 1: Secure all administrative permits and execute sponsorship agreements.
+   - Milestone 2: Complete vendor onboarding, logistics vetting, and contracts.
+   - Milestone 3: Operational rehearsal, health & safety inspection clearance.
+   - Milestone 4: Live event / project operational rollout.
+   - Milestone 5: Site teardown, financial auditing, and final closure report.`
   },
   {
     id: 'wbs_waterfall',
