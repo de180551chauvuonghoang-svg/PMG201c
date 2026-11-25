@@ -1,111 +1,176 @@
 /**
  * PMG201c Exam Practice Hub Data Store
- * Generated automatically
+ * Generated dynamically by scanning workspace PE and FE folders
+ * Updated at: 2026-11-25T09:17:24.283Z
  */
 
 const APP_DATA = {
   "peExams": [
     {
-      "id": "SP26_PE1",
+      "id": "SU26_SU26_PE_01",
+      "semester": "SU26",
+      "title": "SU26 - SU26_PE_01 🖼️",
+      "filename": "Capture.PNG",
+      "type": "image",
+      "path": "PE/SU26/SU26_PE_01/Capture.PNG"
+    },
+    {
+      "id": "SU26_SU26_PE_02",
+      "semester": "SU26",
+      "title": "SU26 - SU26_PE_02 🖼️",
+      "filename": "Capture.PNG",
+      "type": "image",
+      "path": "PE/SU26/SU26_PE_02/Capture.PNG"
+    },
+    {
+      "id": "SU26_SU26_PE_HCM",
+      "semester": "SU26",
+      "title": "SU26 - SU26_PE_HCM 🖼️",
+      "filename": "Capture.PNG",
+      "type": "image",
+      "path": "PE/SU26/SU26_PE_HCM/Capture.PNG"
+    },
+    {
+      "id": "SP26_SP26_PE1",
       "semester": "SP26",
       "title": "SP26 - SP26_PE1",
       "filename": "paper (1).pdf",
       "type": "pdf",
-      "path": "PE\\SP26\\SP26_PE1\\paper (1).pdf"
+      "path": "PE/SP26/SP26_PE1/paper (1).pdf"
     },
     {
-      "id": "SP26_PE2",
+      "id": "SP26_SP26_PE2",
       "semester": "SP26",
       "title": "SP26 - SP26_PE2",
       "filename": "paper (2).pdf",
       "type": "pdf",
-      "path": "PE\\SP26\\SP26_PE2\\paper (2).pdf"
+      "path": "PE/SP26/SP26_PE2/paper (2).pdf"
     },
     {
-      "id": "FA25_PE1_01",
+      "id": "FA25_FA25_PE1_01",
       "semester": "FA25",
-      "title": "FA25 - FA25_PE1_01",
+      "title": "FA25 - FA25_PE1_01 🖼️",
       "filename": "Capture.PNG",
       "type": "image",
-      "path": "PE\\FA25\\FA25_PE1_01\\Capture.PNG"
+      "path": "PE/FA25/FA25_PE1_01/Capture.PNG"
     },
     {
-      "id": "FA25_PE1_02",
+      "id": "FA25_FA25_PE1_02",
       "semester": "FA25",
       "title": "FA25 - FA25_PE1_02",
       "filename": "paper.pdf",
       "type": "pdf",
-      "path": "PE\\FA25\\FA25_PE1_02\\paper.pdf"
+      "path": "PE/FA25/FA25_PE1_02/paper.pdf"
     },
     {
-      "id": "SU25_PE1",
+      "id": "FA25_FA25_PE2",
+      "semester": "FA25",
+      "title": "FA25 - FA25_PE2",
+      "filename": "paper (12).pdf",
+      "type": "pdf",
+      "path": "PE/FA25/FA25_PE2/paper (12).pdf"
+    },
+    {
+      "id": "SU25_SU25_PE1",
       "semester": "SU25",
       "title": "SU25 - SU25_PE1",
       "filename": "paper.pdf",
       "type": "pdf",
-      "path": "PE\\SU25\\SU25_PE1\\paper.pdf"
+      "path": "PE/SU25/SU25_PE1/paper.pdf"
     },
     {
-      "id": "SU25_PE2_Retake",
+      "id": "SU25_SU25_PE2_Retake",
       "semester": "SU25",
       "title": "SU25 - SU25_PE2_Retake",
       "filename": "paper.pdf",
       "type": "pdf",
-      "path": "PE\\SU25\\SU25_PE2_Retake\\paper.pdf"
+      "path": "PE/SU25/SU25_PE2_Retake/paper.pdf"
     },
     {
-      "id": "SU25_Trial",
+      "id": "SU25_SU25_Trial",
       "semester": "SU25",
       "title": "SU25 - SU25_Trial",
       "filename": "paper (1).pdf",
       "type": "pdf",
-      "path": "PE\\SU25\\SU25_Trial\\paper (1).pdf"
+      "path": "PE/SU25/SU25_Trial/paper (1).pdf"
     },
     {
-      "id": "SP25_PE1",
+      "id": "SP25_SP25_PE1",
       "semester": "SP25",
       "title": "SP25 - SP25_PE1",
       "filename": "paper (2).pdf",
       "type": "pdf",
-      "path": "PE\\SP25\\SP25_PE1\\paper (2).pdf"
+      "path": "PE/SP25/SP25_PE1/paper (2).pdf"
     },
     {
-      "id": "SP25_PE2",
+      "id": "SP25_SP25_PE2",
       "semester": "SP25",
       "title": "SP25 - SP25_PE2",
       "filename": "paper (3).pdf",
       "type": "pdf",
-      "path": "PE\\SP25\\SP25_PE2\\paper (3).pdf"
+      "path": "PE/SP25/SP25_PE2/paper (3).pdf"
     },
     {
-      "id": "SP25_PE3",
+      "id": "SP25_SP25_PE3",
       "semester": "SP25",
       "title": "SP25 - SP25_PE3",
       "filename": "paper (4).pdf",
       "type": "pdf",
-      "path": "PE\\SP25\\SP25_PE3\\paper (4).pdf"
+      "path": "PE/SP25/SP25_PE3/paper (4).pdf"
     },
     {
-      "id": "FA24_PE1",
+      "id": "FA24_FA24_PE1",
       "semester": "FA24",
       "title": "FA24 - FA24_PE1",
       "filename": "paper (7).pdf",
       "type": "pdf",
-      "path": "PE\\FA24\\FA24_PE1\\paper (7).pdf"
+      "path": "PE/FA24/FA24_PE1/paper (7).pdf"
     },
     {
-      "id": "FA24_PE2",
+      "id": "FA24_FA24_PE2",
       "semester": "FA24",
       "title": "FA24 - FA24_PE2",
       "filename": "paper (5).pdf",
       "type": "pdf",
-      "path": "PE\\FA24\\FA24_PE2\\paper (5).pdf"
+      "path": "PE/FA24/FA24_PE2/paper (5).pdf"
+    },
+    {
+      "id": "SU24_SU24_PE1",
+      "semester": "SU24",
+      "title": "SU24 - SU24_PE1",
+      "filename": "paper (11).pdf",
+      "type": "pdf",
+      "path": "PE/SU24/SU24_PE1/paper (11).pdf"
+    },
+    {
+      "id": "SU24_SU24_PE2",
+      "semester": "SU24",
+      "title": "SU24 - SU24_PE2",
+      "filename": "paper (9).pdf",
+      "type": "pdf",
+      "path": "PE/SU24/SU24_PE2/paper (9).pdf"
+    },
+    {
+      "id": "SP24_SP24_PE2",
+      "semester": "SP24",
+      "title": "SP24 - SP24_PE2",
+      "filename": "paper (10).pdf",
+      "type": "pdf",
+      "path": "PE/SP24/SP24_PE2/paper (10).pdf"
+    },
+    {
+      "id": "SU23_SU23_PE2_1",
+      "semester": "SU23",
+      "title": "SU23 - SU23_PE2_1",
+      "filename": "paper (13).pdf",
+      "type": "pdf",
+      "path": "PE/SU23/SU23_PE2_1/paper (13).pdf"
     }
   ],
   "feExams": [
     {
       "id": "PMG201c_FA2024_FE_3127",
-      "title": "FA2024 FE 3127",
+      "title": "FA2024 FE 3127 (50 câu)",
       "folder": "FE/PMG201c_FA2024_FE_3127",
       "totalQuestions": 50,
       "questions": [
@@ -163,7 +228,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_FA2024_RE_3167",
-      "title": "FA2024 RE 3167",
+      "title": "FA2024 RE 3167 (50 câu)",
       "folder": "FE/PMG201c_FA2024_RE_3167",
       "totalQuestions": 50,
       "questions": [
@@ -221,7 +286,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_FA25_FE_5632",
-      "title": "FA25 FE 5632",
+      "title": "FA25 FE 5632 (50 câu)",
       "folder": "FE/PMG201c_FA25_FE_5632",
       "totalQuestions": 50,
       "questions": [
@@ -279,7 +344,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_FA25_FE_7526",
-      "title": "FA25 FE 7526",
+      "title": "FA25 FE 7526 (50 câu)",
       "folder": "FE/PMG201c_FA25_FE_7526",
       "totalQuestions": 50,
       "questions": [
@@ -337,7 +402,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_FA25_RE_5711",
-      "title": "FA25 RE 5711",
+      "title": "FA25 RE 5711 (50 câu)",
       "folder": "FE/PMG201c_FA25_RE_5711",
       "totalQuestions": 50,
       "questions": [
@@ -395,7 +460,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_FE_FA2023_1189",
-      "title": "FE FA2023 1189",
+      "title": "FE FA2023 1189 (50 câu)",
       "folder": "FE/PMG201c_FE_FA2023_1189",
       "totalQuestions": 50,
       "questions": [
@@ -453,7 +518,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_FE_SU2023_646",
-      "title": "FE SU2023 646",
+      "title": "FE SU2023 646 (50 câu)",
       "folder": "FE/PMG201c_FE_SU2023_646",
       "totalQuestions": 50,
       "questions": [
@@ -511,7 +576,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_FESP24_1814",
-      "title": "FESP24 1814",
+      "title": "FESP24 1814 (50 câu)",
       "folder": "FE/PMG201c_FESP24_1814",
       "totalQuestions": 50,
       "questions": [
@@ -569,7 +634,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_RESP24_1862",
-      "title": "RESP24 1862",
+      "title": "RESP24 1862 (50 câu)",
       "folder": "FE/PMG201c_RESP24_1862",
       "totalQuestions": 50,
       "questions": [
@@ -627,7 +692,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SP2025_C2FE_3821",
-      "title": "SP2025 C2FE 3821",
+      "title": "SP2025 C2FE 3821 (50 câu)",
       "folder": "FE/PMG201c_SP2025_C2FE_3821",
       "totalQuestions": 50,
       "questions": [
@@ -685,7 +750,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SP2025_FE_3814",
-      "title": "SP2025 FE 3814",
+      "title": "SP2025 FE 3814 (50 câu)",
       "folder": "FE/PMG201c_SP2025_FE_3814",
       "totalQuestions": 50,
       "questions": [
@@ -743,7 +808,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SP2025_RE_3866",
-      "title": "SP2025 RE 3866",
+      "title": "SP2025 RE 3866 (50 câu)",
       "folder": "FE/PMG201c_SP2025_RE_3866",
       "totalQuestions": 50,
       "questions": [
@@ -801,7 +866,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SP26_FE_6358",
-      "title": "SP26 FE 6358",
+      "title": "SP26 FE 6358 (50 câu)",
       "folder": "FE/PMG201c_SP26_FE_6358",
       "totalQuestions": 50,
       "questions": [
@@ -859,7 +924,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SP26_RE_6506",
-      "title": "SP26 RE 6506",
+      "title": "SP26 RE 6506 (50 câu)",
       "folder": "FE/PMG201c_SP26_RE_6506",
       "totalQuestions": 50,
       "questions": [
@@ -917,7 +982,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SU2024_1_2527",
-      "title": "SU2024 1 2527",
+      "title": "SU2024 1 2527 (50 câu)",
       "folder": "FE/PMG201c_SU2024_1_2527",
       "totalQuestions": 50,
       "questions": [
@@ -975,7 +1040,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SU2024_2_2575",
-      "title": "SU2024 2 2575",
+      "title": "SU2024 2 2575 (50 câu)",
       "folder": "FE/PMG201c_SU2024_2_2575",
       "totalQuestions": 50,
       "questions": [
@@ -1033,7 +1098,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SU25_FE_4759",
-      "title": "SU25 FE 4759",
+      "title": "SU25 FE 4759 (50 câu)",
       "folder": "FE/PMG201c_SU25_FE_4759",
       "totalQuestions": 50,
       "questions": [
@@ -1091,7 +1156,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SU25_RE_4834",
-      "title": "SU25 RE 4834",
+      "title": "SU25 RE 4834 (50 câu)",
       "folder": "FE/PMG201c_SU25_RE_4834",
       "totalQuestions": 50,
       "questions": [
@@ -1149,7 +1214,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SU26_FE_7251",
-      "title": "SU26 FE 7251",
+      "title": "SU26 FE 7251 (50 câu)",
       "folder": "FE/PMG201c_SU26_FE_7251",
       "totalQuestions": 50,
       "questions": [
@@ -1207,7 +1272,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SU26_FEHCM_7269",
-      "title": "SU26 FEHCM 7269",
+      "title": "SU26 FEHCM 7269 (50 câu)",
       "folder": "FE/PMG201c_SU26_FEHCM_7269",
       "totalQuestions": 50,
       "questions": [
@@ -1265,7 +1330,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SU26_RE_7305",
-      "title": "SU26 RE 7305",
+      "title": "SU26 RE 7305 (50 câu)",
       "folder": "FE/PMG201c_SU26_RE_7305",
       "totalQuestions": 50,
       "questions": [
@@ -1323,7 +1388,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201_TE2_SU2023_676",
-      "title": "TE2 SU2023 676",
+      "title": "TE2 SU2023 676 (50 câu)",
       "folder": "FE/PMG201_TE2_SU2023_676",
       "totalQuestions": 50,
       "questions": [
@@ -1381,7 +1446,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SU26_PE1_7248",
-      "title": "SU26 PE1 7248",
+      "title": "SU26 PE1 7248 (1 câu)",
       "folder": "FE/PMG201c_SU26_PE1_7248",
       "totalQuestions": 1,
       "questions": [
@@ -1390,7 +1455,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SU26_PE2_7303",
-      "title": "SU26 PE2 7303",
+      "title": "SU26 PE2 7303 (1 câu)",
       "folder": "FE/PMG201c_SU26_PE2_7303",
       "totalQuestions": 1,
       "questions": [
@@ -1399,7 +1464,7 @@ const APP_DATA = {
     },
     {
       "id": "PMG201c_SU26_PEHCM_7265",
-      "title": "SU26 PEHCM 7265",
+      "title": "SU26 PEHCM 7265 (1 câu)",
       "folder": "FE/PMG201c_SU26_PEHCM_7265",
       "totalQuestions": 1,
       "questions": [
@@ -1412,31 +1477,31 @@ const APP_DATA = {
       "id": "charter",
       "name": "1. Project Charter (Tôn chỉ dự án)",
       "category": "Initiation",
-      "content": "PROJECT CHARTER\n1. Project Name: [Tên dự án]\n2. Project Purpose / Description: [Mô tả ngắn gọn dự án làm gì, giải quyết vấn đề gì]\n3. Customer / Sponsor: [Tên khách hàng / Nhà tài trợ, VD: FPT University]\n4. Project Objectives & Success Criteria (SMART):\n   - Objective 1: [Mục tiêu cụ thể + con số đo lường + thời hạn]\n   - Objective 2: [Mục tiêu cụ thể + con số đo lường + thời hạn]\n5. Timeframe: [Từ tháng/năm đến tháng/năm, VD: 01/2026 - 05/2026 (4 months)]\n6. Project Milestones:\n   - Milestone 1 - Initiation: [Thời gian] - Complete Project Charter & Stakeholder analysis.\n   - Milestone 2 - Planning: [Thời gian] - Complete WBS, Schedule, and Budget plan.\n   - Milestone 3 - Execution: [Thời gian] - Complete System Development & Testing.\n   - Milestone 4 - Closure: [Thời gian] - Final product handover & Project sign-off.\n7. Constraints:\n   - Scope: Must deliver all core features defined in the requirements.\n   - Time: Must be completed strictly within [số tháng/tuần].\n   - Cost: Total budget must not exceed [số tiền].\n   - Quality: System must pass 100% of UAT test cases with zero critical bugs.\n8. Project Roles & Team Members:\n   - [Tên thành viên 1] - Project Manager (PM)\n   - [Tên thành viên 2] - Business Analyst (BA)\n   - [Tên thành viên 3] - UI/UX Designer\n   - [Tên thành viên 4] - Developer\n   - [Tên thành viên 5] - Tester / QA\n9. High-Level Requirements:\n   - Requirement 1: [Chức năng chính 1]\n   - Requirement 2: [Chức năng chính 2]\n   - Requirement 3: [Chức năng chính 3]"
+      "content": "PROJECT CHARTER\n1. Project Name: [Tên dự án]\n2. Project Purpose / Description: [Mô tả ngắn gọn dự án làm gì, giải quyết vấn đề gì]\n3. Customer / Sponsor: [Tên khách hàng / Nhà tài trợ, VD: FPT University]\n4. Project Objectives & Success Criteria (SMART):\n   - Objective 1: [Mục tiêu cụ thể + con số đo lường + thời hạn]\n   - Objective 2: [Mục tiêu cụ thể + con số đo lường + thời hạn]\n5. Timeframe: [Từ tháng/năm đến tháng/năm, VD: 01/2026 - 05/2026 (4 months)]\n6. Project Milestones:\n   - Milestone 1 - Initiation: [Thời gian] - Complete Project Charter & Stakeholder analysis.\n   - Milestone 2 - Planning: [Thời gian] - Complete WBS, Schedule, and Budget plan.\n   - Milestone 3 - Execution: [Thời gian] - Complete System Development & Testing.\n   - Milestone 4 - Closure: [Thời gian] - Final product handover & Project sign-off.\n7. Constraints:\n   - Scope: Must deliver all core features defined in the requirements.\n   - Time: Must be completed strictly within [số tháng/tuần].\n   - Cost: Total budget must not exceed [số tiền].\n   - Quality: System must pass 100% of UAT test cases with zero critical bugs.\n8. Project Roles & Team Members:\n   - Project Sponsor: [Họ tên] - Approves budget, charter, and scope changes.\n   - Project Manager: [Họ tên] - Leads planning, execution, and daily team tracking.\n   - Business Analyst: [Họ tên] - Collects and documents software requirements.\n   - Lead Developer: [Họ tên] - Designs system architecture and leads coding.\n   - QA / Tester: [Họ tên] - Writes test cases and executes quality assurance.\n9. Assumptions:\n   - All necessary server infrastructure and third-party APIs are available on schedule.\n   - Team members are committed full-time throughout the project lifecycle.\n10. High-level Risks:\n    - Scope creep due to frequent customer requirement modifications.\n    - Potential delay in third-party service integration."
     },
     {
-      "id": "smart_scope",
-      "name": "2. Mục tiêu SMART & Phạm vi (In/Out Scope)",
-      "category": "Scope",
-      "content": "SMART OBJECTIVES:\n1. Objective 1: [Tên mục tiêu]\n   - Specific: Develop and deploy [tên tính năng/hệ thống] for [đối tượng sử dụng].\n   - Measurable: Achieve [con số cụ thể, VD: 95% accuracy / response time under 3 seconds].\n   - Achievable: Realistic with the current team of [số lượng] members and available tech stack.\n   - Relevant: Directly supports the core goal of [mục tiêu lớn của dự án].\n   - Time-bound: Complete by [thời gian cụ thể, sớm hơn deadline dự án 1 tháng].\n\nPROJECT SCOPE:\n1. In-Scope Items:\n   - [Tính năng/Công việc 1 lấy từ đề bài]\n   - [Tính năng/Công việc 2 lấy từ đề bài]\n   - [Tính năng/Công việc 3 lấy từ đề bài]\n2. Out-of-Scope Items:\n   - Translating documents into other unsupported languages.\n   - Providing physical hardware devices for end-users.\n   - Long-term system maintenance after warranty period.\n3. Deliverables:\n   - Deliverable 1: Fully functional [Tên hệ thống] deployed on production.\n   - Deliverable 2: Processed and digitized database/dataset.\n   - Deliverable 3: Technical documentation and User Manuals."
+      "id": "wbs_waterfall",
+      "name": "2. WBS Mô hình Waterfall (Thác nước)",
+      "category": "Scope & WBS",
+      "content": "WORK BREAKDOWN STRUCTURE (WBS) - WATERFALL MODEL\n1. Initiation Phase\n   1.1 Conduct Stakeholder Kick-off Meeting\n   1.2 Draft & Finalize Project Charter\n   1.3 Identify Project Stakeholders & Create Stakeholder Register\n   1.4 Secure Formal Charter Sign-off\n2. Planning Phase\n   2.1 Scope Planning & Detailed Requirements Specification\n   2.2 Develop Work Breakdown Structure (WBS) & Dictionary\n   2.3 Construct Project Schedule & Critical Path Network Diagram\n   2.4 Estimate Project Budget & Resource Allocation Matrix (RAM)\n   2.5 Formulate Risk Management Plan & Risk Register\n3. Design Phase\n   3.1 Architectural System Design\n   3.2 Database Schema & ERD Design\n   3.3 UI/UX Wireframing & Interactive Prototyping\n   3.4 Technical Architecture Review & Client Approval\n4. Development Phase\n   4.1 Database Setup & Backend API Development\n   4.2 Core Business Logic Implementation\n   4.3 Frontend Interface & User Interaction Coding\n   4.4 Third-party API & Payment Gateway Integration\n5. Testing & Verification Phase\n   5.1 Unit Testing & Code Quality Reviews\n   5.2 Integration & End-to-End System Testing\n   5.3 Security, Vulnerability & Performance Benchmark Testing\n   5.4 User Acceptance Testing (UAT) with Client\n6. Deployment & Closure Phase\n   6.1 Production Server Setup & Cloud Deployment\n   6.2 User Training Workshops & Operation Manual Delivery\n   6.3 System Handover & Final Project Acceptance Sign-off\n   6.4 Document Lessons Learned & Archive Project Records"
     },
     {
-      "id": "wbs",
-      "name": "3. Phân cấp công việc (WBS)",
-      "category": "Planning",
-      "content": "WORK BREAKDOWN STRUCTURE (WBS)\n1. [Tên Dự Án]\n   1.1 Initiation & Planning\n       1.1.1 Project Charter Approval\n       1.1.2 Requirement Gathering & Analysis\n       1.1.3 Project Plan & Schedule Creation\n   1.2 System Design\n       1.2.1 Database Architecture Design\n       1.2.2 UI/UX Wireframe & Prototype Design\n   1.3 Development / Execution\n       1.3.1 Frontend Development\n       1.3.2 Backend & API Development\n       1.3.3 Data Processing & Integration\n   1.4 Testing & Deployment\n       1.4.1 Unit & Integration Testing\n       1.4.2 User Acceptance Testing (UAT)\n       1.4.3 Production Deployment & User Training\n   1.5 Project Closure\n       1.5.1 Final Deliverable Handover\n       1.5.2 Project Sign-off & Lessons Learned"
+      "id": "wbs_agile",
+      "name": "3. WBS Mô hình Agile / Scrum (Lặp)",
+      "category": "Scope & WBS",
+      "content": "WORK BREAKDOWN STRUCTURE (WBS) - AGILE / SCRUM MODEL\n1. Project Envisioning & Sprint 0\n   1.1 Create Product Vision & High-level Roadmap\n   1.2 Build & Prioritize Initial Product Backlog\n   1.3 Define Definition of Done (DoD) & Acceptance Criteria\n   1.4 Setup Development Environments, CI/CD Pipeline & GitHub Repository\n2. Sprint 1 - Core Foundations & Authentication\n   2.1 Sprint Planning & Task Breakdown\n   2.2 User Management & Authentication Service (Login/Register/OAuth)\n   2.3 Database Schema Migration & Base API Setup\n   2.4 Daily Standups & Continuous Integration\n   2.5 Sprint 1 Review (Live Demo) & Retrospective\n3. Sprint 2 - Primary Feature Module Development\n   3.1 Sprint Planning & Backlog Refinement\n   3.2 Implement Core Business Workflows\n   3.3 Frontend Component Building & API Binding\n   3.4 Automated Testing & Code Review\n   3.5 Sprint 2 Review & Retrospective\n4. Sprint 3 - Advanced Features & Integration\n   4.1 Sprint Planning & Estimations\n   4.2 Implement Reporting, Analytics & Search Filters\n   4.3 Payment & Notification Integration\n   4.4 System Integration & Performance Tuning\n   4.5 Sprint 3 Review & Retrospective\n5. Release & Project Closure\n   5.1 Final Regression Testing & Bug Fixing\n   5.2 Production Release & Deployment\n   5.3 Handover Documentation & User Training\n   5.4 Final Project Retrospective & Archive"
     },
     {
-      "id": "raci",
-      "name": "4. Danh sách Hoạt động & Ma trận RACI",
-      "category": "Schedule & Roles",
-      "content": "PROJECT ACTIVITIES & RELATIONSHIPS (Phase: Execution)\n- Activity A: Gather and finalize requirements (Duration: 1 week) - Predecessor: None\n- Activity B: Design database schema (Duration: 1 week) - Predecessor: A (FS)\n- Activity C: Design UI/UX mockups (Duration: 2 weeks) - Predecessor: A (FS)\n- Activity D: Develop Backend APIs (Duration: 3 weeks) - Predecessor: B (FS)\n- Activity E: Develop Frontend interface (Duration: 3 weeks) - Predecessor: C (FS), D (SS)\n- Activity F: Integrate APIs with Frontend (Duration: 2 weeks) - Predecessor: E (FS)\n- Activity G: System Testing & Bug Fixing (Duration: 2 weeks) - Predecessor: F (FS)\n- Activity H: User Acceptance Testing (UAT) (Duration: 1 week) - Predecessor: G (FS)\n- Activity I: Deployment to Production (Duration: 1 week) - Predecessor: H (FS)\n- Activity J: Final Handover & Sign-off (Duration: 1 week) - Predecessor: I (FS)\n\nRACI MATRIX (Format chuẩn EOS không kẻ bảng)\nRoles: PM (Project Manager), BA (Business Analyst), DES (Designer), DEV (Developer), QA (Tester)\n- Activity A (Gather requirements): PM (A), BA (R), DES (C), DEV (C), QA (I)\n- Activity B (Design database): PM (A), BA (C), DES (I), DEV (R), QA (I)\n- Activity C (Design UI/UX): PM (A), BA (C), DES (R), DEV (I), QA (I)\n- Activity D (Develop Backend): PM (A), BA (I), DES (I), DEV (R), QA (C)\n- Activity E (Develop Frontend): PM (A), BA (I), DES (C), DEV (R), QA (C)\n- Activity F (Integration): PM (A), BA (I), DES (I), DEV (R), QA (C)\n- Activity G (System Testing): PM (A), BA (I), DES (I), DEV (C), QA (R)\n- Activity H (UAT): PM (A), BA (R), DES (I), DEV (C), QA (C)\n- Activity I (Deployment): PM (A), BA (I), DES (I), DEV (R), QA (C)\n- Activity J (Final Handover): PM (R, A), BA (C), DES (I), DEV (I), QA (I)"
+      "id": "ram_raci",
+      "name": "4. Ma trận Phân công Trách nhiệm (RAM / RACI)",
+      "category": "Resource",
+      "content": "RESPONSIBILITY ASSIGNMENT MATRIX (RAM - RACI CHART)\nRoles:\n- PM: Project Manager\n- BA: Business Analyst\n- DEV: Development Team (Frontend & Backend)\n- QA: Quality Assurance / Tester\n- SP: Project Sponsor / Client\n\nTasks / Deliverables                  | PM | BA | DEV | QA | SP\n--------------------------------------|----|----|-----|----|---\n1. Develop Project Charter            | A  | C  |  I  | I  | R\n2. Collect & Document Requirements   | A  | R  |  C  | C  | C\n3. System Architecture & UI Design    | A  | C  |  R  | I  | I\n4. Core System Coding & Integration   | A  | I  |  R  | I  | I\n5. Unit & System Testing             | A  | I  |  C  | R  | I\n6. User Acceptance Testing (UAT)      | A  | C  |  I  | C  | R\n7. Production Deployment              | A  | I  |  R  | C  | I\n8. Final Project Sign-off & Handover  | R  | I  |  I  | I  | A\n\nKey:\n- R (Responsible): The doer of the activity.\n- A (Accountable): The sole decision-maker with final approval/veto authority.\n- C (Consulted): Subject matter expert consulted for opinions/advice.\n- I (Informed): Kept updated on progress and results."
     },
     {
       "id": "stakeholder",
-      "name": "5. Phân tích Các bên liên quan (Stakeholders)",
-      "category": "Stakeholders",
-      "content": "STAKEHOLDER ANALYSIS (Power - Interest Grid)\n1. Stakeholder 1: [Tên bên liên quan, VD: Project Sponsor / Board of Directors]\n   - Role/Interest: Provides funding, sets strategic vision, and approves major milestones.\n   - Power: High | Interest: High\n   - Quadrant & Strategy: Manage Closely (Engage actively in steering committee meetings, send weekly reports).\n   - Engagement Level: Current: Supportive -> Desired: Leading\n\n2. Stakeholder 2: [Tên bên liên quan, VD: End-Users / Department Staff]\n   - Role/Interest: Directly operates the software for daily business tasks.\n   - Power: Low | Interest: High\n   - Quadrant & Strategy: Keep Informed (Consult during requirement & UAT phases, provide comprehensive user guides).\n   - Engagement Level: Current: Neutral -> Desired: Supportive\n\n3. Stakeholder 3: [Tên bên liên quan, VD: Compliance / Legal Department]\n   - Role/Interest: Ensures regulatory, copyright, and data privacy standards.\n   - Power: High | Interest: Low\n   - Quadrant & Strategy: Keep Satisfied (Share audit reports, confirm compliance checklist).\n   - Engagement Level: Current: Neutral -> Desired: Supportive"
+      "name": "5. Phân tích Bên liên quan (Stakeholder Matrix)",
+      "category": "Stakeholder",
+      "content": "STAKEHOLDER ANALYSIS & ENGAGEMENT PLAN\n1. Stakeholder 1: Project Sponsor (Ban Giám đốc / Nhà tài trợ)\n   - Role/Interest: Ultimate project owner, funds the budget, expects on-time ROI.\n   - Power: High | Interest: High\n   - Quadrant & Strategy: Manage Closely (Weekly status reports, executive milestone meetings).\n   - Engagement Level: Current: Supportive -> Desired: Leading\n\n2. Stakeholder 2: End-Users / Department Staff\n   - Role/Interest: Directly operates the software for daily business tasks.\n   - Power: Low | Interest: High\n   - Quadrant & Strategy: Keep Informed (Consult during requirement & UAT phases, provide comprehensive user guides).\n   - Engagement Level: Current: Neutral -> Desired: Supportive\n\n3. Stakeholder 3: Compliance & Legal Department\n   - Role/Interest: Ensures regulatory, copyright, and data privacy standards.\n   - Power: High | Interest: Low\n   - Quadrant & Strategy: Keep Satisfied (Share audit reports, confirm compliance checklist).\n   - Engagement Level: Current: Neutral -> Desired: Supportive"
     },
     {
       "id": "risk",
