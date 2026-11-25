@@ -28,6 +28,7 @@
     feExamId: '',
     feQuestionIndex: 0,
     feZoomLevel: 1.0,
+    feViewMode: localStorage.getItem('pmg_fe_view_mode') || 'text', // 'text' (default crisp text) or 'image'
     feMode: 'practice', // 'practice' or 'exam'
     feFilter: 'all',
     feAnswers: {},      // { [examId]: { [qIndex]: ['A'] or ['A', 'C'] } }
@@ -114,6 +115,21 @@
     feFlagBtn: document.getElementById('feFlagBtn'),
     feFlagIcon: document.getElementById('feFlagIcon'),
     feFlagText: document.getElementById('feFlagText'),
+
+    // View Mode & Text Question Elements
+    btnViewText: document.getElementById('btnViewText'),
+    btnViewImage: document.getElementById('btnViewImage'),
+    btnEditQuestionText: document.getElementById('btnEditQuestionText'),
+    btnImportExamText: document.getElementById('btnImportExamText'),
+    feTextContainer: document.getElementById('feTextContainer'),
+    feImageWrapper: document.getElementById('feImageWrapper'),
+    feTextInstruction: document.getElementById('feTextInstruction'),
+    feTextContent: document.getElementById('feTextContent'),
+    feTextOptionsList: document.getElementById('feTextOptionsList'),
+    btnToggleExplanation: document.getElementById('btnToggleExplanation'),
+    feTextExplanationBox: document.getElementById('feTextExplanationBox'),
+    feTextExplanationContent: document.getElementById('feTextExplanationContent'),
+
     feQuestionImage: document.getElementById('feQuestionImage'),
     feZoomInBtn: document.getElementById('feZoomInBtn'),
     feZoomOutBtn: document.getElementById('feZoomOutBtn'),
@@ -150,6 +166,31 @@
     exportResultsBtn: document.getElementById('exportResultsBtn'),
     fullscreenImgModal: document.getElementById('fullscreenImgModal'),
     fullscreenImg: document.getElementById('fullscreenImg'),
+
+    // Edit Question Modal
+    feEditQuestionModal: document.getElementById('feEditQuestionModal'),
+    feEditQNum: document.getElementById('feEditQNum'),
+    feEditQType: document.getElementById('feEditQType'),
+    feEditQText: document.getElementById('feEditQText'),
+    feEditOptA: document.getElementById('feEditOptA'),
+    feEditOptB: document.getElementById('feEditOptB'),
+    feEditOptC: document.getElementById('feEditOptC'),
+    feEditOptD: document.getElementById('feEditOptD'),
+    feEditQExplanation: document.getElementById('feEditQExplanation'),
+    saveEditQBtn: document.getElementById('saveEditQBtn'),
+    cancelEditQBtn: document.getElementById('cancelEditQBtn'),
+    closeEditQModalBtn: document.getElementById('closeEditQModalBtn'),
+
+    // Import Exam Modal
+    feImportExamModal: document.getElementById('feImportExamModal'),
+    feImportTextarea: document.getElementById('feImportTextarea'),
+    feImportStats: document.getElementById('feImportStats'),
+    btnFillSampleImport: document.getElementById('btnFillSampleImport'),
+    btnResetToDefaultExam: document.getElementById('btnResetToDefaultExam'),
+    confirmImportModalBtn: document.getElementById('confirmImportModalBtn'),
+    cancelImportModalBtn: document.getElementById('cancelImportModalBtn'),
+    closeImportModalBtn: document.getElementById('closeImportModalBtn'),
+
     toastContainer: document.getElementById('toastContainer')
   };
 
@@ -512,6 +553,78 @@
   }
 
   // =========================================================================
+  // FE TEXT EXAM PARSER
+  // =========================================================================
+  function parseExamImportText(rawText) {
+    if (rawText.trim().startsWith('[') || rawText.trim().startsWith('{')) {
+      try {
+        const parsed = JSON.parse(rawText);
+        if (Array.isArray(parsed)) return parsed;
+        if (typeof parsed === 'object') return Object.values(parsed);
+      } catch (e) {}
+    }
+
+    const questions = [];
+    // Split by questions: e.g. "Câu 1:", "Question 1:", "1.", or lines starting with numbers
+    const blocks = rawText.split(/(?:^|\n)(?=(?:Câu|Question|\b\d+[\.:\)])\s*\d+)/i);
+
+    blocks.forEach(block => {
+      const trimmed = block.trim();
+      if (!trimmed) return;
+
+      const lines = trimmed.split('\n').map(l => l.trim()).filter(Boolean);
+      if (lines.length < 2) return;
+
+      const qLine = lines[0];
+      const qText = qLine.replace(/^(?:Câu|Question)?\s*\d+[\.:\)]\s*/i, '').trim();
+
+      const isMulti = /choose\s*2\s*answers/i.test(trimmed) || /chọn\s*2/i.test(trimmed);
+      const instruction = isMulti ? '(Choose 2 answers)' : '(Choose 1 answer)';
+
+      const options = {};
+      let explanation = '';
+      const answers = [];
+
+      lines.slice(1).forEach(l => {
+        const optMatch = l.match(/^([A-F])[\.:\)]\s*(.*)$/i);
+        if (optMatch) {
+          const key = optMatch[1].toUpperCase();
+          options[key] = optMatch[2].trim();
+          return;
+        }
+
+        const ansMatch = l.match(/^(?:Đáp án|Answer)[\.:\)]\s*(.*)$/i);
+        if (ansMatch) {
+          const ansStr = ansMatch[1].toUpperCase();
+          ['A', 'B', 'C', 'D', 'E', 'F'].forEach(k => {
+            if (ansStr.includes(k)) answers.push(k);
+          });
+          return;
+        }
+
+        const explMatch = l.match(/^(?:Giải thích|Explanation)[\.:\)]\s*(.*)$/i);
+        if (explMatch) {
+          explanation = explMatch[1].trim();
+        }
+      });
+
+      if (Object.keys(options).length > 0 || qText) {
+        questions.push({
+          number: questions.length + 1,
+          type: isMulti ? 'multi' : 'single',
+          instruction: instruction,
+          question: qText || 'Nội dung câu hỏi',
+          options: Object.keys(options).length > 0 ? options : { "A": "Phương án A", "B": "Phương án B", "C": "Phương án C", "D": "Phương án D" },
+          answer: answers,
+          explanation: explanation
+        });
+      }
+    });
+
+    return questions;
+  }
+
+  // =========================================================================
   // FE MODULE (FINAL EXAM - TRẮC NGHIỆM)
   // =========================================================================
   function initFEModule() {
@@ -593,6 +706,194 @@
       });
     });
 
+    // View Mode & Text Toggle Handlers
+    if (elements.btnViewText) {
+      elements.btnViewText.addEventListener('click', () => {
+        state.feViewMode = 'text';
+        localStorage.setItem('pmg_fe_view_mode', 'text');
+        loadCurrentQuestion();
+        showToast('Đã chuyển sang Chế độ Text sắc nét', 'info');
+      });
+    }
+
+    if (elements.btnViewImage) {
+      elements.btnViewImage.addEventListener('click', () => {
+        state.feViewMode = 'image';
+        localStorage.setItem('pmg_fe_view_mode', 'image');
+        loadCurrentQuestion();
+        showToast('Đã chuyển sang Xem ảnh chụp gốc', 'info');
+      });
+    }
+
+    if (elements.btnToggleExplanation) {
+      elements.btnToggleExplanation.addEventListener('click', () => {
+        const isVisible = elements.feTextExplanationBox.style.display !== 'none';
+        elements.feTextExplanationBox.style.display = isVisible ? 'none' : 'block';
+      });
+    }
+
+    // Edit Question Text Handlers
+    if (elements.btnEditQuestionText) {
+      elements.btnEditQuestionText.addEventListener('click', () => {
+        const qIndex = state.feQuestionIndex;
+        let qData = typeof getFEQuestionText === 'function' ? getFEQuestionText(state.feExamId, qIndex) : null;
+        
+        elements.feEditQNum.textContent = qIndex + 1;
+        const currentMode = state.feQuestionModes[state.feExamId][qIndex] || (qData ? qData.type : 'single');
+        elements.feEditQType.value = currentMode === 'multi' ? 'multi' : 'single';
+        elements.feEditQText.value = qData ? qData.question : '';
+        elements.feEditOptA.value = qData && qData.options ? (qData.options['A'] || '') : '';
+        elements.feEditOptB.value = qData && qData.options ? (qData.options['B'] || '') : '';
+        elements.feEditOptC.value = qData && qData.options ? (qData.options['C'] || '') : '';
+        elements.feEditOptD.value = qData && qData.options ? (qData.options['D'] || '') : '';
+        elements.feEditQExplanation.value = qData ? (qData.explanation || '') : '';
+
+        elements.feEditQuestionModal.classList.add('active');
+      });
+    }
+
+    if (elements.closeEditQModalBtn) {
+      elements.closeEditQModalBtn.addEventListener('click', () => {
+        elements.feEditQuestionModal.classList.remove('active');
+      });
+    }
+    if (elements.cancelEditQBtn) {
+      elements.cancelEditQBtn.addEventListener('click', () => {
+        elements.feEditQuestionModal.classList.remove('active');
+      });
+    }
+
+    if (elements.saveEditQBtn) {
+      elements.saveEditQBtn.addEventListener('click', () => {
+        const qIndex = state.feQuestionIndex;
+        const qType = elements.feEditQType.value;
+        const questionText = elements.feEditQText.value.trim();
+        const optA = elements.feEditOptA.value.trim();
+        const optB = elements.feEditOptB.value.trim();
+        const optC = elements.feEditOptC.value.trim();
+        const optD = elements.feEditOptD.value.trim();
+        const expl = elements.feEditQExplanation.value.trim();
+
+        if (!questionText) {
+          showToast('Vui lòng nhập nội dung câu hỏi!', 'error');
+          return;
+        }
+
+        // Get or init custom store for this exam
+        let customStore = {};
+        try {
+          const raw = localStorage.getItem('pmg201c_fe_custom_text_' + state.feExamId);
+          if (raw) customStore = JSON.parse(raw);
+        } catch (e) {}
+
+        customStore[qIndex] = {
+          number: qIndex + 1,
+          type: qType,
+          instruction: qType === 'multi' ? '(Choose 2 answers)' : '(Choose 1 answer)',
+          question: questionText,
+          options: {
+            "A": optA || "Phương án A",
+            "B": optB || "Phương án B",
+            "C": optC || "Phương án C",
+            "D": optD || "Phương án D"
+          },
+          explanation: expl
+        };
+
+        localStorage.setItem('pmg201c_fe_custom_text_' + state.feExamId, JSON.stringify(customStore));
+        state.feQuestionModes[state.feExamId][qIndex] = qType;
+        saveFEPersistence();
+
+        elements.feEditQuestionModal.classList.remove('active');
+        loadCurrentQuestion();
+        showToast(`Đã lưu nội dung text câu ${qIndex + 1} thành công!`, 'success');
+      });
+    }
+
+    // Batch Import Exam Handlers
+    if (elements.btnImportExamText) {
+      elements.btnImportExamText.addEventListener('click', () => {
+        elements.feImportExamModal.classList.add('active');
+        elements.feImportStats.textContent = 'Nhập văn bản hoặc bấm nút Nạp Ngân Hàng Đề bên trên';
+      });
+    }
+    if (elements.closeImportModalBtn) {
+      elements.closeImportModalBtn.addEventListener('click', () => {
+        elements.feImportExamModal.classList.remove('active');
+      });
+    }
+    if (elements.cancelImportModalBtn) {
+      elements.cancelImportModalBtn.addEventListener('click', () => {
+        elements.feImportExamModal.classList.remove('active');
+      });
+    }
+
+    if (elements.btnFillSampleImport) {
+      elements.btnFillSampleImport.addEventListener('click', () => {
+        if (typeof FE_QUESTIONS_TEXT !== 'undefined' && FE_QUESTIONS_TEXT['default_pmg201c']) {
+          const list = FE_QUESTIONS_TEXT['default_pmg201c'];
+          let formattedText = '';
+          list.forEach(q => {
+            formattedText += `Câu ${q.number}: ${q.question} ${q.instruction || ''}\n`;
+            if (q.options) {
+              Object.keys(q.options).forEach(k => {
+                formattedText += `${k}. ${q.options[k]}\n`;
+              });
+            }
+            if (q.answer && q.answer.length) {
+              formattedText += `Đáp án: ${q.answer.join(', ')}\n`;
+            }
+            if (q.explanation) {
+              formattedText += `Giải thích: ${q.explanation}\n`;
+            }
+            formattedText += '\n';
+          });
+          elements.feImportTextarea.value = formattedText;
+          elements.feImportStats.textContent = `Đã điền ${list.length} câu hỏi PMG201c chuẩn vào khung soạn thảo!`;
+          showToast('Đã điền 50 câu hỏi chuẩn vào khung nạp', 'info');
+        }
+      });
+    }
+
+    if (elements.btnResetToDefaultExam) {
+      elements.btnResetToDefaultExam.addEventListener('click', () => {
+        if (confirm('Bạn có chắc muốn khôi phục dữ liệu gốc cho bộ đề này?')) {
+          localStorage.removeItem('pmg201c_fe_custom_text_' + state.feExamId);
+          elements.feImportExamModal.classList.remove('active');
+          loadCurrentQuestion();
+          showToast('Đã khôi phục dữ liệu mặc định cho đề này', 'info');
+        }
+      });
+    }
+
+    if (elements.confirmImportModalBtn) {
+      elements.confirmImportModalBtn.addEventListener('click', () => {
+        const text = elements.feImportTextarea.value.trim();
+        if (!text) {
+          showToast('Vui lòng dán văn bản đề thi hoặc bấm Nạp ngân hàng đề!', 'error');
+          return;
+        }
+
+        const parsed = parseExamImportText(text);
+        if (parsed.length === 0) {
+          showToast('Không tìm thấy câu hỏi hợp lệ trong văn bản!', 'error');
+          return;
+        }
+
+        const customStore = {};
+        parsed.forEach((q, idx) => {
+          customStore[idx] = q;
+        });
+
+        localStorage.setItem('pmg201c_fe_custom_text_' + state.feExamId, JSON.stringify(customStore));
+        elements.feImportExamModal.classList.remove('active');
+        state.feViewMode = 'text';
+        localStorage.setItem('pmg_fe_view_mode', 'text');
+        loadCurrentQuestion();
+        showToast(`Đã nạp thành công ${parsed.length} câu hỏi dạng Text rõ nét!`, 'success');
+      });
+    }
+
     // Submit
     elements.feSubmitBtn.addEventListener('click', submitFEExam);
     elements.feSubmitBtnSidebar.addEventListener('click', submitFEExam);
@@ -639,12 +940,102 @@
     state.feZoomLevel = 1.0;
     applyFEZoom();
 
+    // Toggle Text vs Image View
+    if (state.feViewMode === 'image') {
+      if (elements.feTextContainer) elements.feTextContainer.style.display = 'none';
+      if (elements.feImageWrapper) elements.feImageWrapper.style.display = 'flex';
+      if (elements.btnViewImage) elements.btnViewImage.classList.add('active');
+      if (elements.btnViewText) elements.btnViewText.classList.remove('active');
+    } else {
+      if (elements.feTextContainer) elements.feTextContainer.style.display = 'flex';
+      if (elements.feImageWrapper) elements.feImageWrapper.style.display = 'none';
+      if (elements.btnViewText) elements.btnViewText.classList.add('active');
+      if (elements.btnViewImage) elements.btnViewImage.classList.remove('active');
+    }
+
+    // Get Text Question Data
+    let qData = null;
+    if (typeof getFEQuestionText === 'function') {
+      qData = getFEQuestionText(state.feExamId, qIndex);
+    }
+
+    if (qData) {
+      // Set Instruction badge
+      if (elements.feTextInstruction) {
+        elements.feTextInstruction.textContent = qData.instruction || (qData.type === 'multi' ? '(Choose 2 answers)' : '(Choose 1 answer)');
+      }
+
+      // Set Main question text
+      if (elements.feTextContent) {
+        elements.feTextContent.textContent = qData.question;
+      }
+
+      // Render options list
+      if (elements.feTextOptionsList) {
+        elements.feTextOptionsList.innerHTML = '';
+        if (qData.options) {
+          Object.keys(qData.options).forEach(optKey => {
+            const item = document.createElement('div');
+            item.className = 'text-opt-item';
+            item.dataset.option = optKey;
+            item.innerHTML = `
+              <div class="text-opt-badge">${optKey}</div>
+              <div class="text-opt-content">${escapeHtml(qData.options[optKey])}</div>
+            `;
+            item.addEventListener('click', () => {
+              handleOptionClick(optKey);
+            });
+            elements.feTextOptionsList.appendChild(item);
+          });
+        }
+      }
+
+      // Handle explanation
+      if (elements.btnToggleExplanation) {
+        if (qData.explanation) {
+          elements.feTextExplanationContent.textContent = qData.explanation;
+          elements.btnToggleExplanation.style.display = 'inline-flex';
+        } else {
+          elements.btnToggleExplanation.style.display = 'none';
+          elements.feTextExplanationBox.style.display = 'none';
+        }
+      }
+
+      // Set Question Mode according to question metadata if not set
+      if (!state.feQuestionModes[state.feExamId][qIndex] && qData.type) {
+        state.feQuestionModes[state.feExamId][qIndex] = qData.type;
+      }
+    } else {
+      // No text data fallback
+      if (elements.feTextInstruction) {
+        elements.feTextInstruction.textContent = 'Chưa có bản Text';
+      }
+      if (elements.feTextContent) {
+        elements.feTextContent.innerHTML = `
+          <div style="font-weight:normal; font-size:1rem; color:var(--text-muted); line-height:1.7; padding:12px 0;">
+            Câu hỏi này hiện chỉ có trong bản ảnh chụp gốc.<br>
+            👉 Bấm nút <strong>[ 🖼️ Ảnh gốc ]</strong> ở trên để xem ảnh câu hỏi.<br>
+            👉 Hoặc bấm nút <strong>[ ✏️ Sửa text ]</strong> / <strong>[ 📥 Nạp Text Đề ]</strong> để nhập hoặc dán nội dung văn bản rõ nét!
+          </div>
+        `;
+      }
+      if (elements.feTextOptionsList) {
+        elements.feTextOptionsList.innerHTML = '';
+      }
+      if (elements.btnToggleExplanation) {
+        elements.btnToggleExplanation.style.display = 'none';
+      }
+      if (elements.feTextExplanationBox) {
+        elements.feTextExplanationBox.style.display = 'none';
+      }
+    }
+
     // Determine selection mode for this question
     // If not set, check if already chosen answers length > 1, else default to 'single'
     let mode = state.feQuestionModes[state.feExamId][qIndex];
     if (!mode) {
       const chosen = state.feAnswers[state.feExamId][qIndex] || [];
-      mode = chosen.length > 1 ? 'multi' : 'single';
+      mode = chosen.length > 1 ? 'multi' : (qData && qData.type ? qData.type : 'single');
       state.feQuestionModes[state.feExamId][qIndex] = mode;
     }
     updateModeUI(mode);
@@ -737,12 +1128,23 @@
     const mode = state.feQuestionModes[state.feExamId][qIndex] || 'single';
     const chosen = state.feAnswers[state.feExamId][qIndex] || [];
 
+    // Sync Circular Buttons below
     elements.feOptionsGrid.querySelectorAll('.opt-btn').forEach(btn => {
       const opt = btn.dataset.option;
       const isSelected = chosen.includes(opt);
       btn.classList.toggle('active', isSelected);
       btn.classList.toggle('multi', isSelected && mode === 'multi');
     });
+
+    // Sync Text Option Items in the Text Card above
+    if (elements.feTextOptionsList) {
+      elements.feTextOptionsList.querySelectorAll('.text-opt-item').forEach(item => {
+        const opt = item.dataset.option;
+        const isSelected = chosen.includes(opt);
+        item.classList.toggle('active', isSelected);
+        item.classList.toggle('multi', isSelected && mode === 'multi');
+      });
+    }
 
     if (chosen.length === 0) {
       elements.feSelectedDisplay.textContent = 'Chưa chọn';
