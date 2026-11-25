@@ -29,6 +29,7 @@
     feQuestionIndex: 0,
     feZoomLevel: 1.0,
     feViewMode: localStorage.getItem('pmg_fe_view_mode') || 'text', // 'text' (default crisp text) or 'image'
+    feInstantFeedback: localStorage.getItem('pmg_fe_instant_feedback') !== 'false', // Instant right/wrong on click
     feMode: 'practice', // 'practice' or 'exam'
     feFilter: 'all',
     fePracticeSubset: 'all', // 'all', 'wrong', 'flagged', 'wrong_flagged'
@@ -103,6 +104,15 @@
     peLeftPane: document.getElementById('peLeftPane'),
     peRightPane: document.getElementById('peRightPane'),
     peResizer: document.getElementById('peResizer'),
+    peRequirementSelect: document.getElementById('peRequirementSelect'),
+    peGradeReqBtn: document.getElementById('peGradeReqBtn'),
+    peGradeModal: document.getElementById('peGradeModal'),
+    peGradeModalTitle: document.getElementById('peGradeModalTitle'),
+    peGradeModalBody: document.getElementById('peGradeModalBody'),
+    closePeGradeModalBtn: document.getElementById('closePeGradeModalBtn'),
+    closePeGradeModalBtn2: document.getElementById('closePeGradeModalBtn2'),
+    copyPeGradeFeedbackBtn: document.getElementById('copyPeGradeFeedbackBtn'),
+    autoInsertPeFixBtn: document.getElementById('autoInsertPeFixBtn'),
 
     // FE Elements
     feExamSelect: document.getElementById('feExamSelect'),
@@ -117,6 +127,9 @@
     feTimerDisplay: document.getElementById('feTimerDisplay'),
     feSubmitBtn: document.getElementById('feSubmitBtn'),
     feResetExamBtn: document.getElementById('feResetExamBtn'),
+    btnInstantFeedbackToggle: document.getElementById('btnInstantFeedbackToggle'),
+    instantFeedbackText: document.getElementById('instantFeedbackText'),
+    feInstantResultBar: document.getElementById('feInstantResultBar'),
     feQuestionNumber: document.getElementById('feQuestionNumber'),
     feSelectionModeTag: document.getElementById('feSelectionModeTag'),
     feModeIcon: document.getElementById('feModeIcon'),
@@ -381,6 +394,27 @@
     // Resizer logic
     initSplitPaneResizer();
 
+    // PE Requirement Grader Listeners
+    if (elements.peGradeReqBtn) {
+      elements.peGradeReqBtn.addEventListener('click', handleGradePEClick);
+    }
+    if (elements.closePeGradeModalBtn) {
+      elements.closePeGradeModalBtn.addEventListener('click', () => {
+        elements.peGradeModal.classList.remove('active');
+      });
+    }
+    if (elements.closePeGradeModalBtn2) {
+      elements.closePeGradeModalBtn2.addEventListener('click', () => {
+        elements.peGradeModal.classList.remove('active');
+      });
+    }
+    if (elements.copyPeGradeFeedbackBtn) {
+      elements.copyPeGradeFeedbackBtn.addEventListener('click', handleCopyPeFeedback);
+    }
+    if (elements.autoInsertPeFixBtn) {
+      elements.autoInsertPeFixBtn.addEventListener('click', handleAutoInsertPeFix);
+    }
+
     // Initial load
     if (semesters.length > 0) {
       state.peSemester = semesters[0];
@@ -565,6 +599,850 @@
   }
 
   // =========================================================================
+  // PE REQUIREMENT GRADER & FIX GUIDE ENGINE
+  // =========================================================================
+  let lastPeGradeResult = null;
+
+  function handleGradePEClick() {
+    const text = elements.peTextarea.value.trim();
+    if (!text) {
+      showToast('Vui lòng nhập hoặc viết bài làm PE trước khi nộp chấm điểm!', 'warning');
+      return;
+    }
+
+    const reqType = elements.peRequirementSelect ? elements.peRequirementSelect.value : 'req1';
+    const result = gradePERequirement(text, reqType);
+    lastPeGradeResult = result;
+
+    renderPEGradeModal(result);
+    elements.peGradeModal.classList.add('active');
+  }
+
+  function handleAutoInsertPeFix() {
+    if (!lastPeGradeResult || !lastPeGradeResult.sampleFixCode) {
+      showToast('Không có nội dung mẫu sửa lỗi cho bài này!', 'warning');
+      return;
+    }
+    const currentVal = elements.peTextarea.value.trim();
+    if (currentVal.length > 0) {
+      elements.peTextarea.value = currentVal + '\n\n' + lastPeGradeResult.sampleFixCode + '\n';
+    } else {
+      elements.peTextarea.value = lastPeGradeResult.sampleFixCode + '\n';
+    }
+    updatePEWordCount();
+    savePEContent();
+    elements.peGradeModal.classList.remove('active');
+    showToast('🎉 Đã tự động chèn khung mẫu chuẩn sửa lỗi vào bài làm của bạn!', 'success', 3500);
+  }
+
+  function handleCopyPeFeedback() {
+    if (!lastPeGradeResult) return;
+    let copyText = `BÁO CÁO ĐÁNH GIÁ & CHẤM ĐIỂM REQUIREMENT BÀI THI PE (PMG201c EOS)\n`;
+    copyText += `Yêu cầu: ${lastPeGradeResult.title}\n`;
+    copyText += `Điểm số: ${lastPeGradeResult.score} / ${lastPeGradeResult.maxScore} (${lastPeGradeResult.badgeText})\n`;
+    copyText += `Độ dài bài làm: ${lastPeGradeResult.wordCount} từ\n`;
+    copyText += `--------------------------------------------------------\n`;
+    copyText += `1. KẾT QUẢ TIÊU CHÍ CHẤM THI EOS:\n`;
+    lastPeGradeResult.criteria.forEach(c => {
+      copyText += `[${c.passed ? '✓ ĐẠT' : '✕ CHƯA ĐẠT'}] ${c.name} (${c.points}/${c.maxPoints}đ): ${c.note}\n`;
+    });
+    if (lastPeGradeResult.fixes && lastPeGradeResult.fixes.length > 0) {
+      copyText += `\n2. NHỮNG ĐIỂM CẦN FIX & LƯU Ý KHI VIẾT:\n`;
+      lastPeGradeResult.fixes.forEach(f => {
+        copyText += `* ${f.title}\n  ${f.message}\n`;
+      });
+    }
+    navigator.clipboard.writeText(copyText).then(() => {
+      showToast('Đã sao chép toàn bộ nhận xét vào Clipboard!', 'success');
+    });
+  }
+
+  function renderPEGradeModal(result) {
+    if (!elements.peGradeModalBody) return;
+    elements.peGradeModalTitle.textContent = `🎯 Đánh Giá: ${result.title}`;
+
+    let html = `
+      <!-- Score Overview Card -->
+      <div class="pe-score-card">
+        <div>
+          <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600; text-transform:uppercase;">
+            Điểm Đánh Giá Chuẩn EOS
+          </div>
+          <div class="pe-score-big">${result.score} <span style="font-size:1.1rem; color:var(--text-muted); font-weight:500;">/ ${result.maxScore}</span></div>
+          <div style="font-size:0.8rem; color:var(--text-muted); margin-top:4px;">
+            Độ dài bài viết: <strong>${result.wordCount} từ</strong> • Trạng thái: <span class="pe-score-badge ${result.badgeClass}">${result.badgeText}</span>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div class="pe-score-badge ${result.badgeClass}" style="font-size:1rem; padding:8px 16px;">
+            ${result.badgeText}
+          </div>
+        </div>
+      </div>
+    `;
+
+    // 1. Checklist
+    html += `
+      <div style="margin-bottom:16px;">
+        <h4 style="font-size:0.95rem; font-weight:700; color:var(--text-main); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+          <span>📋</span> 1. Kết Quả Kiểm Tra Tiêu Chí Chấm Thi EOS
+        </h4>
+        <div class="pe-checklist-section">
+    `;
+
+    result.criteria.forEach(c => {
+      html += `
+        <div class="pe-checklist-item ${c.passed ? 'passed' : 'failed'}">
+          <div class="pe-check-icon ${c.passed ? 'passed' : 'failed'}">
+            ${c.passed ? '✓' : '✕'}
+          </div>
+          <div style="flex:1;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <strong style="color:${c.passed ? 'var(--text-main)' : 'var(--danger)'};">${c.name}</strong>
+              <span style="font-weight:700; font-size:0.82rem; color:${c.passed ? 'var(--success)' : 'var(--danger)'};">
+                ${c.points}/${c.maxPoints}đ
+              </span>
+            </div>
+            <div style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">${c.note}</div>
+          </div>
+        </div>
+      `;
+    });
+
+    html += `
+        </div>
+      </div>
+    `;
+
+    // 2. Fixes & Advice
+    if (result.fixes && result.fixes.length > 0) {
+      html += `
+        <div style="margin-bottom:16px;">
+          <h4 style="font-size:0.95rem; font-weight:700; color:var(--danger); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+            <span>⚠️</span> 2. Những Điểm Cần FIX & Lưu Ý Quan Trọng Khi Viết Bài
+          </h4>
+          <div class="pe-fix-container">
+      `;
+
+      result.fixes.forEach(f => {
+        html += `
+          <div class="pe-fix-alert">
+            <strong>${f.title}</strong>
+            <div>${f.message}</div>
+          </div>
+        `;
+      });
+
+      html += `
+          </div>
+        </div>
+      `;
+    }
+
+    // 3. Sample Fix Code
+    if (result.sampleFixCode) {
+      html += `
+        <div style="margin-bottom:8px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <h4 style="font-size:0.95rem; font-weight:700; color:var(--primary); display:flex; align-items:center; gap:6px; margin:0;">
+              <span>💡</span> 3. Khung Mẫu Chuẩn EOS Để Sửa Bài (Fix Suggestion)
+            </h4>
+            <span style="font-size:0.75rem; color:var(--text-muted);">Format Text không kẻ bảng đạt điểm tối đa</span>
+          </div>
+          <div class="pe-sample-code-box">
+            <pre>${escapeHtml(result.sampleFixCode)}</pre>
+          </div>
+        </div>
+      `;
+    }
+
+    elements.peGradeModalBody.innerHTML = html;
+  }
+
+  function gradePERequirement(text, reqType = 'req1') {
+    text = (text || '').trim();
+    const lower = text.toLowerCase();
+
+    // Auto-detect requirement based on keywords if needed
+    if (reqType === 'auto') {
+      if (lower.includes('critical path') || lower.includes('evm') || lower.includes('spi') || lower.includes('cpi')) {
+        reqType = 'req5';
+      } else if (lower.includes('risk') || lower.includes('mitigation') || lower.includes('contingency')) {
+        reqType = 'req4';
+      } else if (lower.includes('wbs') || lower.includes('raci') || lower.includes('breakdown structure')) {
+        reqType = 'req3';
+      } else if (lower.includes('budget') || lower.includes('bottom-up') || lower.includes('parametric') || (lower.includes('cost') && lower.includes('labor'))) {
+        reqType = 'req2';
+      } else {
+        reqType = 'req1';
+      }
+    }
+
+    if (reqType === 'all') {
+      return gradeAllPERequirements(text, lower);
+    }
+
+    if (reqType === 'req1') return evaluateReq1Charter(text, lower);
+    if (reqType === 'req2') return evaluateReq2Budget(text, lower);
+    if (reqType === 'req3') return evaluateReq3WBS(text, lower);
+    if (reqType === 'req4') return evaluateReq4Risk(text, lower);
+    if (reqType === 'req5') return evaluateReq5CPM(text, lower);
+
+    return evaluateReq1Charter(text, lower);
+  }
+
+  function evaluateReq1Charter(text, lower) {
+    const words = text ? text.split(/\s+/).length : 0;
+    const criteria = [];
+    const fixes = [];
+
+    // 1. Project Title
+    const hasTitle = /(project\s*(name|title)|tên\s*dự\s*án)/i.test(text);
+    criteria.push({
+      name: '1. Tên Dự Án (Project Name / Title)',
+      passed: hasTitle,
+      points: hasTitle ? 1.0 : 0.0,
+      maxPoints: 1.0,
+      note: hasTitle ? 'Đã nêu rõ tên dự án cụ thể.' : 'Chưa có mục Project Name / Title rõ ràng.'
+    });
+    if (!hasTitle) {
+      fixes.push({
+        title: '⚠️ THIẾU TÊN DỰ ÁN CỤ THỂ (PROJECT NAME)',
+        message: 'Hãy mở đầu bằng: "1. Project Name: [Tên dự án đầy đủ và chuyên nghiệp]" (Ví dụ: FPT University Student Learning Management System).'
+      });
+    }
+
+    // 2. Project Purpose
+    const hasPurpose = /(purpose|mục\s*đích|description|tổng\s*quan)/i.test(text);
+    criteria.push({
+      name: '2. Mục Đích Dự Án (Project Purpose)',
+      passed: hasPurpose,
+      points: hasPurpose ? 1.5 : 0.0,
+      maxPoints: 1.5,
+      note: hasPurpose ? 'Đã giải thích mục đích tổng quan của dự án.' : 'Thiếu phần trình bày mục đích và bối cảnh thành lập dự án.'
+    });
+
+    // 3. Justifications (At least 2 business reasons)
+    const hasJustification = /(justification|reason|lý\s*do|bởi\s*vì|why|chứng\s*minh)/i.test(text);
+    const hasMultipleJustifications = /(justification\s*1|reason\s*1|justification\s*2|lý\s*do\s*1|lý\s*do\s*2)/i.test(text) || (text.match(/justification/gi) || []).length >= 2;
+    const justPoints = hasMultipleJustifications ? 1.5 : (hasJustification ? 0.75 : 0.0);
+    criteria.push({
+      name: '3. Ít Nhất 2 Lý Do Chứng Minh (Business Justifications)',
+      passed: hasMultipleJustifications,
+      points: justPoints,
+      maxPoints: 1.5,
+      note: hasMultipleJustifications
+        ? 'Đã cung cấp tối thiểu 2 lý do kinh doanh chứng minh nhu cầu dự án.'
+        : (hasJustification ? 'Mới nêu 1 lý do, đề bài thi PE EOS luôn yêu cầu ít nhất 2 lý do chứng minh.' : 'Thiếu phần Business Justifications.')
+    });
+    if (!hasMultipleJustifications) {
+      fixes.push({
+        title: '⚠️ CẦN TỐI THIỂU 2 LÝ DO KINH DOANH (JUSTIFICATIONS)',
+        message: 'Giám khảo luôn tìm kiếm ít nhất 2 lý do thuyết phục tổ chức đầu tư vào dự án (VD: Justification 1: Hệ thống cũ bị phân mảnh gây thất thoát dữ liệu; Justification 2: Đáp ứng yêu cầu chuyển đổi số và giám sát kiểm định chất lượng).'
+      });
+    }
+
+    // 4. Customer & Sponsor
+    const hasCustomer = /(customer|khách\s*hàng|beneficiar|người\s*dùng)/i.test(text);
+    const hasSponsor = /(sponsor|nhà\s*tài\s*trợ|chủ\s*đầu\s*tư|director|board)/i.test(text);
+    const hasStakeholders = hasCustomer && hasSponsor;
+    criteria.push({
+      name: '4. Xác Định Khách Hàng (Customer) & Nhà Tài Trợ (Sponsor)',
+      passed: hasStakeholders,
+      points: hasStakeholders ? 1.0 : (hasCustomer || hasSponsor ? 0.5 : 0.0),
+      maxPoints: 1.0,
+      note: hasStakeholders
+        ? 'Đã chỉ định rõ đối tượng khách hàng sử dụng và nhà tài trợ phê duyệt vốn.'
+        : 'Cần phân biệt rõ: Customer là người thụ hưởng sản phẩm, Sponsor là bên cấp tiền và phê duyệt Charter.'
+    });
+
+    // 5. In-Scope & Out-of-Scope (Super Important!)
+    const hasInScope = /(in-scope|in\s*scope|trong\s*phạm\s*vi)/i.test(text);
+    const hasOutScope = /(out-of-scope|out\s*of\s*scope|ngoài\s*phạm\s*vi)/i.test(text);
+    const scopePassed = hasInScope && hasOutScope;
+    let scopePoints = 0;
+    if (hasInScope && hasOutScope) scopePoints = 2.0;
+    else if (hasInScope) scopePoints = 1.0;
+    criteria.push({
+      name: '5. Phạm Vi Dự Án (Bắt buộc đủ cả In-Scope VÀ Out-of-Scope)',
+      passed: scopePassed,
+      points: scopePoints,
+      maxPoints: 2.0,
+      note: scopePassed
+        ? 'Rất tốt! Đã có đầy đủ cả ranh giới Trong phạm vi (In-scope) và Ngoài phạm vi (Out-of-scope).'
+        : (hasInScope ? 'ĐÃ CÓ In-scope nhưng THIẾU Out-of-Scope! Đây là lỗi bị trừ điểm nhiều nhất trong PE.' : 'Thiếu hoàn toàn mục phân định Scope.')
+    });
+    if (!hasOutScope) {
+      fixes.push({
+        title: '⚠️ LỖI BỊ TRỪ ĐIỂM NẶNG NHẤT: THIẾU OUT-OF-SCOPE (NGOÀI PHẠM VI)',
+        message: 'Trong barem chấm thi EOS, thí sinh bị trừ từ 1.0 đến 1.5 điểm nếu không viết Out-of-Scope. Dự án không thể làm tất cả mọi thứ! Hãy bổ sung ngay ít nhất 2 mục Out-of-scope:\n- Out-of-scope 1: Cung cấp thiết bị phần cứng/smartphone cho người dùng cuối.\n- Out-of-scope 2: Dịch thuật nội dung sang các ngôn ngữ khác ngoài tiếng Việt và Anh.\n- Out-of-scope 3: Bảo trì và nâng cấp tính năng miễn phí sau thời hạn bảo hành 6 tháng.'
+      });
+    }
+
+    // 6. Time, Cost, Quality Constraints
+    const hasTime = /(time|thời\s*gian|duration|weeks|months|deadline|lịch\s*trình)/i.test(text);
+    const hasCost = /(cost|chi\s*phí|budget|ngân\s*sách|\$|vnd)/i.test(text);
+    const hasQuality = /(quality|chất\s*lượng|tiêu\s*chuẩn|bug|iso|uptime)/i.test(text);
+    const constrPassed = hasTime && hasCost && hasQuality;
+    let constrPoints = 0;
+    if (hasTime) constrPoints += 0.5;
+    if (hasCost) constrPoints += 0.5;
+    if (hasQuality) constrPoints += 0.5;
+    criteria.push({
+      name: '6. Bộ 3 Ràng Buộc (Time, Cost, Quality Constraints)',
+      passed: constrPassed,
+      points: constrPoints,
+      maxPoints: 1.5,
+      note: constrPassed
+        ? 'Đã bao quát đủ ràng buộc Thời gian (Time), Chi phí (Cost), và Tiêu chuẩn chất lượng (Quality).'
+        : `Còn thiếu: ${[!hasTime && 'Time', !hasCost && 'Cost', !hasQuality && 'Quality'].filter(Boolean).join(', ')}.`
+    });
+
+    // 7. Milestones
+    const hasMilestones = /(milestone|cột\s*mốc|mốc\s*thời\s*gian|week\s*\d+|giai\s*đoạn)/i.test(text);
+    criteria.push({
+      name: '7. Các Mốc Quan Trọng (Key Milestones)',
+      passed: hasMilestones,
+      points: hasMilestones ? 1.5 : 0.0,
+      maxPoints: 1.5,
+      note: hasMilestones ? 'Đã liệt kê các cột mốc chính của dự án.' : 'Thiếu danh sách Key Milestones.'
+    });
+
+    const totalScore = parseFloat(criteria.reduce((sum, c) => sum + c.points, 0).toFixed(1));
+    const badge = totalScore >= 8.5 ? { text: 'Xuất sắc', class: 'high' } : (totalScore >= 5.0 ? { text: 'Đạt yêu cầu', class: 'medium' } : { text: 'Cần sửa chữa', class: 'low' });
+
+    if (words < 120) {
+      fixes.unshift({
+        title: '⚠️ BÀI VIẾT QUÁ NGẮN CHO CÂU 1 (PROJECT CHARTER)',
+        message: `Bài làm hiện tại chỉ có ${words} từ. Một bản Project Charter chuẩn đạt điểm 9-10 trên phần mềm EOS thường dài từ 250 - 450 từ với đầy đủ các mục đánh số rõ ràng.`
+      });
+    }
+
+    const sampleFixCode = `REQUEST 1: PROJECT CHARTER STATEMENT
+
+1. Project Name:
+   FPT University Student Learning Management (SLM) System
+
+2. Project Purpose & Justifications:
+   - Purpose: Centralize learning resources, online submissions, and real-time grading analytics for faculty and students.
+   - Justification 1: Eliminates fragmented submission channels and minimizes lost homework records.
+   - Justification 2: Provides direct API integration with the central Academic Portal for automated transcripts.
+   - Justification 3: Enables 24/7 self-service grade and attendance tracking for students.
+
+3. Customer and Project Sponsor:
+   - Customer: Over 25,000 university students, 600 lecturers, and academic department staff.
+   - Project Sponsor: Academic Affairs Directorate and University Board of Trustees.
+
+4. Project Constraints:
+   - Scope Constraint:
+     + In-scope: UI/UX design, core backend RESTful APIs, database schema migration, role-based access control, UAT verification.
+     + Out-of-scope: Hardware device procurement, third-party LMS commercial licensing, multi-language localization beyond VN/EN.
+   - Time Constraint: Strictly limited to 16 calendar weeks (4 months), commencing Feb 1, 2026 and baselined to end May 25, 2026.
+   - Cost Constraint: Fixed capital ceiling of $15,000 (VND 375,000,000), covering labor, AWS cloud servers, and security audits.
+   - Quality Constraint: Zero Severity-1 blocker bugs at release; 99.8% server uptime; complies with ISO/IEC 25010.
+
+5. Key Milestones:
+   - Milestone 1 (Charter Sign-off & Kick-off): End of Week 2.
+   - Milestone 2 (Architecture Baselined & WBS): End of Week 4.
+   - Milestone 3 (Core Code Freeze & Alpha Testing): End of Week 10.
+   - Milestone 4 (Beta Testing & UAT Sign-off): End of Week 14.
+   - Milestone 5 (Production Rollout & Closure): End of Week 16.`;
+
+    return {
+      reqType: 'req1',
+      title: 'Requirement 1: Project Charter & Constraints',
+      score: totalScore,
+      maxScore: 10,
+      badgeText: badge.text,
+      badgeClass: badge.class,
+      wordCount: words,
+      criteria,
+      fixes,
+      sampleFixCode
+    };
+  }
+
+  function evaluateReq2Budget(text, lower) {
+    const words = text ? text.split(/\s+/).length : 0;
+    const criteria = [];
+    const fixes = [];
+
+    // 1. Labor Cost
+    const hasLabor = /(labor|personnel|nhân\s*sự|lương|salary|wage|hourly)/i.test(text);
+    criteria.push({
+      name: '1. Chi Phí Nhân Sự (Labor Cost)',
+      passed: hasLabor,
+      points: hasLabor ? 2.0 : 0.0,
+      maxPoints: 2.0,
+      note: hasLabor ? 'Đã liệt kê chi phí cho các thành viên/vai trò dự án.' : 'Thiếu khoản mục Labor Cost (chi phí nhân sự).'
+    });
+
+    // 2. Software & Tooling
+    const hasSoftware = /(software|license|cloud|hosting|aws|azure|bản\s*quyền|công\s*cụ)/i.test(text);
+    criteria.push({
+      name: '2. Chi Phí Phần Mềm / Bản Quyền / Máy Chủ (Software & Tools)',
+      passed: hasSoftware,
+      points: hasSoftware ? 1.5 : 0.0,
+      maxPoints: 1.5,
+      note: hasSoftware ? 'Đã có chi phí bản quyền công cụ, hạ tầng đám mây.' : 'Thiếu chi phí Software, Tooling hoặc Cloud Server.'
+    });
+
+    // 3. Training Cost
+    const hasTraining = /(training|onboarding|đào\s*tạo|hướng\s*dẫn|workshop)/i.test(text);
+    criteria.push({
+      name: '3. Chi Phí Đào Tạo & Chuyển Giao (Training Cost)',
+      passed: hasTraining,
+      points: hasTraining ? 1.5 : 0.0,
+      maxPoints: 1.5,
+      note: hasTraining ? 'Đã dự toán chi phí đào tạo người dùng và tài liệu.' : 'Thiếu khoản mục Training & User Manuals.'
+    });
+
+    // 4. Overhead & Operational Cost
+    const hasOverhead = /(overhead|operational|vận\s*hành|tiện\s*ích|utility|internet)/i.test(text);
+    criteria.push({
+      name: '4. Chi Phí Vận Hành & Tiện Ích (Overhead & Operational)',
+      passed: hasOverhead,
+      points: hasOverhead ? 1.5 : 0.0,
+      maxPoints: 1.5,
+      note: hasOverhead ? 'Đã có chi phí vận hành chung và thiết bị phụ trợ.' : 'Thiếu khoản mục Overhead / Operational Cost.'
+    });
+
+    // 5. Contingency Reserve
+    const hasContingency = /(contingency|dự\s*phòng|reserve|buffer|10%|5%)/i.test(text);
+    criteria.push({
+      name: '5. Quỹ Dự Phòng Rủi Ro (Contingency Reserve 5% - 10%)',
+      passed: hasContingency,
+      points: hasContingency ? 1.5 : 0.0,
+      maxPoints: 1.5,
+      note: hasContingency ? 'Đã trích lập quỹ dự phòng rủi ro ngân sách.' : 'Thiếu khoản mục Contingency Reserve dự phòng rủi ro.'
+    });
+    if (!hasContingency) {
+      fixes.push({
+        title: '⚠️ BẮT BUỘC TRÍCH LẬP QUỸ DỰ PHÒNG (CONTINGENCY RESERVE)',
+        message: 'Trong Quản trị dự án chuẩn PMI, mọi bảng ngân sách bắt buộc phải có Contingency Reserve (thường trích từ 5% đến 10% tổng baseline) để phòng ngừa rủi ro phát sinh kỹ thuật.'
+      });
+    }
+
+    // 6. Estimation Methods Named
+    const hasMethods = /(bottom-up|parametric|analogous|expert\s*judgment|reserve\s*analysis|phương\s*pháp\s*ước\s*lượng)/i.test(text);
+    const methodCount = (text.match(/bottom-up|parametric|analogous|expert\s*judgment|reserve\s*analysis/gi) || []).length;
+    const methodPassed = methodCount >= 3 || hasMethods;
+    criteria.push({
+      name: '6. Nêu Tên Các Phương Pháp Ước Lượng Chi Phí (Estimation Methods)',
+      passed: methodPassed,
+      points: methodCount >= 3 ? 2.0 : (hasMethods ? 1.0 : 0.0),
+      maxPoints: 2.0,
+      note: methodCount >= 3
+        ? 'Rất tốt! Đã gắn rõ tên phương pháp ước lượng chuẩn cho từng khoản chi.'
+        : (hasMethods ? 'Cần nêu rõ tên phương pháp cho từng khoản mục (Bottom-up, Parametric, Analogous, Expert Judgment, Reserve Analysis).' : 'Thiếu tên các phương pháp ước lượng!')
+    });
+    if (methodCount < 3) {
+      fixes.push({
+        title: '⚠️ THIẾU TÊN PHƯƠNG PHÁP ƯỚC LƯỢNG CHI PHÍ CHUẨN',
+        message: 'Đề bài PMG201c luôn yêu cầu "Explain cost estimation methods". Nếu bạn chỉ ghi số tiền mà không gắn tên phương pháp, bạn sẽ bị mất 30-40% số điểm câu này. Hãy gắn chuẩn:\n- Labor Cost: Bottom-up Estimation (Tính số giờ * đơn giá lương/giờ).\n- Software Cost: Parametric Estimation (Đơn giá theo đầu người/tháng * số user).\n- Training Cost: Expert Judgment (Tham vấn chuyên gia giảng dạy).\n- Overhead Cost: Analogous Estimation (Dựa trên lịch sử các dự án cũ).\n- Contingency: Reserve Analysis (Trích 10% tổng ngân sách).'
+      });
+    }
+
+    const totalScore = parseFloat(criteria.reduce((sum, c) => sum + c.points, 0).toFixed(1));
+    const badge = totalScore >= 8.5 ? { text: 'Xuất sắc', class: 'high' } : (totalScore >= 5.0 ? { text: 'Đạt yêu cầu', class: 'medium' } : { text: 'Cần sửa chữa', class: 'low' });
+
+    const sampleFixCode = `REQUEST 2: COST BUDGET & 5 ESTIMATION METHODS
+
+1. Labor Cost (Chi phí nhân sự): $9,500
+   - Description: Salaries for PM ($2,500), BA ($2,000), 2 Developers ($3,500), and QA Tester ($1,500).
+   - Estimation Method: Bottom-up Estimation (Calculated by multiplying estimated task hours by respective hourly wage rates across the WBS).
+
+2. Software & Tooling Cost (Chi phí phần mềm & công cụ): $1,800
+   - Description: AWS Cloud hosting subscriptions ($1,000), Figma design licenses ($300), and automated testing tools ($500).
+   - Estimation Method: Parametric Estimation (Unit license price multiplied by user accounts and duration).
+
+3. Training & Onboarding Cost (Chi phí đào tạo): $1,200
+   - Description: Instructional webinars, user training sessions, and printed operational manuals.
+   - Estimation Method: Expert Judgment (Estimated through consultation with senior academic instructors based on previous LMS rollouts).
+
+4. Operational & Overhead Cost (Chi phí vận hành): $1,000
+   - Description: High-speed internet access, cloud database backup drives, and test mobile devices.
+   - Estimation Method: Analogous Estimation (Derived from actual expense logs of prior university IT system deployments).
+
+5. Contingency Reserve (Quỹ dự phòng rủi ro 10%): $1,500
+   - Description: Dedicated financial safety buffer for unforeseen technical defects and change requests.
+   - Estimation Method: Percentage Reserve Analysis (Allocated as exactly 10% of total baseline project budget).
+
+=> Total Project Budget: $15,000 (VND 375,000,000)`;
+
+    return {
+      reqType: 'req2',
+      title: 'Requirement 2: Cost Budget & Estimation Methods',
+      score: totalScore,
+      maxScore: 10,
+      badgeText: badge.text,
+      badgeClass: badge.class,
+      wordCount: words,
+      criteria,
+      fixes,
+      sampleFixCode
+    };
+  }
+
+  function evaluateReq3WBS(text, lower) {
+    const words = text ? text.split(/\s+/).length : 0;
+    const criteria = [];
+    const fixes = [];
+
+    // 1. Hierarchy decimal
+    const hasHierarchy = /\b\d+\.\d+(\.\d+)?\b/.test(text);
+    criteria.push({
+      name: '1. Cấu Trúc Phân Rã WBS Tối Thiểu 3 Cấp (1., 1.1, 1.1.1)',
+      passed: hasHierarchy,
+      points: hasHierarchy ? 3.0 : 1.0,
+      maxPoints: 3.0,
+      note: hasHierarchy ? 'Đã áp dụng định dạng số phân cấp thập phân chuẩn EOS.' : 'Cần trình bày WBS theo các cấp số: 1. -> 1.1 -> 1.1.1.'
+    });
+
+    // 2. Lifecycle Phases
+    const hasPhases = /(initiation|planning|design|development|testing|deployment|closure|khởi\s*tạo|kế\s*hoạch|thiết\s*kế|lập\s*trình|kiểm\s*thử)/i.test(text);
+    criteria.push({
+      name: '2. Đầy Đủ Các Giai Đoạn Phát Triển (Lifecycle Phases)',
+      passed: hasPhases,
+      points: hasPhases ? 2.5 : 0.5,
+      maxPoints: 2.5,
+      note: hasPhases ? 'Bao quát đủ các giai đoạn từ Initiation, Planning đến Testing và Closure.' : 'Thiếu các giai đoạn phát triển chính.'
+    });
+
+    // 3. RACI Matrix presence
+    const hasRACI = /(raci|ram|matrix|ma\s*trận|responsible|accountable|consulted|informed)/i.test(text);
+    criteria.push({
+      name: '3. Ma Trận Phân Công Trách Nhiệm (RACI Matrix / RAM)',
+      passed: hasRACI,
+      points: hasRACI ? 2.5 : 0.0,
+      maxPoints: 2.5,
+      note: hasRACI ? 'Đã lập ma trận RACI phân công công việc.' : 'Thiếu phần RACI Matrix / RAM.'
+    });
+    if (!hasRACI) {
+      fixes.push({
+        title: '⚠️ THIẾU MA TRẬN PHÂN CÔNG TRÁCH NHIỆM RACI',
+        message: 'Requirement 3 thường yêu cầu WBS kết hợp với RACI Matrix. Hãy liệt kê các công việc và phân định rõ 4 vai trò: R (Responsible), A (Accountable), C (Consulted), I (Informed).'
+      });
+    }
+
+    // 4. Single 'A' rule
+    const hasRolesRule = /only\s*one\s*a|duy\s*nhất\s*1\s*a|sole\s*decision/i.test(text) || (hasRACI && /(pm|ba|dev|qa)/i.test(text));
+    criteria.push({
+      name: '4. Quy Tắc Duy Nhất 1 Chữ "A" (Accountable) Cho Mỗi Hoạt Động',
+      passed: hasRolesRule,
+      points: hasRolesRule ? 2.0 : 0.5,
+      maxPoints: 2.0,
+      note: hasRolesRule ? 'Đã tuân thủ quy tắc quản trị chuẩn: Mỗi công việc chỉ có duy nhất 1 người chịu trách nhiệm tối cao (A).' : 'Cần lưu ý: Mỗi dòng công việc trong RACI CHỈ ĐƯỢC CÓ DUY NHẤT 1 chữ A.'
+    });
+    fixes.push({
+      title: '💡 LƯU Ý KHI LÀM RACI TRÊN EOS',
+      message: 'Trên phần mềm EOS không kẻ được bảng HTML, bạn hãy viết theo định dạng liệt kê từng dòng rất sáng sủa:\n- Activity 1.1 (Develop Charter): PM (A), BA (C), DEV (I), QA (I), SP (R)\n- Activity 1.2 (Collect Requirements): PM (A), BA (R), DEV (C), QA (C)\nĐảm bảo trên mỗi dòng chỉ có DUY NHẤT 1 chữ A!'
+    });
+
+    const totalScore = parseFloat(criteria.reduce((sum, c) => sum + c.points, 0).toFixed(1));
+    const badge = totalScore >= 8.5 ? { text: 'Xuất sắc', class: 'high' } : (totalScore >= 5.0 ? { text: 'Đạt yêu cầu', class: 'medium' } : { text: 'Cần sửa chữa', class: 'low' });
+
+    const sampleFixCode = `REQUEST 3: WORK BREAKDOWN STRUCTURE (WBS) & RACI MATRIX
+
+1. WORK BREAKDOWN STRUCTURE (WBS):
+1. FPT University SLM System
+   1.1 Initiation & Project Governance
+       1.1.1 Conduct Stakeholder Kick-off Meeting
+       1.1.2 Draft & Formalize Project Charter
+       1.1.3 Identify Stakeholders & Build Stakeholder Register
+   1.2 Planning & Requirements Analysis
+       1.2.1 Scope Definition & Requirements Traceability Matrix
+       1.2.2 Work Breakdown Structure (WBS) & Schedule Network
+       1.2.3 Cost Budget & Resource Allocation Matrix
+       1.2.4 Formulate Risk Register & Response Strategy
+   1.3 System & Architectural Design
+       1.3.1 Technical Architecture & Cloud Database Schema
+       1.3.2 UI/UX Wireframing & Responsive Prototypes
+   1.4 Core Development & Implementation
+       1.4.1 Database Migration & RESTful Backend APIs
+       1.4.2 Frontend Web Interface & Portal Views
+       1.4.3 Academic Portal Integration & Authentication
+   1.5 Testing & Quality Assurance
+       1.5.1 Unit Testing & Code Peer Reviews
+       1.5.2 Integration & End-to-End System Testing
+       1.5.3 Security, Vulnerability & Stress Testing
+       1.5.4 User Acceptance Testing (UAT) with Faculty
+   1.6 Deployment & Project Closure
+       1.6.1 Cloud Production Setup & Deployment
+       1.6.2 User Training Workshops & Manuals
+       1.6.3 System Handover & Charter Sign-off
+
+2. RACI RESPONSIBILITY MATRIX:
+Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Testers), SP (Sponsor)
+- Task 1.1.2 (Project Charter): PM (A), BA (C), DEV (I), QA (I), SP (R)
+- Task 1.2.1 (Requirements): PM (A), BA (R), DEV (C), QA (C), SP (C)
+- Task 1.3.1 (Architecture): PM (A), BA (C), DEV (R), QA (I), SP (I)
+- Task 1.4.1 (Backend Coding): PM (A), BA (I), DEV (R), QA (C), SP (I)
+- Task 1.4.2 (Frontend Coding): PM (A), BA (I), DEV (R), QA (C), SP (I)
+- Task 1.5.2 (System Testing): PM (A), BA (I), DEV (C), QA (R), SP (I)
+- Task 1.5.4 (Client UAT): PM (A), BA (C), DEV (I), QA (C), SP (R)
+- Task 1.6.3 (Final Sign-off): PM (R), BA (I), DEV (I), QA (I), SP (A)
+(*Note: Rule strictly enforced - exactly one Accountable 'A' per activity).`;
+
+    return {
+      reqType: 'req3',
+      title: 'Requirement 3: WBS & RACI Matrix',
+      score: totalScore,
+      maxScore: 10,
+      badgeText: badge.text,
+      badgeClass: badge.class,
+      wordCount: words,
+      criteria,
+      fixes,
+      sampleFixCode
+    };
+  }
+
+  function evaluateReq4Risk(text, lower) {
+    const words = text ? text.split(/\s+/).length : 0;
+    const criteria = [];
+    const fixes = [];
+
+    // 1. Identification
+    const hasMultipleRisks = /(risk\s*1|rủi\s*ro\s*1|risk\s*2|rủi\s*ro\s*2)/i.test(text) || (text.match(/risk/gi) || []).length >= 3;
+    criteria.push({
+      name: '1. Nhận Diện Ít Nhất 3-4 Rủi Ro Điển Hình (Risk Identification)',
+      passed: hasMultipleRisks,
+      points: hasMultipleRisks ? 3.0 : 1.0,
+      maxPoints: 3.0,
+      note: hasMultipleRisks ? 'Đã liệt kê nhiều rủi ro đa dạng (Scope, Personnel, Technology, Timeline).' : 'Cần nhận diện tối thiểu 3-4 rủi ro thực tế.'
+    });
+
+    // 2. Probability & Impact
+    const hasPI = /(probability|impact|low|medium|high|xác\s*suất|mức\s*độ|tác\s*động)/i.test(text);
+    criteria.push({
+      name: '2. Đánh Giá Xác Suất & Tác Động (Probability & Impact Assessment)',
+      passed: hasPI,
+      points: hasPI ? 2.0 : 0.0,
+      maxPoints: 2.0,
+      note: hasPI ? 'Đã phân tích mức độ Probability (Low/Medium/High) và Impact.' : 'Thiếu phần đánh giá Probability và Impact cho từng rủi ro.'
+    });
+
+    // 3. Mitigation Plan
+    const hasMitigation = /(mitigation|phòng\s*ngừa|giảm\s*thiểu|prevent|trước\s*khi)/i.test(text);
+    criteria.push({
+      name: '3. Kế Hoạch Phòng Ngừa Trước (Mitigation Plan)',
+      passed: hasMitigation,
+      points: hasMitigation ? 2.5 : 0.5,
+      maxPoints: 2.5,
+      note: hasMitigation ? 'Đã có các biện pháp hành động trước để giảm thiểu rủi ro.' : 'Thiếu Mitigation Plan (Kế hoạch phòng ngừa).'
+    });
+
+    // 4. Contingency Plan
+    const hasContingencyPlan = /(contingency|khắc\s*phục|ứng\s*phó|fallback|khi\s*xảy\s*ra)/i.test(text);
+    criteria.push({
+      name: '4. Kế Hoạch Khắc Phục Khi Rủi Ro Kích Hoạt (Contingency Plan)',
+      passed: hasContingencyPlan,
+      points: hasContingencyPlan ? 2.5 : 0.5,
+      maxPoints: 2.5,
+      note: hasContingencyPlan ? 'Đã có kế hoạch dự phòng Contingency khi rủi ro kích hoạt.' : 'Thiếu Contingency Plan (Kế hoạch khắc phục dự phòng).'
+    });
+
+    if (!hasMitigation || !hasContingencyPlan) {
+      fixes.push({
+        title: '⚠️ PHÂN BIỆT RÕ RÀNG MITIGATION VÀ CONTINGENCY',
+        message: 'Mỗi rủi ro bắt buộc phải có ĐỦ 2 kế hoạch:\n- Mitigation Plan (Hành động phòng chống TRƯỚC): VD: review code hàng ngày, ký cam kết chốt scope, training backup.\n- Contingency Plan (Hành động cứu vãn SAU KHI rủi ro nổ ra): VD: kích hoạt quỹ dự phòng 10%, thuê chuyên gia ngoài cấp tốc, cắt giảm tính năng non-critical.'
+      });
+    }
+
+    const totalScore = parseFloat(criteria.reduce((sum, c) => sum + c.points, 0).toFixed(1));
+    const badge = totalScore >= 8.5 ? { text: 'Xuất sắc', class: 'high' } : (totalScore >= 5.0 ? { text: 'Đạt yêu cầu', class: 'medium' } : { text: 'Cần sửa chữa', class: 'low' });
+
+    const sampleFixCode = `REQUEST 4: RISK MANAGEMENT PLAN & REGISTER
+
+1. Risk 1: Scope Creep (Yêu cầu thay đổi liên tục từ các bên liên quan)
+   - Description: Faculty and academic officers continuously request new report filters after design baseline.
+   - Category / Impact: High (Impacts Schedule and Budget).
+   - Probability: Medium (Likely to occur in academic software).
+   - Strategy: Mitigate
+   - Mitigation Plan (Phòng ngừa trước): Freeze functional requirements at Milestone 2; enforce a formal Change Control Board (CCB) process where any change requires impact analysis and Sponsor sign-off.
+   - Contingency Plan (Khắc phục khi xảy ra): Re-prioritize the backlog, move non-critical features to Version 2.0, or negotiate timeline extension.
+
+2. Risk 2: Key Personnel Turnover (Lập trình viên chủ chốt nghỉ việc)
+   - Description: Lead backend engineer departs unexpectedly mid-development.
+   - Category / Impact: High (Impacts Schedule and Quality).
+   - Probability: Low
+   - Strategy: Mitigate / Transfer
+   - Mitigation Plan (Phòng ngừa trước): Enforce clean architecture, comprehensive API Swagger documentation, peer code reviews, and pair programming to prevent knowledge silos.
+   - Contingency Plan (Khắc phục khi xảy ra): Reassign modules to cross-trained team members or contract a pre-vetted external senior engineer using the Contingency Reserve.
+
+3. Risk 3: Integration Failure with Legacy Academic Portal
+   - Description: The university's central database API experiences slow response or data schema mismatch.
+   - Category / Impact: High (Impacts System functionality).
+   - Probability: Medium
+   - Strategy: Mitigate
+   - Mitigation Plan (Phòng ngừa trước): Build a mock API service in Sprint 1 to test edge cases early; align schemas with the IT Department.
+   - Contingency Plan (Khắc phục khi xảy ra): Implement local caching and asynchronous message queuing (RabbitMQ) so student submissions are stored locally without data loss.`;
+
+    return {
+      reqType: 'req4',
+      title: 'Requirement 4: Risk Management Plan',
+      score: totalScore,
+      maxScore: 10,
+      badgeText: badge.text,
+      badgeClass: badge.class,
+      wordCount: words,
+      criteria,
+      fixes,
+      sampleFixCode
+    };
+  }
+
+  function evaluateReq5CPM(text, lower) {
+    const words = text ? text.split(/\s+/).length : 0;
+    const criteria = [];
+    const fixes = [];
+
+    // 1. Precedence & Duration
+    const hasPrecedence = /(predecessor|duration|relationship|fs|ss|ff|tuần|week|day)/i.test(text);
+    criteria.push({
+      name: '1. Bảng Quan Hệ Công Việc & Thời Gian (Activity Precedence & Duration)',
+      passed: hasPrecedence,
+      points: hasPrecedence ? 2.0 : 0.5,
+      maxPoints: 2.0,
+      note: hasPrecedence ? 'Đã xác định các công việc, Duration và mối quan hệ phụ thuộc (FS, SS).' : 'Thiếu bảng quan hệ công việc và thời lượng.'
+    });
+
+    // 2. Critical Path & Duration
+    const hasCriticalPath = /(critical\s*path|đường\s*găng|minimum\s*duration|thời\s*gian\s*tối\s*thiểu)/i.test(text);
+    criteria.push({
+      name: '2. Liệt Kê Các Đường Mạng & Xác Định Critical Path',
+      passed: hasCriticalPath,
+      points: hasCriticalPath ? 2.5 : 0.5,
+      maxPoints: 2.5,
+      note: hasCriticalPath ? 'Đã liệt kê các đường đi từ Start đến End và tìm ra Critical Path.' : 'Thiếu các đường mạng hoặc chưa chốt Critical Path.'
+    });
+
+    // 3. Float & Flexibility
+    const hasFloat = /(float|slack|es|ef|ls|lf|flexible|linh\s*hoạt)/i.test(text);
+    criteria.push({
+      name: '3. Công Thức Tính Float & Công Việc Linh Hoạt Nhất (Most Flexible Activity)',
+      passed: hasFloat,
+      points: hasFloat ? 2.0 : 0.0,
+      maxPoints: 2.0,
+      note: hasFloat ? 'Đã tính Float = LS - ES và chỉ rõ công việc linh hoạt nhất.' : 'Thiếu công thức tính Float hoặc xác định công việc có Float lớn nhất.'
+    });
+
+    // 4. EVM formulas
+    const hasEVM = /(pv|ev|ac|cv|sv|cpi|spi|bac|earned\s*value)/i.test(text);
+    criteria.push({
+      name: '4. Tính Toán & Đánh Giá EVM (PV, EV, AC, CV, SV, CPI, SPI)',
+      passed: hasEVM,
+      points: hasEVM ? 2.0 : 0.5,
+      maxPoints: 2.0,
+      note: hasEVM ? 'Đã áp dụng đầy đủ các công thức EVM để đánh giá tiến độ và ngân sách.' : 'Thiếu tính toán các chỉ số EVM.'
+    });
+
+    // 5. Crashing & Fast Tracking
+    const hasCorrective = /(crashing|fast\s*tracking|rút\s*ngắn|khắc\s*phục|biện\s*pháp)/i.test(text);
+    criteria.push({
+      name: '5. Đề Xuất Rút Ngắn Tiến Độ Khi SPI < 1 (Crashing & Fast Tracking)',
+      passed: hasCorrective,
+      points: hasCorrective ? 1.5 : 0.0,
+      maxPoints: 1.5,
+      note: hasCorrective ? 'Đã đề xuất 2 kỹ thuật chuẩn PMI: Crashing và Fast Tracking.' : 'Thiếu đề xuất kỹ thuật Crashing và Fast Tracking.'
+    });
+    if (!hasCorrective) {
+      fixes.push({
+        title: '⚠️ BẮT BUỘC KẾT LUẬN BẰNG CRASHING VÀ FAST TRACKING',
+        message: 'Khi phân tích bài toán EVM thấy SPI < 1 (dự án bị chậm tiến độ - Behind Schedule), giám khảo luôn chấm điểm phần đề xuất giải pháp. Bạn bắt buộc phải ghi:\n1. Fast Tracking: Thực hiện song song các công việc vốn được lên kế hoạch làm tuần tự (Tăng rủi ro).\n2. Crashing: Bổ sung thêm nguồn lực hoặc tăng ca vào các công việc trên Đường Găng (Tăng chi phí).'
+      });
+    }
+
+    const totalScore = parseFloat(criteria.reduce((sum, c) => sum + c.points, 0).toFixed(1));
+    const badge = totalScore >= 8.5 ? { text: 'Xuất sắc', class: 'high' } : (totalScore >= 5.0 ? { text: 'Đạt yêu cầu', class: 'medium' } : { text: 'Cần sửa chữa', class: 'low' });
+
+    const sampleFixCode = `REQUEST 5: CRITICAL PATH METHOD (CPM) & EVM CALCULATION
+
+1. NETWORK PATHS & CRITICAL PATH:
+- Path 1: Start -> A -> B -> D -> G -> End = 2 + 3 + 4 + 3 = 12 weeks
+- Path 2: Start -> A -> C -> E -> G -> End = 2 + 4 + 6 + 3 = 15 weeks
+- Path 3: Start -> A -> C -> F -> G -> End = 2 + 4 + 2 + 3 = 11 weeks
+=> Critical Path: Path 2 (Start -> A -> C -> E -> G -> End).
+=> Minimum Project Duration: 15 weeks.
+
+2. ACTIVITY FLOAT & FLEXIBILITY:
+- Float (Slack) = LS - ES = LF - EF
+- Activities on Critical Path (A, C, E, G): Float = 0 (Zero flexibility).
+- Activity B: Duration = 3, ES = 2, EF = 5 | LS = 5, LF = 8 | Float = 8 - 5 = 3 weeks.
+- Activity D: Duration = 4, ES = 5, EF = 9 | LS = 8, LF = 12 | Float = 12 - 9 = 3 weeks.
+- Activity F: Duration = 2, ES = 6, EF = 8 | LS = 10, LF = 12 | Float = 12 - 8 = 4 weeks.
+=> Most Flexible Activity: Activity F (because it possesses the maximum positive Float of 4 weeks).
+
+3. EARNED VALUE MANAGEMENT (EVM) CALCULATION:
+- Given:
+  * BAC (Budget at Completion) = $15,000
+  * Planned % Completion = 60%
+  * Actual % Completion = 45%
+  * Actual Cost (AC) = $8,000
+- Planned Value (PV) = 60% * $15,000 = $9,000
+- Earned Value (EV) = 45% * $15,000 = $6,750
+- Schedule Variance (SV) = EV - PV = $6,750 - $9,000 = -$2,250 (< 0: Behind schedule)
+- Cost Variance (CV) = EV - AC = $6,750 - $8,000 = -$1,250 (< 0: Over budget)
+- Schedule Performance Index (SPI) = EV / PV = $6,750 / $9,000 = 0.75 (< 1: Behind schedule)
+- Cost Performance Index (CPI) = EV / AC = $6,750 / $8,000 = 0.84 (< 1: Over budget)
+
+4. PROJECT STATUS EVALUATION & CORRECTIVE ACTIONS:
+- Evaluation: Since SPI = 0.75 (< 1) and CPI = 0.84 (< 1), the project is currently BEHIND SCHEDULE and OVER BUDGET.
+- Corrective Actions to bring project back on schedule:
+  1. Fast Tracking: Re-sequence sequential tasks to run in parallel (e.g., develop Frontend and Backend simultaneously).
+  2. Crashing: Inject additional resources and overtime onto Critical Path activities (Activities C and E) to compress schedule.`;
+
+    return {
+      reqType: 'req5',
+      title: 'Requirement 5: Critical Path Method & EVM',
+      score: totalScore,
+      maxScore: 10,
+      badgeText: badge.text,
+      badgeClass: badge.class,
+      wordCount: words,
+      criteria,
+      fixes,
+      sampleFixCode
+    };
+  }
+
+  function gradeAllPERequirements(text, lower) {
+    const r1 = evaluateReq1Charter(text, lower);
+    const r2 = evaluateReq2Budget(text, lower);
+    const r3 = evaluateReq3WBS(text, lower);
+    const r4 = evaluateReq4Risk(text, lower);
+    const r5 = evaluateReq5CPM(text, lower);
+
+    const avgScore = parseFloat(((r1.score + r2.score + r3.score + r4.score + r5.score) / 5).toFixed(1));
+    const badge = avgScore >= 8.5 ? { text: 'Xuất sắc', class: 'high' } : (avgScore >= 5.0 ? { text: 'Đạt yêu cầu', class: 'medium' } : { text: 'Cần sửa chữa', class: 'low' });
+
+    const combinedCriteria = [
+      { name: 'Req 1: Project Charter & 4 Constraints', passed: r1.score >= 5.0, points: r1.score, maxPoints: 10, note: r1.badgeText },
+      { name: 'Req 2: Cost Budget & 5 Estimation Methods', passed: r2.score >= 5.0, points: r2.score, maxPoints: 10, note: r2.badgeText },
+      { name: 'Req 3: WBS Hierarchy & RACI Matrix', passed: r3.score >= 5.0, points: r3.score, maxPoints: 10, note: r3.badgeText },
+      { name: 'Req 4: Risk Register & Response Strategy', passed: r4.score >= 5.0, points: r4.score, maxPoints: 10, note: r4.badgeText },
+      { name: 'Req 5: CPM Critical Path & EVM Calculation', passed: r5.score >= 5.0, points: r5.score, maxPoints: 10, note: r5.badgeText }
+    ];
+
+    const combinedFixes = [...r1.fixes, ...r2.fixes, ...r3.fixes, ...r4.fixes, ...r5.fixes];
+    const words = text ? text.split(/\s+/).length : 0;
+
+    return {
+      reqType: 'all',
+      title: 'Tổng Hợp Toàn Bộ Bài Làm PE (5 Requirements)',
+      score: avgScore,
+      maxScore: 10,
+      badgeText: badge.text,
+      badgeClass: badge.class,
+      wordCount: words,
+      criteria: combinedCriteria,
+      fixes: combinedFixes,
+      sampleFixCode: r1.sampleFixCode + '\n\n' + r2.sampleFixCode + '\n\n' + r3.sampleFixCode + '\n\n' + r4.sampleFixCode + '\n\n' + r5.sampleFixCode
+    };
+  }
+
+  // =========================================================================
   // FE TEXT EXAM PARSER
   // =========================================================================
   function parseExamImportText(rawText) {
@@ -679,6 +1557,24 @@
       }
     });
 
+    // Instant feedback toggle
+    if (elements.btnInstantFeedbackToggle) {
+      updateInstantFeedbackToggleUI();
+      elements.btnInstantFeedbackToggle.addEventListener('click', () => {
+        state.feInstantFeedback = !state.feInstantFeedback;
+        localStorage.setItem('pmg_fe_instant_feedback', state.feInstantFeedback);
+        updateInstantFeedbackToggleUI();
+        updateOptionsUI();
+        renderPalette();
+        showToast(
+          state.feInstantFeedback
+            ? '⚡ Đã BẬT chế độ hiện đúng/sai tức thì khi chọn!'
+            : 'Đã TẮT chế độ hiện đúng/sai tức thì',
+          'info'
+        );
+      });
+    }
+
     // Mode Toggle buttons (Single vs Multi)
     elements.btnModeSingle.addEventListener('click', () => setQuestionMode('single'));
     elements.btnModeMulti.addEventListener('click', () => setQuestionMode('multi'));
@@ -737,6 +1633,12 @@
     // View Mode & Text Toggle Handlers
     if (elements.btnViewText) {
       elements.btnViewText.addEventListener('click', () => {
+        const qIndex = state.feQuestionIndex;
+        const qData = typeof getFEQuestionText === 'function' ? getFEQuestionText(state.feExamId, qIndex) : null;
+        if (!qData) {
+          showToast('Đề thi này hiện đang xem bằng ảnh chụp gốc. Bấm [✏️ Sửa text] hoặc [📥 Nạp Text Đề] nếu muốn tạo bản văn bản!', 'warning');
+          return;
+        }
         state.feViewMode = 'text';
         localStorage.setItem('pmg_fe_view_mode', 'text');
         loadCurrentQuestion();
@@ -947,6 +1849,17 @@
     if (!state.feFlags[examId]) state.feFlags[examId] = {};
     if (!state.feNotes[examId]) state.feNotes[examId] = {};
 
+    // Tự động kiểm tra xem đề này có bản Text rõ nét không
+    const hasText = typeof hasFEExamText === 'function' ? hasFEExamText(examId) : (typeof getFEQuestionText === 'function' && getFEQuestionText(examId, 0) !== null);
+    const userPref = localStorage.getItem('pmg_fe_view_mode');
+
+    if (hasText) {
+      state.feViewMode = userPref === 'image' ? 'image' : 'text';
+    } else {
+      // Đề chưa có bản text -> Tự động chuyển sang xem ảnh chụp gốc của chính đề đó để người học thấy ngay câu hỏi chính xác
+      state.feViewMode = 'image';
+    }
+
     loadCurrentQuestion();
     renderPalette();
   }
@@ -968,8 +1881,16 @@
     state.feZoomLevel = 1.0;
     applyFEZoom();
 
+    // Get Text Question Data
+    let qData = null;
+    if (typeof getFEQuestionText === 'function') {
+      qData = getFEQuestionText(state.feExamId, qIndex);
+    }
+
     // Toggle Text vs Image View
-    if (state.feViewMode === 'image') {
+    // Nếu ở chế độ image, hoặc câu hỏi này chưa có text -> Bật chế độ xem ảnh chụp gốc
+    const showImage = (state.feViewMode === 'image') || (!qData);
+    if (showImage) {
       if (elements.feTextContainer) elements.feTextContainer.style.display = 'none';
       if (elements.feImageWrapper) elements.feImageWrapper.style.display = 'flex';
       if (elements.btnViewImage) elements.btnViewImage.classList.add('active');
@@ -979,12 +1900,6 @@
       if (elements.feImageWrapper) elements.feImageWrapper.style.display = 'none';
       if (elements.btnViewText) elements.btnViewText.classList.add('active');
       if (elements.btnViewImage) elements.btnViewImage.classList.remove('active');
-    }
-
-    // Get Text Question Data
-    let qData = null;
-    if (typeof getFEQuestionText === 'function') {
-      qData = getFEQuestionText(state.feExamId, qIndex);
     }
 
     if (qData) {
@@ -1199,10 +2114,28 @@
     updateSubsetCounts();
   }
 
+  function updateInstantFeedbackToggleUI() {
+    if (!elements.btnInstantFeedbackToggle) return;
+    elements.btnInstantFeedbackToggle.classList.toggle('active', !!state.feInstantFeedback);
+    if (elements.instantFeedbackText) {
+      elements.instantFeedbackText.textContent = state.feInstantFeedback
+        ? 'Hiện đúng/sai ngay: BẬT'
+        : 'Hiện đúng/sai ngay: TẮT';
+    }
+  }
+
   function updateOptionsUI() {
     const qIndex = state.feQuestionIndex;
     const mode = state.feQuestionModes[state.feExamId][qIndex] || 'single';
     const chosen = state.feAnswers[state.feExamId][qIndex] || [];
+
+    let qData = null;
+    if (typeof getFEQuestionText === 'function') {
+      qData = getFEQuestionText(state.feExamId, qIndex);
+    }
+    const hasKey = qData && Array.isArray(qData.answer) && qData.answer.length > 0;
+    const correctList = hasKey ? qData.answer : [];
+    const isInstantOn = !!state.feInstantFeedback;
 
     // Sync Circular Buttons below
     elements.feOptionsGrid.querySelectorAll('.opt-btn').forEach(btn => {
@@ -1210,6 +2143,16 @@
       const isSelected = chosen.includes(opt);
       btn.classList.toggle('active', isSelected);
       btn.classList.toggle('multi', isSelected && mode === 'multi');
+
+      // Instant feedback styling for circular buttons
+      btn.classList.remove('instant-correct', 'instant-wrong', 'instant-target');
+      if (isInstantOn && hasKey && chosen.length > 0) {
+        if (isSelected) {
+          btn.classList.add(correctList.includes(opt) ? 'instant-correct' : 'instant-wrong');
+        } else if (correctList.includes(opt)) {
+          btn.classList.add('instant-target');
+        }
+      }
     });
 
     // Sync Text Option Items in the Text Card above
@@ -1219,7 +2162,110 @@
         const isSelected = chosen.includes(opt);
         item.classList.toggle('active', isSelected);
         item.classList.toggle('multi', isSelected && mode === 'multi');
+
+        // Remove old target tags
+        const oldTag = item.querySelector('.instant-target-tag');
+        if (oldTag) oldTag.remove();
+
+        item.classList.remove('instant-correct', 'instant-wrong', 'instant-target');
+        if (isInstantOn && hasKey && chosen.length > 0) {
+          if (isSelected) {
+            item.classList.add(correctList.includes(opt) ? 'instant-correct' : 'instant-wrong');
+          } else if (correctList.includes(opt)) {
+            item.classList.add('instant-target');
+            const targetBadge = document.createElement('span');
+            targetBadge.className = 'instant-target-tag';
+            targetBadge.innerHTML = '✓ Đáp án chuẩn';
+            item.appendChild(targetBadge);
+          }
+        }
       });
+    }
+
+    // Instant Feedback Result Bar & Explanation Auto-Display
+    if (elements.feInstantResultBar) {
+      if (isInstantOn && hasKey && chosen.length > 0) {
+        const sortedChosen = [...chosen].sort().join(', ');
+        const sortedKey = [...correctList].sort().join(', ');
+
+        if (mode === 'single') {
+          const isCorrect = correctList.includes(chosen[0]);
+          if (isCorrect) {
+            elements.feInstantResultBar.className = 'fe-instant-result-bar correct';
+            elements.feInstantResultBar.innerHTML = `
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span>🎉</span>
+                <span><strong>Chính xác!</strong> Bạn đã chọn đúng đáp án <strong>[ ${sortedKey} ]</strong></span>
+              </div>
+              <span style="font-size:0.78rem; font-weight:700; background:rgba(22,163,74,0.15); padding:2px 8px; border-radius:4px;">+1 Điểm</span>
+            `;
+          } else {
+            elements.feInstantResultBar.className = 'fe-instant-result-bar wrong';
+            elements.feInstantResultBar.innerHTML = `
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span>❌</span>
+                <span><strong>Chưa chính xác!</strong> Bạn chọn <strong>[ ${sortedChosen} ]</strong>. Đáp án chuẩn là <strong>[ ${sortedKey} ]</strong></span>
+              </div>
+              <button class="btn btn-outline btn-sm" id="btnTryAgainAns" style="font-size:0.75rem; padding:2px 8px;">Chọn lại</button>
+            `;
+            const btnTryAgain = elements.feInstantResultBar.querySelector('#btnTryAgainAns');
+            if (btnTryAgain) {
+              btnTryAgain.onclick = () => clearCurrentAnswer();
+            }
+          }
+        } else {
+          // Multi choice
+          if (chosen.length >= 2) {
+            const isMatch = sortedChosen === sortedKey;
+            if (isMatch) {
+              elements.feInstantResultBar.className = 'fe-instant-result-bar correct';
+              elements.feInstantResultBar.innerHTML = `
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span>🎉</span>
+                  <span><strong>Xuất sắc!</strong> Bạn đã chọn đúng cả 2 đáp án: <strong>[ ${sortedKey} ]</strong></span>
+                </div>
+                <span style="font-size:0.78rem; font-weight:700; background:rgba(22,163,74,0.15); padding:2px 8px; border-radius:4px;">+1 Điểm</span>
+              `;
+            } else {
+              elements.feInstantResultBar.className = 'fe-instant-result-bar wrong';
+              elements.feInstantResultBar.innerHTML = `
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span>❌</span>
+                  <span><strong>Chưa hoàn toàn chính xác!</strong> Bạn chọn [ ${sortedChosen} ]. Đáp án chuẩn: <strong>[ ${sortedKey} ]</strong></span>
+                </div>
+                <button class="btn btn-outline btn-sm" id="btnTryAgainAns" style="font-size:0.75rem; padding:2px 8px;">Chọn lại</button>
+              `;
+              const btnTryAgain = elements.feInstantResultBar.querySelector('#btnTryAgainAns');
+              if (btnTryAgain) {
+                btnTryAgain.onclick = () => clearCurrentAnswer();
+              }
+            }
+          } else {
+            // 1 option chosen out of 2
+            const isPartiallyCorrect = correctList.includes(chosen[0]);
+            if (isPartiallyCorrect) {
+              elements.feInstantResultBar.className = 'fe-instant-result-bar correct';
+              elements.feInstantResultBar.innerHTML = `
+                <span>✨ <strong>Đúng 1 đáp án!</strong> Phương án <strong>[ ${chosen[0]} ]</strong> là chính xác. Hãy chọn thêm 1 đáp án nữa.</span>
+              `;
+            } else {
+              elements.feInstantResultBar.className = 'fe-instant-result-bar wrong';
+              elements.feInstantResultBar.innerHTML = `
+                <span>❌ Phương án <strong>[ ${chosen[0]} ]</strong> không chính xác. Hãy chọn phương án khác!</span>
+              `;
+            }
+          }
+        }
+
+        elements.feInstantResultBar.style.display = 'flex';
+
+        // Auto display explanation if available
+        if (qData.explanation && elements.feTextExplanationBox) {
+          elements.feTextExplanationBox.style.display = 'block';
+        }
+      } else {
+        elements.feInstantResultBar.style.display = 'none';
+      }
     }
 
     if (chosen.length === 0) {
