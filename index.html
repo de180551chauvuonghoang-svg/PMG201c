@@ -186,9 +186,18 @@ PROJECT CHARTER
       <div class="fe-container">
         <!-- FE Toolbar -->
         <div class="fe-toolbar">
-          <div class="toolbar-group">
+          <div class="toolbar-group" style="flex-wrap:wrap; gap:8px;">
             <label for="feExamSelect" style="font-size:0.8rem; font-weight:600; color:var(--text-muted)">Bộ đề FE:</label>
-            <select id="feExamSelect" class="select-control" style="min-width:320px;"></select>
+            <select id="feExamSelect" class="select-control" style="min-width:260px;"></select>
+
+            <!-- Custom Practice Filter Dropdown -->
+            <label for="fePracticeSubsetSelect" style="font-size:0.8rem; font-weight:600; color:var(--text-muted)">Chế độ ôn:</label>
+            <select id="fePracticeSubsetSelect" class="select-control" style="min-width:210px; font-weight:700; color:var(--primary); background:var(--primary-light);">
+              <option value="all">📚 Toàn bộ câu hỏi (50 câu)</option>
+              <option value="wrong">❌ Chỉ làm các câu SAI (0)</option>
+              <option value="flagged">🚩 Chỉ làm câu ĐÁNH DẤU (0)</option>
+              <option value="wrong_flagged">🎯 Kết hợp: Câu SAI + ĐÁNH DẤU (0)</option>
+            </select>
           </div>
 
           <div class="toolbar-group">
@@ -212,6 +221,24 @@ PROJECT CHARTER
             <button class="btn btn-outline btn-sm" id="feResetExamBtn" title="Làm lại đề này">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
               <span>Làm lại</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Custom Practice Mode Alert Banner -->
+        <div id="feCustomPracticeBanner" class="custom-practice-banner" style="display:none;">
+          <div class="custom-banner-content">
+            <span class="custom-banner-icon" id="feCustomBannerIcon">🎯</span>
+            <div>
+              <strong id="feCustomBannerTitle">Chế độ Luyện tập Tùy chỉnh: Câu Sai</strong>
+              <div id="feCustomBannerSubtitle" style="font-size:0.8rem; opacity:0.9;">
+                Đang tập trung giải quyết các câu làm sai. Bạn có thể chọn lại đáp án và kiểm tra kiến thức!
+              </div>
+            </div>
+          </div>
+          <div class="custom-banner-actions">
+            <button class="btn-outline-white" id="btnExitCustomPractice">
+              ✕ Thoát chế độ tùy chỉnh (Về toàn bộ đề)
             </button>
           </div>
         </div>
@@ -370,7 +397,7 @@ PROJECT CHARTER
               <div style="font-weight:700; font-size:0.95rem;">Bảng Câu Hỏi (50 Câu)</div>
               
               <!-- Stats -->
-              <div class="palette-stats">
+              <div class="palette-stats" style="grid-template-columns: 1fr 1fr; gap:6px 10px;">
                 <div class="stat-item">
                   <span class="dot done"></span>
                   <span id="feCountDone">0</span> Đã làm
@@ -383,14 +410,19 @@ PROJECT CHARTER
                   <span class="dot flag"></span>
                   <span id="feCountFlag">0</span> Đánh dấu
                 </div>
+                <div class="stat-item">
+                  <span class="dot wrong"></span>
+                  <span id="feCountWrong">0</span> Câu sai
+                </div>
               </div>
 
               <!-- Filter Palette -->
-              <div class="palette-filters">
+              <div class="palette-filters" style="display:flex; flex-wrap:wrap; gap:4px;">
                 <button class="filter-btn active" data-filter="all">Tất cả</button>
                 <button class="filter-btn" data-filter="done">Đã làm</button>
                 <button class="filter-btn" data-filter="empty">Chưa làm</button>
-                <button class="filter-btn" data-filter="flag">Đánh dấu</button>
+                <button class="filter-btn" data-filter="flag">🚩 Cờ</button>
+                <button class="filter-btn" data-filter="wrong">❌ Sai</button>
               </div>
             </div>
 

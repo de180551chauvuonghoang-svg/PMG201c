@@ -1399,3 +1399,164 @@ body {
   .fe-layout { flex-direction: column; }
   .fe-sidebar { width: 100%; height: 260px; border-left: none; border-top: 1px solid var(--border-color); }
 }
+
+/* ===================================================
+   Custom Practice Banner & Mistake Review Styles
+   =================================================== */
+.custom-practice-banner {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #f8fafc;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-left: 5px solid var(--danger);
+  box-shadow: var(--shadow-md);
+  animation: slideDownCustom 0.25s ease;
+}
+
+.custom-practice-banner.flagged-mode {
+  border-left-color: var(--warning);
+}
+
+.custom-practice-banner.combined-mode {
+  border-left-color: var(--purple);
+}
+
+.custom-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.custom-banner-icon {
+  font-size: 1.6rem;
+}
+
+.btn-outline-white {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #ffffff;
+}
+
+/* Palette status for Wrong & Correct */
+.palette-btn.wrong {
+  background: #fee2e2 !important;
+  color: #b91c1c !important;
+  border-color: #f87171 !important;
+  font-weight: 800;
+}
+
+[data-theme="dark"] .palette-btn.wrong {
+  background: #7f1d1d !important;
+  color: #fecaca !important;
+  border-color: #ef4444 !important;
+}
+
+.palette-btn.correct {
+  background: #dcfce7 !important;
+  color: #15803d !important;
+  border-color: #86efac !important;
+  font-weight: 800;
+}
+
+[data-theme="dark"] .palette-btn.correct {
+  background: #14532d !important;
+  color: #bbf7d0 !important;
+  border-color: #22c55e !important;
+}
+
+.dot.wrong {
+  background: var(--danger);
+}
+
+.dot.correct {
+  background: var(--success);
+}
+
+/* Result Modal Action Buttons */
+.modal-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.action-card-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-card);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+}
+
+.action-card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.action-card-btn.btn-wrong {
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
+[data-theme="dark"] .action-card-btn.btn-wrong {
+  background: #450a0a;
+  border-color: #dc2626;
+}
+
+.action-card-btn.btn-flagged {
+  border-color: #fde68a;
+  background: #fffbeb;
+}
+[data-theme="dark"] .action-card-btn.btn-flagged {
+  background: #451a03;
+  border-color: #d97706;
+}
+
+.action-card-btn.btn-combined {
+  border-color: #ddd6fe;
+  background: #f5f3ff;
+}
+[data-theme="dark"] .action-card-btn.btn-combined {
+  background: #2e1065;
+  border-color: #7c3aed;
+}
+
+.action-card-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.action-card-sub {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+@keyframes slideDownCustom {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

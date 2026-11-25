@@ -31,6 +31,8 @@
     feViewMode: localStorage.getItem('pmg_fe_view_mode') || 'text', // 'text' (default crisp text) or 'image'
     feMode: 'practice', // 'practice' or 'exam'
     feFilter: 'all',
+    fePracticeSubset: 'all', // 'all', 'wrong', 'flagged', 'wrong_flagged'
+    feExamResults: {},       // { [examId]: { [qIndex]: 'correct' | 'wrong' | 'unanswered' } }
     feAnswers: {},      // { [examId]: { [qIndex]: ['A'] or ['A', 'C'] } }
     feQuestionModes: {},// { [examId]: { [qIndex]: 'single' | 'multi' } }
     feFlags: {},        // { [examId]: { [qIndex]: boolean } }
@@ -55,6 +57,9 @@
 
     const savedNotes = localStorage.getItem('pmg_fe_notes');
     if (savedNotes) state.feNotes = JSON.parse(savedNotes);
+
+    const savedResults = localStorage.getItem('pmg_fe_results');
+    if (savedResults) state.feExamResults = JSON.parse(savedResults);
   } catch (e) {
     console.error('Error loading FE state from localStorage:', e);
   }
@@ -101,6 +106,12 @@
 
     // FE Elements
     feExamSelect: document.getElementById('feExamSelect'),
+    fePracticeSubsetSelect: document.getElementById('fePracticeSubsetSelect'),
+    feCustomPracticeBanner: document.getElementById('feCustomPracticeBanner'),
+    feCustomBannerIcon: document.getElementById('feCustomBannerIcon'),
+    feCustomBannerTitle: document.getElementById('feCustomBannerTitle'),
+    feCustomBannerSubtitle: document.getElementById('feCustomBannerSubtitle'),
+    btnExitCustomPractice: document.getElementById('btnExitCustomPractice'),
     feModeSelect: document.getElementById('feModeSelect'),
     feTimerBadge: document.getElementById('feTimerBadge'),
     feTimerDisplay: document.getElementById('feTimerDisplay'),
@@ -146,6 +157,7 @@
     feCountDone: document.getElementById('feCountDone'),
     feCountEmpty: document.getElementById('feCountEmpty'),
     feCountFlag: document.getElementById('feCountFlag'),
+    feCountWrong: document.getElementById('feCountWrong'),
     fePaletteGrid: document.getElementById('fePaletteGrid'),
     feSubmitBtnSidebar: document.getElementById('feSubmitBtnSidebar'),
     paletteFilters: document.querySelectorAll('.palette-filters .filter-btn'),
@@ -634,8 +646,24 @@
     ).join('');
 
     elements.feExamSelect.addEventListener('change', () => {
+      state.fePracticeSubset = 'all';
+      if (elements.fePracticeSubsetSelect) elements.fePracticeSubsetSelect.value = 'all';
       loadFEExam(elements.feExamSelect.value);
     });
+
+    // Custom Practice Subset (Wrong / Flagged / All)
+    if (elements.fePracticeSubsetSelect) {
+      elements.fePracticeSubsetSelect.addEventListener('change', () => {
+        setPracticeSubset(elements.fePracticeSubsetSelect.value, false);
+      });
+    }
+
+    if (elements.btnExitCustomPractice) {
+      elements.btnExitCustomPractice.addEventListener('click', () => {
+        setPracticeSubset('all', false);
+        showToast('Đã quay lại hiển thị toàn bộ 50 câu', 'info');
+      });
+    }
 
     // FE Mode change
     elements.feModeSelect.addEventListener('change', () => {
@@ -1053,11 +1081,44 @@
     // Update notes
     elements.feNotesInput.value = state.feNotes[state.feExamId][qIndex] || '';
 
+    // Handle Custom Practice Banner
+    const activeIndices = getActiveQuestionIndices();
+    if (state.fePracticeSubset !== 'all' && elements.feCustomPracticeBanner) {
+      elements.feCustomPracticeBanner.style.display = 'flex';
+      elements.feCustomPracticeBanner.className = 'custom-practice-banner';
+
+      const curPos = activeIndices.indexOf(qIndex) + 1;
+      const count = activeIndices.length;
+
+      if (state.fePracticeSubset === 'wrong') {
+        elements.feCustomBannerIcon.textContent = '❌';
+        elements.feCustomBannerTitle.textContent = `Chế độ Ôn Luyện: ${count} Câu Làm Sai`;
+        elements.feCustomBannerSubtitle.textContent = `Đang ở câu ${qIndex + 1} (${curPos}/${count} câu sai). Hãy suy nghĩ và chọn lại đáp án đúng!`;
+      } else if (state.fePracticeSubset === 'flagged') {
+        elements.feCustomPracticeBanner.classList.add('flagged-mode');
+        elements.feCustomBannerIcon.textContent = '🚩';
+        elements.feCustomBannerTitle.textContent = `Chế độ Ôn Luyện: ${count} Câu Đánh Dấu`;
+        elements.feCustomBannerSubtitle.textContent = `Đang ở câu ${qIndex + 1} (${curPos}/${count} câu cờ). Xem lại các câu bạn từng phân vân!`;
+      } else {
+        elements.feCustomPracticeBanner.classList.add('combined-mode');
+        elements.feCustomBannerIcon.textContent = '🎯';
+        elements.feCustomBannerTitle.textContent = `Bộ Đề Ôn Trọng Tâm: ${count} Câu Sai & Đánh Dấu`;
+        elements.feCustomBannerSubtitle.textContent = `Đang ở câu ${qIndex + 1} (${curPos}/${count} câu ôn luyện).`;
+      }
+
+      elements.feQuestionNumber.textContent = `${qIndex + 1} [${curPos}/${count}]`;
+    } else {
+      if (elements.feCustomPracticeBanner) elements.feCustomPracticeBanner.style.display = 'none';
+      elements.feQuestionNumber.textContent = qIndex + 1;
+    }
+
     // Update navigation buttons
-    elements.fePrevBtn.disabled = qIndex === 0;
-    elements.feNextBtn.disabled = qIndex === totalQ - 1;
+    const activePos = activeIndices.indexOf(qIndex);
+    elements.fePrevBtn.disabled = activePos <= 0;
+    elements.feNextBtn.disabled = activePos >= activeIndices.length - 1 || activePos === -1;
 
     renderPalette();
+    updateSubsetCounts();
   }
 
   function setQuestionMode(mode) {
@@ -1118,9 +1179,24 @@
     }
 
     state.feAnswers[state.feExamId][qIndex] = current;
+
+    // Auto evaluate if question has key answers
+    if (!state.feExamResults[state.feExamId]) state.feExamResults[state.feExamId] = {};
+    const wasWrong = state.feExamResults[state.feExamId][qIndex] === 'wrong';
+    const evalRes = evaluateQuestion(state.feExamId, qIndex);
+    if (evalRes) {
+      state.feExamResults[state.feExamId][qIndex] = evalRes;
+      if (wasWrong && evalRes === 'correct') {
+        showToast(`🎉 Rất tốt! Bạn đã sửa đúng câu ${qIndex + 1}!`, 'success', 2500);
+      }
+    } else if (current.length === 0) {
+      delete state.feExamResults[state.feExamId][qIndex];
+    }
+
     saveFEPersistence();
     updateOptionsUI();
     renderPalette();
+    updateSubsetCounts();
   }
 
   function updateOptionsUI() {
@@ -1184,12 +1260,133 @@
     saveFEPersistence();
   }
 
+  // =========================================================================
+  // EVALUATION & CUSTOM PRACTICE SUBSET (WRONG / FLAGGED)
+  // =========================================================================
+  function evaluateQuestion(examId, qIndex) {
+    if (typeof getFEQuestionText !== 'function') return null;
+    const qData = getFEQuestionText(examId, qIndex);
+    if (!qData || !qData.answer || !Array.isArray(qData.answer) || qData.answer.length === 0) {
+      return null;
+    }
+
+    const userAns = state.feAnswers[examId]?.[qIndex] || [];
+    if (userAns.length === 0) return 'unanswered';
+
+    const normalizedUser = [...userAns].sort().join(',');
+    const normalizedCorrect = [...qData.answer].sort().join(',');
+
+    return normalizedUser === normalizedCorrect ? 'correct' : 'wrong';
+  }
+
+  function getActiveQuestionIndices() {
+    const exam = APP_DATA.feExams.find(e => e.id === state.feExamId);
+    if (!exam) return [];
+    const total = exam.questions.length;
+    const all = Array.from({ length: total }, (_, i) => i);
+
+    if (state.fePracticeSubset === 'wrong') {
+      const wrong = all.filter(i => state.feExamResults[state.feExamId]?.[i] === 'wrong');
+      return wrong.length > 0 ? wrong : all;
+    }
+    if (state.fePracticeSubset === 'flagged') {
+      const flagged = all.filter(i => !!state.feFlags[state.feExamId]?.[i]);
+      return flagged.length > 0 ? flagged : all;
+    }
+    if (state.fePracticeSubset === 'wrong_flagged') {
+      const combined = all.filter(i => state.feExamResults[state.feExamId]?.[i] === 'wrong' || !!state.feFlags[state.feExamId]?.[i]);
+      return combined.length > 0 ? combined : all;
+    }
+
+    return all;
+  }
+
+  function updateSubsetCounts() {
+    const exam = APP_DATA.feExams.find(e => e.id === state.feExamId);
+    if (!exam) return;
+    const total = exam.questions.length;
+    const results = state.feExamResults[state.feExamId] || {};
+    const flags = state.feFlags[state.feExamId] || {};
+
+    let wrongCount = 0;
+    let flagCount = 0;
+    let combinedCount = 0;
+
+    for (let i = 0; i < total; i++) {
+      const isWrong = results[i] === 'wrong';
+      const isFlag = !!flags[i];
+      if (isWrong) wrongCount++;
+      if (isFlag) flagCount++;
+      if (isWrong || isFlag) combinedCount++;
+    }
+
+    if (elements.fePracticeSubsetSelect) {
+      const opts = elements.fePracticeSubsetSelect.options;
+      if (opts[0]) opts[0].textContent = `📚 Toàn bộ câu hỏi (${total} câu)`;
+      if (opts[1]) opts[1].textContent = `❌ Chỉ làm các câu SAI (${wrongCount})`;
+      if (opts[2]) opts[2].textContent = `🚩 Chỉ làm câu ĐÁNH DẤU (${flagCount})`;
+      if (opts[3]) opts[3].textContent = `🎯 Kết hợp: Câu SAI + ĐÁNH DẤU (${combinedCount})`;
+    }
+
+    if (elements.feCountWrong) {
+      elements.feCountWrong.textContent = wrongCount;
+    }
+  }
+
+  function setPracticeSubset(subset, resetAnswersForTarget = false) {
+    const exam = APP_DATA.feExams.find(e => e.id === state.feExamId);
+    if (!exam) return;
+
+    state.fePracticeSubset = subset;
+    if (elements.fePracticeSubsetSelect) {
+      elements.fePracticeSubsetSelect.value = subset;
+    }
+
+    const active = getActiveQuestionIndices();
+    if (subset !== 'all' && active.length === 0) {
+      showToast('Hiện chưa có câu nào trong nhóm này!', 'info');
+      state.fePracticeSubset = 'all';
+      if (elements.fePracticeSubsetSelect) elements.fePracticeSubsetSelect.value = 'all';
+      loadCurrentQuestion();
+      renderPalette();
+      return;
+    }
+
+    // Optional: Reset answers for wrong questions so user can re-attempt cleanly
+    if (resetAnswersForTarget && subset === 'wrong') {
+      active.forEach(idx => {
+        delete state.feAnswers[state.feExamId][idx];
+      });
+      saveFEPersistence();
+      showToast(`Đã làm mới ${active.length} câu sai để bạn tự chọn lại từ đầu!`, 'info');
+    }
+
+    // Switch to first item in active subset if current is not in it
+    if (subset !== 'all' && !active.includes(state.feQuestionIndex)) {
+      state.feQuestionIndex = active[0];
+    }
+
+    loadCurrentQuestion();
+    renderPalette();
+    updateSubsetCounts();
+  }
+
   function changeFEQuestion(delta) {
     const exam = APP_DATA.feExams.find(e => e.id === state.feExamId);
     if (!exam) return;
-    const next = state.feQuestionIndex + delta;
-    if (next >= 0 && next < exam.questions.length) {
-      state.feQuestionIndex = next;
+
+    const active = getActiveQuestionIndices();
+    if (active.length === 0) return;
+
+    let currPos = active.indexOf(state.feQuestionIndex);
+    if (currPos === -1) {
+      currPos = 0;
+    } else {
+      currPos += delta;
+    }
+
+    if (currPos >= 0 && currPos < active.length) {
+      state.feQuestionIndex = active[currPos];
       loadCurrentQuestion();
     }
   }
@@ -1220,22 +1417,30 @@
     elements.fePaletteGrid.innerHTML = '';
     const answers = state.feAnswers[state.feExamId] || {};
     const flags = state.feFlags[state.feExamId] || {};
+    const results = state.feExamResults[state.feExamId] || {};
+    const activeIndices = getActiveQuestionIndices();
 
     let doneCount = 0;
     let flagCount = 0;
+    let wrongCount = 0;
 
     exam.questions.forEach((_, idx) => {
       const isAnswered = answers[idx] && answers[idx].length > 0;
       const isFlagged = !!flags[idx];
       const isCurrent = idx === state.feQuestionIndex;
+      const qResult = results[idx]; // 'correct' | 'wrong' | 'unanswered'
+      const isWrong = qResult === 'wrong';
+      const isCorrect = qResult === 'correct';
 
       if (isAnswered) doneCount++;
       if (isFlagged) flagCount++;
+      if (isWrong) wrongCount++;
 
       // Filter check
       if (state.feFilter === 'done' && !isAnswered) return;
       if (state.feFilter === 'empty' && isAnswered) return;
       if (state.feFilter === 'flag' && !isFlagged) return;
+      if (state.feFilter === 'wrong' && !isWrong) return;
 
       const btn = document.createElement('button');
       btn.className = 'palette-btn';
@@ -1243,6 +1448,15 @@
       if (isCurrent) btn.classList.add('current');
       if (isAnswered) btn.classList.add('answered');
       if (isFlagged) btn.classList.add('flagged');
+      if (isWrong) btn.classList.add('wrong');
+      if (isCorrect) btn.classList.add('correct');
+
+      // If active custom practice subset is on, highlight/fade items
+      if (state.fePracticeSubset !== 'all' && !activeIndices.includes(idx)) {
+        btn.style.opacity = '0.35';
+      } else {
+        btn.style.opacity = '1';
+      }
 
       btn.addEventListener('click', () => {
         state.feQuestionIndex = idx;
@@ -1255,6 +1469,9 @@
     elements.feCountDone.textContent = doneCount;
     elements.feCountEmpty.textContent = exam.questions.length - doneCount;
     elements.feCountFlag.textContent = flagCount;
+    if (elements.feCountWrong) {
+      elements.feCountWrong.textContent = wrongCount;
+    }
   }
 
   function saveFEPersistence() {
@@ -1263,6 +1480,7 @@
       localStorage.setItem('pmg_fe_modes', JSON.stringify(state.feQuestionModes));
       localStorage.setItem('pmg_fe_flags', JSON.stringify(state.feFlags));
       localStorage.setItem('pmg_fe_notes', JSON.stringify(state.feNotes));
+      localStorage.setItem('pmg_fe_results', JSON.stringify(state.feExamResults));
     } catch (e) {
       console.warn('LocalStorage save failed:', e);
     }
@@ -1319,67 +1537,184 @@
     const answers = state.feAnswers[state.feExamId] || {};
     const flags = state.feFlags[state.feExamId] || {};
     const total = exam.questions.length;
+
     let done = 0;
     let multiCount = 0;
+    let correctCount = 0;
+    let wrongCount = 0;
+    let flaggedCount = 0;
+
+    if (!state.feExamResults[state.feExamId]) state.feExamResults[state.feExamId] = {};
 
     const answerLines = [];
 
     for (let i = 0; i < total; i++) {
       const ans = answers[i] || [];
       const mode = state.feQuestionModes[state.feExamId]?.[i] || (ans.length > 1 ? 'multi' : 'single');
+      const isFlag = !!flags[i];
+      if (isFlag) flaggedCount++;
+
+      let correctKey = null;
+      if (typeof getFEQuestionText === 'function') {
+        const qData = getFEQuestionText(state.feExamId, i);
+        if (qData && qData.answer) correctKey = qData.answer;
+      }
+
+      let evalStatus = 'unanswered';
       if (ans.length > 0) {
         done++;
         if (ans.length > 1) multiCount++;
+
+        if (correctKey && correctKey.length > 0) {
+          const userStr = [...ans].sort().join(',');
+          const keyStr = [...correctKey].sort().join(',');
+          if (userStr === keyStr) {
+            evalStatus = 'correct';
+            correctCount++;
+          } else {
+            evalStatus = 'wrong';
+            wrongCount++;
+          }
+        } else {
+          evalStatus = 'answered';
+        }
+      } else {
+        if (correctKey && correctKey.length > 0) {
+          evalStatus = 'wrong'; // Chưa làm cũng tính là sai khi nộp bài
+          wrongCount++;
+        }
       }
+
+      state.feExamResults[state.feExamId][i] = evalStatus;
+
       const ansStr = ans.length > 0 ? ans.sort().join(', ') : 'Chưa chọn';
-      const flagStr = flags[i] ? '🚩' : '';
+      const keyStr = correctKey && correctKey.length > 0 ? correctKey.sort().join(', ') : 'Đang cập nhật';
+      const flagStr = isFlag ? '🚩' : '';
       const modeStr = mode === 'multi' ? '(Chọn 2)' : '(Chọn 1)';
+
       answerLines.push({
         num: i + 1,
         mode: modeStr,
         answer: ansStr,
+        key: keyStr,
+        status: evalStatus,
         flag: flagStr
       });
     }
 
+    saveFEPersistence();
+    renderPalette();
+    updateSubsetCounts();
+
+    const score = ((correctCount / total) * 10).toFixed(1);
+    const isPass = parseFloat(score) >= 5.0;
+    const combinedCount = answerLines.filter(l => l.status === 'wrong' || l.flag === '🚩').length;
+
     // Build modal content
     let html = `
-      <div style="background:var(--primary-light); padding:16px; border-radius:var(--radius-md); margin-bottom:20px; display:flex; justify-content:space-around; text-align:center;">
+      <div style="background:var(--bg-main); border:1.5px solid var(--border-color); padding:18px 20px; border-radius:var(--radius-md); margin-bottom:18px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
         <div>
-          <div style="font-size:1.4rem; font-weight:800; color:var(--primary);">${done}/${total}</div>
-          <div style="font-size:0.8rem; color:var(--text-muted)">Câu đã hoàn thành</div>
+          <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600; text-transform:uppercase;">Kết Quả Đánh Giá</div>
+          <div style="display:flex; align-items:baseline; gap:10px; margin-top:4px;">
+            <span style="font-size:2.2rem; font-weight:800; color:${isPass ? 'var(--success)' : 'var(--danger)'};">${score}</span>
+            <span style="font-size:1.1rem; color:var(--text-muted); font-weight:600;">/ 10 Điểm</span>
+            <span style="padding:4px 10px; border-radius:var(--radius-full); font-size:0.8rem; font-weight:800; background:${isPass ? '#dcfce7; color:#15803d;' : '#fee2e2; color:#b91c1c;'}">
+              ${isPass ? '✓ ĐẠT (PASS)' : '✕ CHƯA ĐẠT (CẦN ÔN LẠI)'}
+            </span>
+          </div>
         </div>
-        <div>
-          <div style="font-size:1.4rem; font-weight:800; color:var(--purple);">${multiCount}</div>
-          <div style="font-size:0.8rem; color:var(--text-muted)">Câu chọn 2 đáp án</div>
-        </div>
-        <div>
-          <div style="font-size:1.4rem; font-weight:800; color:var(--warning);">${Object.keys(flags).filter(k => flags[k]).length}</div>
-          <div style="font-size:0.8rem; color:var(--text-muted)">Câu gắn cờ xem lại</div>
+
+        <div style="display:flex; gap:16px; text-align:center;">
+          <div>
+            <div style="font-size:1.3rem; font-weight:800; color:var(--success);">${correctCount}</div>
+            <div style="font-size:0.75rem; color:var(--text-muted)">Câu đúng</div>
+          </div>
+          <div>
+            <div style="font-size:1.3rem; font-weight:800; color:var(--danger);">${wrongCount}</div>
+            <div style="font-size:0.75rem; color:var(--text-muted)">Câu sai</div>
+          </div>
+          <div>
+            <div style="font-size:1.3rem; font-weight:800; color:var(--warning);">${flaggedCount}</div>
+            <div style="font-size:0.75rem; color:var(--text-muted)">Đánh dấu</div>
+          </div>
+          <div>
+            <div style="font-size:1.3rem; font-weight:800; color:var(--primary);">${done}/${total}</div>
+            <div style="font-size:0.75rem; color:var(--text-muted)">Hoàn thành</div>
+          </div>
         </div>
       </div>
-      <h4 style="margin-bottom:10px;">Bảng Chi Tiết Đáp Án Bạn Đã Chọn:</h4>
-      <div style="max-height:300px; overflow-y:auto; border:1px solid var(--border-color); border-radius:var(--radius-sm);">
-        <table style="width:100%; border-collapse:collapse; font-size:0.85rem;">
+
+      <!-- Quick Action Cards to Practice Wrong / Flagged Questions -->
+      <div style="margin-bottom:16px;">
+        <div style="font-weight:700; font-size:0.88rem; margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+          <span>🎯 Chế Độ Ôn Luyện Trọng Tâm Dành Cho Bạn:</span>
+        </div>
+        <div class="modal-actions-grid">
+          ${wrongCount > 0 ? `
+            <div class="action-card-btn btn-wrong" id="btnActionPracticeWrong" title="Bấm để làm lại toàn bộ các câu sai">
+              <div class="action-card-title" style="color:var(--danger);">
+                <span>❌ Làm Lại ${wrongCount} Câu SAI</span>
+              </div>
+              <div class="action-card-sub">Làm mới đáp án các câu sai để bạn tự suy nghĩ & chọn lại từ đầu</div>
+            </div>
+          ` : ''}
+
+          ${flaggedCount > 0 ? `
+            <div class="action-card-btn btn-flagged" id="btnActionPracticeFlagged" title="Bấm để xem lại các câu đã đánh dấu">
+              <div class="action-card-title" style="color:#b45309;">
+                <span>🚩 Ôn Tập ${flaggedCount} Câu ĐÁNH DẤU</span>
+              </div>
+              <div class="action-card-sub">Kiểm tra lại các câu bạn từng phân vân khi làm bài</div>
+            </div>
+          ` : ''}
+
+          ${(wrongCount > 0 || flaggedCount > 0) ? `
+            <div class="action-card-btn btn-combined" id="btnActionPracticeCombined" title="Bấm để ôn tập cả câu sai và câu đánh dấu">
+              <div class="action-card-title" style="color:var(--purple);">
+                <span>🎯 Bộ Câu Yếu (${combinedCount} câu)</span>
+              </div>
+              <div class="action-card-sub">Kết hợp toàn bộ câu sai & câu gắn cờ thành 1 phiên ôn tập</div>
+            </div>
+          ` : ''}
+        </div>
+      </div>
+
+      <h4 style="margin-bottom:10px; font-size:0.9rem;">Bảng Chi Tiết Kết Quả Từng Câu:</h4>
+      <div style="max-height:260px; overflow-y:auto; border:1px solid var(--border-color); border-radius:var(--radius-sm);">
+        <table style="width:100%; border-collapse:collapse; font-size:0.83rem;">
           <thead>
             <tr style="background:var(--bg-main); text-align:left; border-bottom:1px solid var(--border-color);">
-              <th style="padding:8px 12px;">Câu</th>
-              <th style="padding:8px 12px;">Loại câu</th>
-              <th style="padding:8px 12px;">Đáp án đã chọn</th>
-              <th style="padding:8px 12px;">Đánh dấu</th>
+              <th style="padding:8px 10px;">Câu</th>
+              <th style="padding:8px 10px;">Loại câu</th>
+              <th style="padding:8px 10px;">Đáp án bạn chọn</th>
+              <th style="padding:8px 10px;">Đáp án chuẩn</th>
+              <th style="padding:8px 10px;">Đánh giá</th>
+              <th style="padding:8px 10px;">Cờ</th>
             </tr>
           </thead>
           <tbody>
     `;
 
     answerLines.forEach(line => {
+      const isCorrect = line.status === 'correct';
+      const isWrong = line.status === 'wrong';
       const isUnanswered = line.answer === 'Chưa chọn';
+
+      let statusBadge = '<span style="color:var(--text-muted)">-</span>';
+      if (isCorrect) {
+        statusBadge = '<span style="color:var(--success); font-weight:700;">✓ Đúng</span>';
+      } else if (isWrong) {
+        statusBadge = '<span style="color:var(--danger); font-weight:700;">✕ Sai</span>';
+      }
+
       html += `
-        <tr style="border-bottom:1px solid var(--border-color); ${isUnanswered ? 'color:var(--text-muted); background:rgba(0,0,0,0.01);' : 'font-weight:600;'}">
-          <td style="padding:8px 12px;">Câu ${line.num}</td>
-          <td style="padding:8px 12px;"><span style="font-size:0.75rem; color:var(--text-muted);">${line.mode}</span></td>
-          <td style="padding:8px 12px; color:${isUnanswered ? 'var(--danger)' : 'var(--primary)'};">${line.answer}</td>
-          <td style="padding:8px 12px;">${line.flag}</td>
+        <tr style="border-bottom:1px solid var(--border-color); ${isWrong ? 'background:rgba(239,68,68,0.05);' : ''}">
+          <td style="padding:8px 10px; font-weight:700;">Câu ${line.num}</td>
+          <td style="padding:8px 10px;"><span style="font-size:0.75rem; color:var(--text-muted);">${line.mode}</span></td>
+          <td style="padding:8px 10px; font-weight:600; color:${isCorrect ? 'var(--success)' : (isWrong ? 'var(--danger)' : 'var(--text-muted)')};">${line.answer}</td>
+          <td style="padding:8px 10px; font-weight:700; color:var(--primary);">${line.key}</td>
+          <td style="padding:8px 10px;">${statusBadge}</td>
+          <td style="padding:8px 10px;">${line.flag}</td>
         </tr>
       `;
     });
@@ -1393,15 +1728,41 @@
     elements.submitModalBody.innerHTML = html;
     elements.submitModal.classList.add('active');
 
+    // Attach Action Card Click Events
+    const btnWrong = document.getElementById('btnActionPracticeWrong');
+    if (btnWrong) {
+      btnWrong.addEventListener('click', () => {
+        elements.submitModal.classList.remove('active');
+        setPracticeSubset('wrong', true);
+      });
+    }
+
+    const btnFlagged = document.getElementById('btnActionPracticeFlagged');
+    if (btnFlagged) {
+      btnFlagged.addEventListener('click', () => {
+        elements.submitModal.classList.remove('active');
+        setPracticeSubset('flagged', false);
+      });
+    }
+
+    const btnCombined = document.getElementById('btnActionPracticeCombined');
+    if (btnCombined) {
+      btnCombined.addEventListener('click', () => {
+        elements.submitModal.classList.remove('active');
+        setPracticeSubset('wrong_flagged', false);
+      });
+    }
+
     // Export handler
     elements.exportResultsBtn.onclick = () => {
       let exportText = `BẢNG KẾT QUẢ BÀI THI PMG201c FE\n`;
       exportText += `Bộ đề: ${exam.title}\n`;
       exportText += `Thời gian xuất: ${new Date().toLocaleString()}\n`;
-      exportText += `Tiến độ: ${done}/${total} câu\n`;
-      exportText += `----------------------------------------\n`;
+      exportText += `Điểm số: ${score}/10 (${isPass ? 'ĐẠT' : 'CHƯA ĐẠT'})\n`;
+      exportText += `Thống kê: ${correctCount} Đúng | ${wrongCount} Sai | ${flaggedCount} Đánh dấu | ${done}/${total} Hoàn thành\n`;
+      exportText += `--------------------------------------------------------\n`;
       answerLines.forEach(l => {
-        exportText += `Câu ${String(l.num).padStart(2, '0')}: ${l.answer} ${l.mode} ${l.flag ? '[FLAG]' : ''}\n`;
+        exportText += `Câu ${String(l.num).padStart(2, '0')}: Đã chọn [ ${l.answer} ] | Chuẩn [ ${l.key} ] | ${l.status.toUpperCase()} ${l.flag ? '[FLAG]' : ''}\n`;
       });
       downloadTextFile(`${exam.id}_KetQua.txt`, exportText);
       showToast('Đã xuất file kết quả bài thi!', 'success');
