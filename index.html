@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PMG201c Exam Practice Hub - Luyện Thi PE & FE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="app-header">
+    <div class="brand" id="brandBtn">
+      <div class="brand-logo">PM</div>
+      <div class="brand-info">
+        <h1>PMG201c Hub <span class="brand-badge">EOS Standard</span></h1>
+        <div class="brand-sub">Quản Trị Dự Án • Ôn Thi PE (Tự Luận) & FE (Trắc Nghiệm)</div>
+      </div>
+    </div>
+
+    <!-- Mode Switcher Tabs -->
+    <nav class="nav-tabs">
+      <button class="nav-btn active" data-view="peView">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <span>Luyện Thi PE (Tự Luận)</span>
+      </button>
+      <button class="nav-btn" data-view="feView">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <span>Luyện Thi FE (Trắc Nghiệm)</span>
+      </button>
+      <button class="nav-btn" data-view="guideView">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>Cẩm Nang & Mẫu Trả Lời</span>
+      </button>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <!-- Dark/Light Theme Toggle -->
+      <button class="icon-btn" id="themeToggle" title="Chuyển chế độ Sáng / Tối">
+        <svg id="themeIconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg id="themeIconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+      <!-- Quick Cheatsheet Modal Button -->
+      <button class="btn btn-outline btn-sm" id="btnQuickFormula" title="Tra cứu nhanh công thức EVM & CPM">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <span>Tra cứu EVM</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== BODY WRAPPER ==================== -->
+  <main class="app-body">
+
+    <!-- ===================================================
+         VIEW 1: PE VIEW (TỰ LUẬN)
+         =================================================== -->
+    <section class="view-panel active" id="peView">
+      <div class="pe-container">
+        <!-- PE Toolbar -->
+        <div class="pe-toolbar">
+          <div class="toolbar-group">
+            <label for="peSemesterSelect" style="font-size:0.8rem; font-weight:600; color:var(--text-muted)">Học kỳ:</label>
+            <select id="peSemesterSelect" class="select-control"></select>
+
+            <label for="peExamSelect" style="font-size:0.8rem; font-weight:600; color:var(--text-muted)">Đề thi:</label>
+            <select id="peExamSelect" class="select-control" style="min-width:220px;"></select>
+          </div>
+
+          <!-- Timer & Actions -->
+          <div class="toolbar-group">
+            <!-- Timer Component -->
+            <div class="timer-badge" id="peTimerBadge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span id="peTimerDisplay">00:00:00</span>
+            </div>
+            <button class="btn btn-outline btn-sm" id="peTimerToggleBtn" title="Bắt đầu / Tạm dừng">
+              <svg id="peTimerPlayIcon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg id="peTimerPauseIcon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <button class="btn btn-outline btn-sm" id="peTimerResetBtn" title="Đặt lại thời gian">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            </button>
+            <select id="peTimerPreset" class="select-control" style="width:110px;">
+              <option value="free">Tự do</option>
+              <option value="60">Thi 60 phút</option>
+              <option value="90" selected>Thi 90 phút</option>
+            </select>
+
+            <div style="width:1px; height:24px; background:var(--border-color); margin:0 4px;"></div>
+
+            <!-- Insert Template Dropdown -->
+            <select id="peTemplateInsertSelect" class="select-control" style="background:var(--primary-light); color:var(--primary); font-weight:700;">
+              <option value="">⚡ Chèn Mẫu Chuẩn (Quick Insert)...</option>
+            </select>
+
+            <!-- Export & Copy -->
+            <button class="btn btn-outline btn-sm" id="peCopyBtn" title="Sao chép toàn bộ bài làm">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span>Sao chép</span>
+            </button>
+            <button class="btn btn-primary btn-sm" id="peDownloadBtn" title="Tải bài làm dạng .txt">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Tải file bài làm</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Split Pane: Left = Question Paper, Right = EOS Text Editor -->
+        <div class="pe-split-pane" id="peSplitPane">
+          <!-- Left Pane (Exam Paper Viewer) -->
+          <div class="pe-left-pane" id="peLeftPane">
+            <div class="pane-header">
+              <span id="peExamTitle">Đề bài thi PE</span>
+              <div class="toolbar-group">
+                <button class="btn btn-outline btn-sm" id="peOpenExternalBtn" title="Mở file đề trong tab mới">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>Mở tab mới</span>
+                </button>
+              </div>
+            </div>
+            <div class="pane-content" id="peViewerContent">
+              <!-- Dynamically populated iframe or img -->
+            </div>
+          </div>
+
+          <!-- Draggable Resizer -->
+          <div class="pe-resizer" id="peResizer" title="Kéo để chỉnh kích thước"></div>
+
+          <!-- Right Pane (EOS Text Editor) -->
+          <div class="pe-right-pane" id="peRightPane">
+            <div class="pane-header">
+              <div class="toolbar-group">
+                <span>Khung Soạn Thảo Bài Làm (EOS Simulator)</span>
+                <span class="save-indicator saved" id="peSaveIndicator">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span id="peSaveText">Đã lưu tự động</span>
+                </span>
+              </div>
+              <div class="toolbar-group">
+                <button class="btn btn-outline btn-sm" id="peClearEditorBtn" style="color:var(--danger)">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                  <span>Làm mới</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="editor-wrapper">
+              <div class="editor-info-bar">
+                <span>Quy định EOS: Không hỗ trợ kẻ bảng. Dùng ký tự gạch đầu dòng (<code>-</code>), mũi tên (<code>-&gt;</code>) và số phân cấp (<code>1.1.1</code>).</span>
+                <span>Phím <kbd style="background:#e2e8f0; padding:1px 5px; border-radius:3px;">Tab</kbd> hỗ trợ thụt lề</span>
+              </div>
+
+              <textarea id="peTextarea" class="eos-textarea" placeholder="Nhập bài làm tự luận của bạn tại đây...
+Ví dụ:
+PROJECT CHARTER
+1. Project Name: ...
+2. Project Purpose: ...
+(Gợi ý: Chọn nút '⚡ Chèn Mẫu Chuẩn' ở thanh công cụ phía trên để điền nhanh khung sườn đạt điểm tối đa!)" spellcheck="false"></textarea>
+
+              <div class="editor-footer">
+                <div class="toolbar-group">
+                  <span id="peWordCount">Số từ: 0 từ</span>
+                  <span>•</span>
+                  <span id="peCharCount">Ký tự: 0</span>
+                  <span>•</span>
+                  <span id="peLineCount">Dòng: 1</span>
+                </div>
+                <div>Format: Text / Markdown chuẩn EOS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================================================
+         VIEW 2: FE VIEW (TRẮC NGHIỆM)
+         =================================================== -->
+    <section class="view-panel" id="feView">
+      <div class="fe-container">
+        <!-- FE Toolbar -->
+        <div class="fe-toolbar">
+          <div class="toolbar-group">
+            <label for="feExamSelect" style="font-size:0.8rem; font-weight:600; color:var(--text-muted)">Bộ đề FE:</label>
+            <select id="feExamSelect" class="select-control" style="min-width:320px;"></select>
+          </div>
+
+          <div class="toolbar-group">
+            <!-- Practice vs Exam Mode Toggle -->
+            <select id="feModeSelect" class="select-control">
+              <option value="practice">Chế độ: Luyện tập tự do</option>
+              <option value="exam">Chế độ: Thi thử 60 phút</option>
+            </select>
+
+            <!-- FE Timer (visible in exam mode) -->
+            <div class="timer-badge" id="feTimerBadge" style="display:none;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span id="feTimerDisplay">60:00</span>
+            </div>
+
+            <!-- Submit Button -->
+            <button class="btn btn-success btn-sm" id="feSubmitBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Nộp bài & Chấm điểm</span>
+            </button>
+            <button class="btn btn-outline btn-sm" id="feResetExamBtn" title="Làm lại đề này">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+              <span>Làm lại</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- FE Main Layout -->
+        <div class="fe-layout">
+          <!-- Center Main Pane -->
+          <div class="fe-main-pane">
+            <!-- Question Header Card -->
+            <div class="question-header">
+              <div class="q-badge-group">
+                <div class="q-number-pill">
+                  Câu <span id="feQuestionNumber">1</span> <span>/ 50</span>
+                </div>
+                <!-- Dynamic Tag indicating Single or Multi-choice -->
+                <span class="mode-tag single" id="feSelectionModeTag">
+                  <span id="feModeIcon">🔘</span>
+                  <span id="feModeText">Chọn 1 đáp án</span>
+                </span>
+              </div>
+
+              <!-- Question Type Selector & Flag -->
+              <div class="toolbar-group">
+                <div class="mode-toggle-bar" title="Chuyển đổi hình thức chọn cho câu này">
+                  <span style="font-size:0.75rem; font-weight:600; color:var(--text-muted); margin-left:4px;">Chế độ chọn:</span>
+                  <button class="mode-toggle-btn active" id="btnModeSingle">● 1 Đáp án</button>
+                  <button class="mode-toggle-btn" id="btnModeMulti">■ 2 Đáp án (Chọn 2)</button>
+                </div>
+
+                <button class="btn btn-outline btn-sm" id="feFlagBtn" title="Đánh dấu cờ câu hỏi này để xem lại sau">
+                  <svg id="feFlagIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                  <span id="feFlagText">Đánh dấu (F)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Question Card: Image Display -->
+            <div class="question-card">
+              <div class="question-img-wrapper">
+                <img id="feQuestionImage" src="" alt="Đang tải câu hỏi..." class="question-img">
+                <div class="img-controls">
+                  <button class="img-ctrl-btn" id="feZoomInBtn" title="Phóng to">+</button>
+                  <button class="img-ctrl-btn" id="feZoomOutBtn" title="Thu nhỏ">-</button>
+                  <button class="img-ctrl-btn" id="feZoomResetBtn" title="Đặt lại kích thước">↺</button>
+                  <button class="img-ctrl-btn" id="feFullscreenBtn" title="Xem ảnh toàn màn hình">⛶</button>
+                </div>
+              </div>
+
+              <!-- Answer Choices Section -->
+              <div class="answer-section">
+                <div class="answer-status-bar">
+                  <span>Chọn đáp án của bạn:</span>
+                  <span class="selected-display" id="feSelectedDisplay">Chưa chọn</span>
+                </div>
+
+                <!-- 6 Option Buttons (A, B, C, D, E, F) -->
+                <div class="options-grid" id="feOptionsGrid">
+                  <button class="opt-btn" data-option="A">A<span class="opt-sub">Phím A</span></button>
+                  <button class="opt-btn" data-option="B">B<span class="opt-sub">Phím B</span></button>
+                  <button class="opt-btn" data-option="C">C<span class="opt-sub">Phím C</span></button>
+                  <button class="opt-btn" data-option="D">D<span class="opt-sub">Phím D</span></button>
+                  <button class="opt-btn" data-option="E">E<span class="opt-sub">Phím E</span></button>
+                  <button class="opt-btn" data-option="F">F<span class="opt-sub">Phím F</span></button>
+                </div>
+
+                <div style="display:flex; justify-content:flex-end;">
+                  <button class="btn btn-outline btn-sm" id="feClearChoiceBtn" style="color:var(--text-muted); font-size:0.75rem;">
+                    Bỏ chọn câu này
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question Navigation (Prev / Next) -->
+            <div class="question-nav-bar">
+              <button class="btn btn-outline" id="fePrevBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                <span>Câu trước (←)</span>
+              </button>
+
+              <div style="font-size:0.8rem; color:var(--text-muted);">
+                Sử dụng phím mũi tên <strong>← / →</strong> để đổi câu, phím <strong>A, B, C, D, E, F</strong> để chọn đáp án
+              </div>
+
+              <button class="btn btn-primary" id="feNextBtn">
+                <span>Câu tiếp (→)</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+
+            <!-- Personal Notes for this Question -->
+            <div class="notes-card">
+              <div class="notes-header" id="feNotesToggle">
+                <h4>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                  <span>Ghi chú riêng cho câu này (Tự động lưu)</span>
+                </h4>
+                <span id="feNotesArrow" style="font-size:0.8rem; color:var(--text-muted);">▼</span>
+              </div>
+              <textarea id="feNotesInput" class="notes-textarea" placeholder="Nhập ghi nhớ của bạn (tại sao chọn câu này, công thức, bẫy trắc nghiệm...)" spellcheck="false"></textarea>
+            </div>
+          </div>
+
+          <!-- Right Sidebar (Question Palette 1-50) -->
+          <aside class="fe-sidebar">
+            <div class="sidebar-header">
+              <div style="font-weight:700; font-size:0.95rem;">Bảng Câu Hỏi (50 Câu)</div>
+              
+              <!-- Stats -->
+              <div class="palette-stats">
+                <div class="stat-item">
+                  <span class="dot done"></span>
+                  <span id="feCountDone">0</span> Đã làm
+                </div>
+                <div class="stat-item">
+                  <span class="dot empty"></span>
+                  <span id="feCountEmpty">50</span> Chưa làm
+                </div>
+                <div class="stat-item">
+                  <span class="dot flag"></span>
+                  <span id="feCountFlag">0</span> Đánh dấu
+                </div>
+              </div>
+
+              <!-- Filter Palette -->
+              <div class="palette-filters">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="done">Đã làm</button>
+                <button class="filter-btn" data-filter="empty">Chưa làm</button>
+                <button class="filter-btn" data-filter="flag">Đánh dấu</button>
+              </div>
+            </div>
+
+            <!-- Question Grid 1 - 50 -->
+            <div class="palette-scroll">
+              <div class="palette-grid" id="fePaletteGrid">
+                <!-- 50 buttons generated dynamically -->
+              </div>
+            </div>
+
+            <div class="sidebar-footer">
+              <button class="btn btn-primary" id="feSubmitBtnSidebar" style="width:100%; justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Nộp bài thi</span>
+              </button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================================================
+         VIEW 3: STUDY GUIDE & TEMPLATES VIEW
+         =================================================== -->
+    <section class="view-panel" id="guideView">
+      <div class="guide-container">
+        <!-- Table of Contents -->
+        <aside class="guide-toc">
+          <div class="toc-header">
+            <input type="text" id="guideSearchInput" class="search-input" placeholder="Tìm kiếm kiến thức, công thức...">
+          </div>
+          <ul class="toc-list" id="guideTocList">
+            <!-- Dynamically populated from markdown headings -->
+          </ul>
+        </aside>
+
+        <!-- Article Content -->
+        <div class="guide-content-area" id="guideContentArea">
+          <article class="guide-article" id="guideArticle">
+            <!-- Rendered from PMG201c_Templates.md -->
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- Quick Formula Modal -->
+  <div class="modal-overlay" id="formulaModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">⚡ Bảng Tra Cứu Nhanh Công Thức EVM & CPM</h3>
+        <button class="icon-btn" id="closeFormulaModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4 style="margin-bottom:8px; color:var(--primary);">1. Earned Value Management (EVM)</h4>
+        <ul style="margin-left:20px; margin-bottom:16px; line-height:1.7;">
+          <li><strong>BAC (Budget at Completion):</strong> Tổng ngân sách dự kiến ban đầu.</li>
+          <li><strong>PV (Planned Value):</strong> <code>% Kế hoạch × BAC</code></li>
+          <li><strong>EV (Earned Value):</strong> <code>% Hoàn thành thực tế × BAC</code></li>
+          <li><strong>AC (Actual Cost):</strong> Chi phí thực tế đã chi tính đến hiện tại.</li>
+          <li><strong>CV (Cost Variance):</strong> <code>EV - AC</code> (&gt;0: Tiết kiệm chi phí, &lt;0: Vượt ngân sách)</li>
+          <li><strong>SV (Schedule Variance):</strong> <code>EV - PV</code> (&gt;0: Nhanh hơn tiến độ, &lt;0: Chậm tiến độ)</li>
+          <li><strong>CPI (Cost Performance Index):</strong> <code>EV / AC</code> (&gt;1: Hiệu quả tốt, &lt;1: Lãng phí)</li>
+          <li><strong>SPI (Schedule Performance Index):</strong> <code>EV / PV</code> (&gt;1: Vượt tiến độ, &lt;1: Chậm tiến độ)</li>
+          <li><strong>EAC (Estimate at Completion):</strong> <code>BAC / CPI</code> (Dự toán chi phí khi hoàn thành)</li>
+          <li><strong>VAC (Variance at Completion):</strong> <code>BAC - EAC</code></li>
+        </ul>
+
+        <h4 style="margin-bottom:8px; color:var(--primary);">2. Critical Path & Float (CPM)</h4>
+        <ul style="margin-left:20px; margin-bottom:16px; line-height:1.7;">
+          <li><strong>Forward Pass (Tính xuôi):</strong> <code>EF = ES + Duration</code>; <code>ES = max(EF các việc trước)</code></li>
+          <li><strong>Backward Pass (Tính ngược):</strong> <code>LS = LF - Duration</code>; <code>LF = min(LS các việc sau)</code></li>
+          <li><strong>Total Float (Slack):</strong> <code>Float = LS - ES = LF - EF</code></li>
+          <li><strong>Đường găng (Critical Path):</strong> Đường dài nhất từ Start đến End, có <code>Float = 0</code>.</li>
+          <li><strong>Most Flexible Activity:</strong> Công việc có Float lớn nhất (&gt; 0).</li>
+        </ul>
+
+        <h4 style="margin-bottom:8px; color:var(--primary);">3. 2 Kỹ thuật rút ngắn tiến độ khi SPI &lt; 1</h4>
+        <ul style="margin-left:20px; line-height:1.7;">
+          <li><strong>Crashing:</strong> Bơm thêm nguồn lực (tăng ca, thêm dev) vào các công việc trên <em>Đường găng</em>. (Tăng chi phí).</li>
+          <li><strong>Fast Tracking:</strong> Chuyển các công việc làm tuần tự sang làm song song/gối đầu. (Tăng rủi ro).</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="confirmFormulaModalBtn">Đã hiểu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submit Result Summary Modal -->
+  <div class="modal-overlay" id="submitModal">
+    <div class="modal-card" style="max-width:700px;">
+      <div class="modal-header">
+        <h3 class="modal-title">📊 Kết Quả Nộp Bài Thi Trắc Nghiệm FE</h3>
+        <button class="icon-btn" id="closeSubmitModalBtn">&times;</button>
+      </div>
+      <div class="modal-body" id="submitModalBody">
+        <!-- Rendered summary -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" id="closeSubmitModalBtn2">Đóng & Tiếp tục xem lại</button>
+        <button class="btn btn-primary" id="exportResultsBtn">Xuất Bảng Đáp Án (.txt)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Image Modal -->
+  <div class="modal-overlay" id="fullscreenImgModal">
+    <div class="img-modal-content">
+      <img id="fullscreenImg" src="" alt="Fullscreen view">
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- SCRIPTS -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

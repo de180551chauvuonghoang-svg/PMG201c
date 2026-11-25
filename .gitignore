@@ -3,3 +3,8 @@ package.json
 package-lock.json
 download_pe.js
 download_via_browser.js
+*.traineddata
+test_*.png
+test_*.js
+js_data_preview.json
+

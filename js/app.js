@@ -1,0 +1,1221 @@
+/**
+ * PMG201c Exam Practice Hub - Application Controller
+ * Full interactive logic for PE and FE exam prep
+ */
+
+(function () {
+  'use strict';
+
+  // =========================================================================
+  // STATE MANAGEMENT
+  // =========================================================================
+  const state = {
+    currentView: 'peView',
+    theme: localStorage.getItem('pmg_theme') || 'light',
+
+    // PE State
+    peSemester: '',
+    peExamId: '',
+    peTimer: {
+      duration: 90 * 60, // seconds
+      remaining: 90 * 60,
+      running: false,
+      intervalId: null,
+      mode: 'countdown' // 'countdown' or 'countup'
+    },
+
+    // FE State
+    feExamId: '',
+    feQuestionIndex: 0,
+    feZoomLevel: 1.0,
+    feMode: 'practice', // 'practice' or 'exam'
+    feFilter: 'all',
+    feAnswers: {},      // { [examId]: { [qIndex]: ['A'] or ['A', 'C'] } }
+    feQuestionModes: {},// { [examId]: { [qIndex]: 'single' | 'multi' } }
+    feFlags: {},        // { [examId]: { [qIndex]: boolean } }
+    feNotes: {},        // { [examId]: { [qIndex]: string } }
+    feTimer: {
+      remaining: 60 * 60,
+      running: false,
+      intervalId: null
+    }
+  };
+
+  // Restore cached FE state
+  try {
+    const savedAnswers = localStorage.getItem('pmg_fe_answers');
+    if (savedAnswers) state.feAnswers = JSON.parse(savedAnswers);
+
+    const savedModes = localStorage.getItem('pmg_fe_modes');
+    if (savedModes) state.feQuestionModes = JSON.parse(savedModes);
+
+    const savedFlags = localStorage.getItem('pmg_fe_flags');
+    if (savedFlags) state.feFlags = JSON.parse(savedFlags);
+
+    const savedNotes = localStorage.getItem('pmg_fe_notes');
+    if (savedNotes) state.feNotes = JSON.parse(savedNotes);
+  } catch (e) {
+    console.error('Error loading FE state from localStorage:', e);
+  }
+
+  // =========================================================================
+  // DOM ELEMENT REFERENCES
+  // =========================================================================
+  const elements = {
+    // Header
+    navButtons: document.querySelectorAll('.nav-btn'),
+    viewPanels: document.querySelectorAll('.view-panel'),
+    themeToggle: document.getElementById('themeToggle'),
+    themeIconSun: document.getElementById('themeIconSun'),
+    themeIconMoon: document.getElementById('themeIconMoon'),
+    btnQuickFormula: document.getElementById('btnQuickFormula'),
+
+    // PE Elements
+    peSemesterSelect: document.getElementById('peSemesterSelect'),
+    peExamSelect: document.getElementById('peExamSelect'),
+    peTimerDisplay: document.getElementById('peTimerDisplay'),
+    peTimerToggleBtn: document.getElementById('peTimerToggleBtn'),
+    peTimerResetBtn: document.getElementById('peTimerResetBtn'),
+    peTimerPreset: document.getElementById('peTimerPreset'),
+    peTimerPlayIcon: document.getElementById('peTimerPlayIcon'),
+    peTimerPauseIcon: document.getElementById('peTimerPauseIcon'),
+    peTimerBadge: document.getElementById('peTimerBadge'),
+    peTemplateInsertSelect: document.getElementById('peTemplateInsertSelect'),
+    peCopyBtn: document.getElementById('peCopyBtn'),
+    peDownloadBtn: document.getElementById('peDownloadBtn'),
+    peClearEditorBtn: document.getElementById('peClearEditorBtn'),
+    peOpenExternalBtn: document.getElementById('peOpenExternalBtn'),
+    peExamTitle: document.getElementById('peExamTitle'),
+    peViewerContent: document.getElementById('peViewerContent'),
+    peTextarea: document.getElementById('peTextarea'),
+    peWordCount: document.getElementById('peWordCount'),
+    peCharCount: document.getElementById('peCharCount'),
+    peLineCount: document.getElementById('peLineCount'),
+    peSaveIndicator: document.getElementById('peSaveIndicator'),
+    peSaveText: document.getElementById('peSaveText'),
+    peSplitPane: document.getElementById('peSplitPane'),
+    peLeftPane: document.getElementById('peLeftPane'),
+    peRightPane: document.getElementById('peRightPane'),
+    peResizer: document.getElementById('peResizer'),
+
+    // FE Elements
+    feExamSelect: document.getElementById('feExamSelect'),
+    feModeSelect: document.getElementById('feModeSelect'),
+    feTimerBadge: document.getElementById('feTimerBadge'),
+    feTimerDisplay: document.getElementById('feTimerDisplay'),
+    feSubmitBtn: document.getElementById('feSubmitBtn'),
+    feResetExamBtn: document.getElementById('feResetExamBtn'),
+    feQuestionNumber: document.getElementById('feQuestionNumber'),
+    feSelectionModeTag: document.getElementById('feSelectionModeTag'),
+    feModeIcon: document.getElementById('feModeIcon'),
+    feModeText: document.getElementById('feModeText'),
+    btnModeSingle: document.getElementById('btnModeSingle'),
+    btnModeMulti: document.getElementById('btnModeMulti'),
+    feFlagBtn: document.getElementById('feFlagBtn'),
+    feFlagIcon: document.getElementById('feFlagIcon'),
+    feFlagText: document.getElementById('feFlagText'),
+    feQuestionImage: document.getElementById('feQuestionImage'),
+    feZoomInBtn: document.getElementById('feZoomInBtn'),
+    feZoomOutBtn: document.getElementById('feZoomOutBtn'),
+    feZoomResetBtn: document.getElementById('feZoomResetBtn'),
+    feFullscreenBtn: document.getElementById('feFullscreenBtn'),
+    feSelectedDisplay: document.getElementById('feSelectedDisplay'),
+    feOptionsGrid: document.getElementById('feOptionsGrid'),
+    feClearChoiceBtn: document.getElementById('feClearChoiceBtn'),
+    fePrevBtn: document.getElementById('fePrevBtn'),
+    feNextBtn: document.getElementById('feNextBtn'),
+    feNotesToggle: document.getElementById('feNotesToggle'),
+    feNotesArrow: document.getElementById('feNotesArrow'),
+    feNotesInput: document.getElementById('feNotesInput'),
+    feCountDone: document.getElementById('feCountDone'),
+    feCountEmpty: document.getElementById('feCountEmpty'),
+    feCountFlag: document.getElementById('feCountFlag'),
+    fePaletteGrid: document.getElementById('fePaletteGrid'),
+    feSubmitBtnSidebar: document.getElementById('feSubmitBtnSidebar'),
+    paletteFilters: document.querySelectorAll('.palette-filters .filter-btn'),
+
+    // Guide Elements
+    guideSearchInput: document.getElementById('guideSearchInput'),
+    guideTocList: document.getElementById('guideTocList'),
+    guideArticle: document.getElementById('guideArticle'),
+
+    // Modals
+    formulaModal: document.getElementById('formulaModal'),
+    closeFormulaModalBtn: document.getElementById('closeFormulaModalBtn'),
+    confirmFormulaModalBtn: document.getElementById('confirmFormulaModalBtn'),
+    submitModal: document.getElementById('submitModal'),
+    closeSubmitModalBtn: document.getElementById('closeSubmitModalBtn'),
+    closeSubmitModalBtn2: document.getElementById('closeSubmitModalBtn2'),
+    submitModalBody: document.getElementById('submitModalBody'),
+    exportResultsBtn: document.getElementById('exportResultsBtn'),
+    fullscreenImgModal: document.getElementById('fullscreenImgModal'),
+    fullscreenImg: document.getElementById('fullscreenImg'),
+    toastContainer: document.getElementById('toastContainer')
+  };
+
+  // =========================================================================
+  // UTILITIES & HELPERS
+  // =========================================================================
+  function showToast(message, type = 'info', duration = 3000) {
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+    elements.toastContainer.appendChild(toast);
+
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateY(10px)';
+      setTimeout(() => toast.remove(), 250);
+    }, duration);
+  }
+
+  function formatTime(seconds) {
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    if (hrs > 0) {
+      return `${String(hrs).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+    return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+  }
+
+  function downloadTextFile(filename, text) {
+    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+  }
+
+  // =========================================================================
+  // THEME MANAGEMENT
+  // =========================================================================
+  function applyTheme(theme) {
+    state.theme = theme;
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('pmg_theme', theme);
+    if (theme === 'dark') {
+      elements.themeIconSun.style.display = 'none';
+      elements.themeIconMoon.style.display = 'block';
+    } else {
+      elements.themeIconSun.style.display = 'block';
+      elements.themeIconMoon.style.display = 'none';
+    }
+  }
+
+  elements.themeToggle.addEventListener('click', () => {
+    applyTheme(state.theme === 'light' ? 'dark' : 'light');
+  });
+
+  // =========================================================================
+  // VIEW NAVIGATION
+  // =========================================================================
+  function switchView(targetViewId) {
+    state.currentView = targetViewId;
+    elements.navButtons.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.view === targetViewId);
+    });
+    elements.viewPanels.forEach(panel => {
+      panel.classList.toggle('active', panel.id === targetViewId);
+    });
+    localStorage.setItem('pmg_active_view', targetViewId);
+  }
+
+  elements.navButtons.forEach(btn => {
+    btn.addEventListener('click', () => switchView(btn.dataset.view));
+  });
+
+  // =========================================================================
+  // PE MODULE (PRACTICAL EXAM - TỰ LUẬN)
+  // =========================================================================
+  function initPEModule() {
+    // Populate Semesters
+    const semesters = [...new Set(APP_DATA.peExams.map(e => e.semester))];
+    elements.peSemesterSelect.innerHTML = semesters.map(sem => `<option value="${sem}">${sem}</option>`).join('');
+
+    // Semester change handler
+    elements.peSemesterSelect.addEventListener('change', () => {
+      state.peSemester = elements.peSemesterSelect.value;
+      populatePEExams();
+    });
+
+    // Exam change handler
+    elements.peExamSelect.addEventListener('change', () => {
+      loadPEExam(elements.peExamSelect.value);
+    });
+
+    // Populate Templates in Quick Insert dropdown
+    elements.peTemplateInsertSelect.innerHTML = '<option value="">⚡ Chèn Mẫu Chuẩn (Quick Insert)...</option>' +
+      APP_DATA.templates.map(t => `<option value="${t.id}">${t.name}</option>`).join('');
+
+    elements.peTemplateInsertSelect.addEventListener('change', () => {
+      const templateId = elements.peTemplateInsertSelect.value;
+      if (!templateId) return;
+      const t = APP_DATA.templates.find(item => item.id === templateId);
+      if (t) {
+        insertTextAtCursor(elements.peTextarea, '\n\n' + t.content + '\n\n');
+        updatePEWordCount();
+        savePEContent();
+        showToast(`Đã chèn mẫu: ${t.name}`, 'success');
+      }
+      elements.peTemplateInsertSelect.value = '';
+    });
+
+    // Textarea input & stats
+    elements.peTextarea.addEventListener('input', () => {
+      updatePEWordCount();
+      triggerAutoSavePE();
+    });
+
+    // Tab key support in textarea
+    elements.peTextarea.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        insertTextAtCursor(elements.peTextarea, '    ');
+      }
+    });
+
+    // Copy & Download
+    elements.peCopyBtn.addEventListener('click', () => {
+      const text = elements.peTextarea.value;
+      if (!text.trim()) {
+        showToast('Bài làm chưa có nội dung để sao chép', 'warning');
+        return;
+      }
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Đã sao chép toàn bộ bài làm vào Clipboard!', 'success');
+      }).catch(() => {
+        showToast('Không thể truy cập Clipboard', 'error');
+      });
+    });
+
+    elements.peDownloadBtn.addEventListener('click', () => {
+      const text = elements.peTextarea.value;
+      const examName = elements.peExamSelect.value || 'PE_Exam';
+      const filename = `${examName}_BaiLam_PMG201c.txt`;
+      downloadTextFile(filename, text);
+      showToast(`Đã tải về: ${filename}`, 'success');
+    });
+
+    elements.peClearEditorBtn.addEventListener('click', () => {
+      if (confirm('Bạn có chắc chắn muốn làm mới toàn bộ bài viết này không?')) {
+        elements.peTextarea.value = '';
+        updatePEWordCount();
+        savePEContent();
+        showToast('Đã làm mới bài làm', 'info');
+      }
+    });
+
+    // Timer buttons
+    elements.peTimerToggleBtn.addEventListener('click', togglePETimer);
+    elements.peTimerResetBtn.addEventListener('click', resetPETimer);
+    elements.peTimerPreset.addEventListener('change', () => {
+      const val = elements.peTimerPreset.value;
+      if (val === 'free') {
+        state.peTimer.mode = 'countup';
+        state.peTimer.remaining = 0;
+      } else {
+        state.peTimer.mode = 'countdown';
+        state.peTimer.duration = parseInt(val, 10) * 60;
+        state.peTimer.remaining = state.peTimer.duration;
+      }
+      updatePETimerDisplay();
+    });
+
+    // Resizer logic
+    initSplitPaneResizer();
+
+    // Initial load
+    if (semesters.length > 0) {
+      state.peSemester = semesters[0];
+      elements.peSemesterSelect.value = state.peSemester;
+      populatePEExams();
+    }
+  }
+
+  function populatePEExams() {
+    const exams = APP_DATA.peExams.filter(e => e.semester === state.peSemester);
+    elements.peExamSelect.innerHTML = exams.map(e => `<option value="${e.id}">${e.title} (${e.filename})</option>`).join('');
+    if (exams.length > 0) {
+      loadPEExam(exams[0].id);
+    }
+  }
+
+  function loadPEExam(examId) {
+    state.peExamId = examId;
+    elements.peExamSelect.value = examId;
+    const exam = APP_DATA.peExams.find(e => e.id === examId);
+    if (!exam) return;
+
+    elements.peExamTitle.textContent = `Đề thi: ${exam.title}`;
+
+    // Render Viewer Content
+    elements.peViewerContent.innerHTML = '';
+    if (exam.type === 'pdf') {
+      const iframe = document.createElement('iframe');
+      iframe.className = 'doc-viewer-iframe';
+      iframe.src = `${exam.path}#view=FitH&toolbar=1`;
+      elements.peViewerContent.appendChild(iframe);
+    } else {
+      const wrap = document.createElement('div');
+      wrap.className = 'doc-viewer-image-wrap';
+      const img = document.createElement('img');
+      img.className = 'doc-viewer-image';
+      img.src = exam.path;
+      img.alt = exam.title;
+      wrap.appendChild(img);
+      elements.peViewerContent.appendChild(wrap);
+    }
+
+    elements.peOpenExternalBtn.onclick = () => {
+      window.open(exam.path, '_blank');
+    };
+
+    // Restore text for this exam
+    const saved = localStorage.getItem(`pmg_pe_content_${examId}`) || '';
+    elements.peTextarea.value = saved;
+    updatePEWordCount();
+  }
+
+  function insertTextAtCursor(textarea, text) {
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const before = textarea.value.substring(0, start);
+    const after = textarea.value.substring(end);
+    textarea.value = before + text + after;
+    textarea.selectionStart = textarea.selectionEnd = start + text.length;
+    textarea.focus();
+  }
+
+  function updatePEWordCount() {
+    const text = elements.peTextarea.value.trim();
+    const words = text ? text.split(/\s+/).length : 0;
+    const chars = elements.peTextarea.value.length;
+    const lines = elements.peTextarea.value.split('\n').length;
+
+    elements.peWordCount.textContent = `Số từ: ${words} từ`;
+    elements.peCharCount.textContent = `Ký tự: ${chars}`;
+    elements.peLineCount.textContent = `Dòng: ${lines}`;
+  }
+
+  let autoSaveTimeout = null;
+  function triggerAutoSavePE() {
+    elements.peSaveIndicator.className = 'save-indicator saving';
+    elements.peSaveText.textContent = 'Đang lưu...';
+    clearTimeout(autoSaveTimeout);
+    autoSaveTimeout = setTimeout(() => {
+      savePEContent();
+      elements.peSaveIndicator.className = 'save-indicator saved';
+      elements.peSaveText.textContent = 'Đã lưu tự động';
+    }, 600);
+  }
+
+  function savePEContent() {
+    if (!state.peExamId) return;
+    localStorage.setItem(`pmg_pe_content_${state.peExamId}`, elements.peTextarea.value);
+  }
+
+  function togglePETimer() {
+    if (state.peTimer.running) {
+      clearInterval(state.peTimer.intervalId);
+      state.peTimer.running = false;
+      elements.peTimerPlayIcon.style.display = 'block';
+      elements.peTimerPauseIcon.style.display = 'none';
+      showToast('Đã tạm dừng đếm thời gian', 'info');
+    } else {
+      state.peTimer.running = true;
+      elements.peTimerPlayIcon.style.display = 'none';
+      elements.peTimerPauseIcon.style.display = 'block';
+      showToast('Bắt đầu tính giờ làm bài PE!', 'success');
+
+      state.peTimer.intervalId = setInterval(() => {
+        if (state.peTimer.mode === 'countup') {
+          state.peTimer.remaining++;
+        } else {
+          if (state.peTimer.remaining > 0) {
+            state.peTimer.remaining--;
+          } else {
+            clearInterval(state.peTimer.intervalId);
+            state.peTimer.running = false;
+            elements.peTimerPlayIcon.style.display = 'block';
+            elements.peTimerPauseIcon.style.display = 'none';
+            elements.peTimerBadge.className = 'timer-badge danger';
+            showToast('HẾT GIỜ LÀM BÀI THI PE!', 'error', 6000);
+          }
+        }
+        updatePETimerDisplay();
+      }, 1000);
+    }
+  }
+
+  function resetPETimer() {
+    clearInterval(state.peTimer.intervalId);
+    state.peTimer.running = false;
+    elements.peTimerPlayIcon.style.display = 'block';
+    elements.peTimerPauseIcon.style.display = 'none';
+    elements.peTimerBadge.className = 'timer-badge';
+    if (state.peTimer.mode === 'countup') {
+      state.peTimer.remaining = 0;
+    } else {
+      state.peTimer.remaining = state.peTimer.duration;
+    }
+    updatePETimerDisplay();
+  }
+
+  function updatePETimerDisplay() {
+    elements.peTimerDisplay.textContent = formatTime(state.peTimer.remaining);
+    if (state.peTimer.mode === 'countdown') {
+      if (state.peTimer.remaining <= 300 && state.peTimer.remaining > 60) {
+        elements.peTimerBadge.className = 'timer-badge warning';
+      } else if (state.peTimer.remaining <= 60 && state.peTimer.remaining > 0) {
+        elements.peTimerBadge.className = 'timer-badge danger';
+      } else if (state.peTimer.remaining === 0) {
+        elements.peTimerBadge.className = 'timer-badge danger';
+      } else {
+        elements.peTimerBadge.className = 'timer-badge';
+      }
+    }
+  }
+
+  function initSplitPaneResizer() {
+    let isResizing = false;
+    elements.peResizer.addEventListener('mousedown', (e) => {
+      isResizing = true;
+      elements.peResizer.classList.add('resizing');
+      document.body.style.userSelect = 'none';
+      document.body.style.cursor = 'col-resize';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isResizing) return;
+      const containerRect = elements.peSplitPane.getBoundingClientRect();
+      const pointerRelativeX = e.clientX - containerRect.left;
+      const minWidth = 280;
+      const maxWidth = containerRect.width - 280;
+      if (pointerRelativeX >= minWidth && pointerRelativeX <= maxWidth) {
+        const percent = (pointerRelativeX / containerRect.width) * 100;
+        elements.peLeftPane.style.width = `${percent}%`;
+      }
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (isResizing) {
+        isResizing = false;
+        elements.peResizer.classList.remove('resizing');
+        document.body.style.userSelect = '';
+        document.body.style.cursor = '';
+      }
+    });
+  }
+
+  // =========================================================================
+  // FE MODULE (FINAL EXAM - TRẮC NGHIỆM)
+  // =========================================================================
+  function initFEModule() {
+    // Populate FE Exams
+    elements.feExamSelect.innerHTML = APP_DATA.feExams.map(e =>
+      `<option value="${e.id}">${e.title} (${e.totalQuestions} câu)</option>`
+    ).join('');
+
+    elements.feExamSelect.addEventListener('change', () => {
+      loadFEExam(elements.feExamSelect.value);
+    });
+
+    // FE Mode change
+    elements.feModeSelect.addEventListener('change', () => {
+      state.feMode = elements.feModeSelect.value;
+      if (state.feMode === 'exam') {
+        elements.feTimerBadge.style.display = 'flex';
+        startFETimer();
+        showToast('Bắt đầu chế độ Thi Thử: Thời gian 60 phút!', 'warning');
+      } else {
+        elements.feTimerBadge.style.display = 'none';
+        stopFETimer();
+        showToast('Chuyển sang chế độ Luyện Tập Tự Do', 'info');
+      }
+    });
+
+    // Mode Toggle buttons (Single vs Multi)
+    elements.btnModeSingle.addEventListener('click', () => setQuestionMode('single'));
+    elements.btnModeMulti.addEventListener('click', () => setQuestionMode('multi'));
+
+    // Option Buttons Click
+    elements.feOptionsGrid.querySelectorAll('.opt-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const opt = btn.dataset.option;
+        handleOptionClick(opt);
+      });
+    });
+
+    // Clear choice
+    elements.feClearChoiceBtn.addEventListener('click', () => {
+      clearCurrentAnswer();
+    });
+
+    // Navigation
+    elements.fePrevBtn.addEventListener('click', () => changeFEQuestion(-1));
+    elements.feNextBtn.addEventListener('click', () => changeFEQuestion(1));
+
+    // Flag button
+    elements.feFlagBtn.addEventListener('click', toggleCurrentFlag);
+
+    // Zoom buttons
+    elements.feZoomInBtn.addEventListener('click', () => zoomFEImage(0.15));
+    elements.feZoomOutBtn.addEventListener('click', () => zoomFEImage(-0.15));
+    elements.feZoomResetBtn.addEventListener('click', () => {
+      state.feZoomLevel = 1.0;
+      applyFEZoom();
+    });
+    elements.feFullscreenBtn.addEventListener('click', openFullscreenImage);
+    elements.feQuestionImage.addEventListener('click', openFullscreenImage);
+
+    // Notes toggle & input
+    elements.feNotesToggle.addEventListener('click', () => {
+      const isHidden = elements.feNotesInput.style.display === 'none';
+      elements.feNotesInput.style.display = isHidden ? 'block' : 'none';
+      elements.feNotesArrow.textContent = isHidden ? '▲' : '▼';
+    });
+
+    elements.feNotesInput.addEventListener('input', () => {
+      saveCurrentNotes();
+    });
+
+    // Palette filters
+    elements.paletteFilters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        elements.paletteFilters.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state.feFilter = btn.dataset.filter;
+        renderPalette();
+      });
+    });
+
+    // Submit
+    elements.feSubmitBtn.addEventListener('click', submitFEExam);
+    elements.feSubmitBtnSidebar.addEventListener('click', submitFEExam);
+    elements.feResetExamBtn.addEventListener('click', resetFEExam);
+
+    // Keyboard Shortcuts
+    window.addEventListener('keydown', handleKeyboardShortcuts);
+
+    // Initial load first exam
+    if (APP_DATA.feExams.length > 0) {
+      loadFEExam(APP_DATA.feExams[0].id);
+    }
+  }
+
+  function loadFEExam(examId) {
+    state.feExamId = examId;
+    elements.feExamSelect.value = examId;
+    state.feQuestionIndex = 0;
+    state.feZoomLevel = 1.0;
+
+    if (!state.feAnswers[examId]) state.feAnswers[examId] = {};
+    if (!state.feQuestionModes[examId]) state.feQuestionModes[examId] = {};
+    if (!state.feFlags[examId]) state.feFlags[examId] = {};
+    if (!state.feNotes[examId]) state.feNotes[examId] = {};
+
+    loadCurrentQuestion();
+    renderPalette();
+  }
+
+  function loadCurrentQuestion() {
+    const exam = APP_DATA.feExams.find(e => e.id === state.feExamId);
+    if (!exam) return;
+
+    const qIndex = state.feQuestionIndex;
+    const totalQ = exam.questions.length;
+    const filename = exam.questions[qIndex] || `Cau_${String(qIndex + 1).padStart(2, '0')}.webp`;
+    const imagePath = `${exam.folder}/${filename}`;
+
+    elements.feQuestionNumber.textContent = qIndex + 1;
+    elements.feQuestionImage.src = imagePath;
+    elements.feQuestionImage.alt = `Câu ${qIndex + 1}`;
+
+    // Reset zoom
+    state.feZoomLevel = 1.0;
+    applyFEZoom();
+
+    // Determine selection mode for this question
+    // If not set, check if already chosen answers length > 1, else default to 'single'
+    let mode = state.feQuestionModes[state.feExamId][qIndex];
+    if (!mode) {
+      const chosen = state.feAnswers[state.feExamId][qIndex] || [];
+      mode = chosen.length > 1 ? 'multi' : 'single';
+      state.feQuestionModes[state.feExamId][qIndex] = mode;
+    }
+    updateModeUI(mode);
+
+    // Update active options
+    updateOptionsUI();
+
+    // Update flag status
+    const isFlagged = !!state.feFlags[state.feExamId][qIndex];
+    elements.feFlagBtn.classList.toggle('btn-primary', isFlagged);
+    elements.feFlagBtn.classList.toggle('btn-outline', !isFlagged);
+    elements.feFlagText.textContent = isFlagged ? 'Đã đánh dấu (F)' : 'Đánh dấu (F)';
+    elements.feFlagIcon.setAttribute('fill', isFlagged ? 'currentColor' : 'none');
+
+    // Update notes
+    elements.feNotesInput.value = state.feNotes[state.feExamId][qIndex] || '';
+
+    // Update navigation buttons
+    elements.fePrevBtn.disabled = qIndex === 0;
+    elements.feNextBtn.disabled = qIndex === totalQ - 1;
+
+    renderPalette();
+  }
+
+  function setQuestionMode(mode) {
+    const qIndex = state.feQuestionIndex;
+    state.feQuestionModes[state.feExamId][qIndex] = mode;
+    saveFEPersistence();
+    updateModeUI(mode);
+
+    // If switching to single and currently has multiple selections, keep only the first
+    const current = state.feAnswers[state.feExamId][qIndex] || [];
+    if (mode === 'single' && current.length > 1) {
+      state.feAnswers[state.feExamId][qIndex] = [current[0]];
+      saveFEPersistence();
+      updateOptionsUI();
+      renderPalette();
+    }
+  }
+
+  function updateModeUI(mode) {
+    if (mode === 'multi') {
+      elements.btnModeMulti.classList.add('active');
+      elements.btnModeSingle.classList.remove('active');
+      elements.feSelectionModeTag.className = 'mode-tag multi';
+      elements.feModeIcon.textContent = '☑️';
+      elements.feModeText.textContent = 'Chọn 2 đáp án (Multi)';
+    } else {
+      elements.btnModeSingle.classList.add('active');
+      elements.btnModeMulti.classList.remove('active');
+      elements.feSelectionModeTag.className = 'mode-tag single';
+      elements.feModeIcon.textContent = '🔘';
+      elements.feModeText.textContent = 'Chọn 1 đáp án (Single)';
+    }
+  }
+
+  function handleOptionClick(opt) {
+    const qIndex = state.feQuestionIndex;
+    const mode = state.feQuestionModes[state.feExamId][qIndex] || 'single';
+    let current = state.feAnswers[state.feExamId][qIndex] ? [...state.feAnswers[state.feExamId][qIndex]] : [];
+
+    if (mode === 'single') {
+      // Toggle if already selected, or select new
+      if (current.includes(opt)) {
+        current = [];
+      } else {
+        current = [opt];
+      }
+    } else {
+      // Multi-choice (max 2 options for EOS standard)
+      if (current.includes(opt)) {
+        current = current.filter(x => x !== opt);
+      } else {
+        if (current.length >= 2) {
+          // If already 2 selected, replace the earliest one
+          current.shift();
+        }
+        current.push(opt);
+      }
+    }
+
+    state.feAnswers[state.feExamId][qIndex] = current;
+    saveFEPersistence();
+    updateOptionsUI();
+    renderPalette();
+  }
+
+  function updateOptionsUI() {
+    const qIndex = state.feQuestionIndex;
+    const mode = state.feQuestionModes[state.feExamId][qIndex] || 'single';
+    const chosen = state.feAnswers[state.feExamId][qIndex] || [];
+
+    elements.feOptionsGrid.querySelectorAll('.opt-btn').forEach(btn => {
+      const opt = btn.dataset.option;
+      const isSelected = chosen.includes(opt);
+      btn.classList.toggle('active', isSelected);
+      btn.classList.toggle('multi', isSelected && mode === 'multi');
+    });
+
+    if (chosen.length === 0) {
+      elements.feSelectedDisplay.textContent = 'Chưa chọn';
+      elements.feSelectedDisplay.style.color = 'var(--text-muted)';
+    } else {
+      const text = chosen.sort().join(', ');
+      const limit = mode === 'multi' ? '2' : '1';
+      elements.feSelectedDisplay.textContent = `Đã chọn: [ ${text} ] (${chosen.length}/${limit})`;
+      elements.feSelectedDisplay.style.color = mode === 'multi' ? 'var(--purple)' : 'var(--primary)';
+    }
+  }
+
+  function clearCurrentAnswer() {
+    const qIndex = state.feQuestionIndex;
+    delete state.feAnswers[state.feExamId][qIndex];
+    saveFEPersistence();
+    updateOptionsUI();
+    renderPalette();
+    showToast(`Đã bỏ chọn câu ${qIndex + 1}`, 'info');
+  }
+
+  function toggleCurrentFlag() {
+    const qIndex = state.feQuestionIndex;
+    const current = !state.feFlags[state.feExamId][qIndex];
+    state.feFlags[state.feExamId][qIndex] = current;
+    saveFEPersistence();
+    elements.feFlagBtn.classList.toggle('btn-primary', current);
+    elements.feFlagBtn.classList.toggle('btn-outline', !current);
+    elements.feFlagText.textContent = current ? 'Đã đánh dấu (F)' : 'Đánh dấu (F)';
+    elements.feFlagIcon.setAttribute('fill', current ? 'currentColor' : 'none');
+    renderPalette();
+  }
+
+  function saveCurrentNotes() {
+    const qIndex = state.feQuestionIndex;
+    state.feNotes[state.feExamId][qIndex] = elements.feNotesInput.value;
+    saveFEPersistence();
+  }
+
+  function changeFEQuestion(delta) {
+    const exam = APP_DATA.feExams.find(e => e.id === state.feExamId);
+    if (!exam) return;
+    const next = state.feQuestionIndex + delta;
+    if (next >= 0 && next < exam.questions.length) {
+      state.feQuestionIndex = next;
+      loadCurrentQuestion();
+    }
+  }
+
+  function zoomFEImage(delta) {
+    state.feZoomLevel = Math.max(0.6, Math.min(2.5, state.feZoomLevel + delta));
+    applyFEZoom();
+  }
+
+  function applyFEZoom() {
+    elements.feQuestionImage.style.transform = `scale(${state.feZoomLevel})`;
+  }
+
+  function openFullscreenImage() {
+    elements.fullscreenImg.src = elements.feQuestionImage.src;
+    elements.fullscreenImgModal.classList.add('active');
+  }
+
+  elements.fullscreenImgModal.addEventListener('click', () => {
+    elements.fullscreenImgModal.classList.remove('active');
+  });
+
+  // Palette rendering
+  function renderPalette() {
+    const exam = APP_DATA.feExams.find(e => e.id === state.feExamId);
+    if (!exam) return;
+
+    elements.fePaletteGrid.innerHTML = '';
+    const answers = state.feAnswers[state.feExamId] || {};
+    const flags = state.feFlags[state.feExamId] || {};
+
+    let doneCount = 0;
+    let flagCount = 0;
+
+    exam.questions.forEach((_, idx) => {
+      const isAnswered = answers[idx] && answers[idx].length > 0;
+      const isFlagged = !!flags[idx];
+      const isCurrent = idx === state.feQuestionIndex;
+
+      if (isAnswered) doneCount++;
+      if (isFlagged) flagCount++;
+
+      // Filter check
+      if (state.feFilter === 'done' && !isAnswered) return;
+      if (state.feFilter === 'empty' && isAnswered) return;
+      if (state.feFilter === 'flag' && !isFlagged) return;
+
+      const btn = document.createElement('button');
+      btn.className = 'palette-btn';
+      btn.textContent = idx + 1;
+      if (isCurrent) btn.classList.add('current');
+      if (isAnswered) btn.classList.add('answered');
+      if (isFlagged) btn.classList.add('flagged');
+
+      btn.addEventListener('click', () => {
+        state.feQuestionIndex = idx;
+        loadCurrentQuestion();
+      });
+
+      elements.fePaletteGrid.appendChild(btn);
+    });
+
+    elements.feCountDone.textContent = doneCount;
+    elements.feCountEmpty.textContent = exam.questions.length - doneCount;
+    elements.feCountFlag.textContent = flagCount;
+  }
+
+  function saveFEPersistence() {
+    try {
+      localStorage.setItem('pmg_fe_answers', JSON.stringify(state.feAnswers));
+      localStorage.setItem('pmg_fe_modes', JSON.stringify(state.feQuestionModes));
+      localStorage.setItem('pmg_fe_flags', JSON.stringify(state.feFlags));
+      localStorage.setItem('pmg_fe_notes', JSON.stringify(state.feNotes));
+    } catch (e) {
+      console.warn('LocalStorage save failed:', e);
+    }
+  }
+
+  function startFETimer() {
+    clearInterval(state.feTimer.intervalId);
+    state.feTimer.remaining = 60 * 60;
+    state.feTimer.running = true;
+    updateFETimerDisplay();
+
+    state.feTimer.intervalId = setInterval(() => {
+      if (state.feTimer.remaining > 0) {
+        state.feTimer.remaining--;
+        updateFETimerDisplay();
+      } else {
+        clearInterval(state.feTimer.intervalId);
+        state.feTimer.running = false;
+        showToast('HẾT THỜI GIAN THI THỬ 60 PHÚT!', 'error', 6000);
+        submitFEExam();
+      }
+    }, 1000);
+  }
+
+  function stopFETimer() {
+    clearInterval(state.feTimer.intervalId);
+    state.feTimer.running = false;
+  }
+
+  function updateFETimerDisplay() {
+    elements.feTimerDisplay.textContent = formatTime(state.feTimer.remaining);
+    if (state.feTimer.remaining <= 300) {
+      elements.feTimerBadge.className = 'timer-badge danger';
+    } else {
+      elements.feTimerBadge.className = 'timer-badge';
+    }
+  }
+
+  function resetFEExam() {
+    if (confirm('Bạn có chắc muốn xóa toàn bộ câu trả lời và làm lại từ đầu bộ đề này không?')) {
+      delete state.feAnswers[state.feExamId];
+      delete state.feFlags[state.feExamId];
+      saveFEPersistence();
+      state.feQuestionIndex = 0;
+      loadCurrentQuestion();
+      showToast('Đã làm mới đề thi!', 'info');
+    }
+  }
+
+  function submitFEExam() {
+    const exam = APP_DATA.feExams.find(e => e.id === state.feExamId);
+    if (!exam) return;
+
+    const answers = state.feAnswers[state.feExamId] || {};
+    const flags = state.feFlags[state.feExamId] || {};
+    const total = exam.questions.length;
+    let done = 0;
+    let multiCount = 0;
+
+    const answerLines = [];
+
+    for (let i = 0; i < total; i++) {
+      const ans = answers[i] || [];
+      const mode = state.feQuestionModes[state.feExamId]?.[i] || (ans.length > 1 ? 'multi' : 'single');
+      if (ans.length > 0) {
+        done++;
+        if (ans.length > 1) multiCount++;
+      }
+      const ansStr = ans.length > 0 ? ans.sort().join(', ') : 'Chưa chọn';
+      const flagStr = flags[i] ? '🚩' : '';
+      const modeStr = mode === 'multi' ? '(Chọn 2)' : '(Chọn 1)';
+      answerLines.push({
+        num: i + 1,
+        mode: modeStr,
+        answer: ansStr,
+        flag: flagStr
+      });
+    }
+
+    // Build modal content
+    let html = `
+      <div style="background:var(--primary-light); padding:16px; border-radius:var(--radius-md); margin-bottom:20px; display:flex; justify-content:space-around; text-align:center;">
+        <div>
+          <div style="font-size:1.4rem; font-weight:800; color:var(--primary);">${done}/${total}</div>
+          <div style="font-size:0.8rem; color:var(--text-muted)">Câu đã hoàn thành</div>
+        </div>
+        <div>
+          <div style="font-size:1.4rem; font-weight:800; color:var(--purple);">${multiCount}</div>
+          <div style="font-size:0.8rem; color:var(--text-muted)">Câu chọn 2 đáp án</div>
+        </div>
+        <div>
+          <div style="font-size:1.4rem; font-weight:800; color:var(--warning);">${Object.keys(flags).filter(k => flags[k]).length}</div>
+          <div style="font-size:0.8rem; color:var(--text-muted)">Câu gắn cờ xem lại</div>
+        </div>
+      </div>
+      <h4 style="margin-bottom:10px;">Bảng Chi Tiết Đáp Án Bạn Đã Chọn:</h4>
+      <div style="max-height:300px; overflow-y:auto; border:1px solid var(--border-color); border-radius:var(--radius-sm);">
+        <table style="width:100%; border-collapse:collapse; font-size:0.85rem;">
+          <thead>
+            <tr style="background:var(--bg-main); text-align:left; border-bottom:1px solid var(--border-color);">
+              <th style="padding:8px 12px;">Câu</th>
+              <th style="padding:8px 12px;">Loại câu</th>
+              <th style="padding:8px 12px;">Đáp án đã chọn</th>
+              <th style="padding:8px 12px;">Đánh dấu</th>
+            </tr>
+          </thead>
+          <tbody>
+    `;
+
+    answerLines.forEach(line => {
+      const isUnanswered = line.answer === 'Chưa chọn';
+      html += `
+        <tr style="border-bottom:1px solid var(--border-color); ${isUnanswered ? 'color:var(--text-muted); background:rgba(0,0,0,0.01);' : 'font-weight:600;'}">
+          <td style="padding:8px 12px;">Câu ${line.num}</td>
+          <td style="padding:8px 12px;"><span style="font-size:0.75rem; color:var(--text-muted);">${line.mode}</span></td>
+          <td style="padding:8px 12px; color:${isUnanswered ? 'var(--danger)' : 'var(--primary)'};">${line.answer}</td>
+          <td style="padding:8px 12px;">${line.flag}</td>
+        </tr>
+      `;
+    });
+
+    html += `
+          </tbody>
+        </table>
+      </div>
+    `;
+
+    elements.submitModalBody.innerHTML = html;
+    elements.submitModal.classList.add('active');
+
+    // Export handler
+    elements.exportResultsBtn.onclick = () => {
+      let exportText = `BẢNG KẾT QUẢ BÀI THI PMG201c FE\n`;
+      exportText += `Bộ đề: ${exam.title}\n`;
+      exportText += `Thời gian xuất: ${new Date().toLocaleString()}\n`;
+      exportText += `Tiến độ: ${done}/${total} câu\n`;
+      exportText += `----------------------------------------\n`;
+      answerLines.forEach(l => {
+        exportText += `Câu ${String(l.num).padStart(2, '0')}: ${l.answer} ${l.mode} ${l.flag ? '[FLAG]' : ''}\n`;
+      });
+      downloadTextFile(`${exam.id}_KetQua.txt`, exportText);
+      showToast('Đã xuất file kết quả bài thi!', 'success');
+    };
+  }
+
+  // Keyboard shortcut listener
+  function handleKeyboardShortcuts(e) {
+    if (state.currentView !== 'feView') return;
+    // Don't trigger if typing in notes or input
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      changeFEQuestion(-1);
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      changeFEQuestion(1);
+    } else if (['a', 'A'].includes(e.key)) {
+      e.preventDefault();
+      handleOptionClick('A');
+    } else if (['b', 'B'].includes(e.key)) {
+      e.preventDefault();
+      handleOptionClick('B');
+    } else if (['c', 'C'].includes(e.key)) {
+      e.preventDefault();
+      handleOptionClick('C');
+    } else if (['d', 'D'].includes(e.key)) {
+      e.preventDefault();
+      handleOptionClick('D');
+    } else if (['e', 'E'].includes(e.key)) {
+      e.preventDefault();
+      handleOptionClick('E');
+    } else if (['f', 'F'].includes(e.key)) {
+      e.preventDefault();
+      toggleCurrentFlag();
+    }
+  }
+
+  // =========================================================================
+  // STUDY GUIDE MODULE
+  // =========================================================================
+  function initGuideModule() {
+    const md = APP_DATA.guideMarkdown || '';
+    renderGuideMarkdown(md);
+
+    // Search filter
+    elements.guideSearchInput.addEventListener('input', () => {
+      const query = elements.guideSearchInput.value.toLowerCase().trim();
+      const items = elements.guideTocList.querySelectorAll('.toc-item');
+      items.forEach(it => {
+        const text = it.textContent.toLowerCase();
+        it.style.display = text.includes(query) ? 'block' : 'none';
+      });
+    });
+  }
+
+  function renderGuideMarkdown(markdown) {
+    // Basic Markdown parser for headings, code blocks, lists, and formatting
+    const lines = markdown.split('\n');
+    let html = '';
+    let inCodeBlock = false;
+    let codeBuffer = '';
+    const tocItems = [];
+
+    lines.forEach((line, idx) => {
+      if (line.startsWith('```')) {
+        if (!inCodeBlock) {
+          inCodeBlock = true;
+          codeBuffer = '';
+        } else {
+          inCodeBlock = false;
+          const escaped = escapeHtml(codeBuffer);
+          html += `<pre><code>${escaped}</code><button class="copy-code-btn" data-code="${encodeURIComponent(codeBuffer)}">Sao chép</button></pre>`;
+        }
+        return;
+      }
+
+      if (inCodeBlock) {
+        codeBuffer += line + '\n';
+        return;
+      }
+
+      // Headings
+      if (line.startsWith('# ')) {
+        const text = line.substring(2).trim();
+        const id = 'heading-' + idx;
+        html += `<h1 id="${id}">${escapeHtml(text)}</h1>`;
+        tocItems.push({ level: 1, text, id });
+      } else if (line.startsWith('## ')) {
+        const text = line.substring(3).trim();
+        const id = 'heading-' + idx;
+        html += `<h2 id="${id}">${escapeHtml(text)}</h2>`;
+        tocItems.push({ level: 2, text, id });
+      } else if (line.startsWith('### ')) {
+        const text = line.substring(4).trim();
+        const id = 'heading-' + idx;
+        html += `<h3 id="${id}">${escapeHtml(text)}</h3>`;
+        tocItems.push({ level: 3, text, id });
+      } else if (line.startsWith('* ') || line.startsWith('- ')) {
+        html += `<li>${formatInline(line.substring(2))}</li>`;
+      } else if (/^\d+\.\s/.test(line)) {
+        html += `<li>${formatInline(line.replace(/^\d+\.\s/, ''))}</li>`;
+      } else if (line.trim() === '---') {
+        html += '<hr style="border:none; border-top:1px solid var(--border-color); margin:28px 0;">';
+      } else if (line.trim()) {
+        html += `<p>${formatInline(line)}</p>`;
+      }
+    });
+
+    elements.guideArticle.innerHTML = html;
+
+    // Build TOC
+    elements.guideTocList.innerHTML = tocItems.map(item => `
+      <li>
+        <a class="toc-item" href="#${item.id}" style="padding-left:${item.level * 10}px">
+          ${escapeHtml(item.text)}
+        </a>
+      </li>
+    `).join('');
+
+    // Smooth scroll for TOC links
+    elements.guideTocList.querySelectorAll('.toc-item').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Copy code button handler
+    elements.guideArticle.querySelectorAll('.copy-code-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = decodeURIComponent(btn.dataset.code);
+        navigator.clipboard.writeText(code).then(() => {
+          const original = btn.textContent;
+          btn.textContent = '✓ Đã chép!';
+          setTimeout(() => btn.textContent = original, 2000);
+          showToast('Đã sao chép khung mẫu vào clipboard!', 'success');
+        });
+      });
+    });
+  }
+
+  function escapeHtml(str) {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function formatInline(str) {
+    let out = escapeHtml(str);
+    // Bold
+    out = out.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    // Italic
+    out = out.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    // Code
+    out = out.replace(/`(.*?)`/g, '<code>$1</code>');
+    return out;
+  }
+
+  // =========================================================================
+  // FORMULA & SUBMIT MODALS
+  // =========================================================================
+  elements.btnQuickFormula.addEventListener('click', () => {
+    elements.formulaModal.classList.add('active');
+  });
+
+  elements.closeFormulaModalBtn.addEventListener('click', () => {
+    elements.formulaModal.classList.remove('active');
+  });
+
+  elements.confirmFormulaModalBtn.addEventListener('click', () => {
+    elements.formulaModal.classList.remove('active');
+  });
+
+  elements.formulaModal.addEventListener('click', (e) => {
+    if (e.target === elements.formulaModal) {
+      elements.formulaModal.classList.remove('active');
+    }
+  });
+
+  elements.closeSubmitModalBtn.addEventListener('click', () => {
+    elements.submitModal.classList.remove('active');
+  });
+
+  elements.closeSubmitModalBtn2.addEventListener('click', () => {
+    elements.submitModal.classList.remove('active');
+  });
+
+  // =========================================================================
+  // BOOTSTRAP APP
+  // =========================================================================
+  function initApp() {
+    applyTheme(state.theme);
+    initPEModule();
+    initFEModule();
+    initGuideModule();
+
+    // Restore active view
+    const lastView = localStorage.getItem('pmg_active_view') || 'peView';
+    switchView(lastView);
+
+    console.log('PMG201c Exam Practice Hub loaded successfully!');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+  } else {
+    initApp();
+  }
+
+})();
