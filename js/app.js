@@ -1871,7 +1871,7 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
     const qIndex = state.feQuestionIndex;
     const totalQ = exam.questions.length;
     const filename = exam.questions[qIndex] || `Cau_${String(qIndex + 1).padStart(2, '0')}.webp`;
-    const imagePath = `${exam.folder}/${filename}?v=4.0`;
+    const imagePath = `${exam.folder}/${filename}?v=4.1`;
 
     elements.feQuestionNumber.textContent = qIndex + 1;
     elements.feQuestionImage.src = imagePath;
@@ -1944,8 +1944,11 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
         }
       }
 
-      // Set Question Mode according to question metadata if not set
-      if (!state.feQuestionModes[state.feExamId][qIndex] && qData.type) {
+      // Always enforce multi mode for 2-answer questions from question metadata
+      const isMultiQuestion = qData.type === 'multi' || (Array.isArray(qData.answer) && qData.answer.length > 1);
+      if (isMultiQuestion) {
+        state.feQuestionModes[state.feExamId][qIndex] = 'multi';
+      } else if (!state.feQuestionModes[state.feExamId][qIndex] && qData.type) {
         state.feQuestionModes[state.feExamId][qIndex] = qData.type;
       }
     } else {
