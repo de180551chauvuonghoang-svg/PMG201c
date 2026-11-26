@@ -1633,7 +1633,7 @@ const FE_QUESTIONS_TEXT = {
       "instruction": "(Choose 1 answer)",
       "question": "What is a program?",
       "options": {
-        "A": "An initiation group of management",
+        "A": "An initiative set up by management",
         "B": "A means to gain benefits and control of related projects",
         "C": "A group of unrelated projects managed in a coordinated way",
         "D": "A government regulation"
@@ -1641,13 +1641,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "By PMBOK definition, a program is a group of related projects, subsidiary programs, and program activities managed in a coordinated way to obtain benefits not available from managing them individually."
+      "explanation": "A program is a group of related projects managed in a coordinated way to obtain benefits and control not available from managing them individually."
     },
     {
       "number": 2,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "We discussed three types of matrix organizations. The not-mentioned one is:",
+      "question": "We discussed three types of matrix organizations, the not mentioned one is:",
       "options": {
         "A": "Medium Matrix",
         "B": "Weak Matrix",
@@ -1657,7 +1657,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "PMBOK classifies matrix organizational structures into Weak Matrix, Balanced Matrix, and Strong Matrix. Medium Matrix is not a recognized type."
+      "explanation": "The three types of matrix organizations in PMBOK are Weak, Balanced, and Strong Matrix (Medium Matrix does not exist)."
     },
     {
       "number": 3,
@@ -1666,14 +1666,14 @@ const FE_QUESTIONS_TEXT = {
       "question": "A project manager's primary responsibility is to deliver the product of the project within project constraints. Actions taken and changes made to the benefit of one constraint could negatively affect another. Which of the following best describes the major constraints on a project?",
       "options": {
         "A": "Scope, number of resources, and cost",
-        "B": "Scope, risks and schedule",
+        "B": "Scope, cost, and schedule",
         "C": "Scope, schedule, cost, quality, risk, resources, and customer satisfaction",
-        "D": "Schedule, risks, and number of changes"
+        "D": "Schedule, cost, and number of changes"
       },
       "answer": [
         "C"
       ],
-      "explanation": "Project constraints encompass competing constraints: Scope, Schedule, Cost, Quality, Risk, Resources, and Customer Satisfaction."
+      "explanation": "The major competing project constraints include scope, schedule, cost, quality, risk, resources, and customer satisfaction."
     },
     {
       "number": 4,
@@ -1689,23 +1689,23 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "D"
       ],
-      "explanation": "The project manager achieves a realistic plan by collaboratively involving the project team who will execute the actual work."
+      "explanation": "The project manager creates the project management plan with input from the project team who will execute the work."
     },
     {
       "number": 5,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "As discussed in the Project Management Lessons, The PMBOK® Guide describes 10 Project Management Knowledge Areas. Identify 3 out of the 10.",
+      "question": "As discussed in the Project Management course, The PMBOK® Guide describes 10 Project Management Knowledge Areas. Identify 3 out of the 10:",
       "options": {
         "A": "Stakeholder, Communication, Human Resource",
-        "B": "Deliverable, Scope, Customer",
-        "C": "Risk, Vendor Response, Vendor",
+        "B": "Stakeholder, Vendor, Customer",
+        "C": "Risk, Human Resource, Vendor",
         "D": "Procurement, Communication, Customer"
       },
       "answer": [
         "A"
       ],
-      "explanation": "PMBOK 10 Knowledge Areas: Integration, Scope, Schedule, Cost, Quality, Resource (Human Resource), Communications, Risk, Procurement, and Stakeholder Management."
+      "explanation": "Stakeholder, Communications, and Human Resource (Resource) Management are all PMBOK Knowledge Areas; Vendor and Customer are not."
     },
     {
       "number": 6,
@@ -1721,7 +1721,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "C"
       ],
-      "explanation": "The project charter is authored and issued by the sponsor. Only the project sponsor has the ultimate authority to modify or re-authorize the project charter."
+      "explanation": "The project sponsor is responsible for approving and authorizing changes to the project charter."
     },
     {
       "number": 7,
@@ -1729,22 +1729,22 @@ const FE_QUESTIONS_TEXT = {
       "instruction": "(Choose 1 answer)",
       "question": "Which one is not the causes of scope creep?",
       "options": {
-        "A": "Poorly defined objections",
+        "A": "Poorly defined objectives",
         "B": "Lack of defined change control process",
-        "C": "Changing stakeholder requirements",
-        "D": "Inconsistent understanding what is in scope & how to get it done",
+        "C": "Changing stakeholder perspectives",
+        "D": "Increased understanding of what it takes to get it done",
         "E": "Ability to say \"NO\""
       },
       "answer": [
         "E"
       ],
-      "explanation": "The ability to say 'NO' prevents scope creep. The lack of ability to say no is what causes scope creep."
+      "explanation": "The ability to say \"NO\" helps prevent scope creep rather than causing it."
     },
     {
       "number": 8,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: Unregulated changes allow for innovation and flexibility. Regulating changes causes a loss of creativity.",
+      "question": "True or False: Unregulated changes allow for innovation and flexibility. Regulating changes causes a lack of creativity.",
       "options": {
         "A": "True",
         "B": "False"
@@ -1752,7 +1752,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "False. Unregulated changes lead to uncontrolled scope creep and project failure. Formal change control ensures orderly execution without stifling needed innovation."
+      "explanation": "False. Unregulated changes lead to scope creep and project failure; change control manages changes without stifling innovation."
     },
     {
       "number": 9,
@@ -1768,7 +1768,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "A robust change management process uses tiered thresholds: routine/minor changes can be approved quickly by the PM, while major scope/cost impacts require CCB or Sponsor review."
+      "explanation": "A good change control process defines appropriate approval levels and thresholds based on the type and impact of the change."
     },
     {
       "number": 10,
@@ -1784,13 +1784,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "Lessons learned become organizational process assets and historical records that prevent repeated mistakes in future projects."
+      "explanation": "Lessons learned serve as historical records (organizational process assets) to improve future projects."
     },
     {
       "number": 11,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: Project scope statement is better to define inclusions (in scope items) than identify only exclusions (out of scope items).",
+      "question": "True or False: Project scope statement is better to define inclusions (in-scope items) than identify only exclusions (out of scope items)",
       "options": {
         "A": "False",
         "B": "True"
@@ -1798,7 +1798,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "True. While scope statements should document both, explicitly defining what is included (deliverables and acceptance criteria) is foundational."
+      "explanation": "True. Explicitly defining in-scope inclusions (alongside exclusions) provides clarity on what work is required."
     },
     {
       "number": 12,
@@ -1806,21 +1806,21 @@ const FE_QUESTIONS_TEXT = {
       "instruction": "(Choose 1 answer)",
       "question": "As you plan your project, you do so thinking that all team members will be assigned to your project for at least 50% of their available time. This is an example of:",
       "options": {
-        "A": "Fact planning",
-        "B": "Wishful thinking",
-        "C": "A project constraint",
-        "D": "An assumption"
+        "A": "Poor planning.",
+        "B": "Wishful thinking.",
+        "C": "A project demand.",
+        "D": "An assumption."
       },
       "answer": [
         "D"
       ],
-      "explanation": "An assumption is a factor considered to be true, real, or certain for planning purposes without proof or demonstration."
+      "explanation": "Planning based on something believed to be true without proof is an assumption."
     },
     {
       "number": 13,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: When creating the WBS of the project, Project Manager decides to not include the management tasks onto WBS as those tasks will be done by him and he knows well what to do to do in the project.",
+      "question": "True or False: When creating the WBS of the project, Project Manager decided to not include his management tasks into WBS as those tasks will be done by him and he knows well what he has to do in the project",
       "options": {
         "A": "False",
         "B": "True"
@@ -1828,7 +1828,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "False. According to the 100% Rule, the WBS must include 100% of the project scope, which explicitly includes project management work packages."
+      "explanation": "False. By the 100% rule, the WBS must include all project work, including project management activities."
     },
     {
       "number": 14,
@@ -1836,15 +1836,15 @@ const FE_QUESTIONS_TEXT = {
       "instruction": "(Choose 1 answer)",
       "question": "To manage a project effectively, work should be broken down into small pieces. Which of the following does not describe how far to decompose the work?",
       "options": {
-        "A": "Until it has a meaningful conclusion.",
-        "B": "Until it cannot be logically subdivided further.",
-        "C": "Until it can be done by one person.",
-        "D": "Until it can be realistically estimated."
+        "A": "Until it has a meaningful conclusion",
+        "B": "Until it cannot be logically subdivided further",
+        "C": "Until it can be done by one person",
+        "D": "Until it can be realistically estimated"
       },
       "answer": [
         "C"
       ],
-      "explanation": "Work packages are decomposed until realistic estimates, schedules, and accountability can be assigned, not strictly down to a single person level."
+      "explanation": "Work packages do not have to be performed by a single person; decomposition stops when work can be realistically estimated and managed."
     },
     {
       "number": 15,
@@ -1860,27 +1860,27 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "C"
       ],
-      "explanation": "Requirements specifications are inputs to Collect Requirements and Define Scope, not directly to Estimate Activity Durations."
+      "explanation": "Requirements specifications are not a direct input to Estimate Activity Durations."
     },
     {
       "number": 16,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: Project Manager should avoid using milestones for high-level reporting.",
+      "question": "True or False: Project Manager should consider using milestones for high level reporting.",
       "options": {
         "A": "True",
         "B": "False"
       },
       "answer": [
-        "B"
+        "A"
       ],
-      "explanation": "False. Milestone charts (zero-duration checkpoints) are among the best tools for concise high-level and executive reporting."
+      "explanation": "True. Milestones represent key events/points in time and are ideal for high-level executive reporting."
     },
     {
       "number": 17,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "The team member informs you that the test system must be refreshed with production data before testing can begin. This dependency is:",
+      "question": "Your team member informs you that the test system must be refreshed with your test data before testing can begin. This dependency is:",
       "options": {
         "A": "Discretionary",
         "B": "Internal",
@@ -1890,13 +1890,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "C"
       ],
-      "explanation": "Mandatory dependency (hard logic) is inherent in the nature of the work. Testing cannot physically execute without the required database environment."
+      "explanation": "A mandatory dependency (hard logic) is one that is legally or contractually required or inherent in the nature of the work."
     },
     {
       "number": 18,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: If 'develop online modules' cannot finish before 'review online modules' can finish, that is called a finish to finish relationship.",
+      "question": "True or False: If \"develop online modules\" needs to finish before \"review online modules\" can finish, that is called a finish to finish relationship.",
       "options": {
         "A": "True",
         "B": "False"
@@ -1904,13 +1904,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "True. A Finish-to-Finish (FF) dependency means that the successor cannot finish until the predecessor has finished."
+      "explanation": "True. Finish-to-Finish (FF) means the successor cannot finish until the predecessor has finished."
     },
     {
       "number": 19,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: The start time of the project (the early start of the first activity) can be 'zero' or 'one' depending on your chosen convention.",
+      "question": "True or False: The start time of the project (the early start of the first activity) can be \"zero\" or \"one\" depending on your chosen convention.",
       "options": {
         "A": "False",
         "B": "True"
@@ -1918,13 +1918,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "True. Project managers and scheduling algorithms can use either the 0-based or 1-based start day convention."
+      "explanation": "True. Both 0-based and 1-based conventions are valid in network diagramming as long as used consistently."
     },
     {
       "number": 20,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "The figure below is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? (A:2 Start, B:4 A,E, C:6 A, D:3 B,C, E:7 Start, F:2 E, End: D,F)",
+      "question": "The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? (A=2 [Start], B=4 [A,E], C=6 [A], D=3 [B,C], E=7 [Start], F=2 [E], End=- [D,F])",
       "options": {
         "A": "13",
         "B": "9",
@@ -1934,7 +1934,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "D"
       ],
-      "explanation": "Path Start -> E(7) -> B(4) -> D(3) -> End = 14. This is the longest path, making it the critical path."
+      "explanation": "Paths: A-C-D = 2+6+3 = 11; A-B-D = 2+4+3 = 9; E-B-D = 7+4+3 = 14; E-F = 7+2 = 9. The longest (critical) path is E-B-D = 14."
     },
     {
       "number": 21,
@@ -1948,21 +1948,21 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "True. The Forward Pass computes the early start (ES) and early finish (EF) dates and identifies the total project duration."
+      "explanation": "True. The forward pass calculates Early Start and Early Finish, determining the total project duration."
     },
     {
       "number": 22,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: Fast tracking is the approach to add more resources (labor, overtime, etc.) into the activities to reduce their duration.",
+      "question": "True or False: The Crashing is the approach to add more resources (labor, overtime, etc.) into the activities to reduce their durations.",
       "options": {
         "A": "True",
         "B": "False"
       },
       "answer": [
-        "B"
+        "A"
       ],
-      "explanation": "False. Adding resources to compress schedule is Crashing. Fast tracking involves executing sequential activities in parallel."
+      "explanation": "True. Crashing adds resources to critical path activities to shorten schedule duration, usually increasing cost."
     },
     {
       "number": 23,
@@ -1978,23 +1978,23 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "D"
       ],
-      "explanation": "Top-down estimation is fast and inexpensive, but significantly less accurate than bottom-up estimation."
+      "explanation": "Top-down (analogous) estimating is generally less accurate than bottom-up estimating."
     },
     {
       "number": 24,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "When you have good historical information which can be used in a reliable formula to model, you will probably use:",
+      "question": "When you have good historical information which can be used in a reliable formula or model, you will probably use:",
       "options": {
         "A": "Parametric estimating",
-        "B": "Guess estimating",
+        "B": "Exact estimating",
         "C": "Analogous estimating",
-        "D": "Bottom-up estimating"
+        "D": "Bottoms up estimating"
       },
       "answer": [
         "A"
       ],
-      "explanation": "Parametric estimating uses statistical relationships between historical data and variables in a mathematical formula to calculate estimates."
+      "explanation": "Parametric estimating uses statistical relationships between historical data and other variables to calculate an estimate."
     },
     {
       "number": 25,
@@ -2008,13 +2008,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "True. Top-down estimating is standard during early project chartering when detailed work packages are not yet available."
+      "explanation": "True. Top-down estimating is useful early in a project when detailed information is limited or uncertain."
     },
     {
       "number": 26,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: The Cost baseline is equal to the total of Activity Cost Estimates.",
+      "question": "True or False: The Cost Baseline is equal to the total of Activity Cost Estimates.",
       "options": {
         "A": "True",
         "B": "False"
@@ -2022,7 +2022,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "False. The Cost Baseline includes work package cost estimates PLUS contingency reserves. It does not include management reserves."
+      "explanation": "False. The Cost Baseline equals Activity Cost Estimates plus Contingency Reserves."
     },
     {
       "number": 27,
@@ -2036,13 +2036,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "False. EVM integrates scope, schedule, and cost baselines using monetary terms, but does not measure quality directly."
+      "explanation": "False. Earned Value Management integrates scope, schedule, and cost (not quality)."
     },
     {
       "number": 28,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "The discipline of quality management complements the discipline of project management. Both recognize all BUT one of the following:",
+      "question": "The discipline of quality management complements the discipline of project management. Both recognize all but one of the following:",
       "options": {
         "A": "Customer satisfaction",
         "B": "Prevention over inspection",
@@ -2052,7 +2052,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "C"
       ],
-      "explanation": "Modern quality management emphasizes Continuous Improvement (Kaizen / PDCA cycle), never 'one-time' improvement."
+      "explanation": "Quality management and project management both emphasize continuous improvement, not one-time improvement."
     },
     {
       "number": 29,
@@ -2066,7 +2066,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "True. Project quality focuses on the execution of management processes, whereas product quality evaluates product deliverables."
+      "explanation": "True. Project quality focuses on project management processes, while product quality focuses on the deliverable itself."
     },
     {
       "number": 30,
@@ -2080,21 +2080,21 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "False. Process Improvement plans aim to identify waste and INCREASE value, efficiency, and customer satisfaction."
+      "explanation": "False. The Process Improvement Plan identifies ways to increase (not reduce) the value of processes."
     },
     {
       "number": 31,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: Your roles as the project manager during quality assurance is to work with a quality assurance manager who will create a test plan and test cases which will be used to test the product you are creating in order to prevent defects from reaching your customer.",
+      "question": "True or False: Your role as the project manager during quality assurance is to work with a quality assurance manager who will create a test plan and test cases which will be used to test the product you are creating in order to prevent defects from reaching your customer.",
       "options": {
         "A": "False",
         "B": "True"
       },
       "answer": [
-        "B"
+        "A"
       ],
-      "explanation": "True. Quality assurance ensures standard audits and preventative measures eliminate defects before final delivery."
+      "explanation": "False. Creating test plans and test cases to test the product is Quality Control, whereas Quality Assurance focuses on auditing processes."
     },
     {
       "number": 32,
@@ -2108,7 +2108,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "True. Quality Control inspects deliverables and takes corrective actions to eliminate defects and unsatisfactory performance."
+      "explanation": "True. Quality control monitors specific project results to determine compliance and eliminate causes of unsatisfactory performance."
     },
     {
       "number": 33,
@@ -2122,7 +2122,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "True. Human Resource Management includes organizing, managing, motivating, and leading the project team."
+      "explanation": "True."
     },
     {
       "number": 34,
@@ -2132,35 +2132,35 @@ const FE_QUESTIONS_TEXT = {
       "options": {
         "A": "Caused by troublemakers",
         "B": "Often beneficial",
-        "C": "Avoid at all costs",
+        "C": "Should be avoided",
         "D": "Must be suppressed"
       },
       "answer": [
         "B"
       ],
-      "explanation": "Modern project management views conflict as natural, inevitable, and often beneficial for healthy team discussions and innovation."
+      "explanation": "Modern project management views conflict as inevitable and often beneficial when managed constructively."
     },
     {
       "number": 35,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Two team members disagree on how to solve a project issue. They express their disagreement and then engage in collaborative debate. This is an example of:",
+      "question": "Two team members disagree on how to solve a project issue. They express their disagreement and then engage in a professional debate. This is an example of:",
       "options": {
-        "A": "Unrealistic conflict",
-        "B": "Unproductive conflict",
-        "C": "Healthy conflict",
-        "D": "Unhealthy conflict"
+        "A": "Unrealistic conflict.",
+        "B": "Unproductive conflict.",
+        "C": "Healthy conflict.",
+        "D": "Unhealthy conflict."
       },
       "answer": [
         "C"
       ],
-      "explanation": "Constructive disagreement focused on finding the best technical solution is a prime example of healthy conflict."
+      "explanation": "Professional debate over technical or project issues is healthy conflict."
     },
     {
       "number": 36,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "You and another project manager disagree over whether a team member should work on your team or on her team. You decide that the team member can work for the other project manager and suppose that the other project manager will support you in the future. The truth is you needed this person working on your project. The conflict resolution approach you have used is:",
+      "question": "You and another project manager disagree over whether a team member should work on your team or on her team. You decide that the team member can work for the other project manager and suppose that the other project manager will support you in the future. The truth is you wanted this person working on your project. The conflict resolution approach you have used is:",
       "options": {
         "A": "Compromising",
         "B": "Smoothing",
@@ -2168,31 +2168,31 @@ const FE_QUESTIONS_TEXT = {
         "D": "Forcing"
       },
       "answer": [
-        "B"
+        "A"
       ],
-      "explanation": "Smoothing (accommodating) concedes your own position to satisfy the other party and maintain peace, often sacrificing your immediate need."
+      "explanation": "Compromising involves give-and-take where both parties give up something or trade support."
     },
     {
       "number": 37,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "When you use the RACI (Responsible, Accountable, Consult, Inform) version of the RAM, those who are Accountable are:",
+      "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those informed persons are:",
       "options": {
-        "A": "Providing subject-matter expertise",
+        "A": "Providing subject matter expertise",
         "B": "Making the final decision",
-        "C": "Being kept updated about project progress",
+        "C": "Being kept updated about project progress.",
         "D": "Completing the work"
       },
       "answer": [
-        "B"
+        "C"
       ],
-      "explanation": "In a RACI chart, Accountable ('A') is the single person who has the final decision-making power and ownership of the deliverable."
+      "explanation": "In RACI, Informed (I) stakeholders are kept updated on progress and decisions."
     },
     {
       "number": 38,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: Effective project communication management creates a bridge between stakeholders based on a shared understanding of the project and the ongoing exchange of information needed for its success.",
+      "question": "True or False: Effective project communication management creates a bridge between stakeholders based on a shared understanding of the project and the ongoing sharing of information needed for its success.",
       "options": {
         "A": "True",
         "B": "False"
@@ -2200,7 +2200,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "True. Communication bridges diverse stakeholders with different backgrounds, cultures, and expectations."
+      "explanation": "True."
     },
     {
       "number": 39,
@@ -2208,15 +2208,15 @@ const FE_QUESTIONS_TEXT = {
       "instruction": "(Choose 1 answer)",
       "question": "Which of the following is NOT likely to be documented in a communications management plan?",
       "options": {
-        "A": "Person responsible for treats to risk review",
-        "B": "Timeframe and frequency of communication",
+        "A": "Person responsible for tracking risk events",
+        "B": "Time frame and frequency of communication",
         "C": "How information will be communicated",
         "D": "What information will be communicated"
       },
       "answer": [
         "A"
       ],
-      "explanation": "Risk review owners and threat mitigation roles belong in the Risk Management Plan and Risk Register, not communications."
+      "explanation": "Risk tracking responsibilities are documented in the risk management plan/register, not the communications management plan."
     },
     {
       "number": 40,
@@ -2224,15 +2224,15 @@ const FE_QUESTIONS_TEXT = {
       "instruction": "(Choose 1 answer)",
       "question": "Lateral communication is communication to/from:",
       "options": {
-        "A": "Your subordinates",
-        "B": "Your functional management",
-        "C": "Your unit management",
-        "D": "Your peers"
+        "A": "Your subordinates.",
+        "B": "Your functional management.",
+        "C": "Your line management.",
+        "D": "Your peers."
       },
       "answer": [
         "D"
       ],
-      "explanation": "Lateral or horizontal communication flows between colleagues and peers at the same organizational hierarchy level."
+      "explanation": "Lateral (horizontal) communication occurs between peers."
     },
     {
       "number": 41,
@@ -2246,25 +2246,25 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "False. The roles are reversed: the sender ensures the message is clear, complete, and tailored; the receiver provides feedback and confirms understanding."
+      "explanation": "False. The roles are reversed: the sender makes the message clear/complete, and the receiver provides feedback."
     },
     {
       "number": 42,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Which one is the correct matching of report types and the descriptions?\nReport types: (1) Status report, (2) Progress report, (3) Forecasting report.\nDescriptions: (a) Predicting future project progress, (b) Describing what the project team has accomplished, (c) Describing where the project now stands.",
+      "question": "Which one is the correct matching of report types and the descriptions?\nReport types: (1) Status report, (2) Progress report, (3) Forecasting report\nDescriptions: (a) Predicting future project progress and completion, (b) Describing what the project team has accomplished or what is completed versus what is in progress, (c) Describing where the project now stands.",
       "options": {
-        "A": "(1)-(a), (2)-(b), (3)-(c)",
-        "B": "(1)-(a), (2)-(c), (3)-(b)",
-        "C": "(1)-(b), (2)-(c), (3)-(a)",
-        "D": "(1)-(b), (2)-(a), (3)-(c)",
-        "E": "(1)-(c), (2)-(b), (3)-(a)",
-        "F": "(1)-(c), (2)-(a), (3)-(b)"
+        "A": "(1)&(a), (2)&(b), (3)&(c)",
+        "B": "(1)&(a), (2)&(c), (3)&(b)",
+        "C": "(1)&(b), (2)&(c), (3)&(a)",
+        "D": "(1)&(b), (2)&(a), (3)&(c)",
+        "E": "(1)&(c), (2)&(a), (3)&(b)",
+        "F": "(1)&(c), (2)&(b), (3)&(a)"
       },
       "answer": [
-        "E"
+        "F"
       ],
-      "explanation": "Status report matches (c) current standing; Progress report matches (b) work accomplished; Forecasting report matches (a) future predictions."
+      "explanation": "Status report describes where the project now stands (c); Progress report describes what has been accomplished vs in progress (b); Forecasting report predicts future progress (a)."
     },
     {
       "number": 43,
@@ -2278,7 +2278,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "False. Risk management aims to MINIMIZE threats (negative risks) and MAXIMIZE opportunities (positive risks)."
+      "explanation": "False. Risk management aims to minimize threats and maximize opportunities."
     },
     {
       "number": 44,
@@ -2288,35 +2288,35 @@ const FE_QUESTIONS_TEXT = {
       "options": {
         "A": "SWOT (Strengths, Opportunities, Weaknesses, Threats)",
         "B": "Reviewing and evaluating project documents",
-        "C": "Reviewing similar projects resource in past",
+        "C": "Reviewing similar projects executed in past",
         "D": "EVM (Earned Value Management)"
       },
       "answer": [
         "D"
       ],
-      "explanation": "EVM is a quantitative monitoring tool used during project execution, not a risk identification technique."
+      "explanation": "EVM is a performance measurement technique for cost/schedule control, not a risk identification tool."
     },
     {
       "number": 45,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "If the response your choose is to accept a risk, that means that:",
+      "question": "If the response you choose is to accept a risk this means that:",
       "options": {
-        "A": "You decide to not consider the risk but establish contingency plan.",
+        "A": "You actively do not consider the risk but establish contingency plan.",
         "B": "You change your plans so that you eliminate the risk.",
-        "C": "You change your plan to make another party become responsible for the risk.",
+        "C": "You change your plan so that another party will be responsible for the risk.",
         "D": "You create your plan to reduce the probability and/or the impact of the risk."
       },
       "answer": [
         "A"
       ],
-      "explanation": "Risk acceptance acknowledges the existence of a risk and maintains a contingency reserve without changing the project plan upfront."
+      "explanation": "Active risk acceptance means acknowledging the risk without changing the plan, while establishing a contingency plan/reserve."
     },
     {
       "number": 46,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: When you choose to transfer your project risks to a third party, it will definitely start a secondary risk.",
+      "question": "True or False: When you choose to transfer your project risk to a third party, it will definitely rise to secondary risk.",
       "options": {
         "A": "True",
         "B": "False"
@@ -2324,29 +2324,29 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "False. Secondary risks can occasionally arise from risk responses, but they do not 'definitely' happen in every instance."
+      "explanation": "False. Transferring a risk may create secondary risks, but not definitely."
     },
     {
       "number": 47,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Who's the stakeholder that has the most influence on your current running project?",
+      "question": "Who is the stakeholder that has the most influence on your current running project?",
       "options": {
         "A": "Project Team",
-        "B": "Immediate boss",
+        "B": "Investors",
         "C": "Competitors",
         "D": "Sponsor"
       },
       "answer": [
         "D"
       ],
-      "explanation": "The Project Sponsor champions the project, allocates capital, and holds the highest decision-making authority."
+      "explanation": "The project sponsor provides funding and executive authority, holding the most influence over the project."
     },
     {
       "number": 48,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "One way to classify your stakeholders is to use the Power/Interest grid. If a stakeholder is low interest, high power, what should the Project Manager do?",
+      "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is low interest / high power, what should the Project Manager do?",
       "options": {
         "A": "Monitor",
         "B": "Keep satisfied",
@@ -2356,13 +2356,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "Stakeholders with High Power and Low Interest should be kept satisfied to prevent them from negatively impacting the project."
+      "explanation": "In the Power/Interest Grid, High Power / Low Interest stakeholders should be Kept Satisfied."
     },
     {
       "number": 49,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "You just came from a meeting with one of your project stakeholders, he knows about your project and also its potential impacts, and he always supports the work and its outcomes. How would you classify him?",
+      "question": "You just came from a meeting with one of your project stakeholders, he knew about your project and also its potential impacts, and he always supported for the work and its outcomes. How would you classify him?",
       "options": {
         "A": "Supportive",
         "B": "Neutral",
@@ -2372,13 +2372,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "A stakeholder who understands the project and actively supports its goals is classified as 'Supportive'."
+      "explanation": "A stakeholder aware of the project who supports the work and its outcomes is classified as Supportive."
     },
     {
       "number": 50,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: The Project Manager is responsible for stakeholder expectation management.",
+      "question": "True or False: The Project Manager is responsible for stakeholder expectations management.",
       "options": {
         "A": "False",
         "B": "True"
@@ -2386,7 +2386,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "True. Managing stakeholder expectations and communication is a core competency and duty of the Project Manager."
+      "explanation": "True. Managing stakeholder engagement and expectations is a key responsibility of the Project Manager."
     }
   ],
   "PMG201c_FA2024_RE_3167": [
@@ -2394,9 +2394,9 @@ const FE_QUESTIONS_TEXT = {
       "number": 1,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Identify the five engagement levels of stakeholders",
+      "question": "Identify the five engagement levels of stakeholders:",
       "options": {
-        "A": "Unaware, resistant, wrong-willed, supportive, leading",
+        "A": "Unaware, resistant, strong-willed, supportive, leading",
         "B": "Unaware, resistant, neutral, supportive, leading",
         "C": "Unaware, resistant, strong-willed, supportive, sponsor",
         "D": "Unaware, resistant, neutral, supportive, oblivious"
@@ -2404,7 +2404,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "PMBOK classifies stakeholder engagement levels into: Unaware, Resistant, Neutral, Supportive, and Leading."
+      "explanation": "PMBOK defines five stakeholder engagement levels: Unaware, Resistant, Neutral, Supportive, and Leading."
     },
     {
       "number": 2,
@@ -2418,13 +2418,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "True. Defining project exclusions explicitly manages stakeholder expectations and guards against scope creep."
+      "explanation": "True. Project exclusions explicitly state what is out of scope to prevent scope creep."
     },
     {
       "number": 3,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: If 'develop online modules' must be 100% completed before 'review online modules' can begin, that is called a finish to start relationship.",
+      "question": "True or False: If \"develop online modules\" must be 100% completed before \"review online modules\" can begin, that is called a finish to start relationship.",
       "options": {
         "A": "True",
         "B": "False"
@@ -2432,7 +2432,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "True. A Finish-to-Start (FS) relationship means the successor activity cannot start until the predecessor has completely finished."
+      "explanation": "True. Finish-to-Start (FS) means the predecessor must finish before the successor can start."
     },
     {
       "number": 4,
@@ -2448,7 +2448,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "C"
       ],
-      "explanation": "Mandatory dependencies (hard logic) are legally, contractually, or physically required by the inherent nature of the work."
+      "explanation": "Mandatory dependencies (hard logic) are inherent in the nature of the work and cannot be done in any other order."
     },
     {
       "number": 5,
@@ -2462,7 +2462,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "False. Product quality focuses on the deliverables and output specs; project quality focuses on project management processes."
+      "explanation": "False. Project quality focuses on project management processes; product quality focuses on the product/deliverable."
     },
     {
       "number": 6,
@@ -2473,19 +2473,19 @@ const FE_QUESTIONS_TEXT = {
         "A": "Poorly defined objectives",
         "B": "Lack of defined change control process",
         "C": "Changing stakeholder perspectives",
-        "D": "Inconsistent understanding what is in scope & how to get it done",
+        "D": "Increased understanding of what it takes to get it done",
         "E": "Ability to say \"NO\""
       },
       "answer": [
         "E"
       ],
-      "explanation": "The ability to say 'NO' prevents scope creep. The inability or reluctance to say no causes scope creep."
+      "explanation": "The ability to say \"NO\" prevents scope creep rather than causing it."
     },
     {
       "number": 7,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "A project manager may use ________ to make sure the team members clearly know what is included in each of their work packages.",
+      "question": "A project manager may use ______ to make sure the team members clearly know what is included in each of their work packages.",
       "options": {
         "A": "The project scope statement",
         "B": "The product scope",
@@ -2495,7 +2495,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "C"
       ],
-      "explanation": "The WBS Dictionary provides detailed descriptions of work, deliverables, resource requirements, and acceptance criteria for each work package."
+      "explanation": "The WBS dictionary provides detailed descriptions of each WBS component/work package."
     },
     {
       "number": 8,
@@ -2509,7 +2509,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "True. Quality assurance focuses on process compliance and organizational audits to prevent defects from happening."
+      "explanation": "True."
     },
     {
       "number": 9,
@@ -2523,7 +2523,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "True. If underlying parameters or technology have changed, old historical relationships will produce skewed, invalid estimates."
+      "explanation": "True. Historical cost/resource relationships may become outdated or inapplicable across different contexts."
     },
     {
       "number": 10,
@@ -2533,19 +2533,19 @@ const FE_QUESTIONS_TEXT = {
       "options": {
         "A": "The sponsor creates the project charter, and the project manager approves it",
         "B": "The project team creates the project charter, and the PMO (Project Management Office) approves it",
-        "C": "The operations manager creates the project charter, and the functional manager approves it",
+        "C": "The executive manager creates the project charter, and the functional manager approves it",
         "D": "The project manager creates the project charter, and the sponsor approves it"
       },
       "answer": [
         "D"
       ],
-      "explanation": "In standard practice, the project manager frequently drafts/develops the charter, but the initiating sponsor formally approves and signs it."
+      "explanation": "In this course context, the project manager drafts/creates the charter and the sponsor approves it."
     },
     {
       "number": 11,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: The term resources refers to not only people. It also includes money or materials or equipment.",
+      "question": "True or False: The term resources refers to not only people, it also includes money or materials or equipment.",
       "options": {
         "A": "True",
         "B": "False"
@@ -2553,7 +2553,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "True. Project resources comprise human resources, equipment, supplies, materials, facilities, and budget."
+      "explanation": "True."
     },
     {
       "number": 12,
@@ -2567,7 +2567,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "True. The Backward Pass calculates late start (LS) and late finish (LF) dates, and derives total and free float."
+      "explanation": "True. Backward pass calculates LS and LF, enabling calculation of float and identification of the critical path."
     },
     {
       "number": 13,
@@ -2576,14 +2576,14 @@ const FE_QUESTIONS_TEXT = {
       "question": "In a project context, risk is defined as:",
       "options": {
         "A": "The probability of an event having a positive or negative effect on at least one project objective.",
-        "B": "The impact of not completing the project on time and within budget",
+        "B": "The impact of not completing the project on time and within budget.",
         "C": "An uncertain event that, if it occurs, will have a positive or negative effect on at least one project objective.",
         "D": "An uncertain event that, if it occurs, will have a negative effect on at least one project objective."
       },
       "answer": [
         "C"
       ],
-      "explanation": "PMBOK definition: An uncertain event or condition that, if it occurs, has a positive or negative effect on one or more project objectives."
+      "explanation": "PMBOK defines risk as an uncertain event or condition that, if it occurs, has a positive or negative effect on one or more project objectives."
     },
     {
       "number": 14,
@@ -2597,13 +2597,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "True. Milestones represent key completion events (with 0 duration) that provide clean progress summaries for upper management."
+      "explanation": "True."
     },
     {
       "number": 15,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "As discussed in the Project Management lessons, the PMBOK® Guide describes 10 Project Management Knowledge Areas. Identify 3 out of the 10.",
+      "question": "As discussed in the Project Management course, The PMBOK® Guide describes 10 Project Management Knowledge Areas. Identify 3 out of the 10:",
       "options": {
         "A": "Cost, Scope, Time",
         "B": "Quality, Process, Scope",
@@ -2613,7 +2613,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "Cost, Scope, and Time (Schedule) are 3 fundamental Knowledge Areas in PMBOK."
+      "explanation": "Cost, Scope, and Time (Schedule) are PMBOK Knowledge Areas; Process and Contracts are not."
     },
     {
       "number": 16,
@@ -2621,7 +2621,7 @@ const FE_QUESTIONS_TEXT = {
       "instruction": "(Choose 1 answer)",
       "question": "Which of the following best describes a project management plan?",
       "options": {
-        "A": "A prescriptive project management software",
+        "A": "A printout from project management software",
         "B": "A bar chart",
         "C": "Scope, risk, resource, and other management plan",
         "D": "A project schedule"
@@ -2629,13 +2629,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "C"
       ],
-      "explanation": "The Project Management Plan is an integrated comprehensive document consolidating scope, schedule, cost, quality, resource, risk, and communications subsidiary plans."
+      "explanation": "The project management plan integrates all subsidiary management plans (scope, schedule, cost, quality, resource, risk, etc.) and baselines."
     },
     {
       "number": 17,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "The table below is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? (A:2 Start, B:4 A,E, C:6 A, D:3 B,C, E:7 Start, F:2 E, End: D,F)",
+      "question": "The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? (A=2 [Start], B=4 [A,E], C=6 [A], D=3 [B,C], E=7 [Start], F=2 [E], End=- [D,F])",
       "options": {
         "A": "9",
         "B": "11",
@@ -2645,7 +2645,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "D"
       ],
-      "explanation": "Critical path Start -> E (7) -> B (4) -> D (3) = 14 days."
+      "explanation": "Critical path is Start -> E(7) -> B(4) -> D(3) -> End = 14."
     },
     {
       "number": 18,
@@ -2659,7 +2659,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "False. Project Budget = Cost Baseline + Management Reserves. The cost baseline only includes contingency reserves."
+      "explanation": "False. Project Budget = Cost Baseline + Management Reserves."
     },
     {
       "number": 19,
@@ -2675,7 +2675,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "C"
       ],
-      "explanation": "Project Documents Updates are outputs of the process, not inputs. Requirements specifications define what needs to be built rather than duration estimates."
+      "explanation": "Project Documents Updates is an output, not an input."
     },
     {
       "number": 20,
@@ -2689,13 +2689,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "False. The WBS represents work executed by the ENTIRE project team to accomplish project objectives, not just by the project manager."
+      "explanation": "False. The WBS decomposes the work to be executed by the entire project team, not just the PM."
     },
     {
       "number": 21,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Which one of these is the current view of conflict?",
+      "question": "Which one of these is the correct view of conflict?",
       "options": {
         "A": "Inevitable",
         "B": "Always bad",
@@ -2705,13 +2705,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "Modern management recognizes conflict as inevitable and a natural consequence of diverse teams working together under constraints."
+      "explanation": "Conflict is inevitable in projects."
     },
     {
       "number": 22,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Which description defines Bottom-Up Estimating?",
+      "question": "What description defines Bottoms Up Estimating?",
       "options": {
         "A": "A technique that analyzes activities on past projects and using them as a basis for estimating costs.",
         "B": "A technique that uses a mathematical model to estimate costs.",
@@ -2720,13 +2720,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "C"
       ],
-      "explanation": "Bottom-up estimating aggregates individual work package or activity estimates at the lowest granular level up to project totals."
+      "explanation": "Bottom-up estimating estimates individual work packages or activities at the lowest level of detail and rolls them up."
     },
     {
       "number": 23,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "The discipline of quality management complements the discipline of project management. Both recognize all BUT one of the following:",
+      "question": "The discipline of quality management complements the discipline of project management. Both recognize all but one of the following:",
       "options": {
         "A": "Customer satisfaction",
         "B": "Prevention over inspection",
@@ -2736,7 +2736,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "D"
       ],
-      "explanation": "The standard PMBOK tenet is 'Management Responsibility' (leadership provides resources and ownership of quality system)."
+      "explanation": "Both recognize management responsibility (not project team responsibility) alongside customer satisfaction, prevention over inspection, and continuous improvement."
     },
     {
       "number": 24,
@@ -2752,7 +2752,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "Lessons learned document successes and failures so that future teams avoid repeating errors and replicate successes."
+      "explanation": "Lessons learned capture successes and failures so future projects can repeat successes and avoid past mistakes."
     },
     {
       "number": 25,
@@ -2766,23 +2766,23 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "False. The primary output of Identify Risks is the Risk Register."
+      "explanation": "False. The primary output of Identify Risks is the risk register."
     },
     {
       "number": 26,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "You and your team have identified a risk that is a threat to your ability to successfully meet project objectives. The risk involves team members from your company performing work which requires training, certification, and many hours of experience. You have one newly-certified team member and others who are still in training. Which do you think is your best response to this risk?",
+      "question": "You and your team have identified a risk that is a threat to your ability to successfully meet project objectives. The risk involves team members from your company performing work which requires training, certification, and many hours of experience. You have one newly certified team member and others who are still in training. Which do you think is your best response to this risk?",
       "options": {
         "A": "Acknowledge your lack of expertise and set aside some contingency reserve to cover the risk.",
         "B": "Change the scope of the project so that this type of work is excluded and introduce a new risk, that of an unhappy sponsor.",
         "C": "Let the team do the work and see what happen, do not prepare any other response.",
-        "D": "You have budget to hire external resources and there is a vendor you can hire who specializes in this type of work. Hire them."
+        "D": "You have budget to hire external resources and there is a vendor you can hire who specialized in this type of work, hire them."
       },
       "answer": [
         "D"
       ],
-      "explanation": "Hiring an experienced vendor transfers and mitigates the threat by leveraging qualified external subject matter expertise within existing budget."
+      "explanation": "Hiring a specialized vendor when you have the budget effectively mitigates/transfers the expertise risk."
     },
     {
       "number": 27,
@@ -2796,7 +2796,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "False. A project has a DEFINED beginning and a DEFINED end/finish."
+      "explanation": "False. A project has a definite (defined) start and finish."
     },
     {
       "number": 28,
@@ -2805,14 +2805,14 @@ const FE_QUESTIONS_TEXT = {
       "question": "The definition of a stakeholder includes:",
       "options": {
         "A": "People and organizations that are not impacted by your project.",
-        "B": "Organizations impacted by your project but not people; they are all part of the impacted organizations.",
+        "B": "Organizations impacted by your project but not people, they are all part of the impacted organizations.",
         "C": "The people or organizations that are positively or negatively impacted by your project.",
         "D": "People who are impacted by your project, but not organizations impacted by your project."
       },
       "answer": [
         "C"
       ],
-      "explanation": "Stakeholders are persons or organizations actively involved in the project, or whose interests may be positively or negatively affected by its execution or completion."
+      "explanation": "Stakeholders are individuals, groups, or organizations that may affect, be affected by, or perceive themselves to be affected by a project."
     },
     {
       "number": 29,
@@ -2828,7 +2828,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "D"
       ],
-      "explanation": "Organizational breakdown charts and responsibility assignment matrices (RAM / RACI) communicate reporting relationships, roles, and responsibilities."
+      "explanation": "Organization charts (hierarchical charts) are used to document and communicate team roles and responsibilities."
     },
     {
       "number": 30,
@@ -2836,15 +2836,15 @@ const FE_QUESTIONS_TEXT = {
       "instruction": "(Choose 1 answer)",
       "question": "To calculate late start (LS) of an activity, you will:",
       "options": {
-        "A": "Take its late finish minus its estimated duration",
-        "B": "Take its early finish minus its estimated duration",
-        "C": "Take its early start plus its estimated duration",
-        "D": "Take its early start"
+        "A": "Take its late finish minus its estimated duration.",
+        "B": "Take its early finish minus its estimated duration.",
+        "C": "Take its early start plus its estimated duration.",
+        "D": "Take its early start."
       },
       "answer": [
         "A"
       ],
-      "explanation": "In Critical Path Method network calculations: Late Start (LS) = Late Finish (LF) - Duration."
+      "explanation": "LS = LF - Duration."
     },
     {
       "number": 31,
@@ -2858,7 +2858,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "False. Process Improvement seeks to eliminate waste and INCREASE value."
+      "explanation": "False. It identifies how to increase their value."
     },
     {
       "number": 32,
@@ -2874,23 +2874,23 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "Top-down estimation is quick and low cost. 'Costly to create' is a disadvantage of detailed bottom-up estimating."
+      "explanation": "Top-down estimating is less costly to create, not costly."
     },
     {
       "number": 33,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Your project has a team of which consists of yourself, a tester, five developers and a user/customer. How many communication channels on your team?",
+      "question": "Your project has a team of which consists of yourself, a tester, five developers and a communicator. How many communication channels on your team?",
       "options": {
         "A": "8",
         "B": "9",
         "C": "28",
-        "D": "56"
+        "D": "36"
       },
       "answer": [
         "C"
       ],
-      "explanation": "Number of people N = 1 (PM) + 1 (tester) + 5 (developers) + 1 (customer) = 8. Communication channels = N * (N - 1) / 2 = 8 * 7 / 2 = 28."
+      "explanation": "N = 1 + 1 + 5 + 1 = 8. Channels = 8 * 7 / 2 = 28."
     },
     {
       "number": 34,
@@ -2900,29 +2900,29 @@ const FE_QUESTIONS_TEXT = {
       "options": {
         "A": "Ask your executive management team",
         "B": "If the schedule baseline shows you are two weeks late, then it is not acceptable",
-        "C": "If the team tells you the work cannot be completed any earlier then it is acceptable",
-        "D": "Your variance thresholds should be documented in your project management plan; look there for guidance"
+        "C": "If the team tells you the work cannot be completes any earlier than it is acceptable",
+        "D": "Your variance thresholds should be documented in your project management plan, look there for guidance."
       },
       "answer": [
         "D"
       ],
-      "explanation": "The Project Management Plan specifies schedule and cost variance thresholds that dictate when corrective actions or CCB escalation must occur."
+      "explanation": "Control/variance thresholds are documented in the project management plan (specifically the schedule management plan)."
     },
     {
       "number": 35,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "A project manager's primary responsibility is to deliver the product of the project within project constraints... Which of the following best describes the major constraints on a project?",
+      "question": "A project manager's primary responsibility is to deliver the product of the project within project constraints. Actions taken and changes made to the benefit of one constraint could negatively affect another. Which of the following best describes the major constraints on a project?",
       "options": {
         "A": "Scope, number of resources, and cost",
-        "B": "Scope, risks and schedule",
+        "B": "Scope, cost, and schedule",
         "C": "Scope, schedule, cost, quality, risk, resources, and customer satisfaction",
-        "D": "Schedule, risks, and number of changes"
+        "D": "Schedule, cost, and number of changes"
       },
       "answer": [
         "C"
       ],
-      "explanation": "Major competing project constraints comprise Scope, Schedule, Cost, Quality, Risk, Resources, and Customer Satisfaction."
+      "explanation": "The major project constraints include scope, schedule, cost, quality, risk, resources, and customer satisfaction."
     },
     {
       "number": 36,
@@ -2936,7 +2936,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "True. Crashing directly trades off increased cost for decreased schedule duration (e.g. paying overtime, expedited fees). Fast tracking incurs risk rather than direct immediate extra cost."
+      "explanation": "True. Crashing usually increases costs, whereas Fast Tracking performs activities in parallel (increasing risk rather than direct resource cost)."
     },
     {
       "number": 37,
@@ -2947,28 +2947,28 @@ const FE_QUESTIONS_TEXT = {
         "A": "Variance analysis",
         "B": "Trend analysis",
         "C": "Earned Value Management (EVM)",
-        "D": "Regression analysis"
+        "D": "Requirement analysis"
       },
       "answer": [
         "D"
       ],
-      "explanation": "Status review meetings leverage variance analysis, trend analysis, and earned value metrics. Complex statistical regression analysis is not a primary standard tool for routine status review meetings."
+      "explanation": "Variance analysis, trend analysis, and EVM are used to evaluate performance; requirement analysis is for scope definition."
     },
     {
       "number": 38,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Two team members disagree on how to solve a project issue. They express their disagreement and then engage in contentious debate. This is an example of:",
+      "question": "Two team members disagree on how to solve a project issue. They express their disagreement and then engage in a professional debate. This is an example of:",
       "options": {
-        "A": "Unrealistic conflict",
-        "B": "Unproductive conflict",
-        "C": "Healthy conflict",
-        "D": "Unhealthy conflict"
+        "A": "Unrealistic conflict.",
+        "B": "Unproductive conflict.",
+        "C": "Healthy conflict.",
+        "D": "Unhealthy conflict."
       },
       "answer": [
-        "D"
+        "C"
       ],
-      "explanation": "When disagreement devolves into contentious debate rather than collaborative problem-solving, it turns into unhealthy conflict."
+      "explanation": "Healthy conflict involves constructive, professional debate."
     },
     {
       "number": 39,
@@ -2984,31 +2984,31 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "Statement B is incorrect (and thus the answer): Assumptions are believed to be true without proof; constraints are real, factual limitations imposed on the project."
+      "explanation": "Assumptions are believed to be true (without proof), whereas constraints are actual limiting factors; option B reverses them."
     },
     {
       "number": 40,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "If the response your choose is to exploit a risk, that means that:",
+      "question": "If the response you choose is to exploit a risk this means that:",
       "options": {
         "A": "You actively do not consider the risk but establish contingency plan.",
-        "B": "You add steps to your plan to make certain the opportunity is captured.",
+        "B": "You add steps to your plans to make certain the opportunity is captured.",
         "C": "You change your plan so that another party will be responsible for a partial amount of ownership of the opportunity.",
         "D": "You create your plan to increase the probability and/or the impact of the opportunity."
       },
       "answer": [
         "B"
       ],
-      "explanation": "Exploiting a positive risk (opportunity) means eliminating uncertainty by ensuring that the opportunity is 100% realized."
+      "explanation": "Exploiting a positive risk (opportunity) means taking action to ensure the opportunity definitely happens."
     },
     {
       "number": 41,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "When you use the RACI (or Responsible, Accountable, Consult, Inform) version of the RAM, those responsible persons are:",
+      "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those responsible persons are:",
       "options": {
-        "A": "Providing subject-matter expertise",
+        "A": "Providing subject matter expertise",
         "B": "Supervising the work",
         "C": "Not completing the work",
         "D": "Completing the work"
@@ -3016,7 +3016,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "D"
       ],
-      "explanation": "In a RACI chart, Responsible ('R') denotes the person or role tasked with completing the actual work."
+      "explanation": "In RACI, Responsible (R) denotes the person(s) completing the work."
     },
     {
       "number": 42,
@@ -3030,7 +3030,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "True. Quality control inspects outputs to verify compliance and triggers corrective actions to eliminate defects and performance shortcomings."
+      "explanation": "True."
     },
     {
       "number": 43,
@@ -3038,15 +3038,15 @@ const FE_QUESTIONS_TEXT = {
       "instruction": "(Choose 1 answer)",
       "question": "Lateral communication is NOT communication to/from:",
       "options": {
-        "A": "Your customers",
-        "B": "Your friends",
-        "C": "Your subordinates",
-        "D": "Your peers"
+        "A": "Your customers.",
+        "B": "Your friends.",
+        "C": "Your subordinates.",
+        "D": "Your peers."
       },
       "answer": [
         "C"
       ],
-      "explanation": "Communication to or from subordinates is downward/upward hierarchical communication, not lateral (peer-to-peer) communication."
+      "explanation": "Communication with subordinates is downward (vertical) communication, not lateral communication."
     },
     {
       "number": 44,
@@ -3060,7 +3060,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "False. Change can introduce beneficial improvements, efficiencies, and strategic realignments when governed properly."
+      "explanation": "False. Change can be beneficial if properly evaluated and managed."
     },
     {
       "number": 45,
@@ -3074,13 +3074,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "True. Communication management establishes transparency and shared alignment among all project participants."
+      "explanation": "True."
     },
     {
       "number": 46,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is low interest, high power, what should the Project Manager do?",
+      "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is low interest / high power, what should the Project Manager do?",
       "options": {
         "A": "Monitor",
         "B": "Keep satisfied",
@@ -3090,13 +3090,13 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "Stakeholders with High Power and Low Interest must be kept satisfied to avoid friction or unexpected objections."
+      "explanation": "High Power / Low Interest = Keep Satisfied."
     },
     {
       "number": 47,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: In a projectized organization, team members are never assigned to the project full-time.",
+      "question": "True or False: In a projectized organization, team members are never assigned to the project full time.",
       "options": {
         "A": "True",
         "B": "False"
@@ -3104,7 +3104,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "False. In projectized organizations, team members are collocated and dedicated full-time to their respective projects."
+      "explanation": "False. In a projectized organization, team members are typically assigned full time to the project."
     },
     {
       "number": 48,
@@ -3122,22 +3122,22 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "F"
       ],
-      "explanation": "The 5 standard PMBOK conflict resolution techniques are Problem Solving (Confronting), Compromising, Smoothing, Forcing, and Withdrawing (Avoiding). 'Challenging' is not one of them."
+      "explanation": "The five conflict resolution approaches are Confronting, Compromising, Smoothing, Forcing, and Avoiding (not Challenging)."
     },
     {
       "number": 49,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Your Cost Performance Index (CPI) is more than 1 means you are:",
+      "question": "Your Cost Performance Index (CPI) is lesser than 1 means you are:",
       "options": {
-        "A": "on budget",
-        "B": "under budget",
-        "C": "over budget"
+        "A": "on budget.",
+        "B": "under budget.",
+        "C": "over budget."
       },
       "answer": [
-        "B"
+        "C"
       ],
-      "explanation": "CPI = EV / AC. A CPI > 1.0 means you earned more value than the actual cost spent, so you are running under budget."
+      "explanation": "CPI = EV / AC < 1 means actual cost exceeds earned value, so the project is over budget."
     },
     {
       "number": 50,
@@ -3153,7 +3153,7 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "A stakeholder who knows of the project but is neither supportive nor opposed is classified as 'Neutral'."
+      "explanation": "A stakeholder who is aware of the project and neither supportive nor resistant is classified as Neutral."
     }
   ],
   "PMG201c_SU26_FE_7251": [
@@ -13308,1132 +13308,116 @@ const FE_QUESTIONS_TEXT = {
       "number": 1,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Project scope differs from product scope in that:",
+      "question": "All the following are characteristics of a project EXCEPT:",
       "options": {
-        "A": "The project manager acting as coordinator only",
-        "B": "The functional manager having full authority over resources",
-        "C": "Project scope is the work that needs to be accomplished to deliver a product, service, or result.",
-        "D": "Historical cost relationships may no longer be applicable"
+        "A": "It is temporary",
+        "B": "It has a definite beginning and end",
+        "C": "It has interrelated activities",
+        "D": "It repeats itself every month"
       },
       "answer": [
-        "C"
+        "D"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Project scope is the work that needs to be accomplished to deliver a product, service, or result.\"."
+      "explanation": "Projects are temporary and unique; ongoing repetitive monthly work is operations."
     },
     {
       "number": 2,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: A Work Breakdown Structure (WBS) is a deliverable-oriented hierarchical decomposition of the work to be executed by the project team.",
+      "question": "In a functional organization:",
       "options": {
-        "A": "True",
-        "B": "False"
+        "A": "Team members are never assigned to the project full time.",
+        "B": "A project manager is not assigned to the team.",
+        "C": "The project manager acts as manager of the team.",
+        "D": "The functional manager has stronger power than the project manager's power."
       },
       "answer": [
-        "A"
+        "D"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là ĐÚNG (True). True"
+      "explanation": "In a functional organization, the functional manager holds stronger authority than the project manager."
     },
     {
       "number": 3,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Two team members disagree on how to solve a project issue. They express their disagreement and then engage in a professional debate. This is an example of:",
+      "question": "You have finished planning and have begun executing the project when the client asks if you would shorten the project duration so that the project can finish 2 weeks earlier than the original plan. How are the triple constraints affected?",
       "options": {
-        "A": "Healthy conflict.",
-        "B": "Acceptance criteria, deliverables, and project exclusions",
-        "C": "Work Breakdown Structure (WBS) and WBS Dictionary",
-        "D": "Responsibility Assignment Matrix (RACI chart)"
+        "A": "Scope and cost may both be affected",
+        "B": "Neither scope nor cost will be affected in any situation",
+        "C": "Cost will reduce as the project duration is shortened and scope is not changed",
+        "D": "There is no relevant option except the project must be cut down on scope"
       },
       "answer": [
         "A"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Healthy conflict.\"."
+      "explanation": "Shortening schedule typically requires more cost (crashing) and/or reduced scope."
     },
     {
       "number": 4,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Some of the major sources of conflict that a project manager may influence are:",
+      "question": "An output of the Close Project or Close Phase process is the creation of:",
       "options": {
-        "A": "Stakeholder assessment and engagement matrix",
-        "B": "Personality conflict, schedules, resources",
-        "C": "Mitigate the risk by reducing probability or impact",
-        "D": "Transfer the risk to a third party or vendor"
+        "A": "Project archives.",
+        "B": "A project charter",
+        "C": "A project management plan",
+        "D": "A risk management plan",
+        "E": "A communication plan"
       },
       "answer": [
-        "B"
+        "A"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Personality conflict, schedules, resources\"."
+      "explanation": "Close Project or Phase updates Organizational Process Assets, including project archives and lessons learned."
     },
     {
       "number": 5,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "True or False: Each person involved in the project should be assigned, but doesn't always need to know his or her role and responsibility.",
+      "question": "As discussed in the Project Management course, The PMBOK® Guide knowledge area that has processes in all 5 process groups is:",
       "options": {
-        "A": "True",
-        "B": "False"
+        "A": "Project Integration Management",
+        "B": "Project Cost Management",
+        "C": "Project Scope Management",
+        "D": "Project Time Management",
+        "E": "Project Quality Management"
       },
       "answer": [
-        "B"
+        "A"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là SAI (False). False"
+      "explanation": "Project Integration Management is the only knowledge area with processes in all 5 process groups."
     },
     {
       "number": 6,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Conflict management is the process by which the project manager uses appropriate managerial techniques to deal with the inevitable disagreements that develop among those working toward project accomplishment.",
+      "question": "Which of the following is included in a project charter?",
       "options": {
-        "A": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)",
-        "B": "Critical Path Method (CPM) forward and backward pass",
-        "C": "Crashing and Fast Tracking for schedule compression",
-        "D": "True"
+        "A": "A risk management strategy",
+        "B": "Work package estimates",
+        "C": "Detailed resources estimates",
+        "D": "The business case for the project"
       },
       "answer": [
         "D"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"True\"."
+      "explanation": "The project charter documents the business need/case and high-level justification for the project."
     },
     {
       "number": 7,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "One of the ways a Project Charter can help you as a project manager is:",
+      "question": "True or False: Scope creep represents the situation that the changes are made with the proper process and authority.",
       "options": {
-        "A": "it describes your authority level as the project manager",
-        "B": "Customer satisfaction and prevention over inspection",
-        "C": "Quality assurance audits and process improvement",
-        "D": "Formal change control process with CCB approval"
+        "A": "True",
+        "B": "False"
       },
       "answer": [
-        "A"
+        "B"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"it describes your authority level as the project manager\"."
+      "explanation": "False. Scope creep refers to uncontrolled scope changes without proper process or authority."
     },
     {
       "number": 8,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "As you plan your project, you do so thinking that all team members will be assigned to your project at least 50% of their available time. This is an example of:",
-      "options": {
-        "A": "Lessons learned documentation and organizational archives",
-        "B": "An assumption",
-        "C": "Scope, cost, and schedule",
-        "D": "Scope, time, and quality"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"An assumption\"."
-    },
-    {
-      "number": 9,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Project scope differs from product scope in that:",
-      "options": {
-        "A": "The project manager acting as coordinator only",
-        "B": "The functional manager having full authority over resources",
-        "C": "Project scope is the work that needs to be accomplished to deliver a product, service, or result",
-        "D": "Historical cost relationships may no longer be applicable"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Project scope is the work that needs to be accomplished to deliver a product, service, or result\"."
-    },
-    {
-      "number": 10,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The definition of a stakeholder includes:",
-      "options": {
-        "A": "Top-down estimating using analogous projects",
-        "B": "Bottom-up detailed analysis of work packages",
-        "C": "Parametric statistical modeling",
-        "D": "The people or organizations that are positively or negatively impacted by your project"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The people or organizations that are positively or negatively impacted by your project\"."
-    },
-    {
-      "number": 11,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: The Project Sponsor is responsible for stakeholder expectations management",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là SAI (False). False"
-    },
-    {
-      "number": 12,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "In our lessons the acronym RAM stands for:",
-      "options": {
-        "A": "Stakeholder assessment and engagement matrix",
-        "B": "Responsibility Assignment Matrix",
-        "C": "Mitigate the risk by reducing probability or impact",
-        "D": "Transfer the risk to a third party or vendor"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Responsibility Assignment Matrix\"."
-    },
-    {
-      "number": 13,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The WBS is used to derive all but one of the following:",
-      "options": {
-        "A": "Avoid the risk by eliminating the threat completely",
-        "B": "Active risk acceptance with contingency reserves",
-        "C": "The business need for the project",
-        "D": "Earned Value Management (EVM) variance analysis"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The business need for the project\"."
-    },
-    {
-      "number": 14,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: Product quality focuses on the project management processes used to meet project objectives",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là SAI (False). False"
-    },
-    {
-      "number": 15,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "An estimate created by looking at a similar project or activity and then adding or subtracting to or from the estimate based on the differences between the two is called:",
-      "options": {
-        "A": "Analogous estimating",
-        "B": "Customer satisfaction and prevention over inspection",
-        "C": "Quality assurance audits and process improvement",
-        "D": "Formal change control process with CCB approval"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Analogous estimating\"."
-    },
-    {
-      "number": 16,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Which one of these most correctly defines management reserve?",
-      "options": {
-        "A": "Lessons learned documentation and organizational archives",
-        "B": "Management reserve is not tied to specific work packages it is for the entire project.",
-        "C": "Scope, cost, and schedule",
-        "D": "Scope, time, and quality"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Management reserve is not tied to specific work packages it is for the entire project.\"."
-    },
-    {
-      "number": 17,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "What description defines Bottoms Up Estimating?",
-      "options": {
-        "A": "The project manager acting as coordinator only",
-        "B": "The functional manager having full authority over resources",
-        "C": "A technique that involves estimating the cost of individual work packages or individual schedule activities with the lowest level of detail.",
-        "D": "Historical cost relationships may no longer be applicable"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"A technique that involves estimating the cost of individual work packages or individual schedule activities with the lowest level of detail.\"."
-    },
-    {
-      "number": 18,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Earned value management integrates scope, cost, and schedule measures to:",
-      "options": {
-        "A": "Top-down estimating using analogous projects",
-        "B": "Bottom-up detailed analysis of work packages",
-        "C": "Parametric statistical modeling",
-        "D": "assess project performance and progress."
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"assess project performance and progress.\"."
-    },
-    {
-      "number": 19,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "If develop online modules needs to finish before review online modules can finish, that is called a:",
-      "options": {
-        "A": "Finish to finish relationship.",
-        "B": "Acceptance criteria, deliverables, and project exclusions",
-        "C": "Work Breakdown Structure (WBS) and WBS Dictionary",
-        "D": "Responsibility Assignment Matrix (RACI chart)"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Finish to finish relationship.\"."
-    },
-    {
-      "number": 20,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The network diagram is the best tool for demonstrating:",
-      "options": {
-        "A": "Stakeholder assessment and engagement matrix",
-        "B": "The sequence of project activities",
-        "C": "Mitigate the risk by reducing probability or impact",
-        "D": "Transfer the risk to a third party or vendor"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The sequence of project activities\"."
-    },
-    {
-      "number": 21,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A significant event in a project that may indicate completion of a major phase is a/an:",
-      "options": {
-        "A": "Avoid the risk by eliminating the threat completely",
-        "B": "Active risk acceptance with contingency reserves",
-        "C": "Milestone",
-        "D": "Earned Value Management (EVM) variance analysis"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Milestone\"."
-    },
-    {
-      "number": 22,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Which item would most likely NOT be part of a basic communication plan:",
-      "options": {
-        "A": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)",
-        "B": "Critical Path Method (CPM) forward and backward pass",
-        "C": "Crashing and Fast Tracking for schedule compression",
-        "D": "The amount of their annual bonus."
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The amount of their annual bonus.\"."
-    },
-    {
-      "number": 23,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: Earned value integrates scope, schedule and budget and uses monetary values to assess project status.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là ĐÚNG (True). True"
-    },
-    {
-      "number": 24,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: Effective project communication management creates a bridge between stakeholders based on a shared understanding of the project and the ongoing sharing of information needed for its success.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là ĐÚNG (True). True"
-    },
-    {
-      "number": 25,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: A positive risk is an opportunity; a negative risk is a threat.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là ĐÚNG (True). True"
-    },
-    {
-      "number": 26,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Once you and your team identify and assess risks and develop responses you:",
-      "options": {
-        "A": "Top-down estimating using analogous projects",
-        "B": "Bottom-up detailed analysis of work packages",
-        "C": "Parametric statistical modeling",
-        "D": "Continue to identify and monitor risks for the remainder of the project."
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Continue to identify and monitor risks for the remainder of the project.\"."
-    },
-    {
-      "number": 27,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A useful tool in identifying risks is the SWOT analysis. What does SWOT stand for?",
-      "options": {
-        "A": "Strengths, opportunities, weaknesses, and threats",
-        "B": "Acceptance criteria, deliverables, and project exclusions",
-        "C": "Work Breakdown Structure (WBS) and WBS Dictionary",
-        "D": "Responsibility Assignment Matrix (RACI chart)"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Strengths, opportunities, weaknesses, and threats\"."
-    },
-    {
-      "number": 28,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Which one of these situations most closely represents scope creep:",
-      "options": {
-        "A": "Stakeholder assessment and engagement matrix",
-        "B": "The project scope keeps changing and team members are not sure why and the project seems like it will never end.",
-        "C": "Mitigate the risk by reducing probability or impact",
-        "D": "Transfer the risk to a third party or vendor"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The project scope keeps changing and team members are not sure why and the project seems like it will never end.\"."
-    },
-    {
-      "number": 29,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A good change process will:",
-      "options": {
-        "A": "Avoid the risk by eliminating the threat completely",
-        "B": "Active risk acceptance with contingency reserves",
-        "C": "Have change thresholds that are appropriate for the type of change.",
-        "D": "Earned Value Management (EVM) variance analysis"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Have change thresholds that are appropriate for the type of change.\"."
-    },
-    {
-      "number": 30,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Your project team is customer focused and often agrees to incorporate many small scope changes throughout the project execution. The changes are documented in an issues log. Which of the following is not a potential problem?",
-      "options": {
-        "A": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)",
-        "B": "Critical Path Method (CPM) forward and backward pass",
-        "C": "Crashing and Fast Tracking for schedule compression",
-        "D": "Changes with impacts on cost or time will be elevated to the Change Control Board."
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Changes with impacts on cost or time will be elevated to the Change Control Board.\"."
-    },
-    {
-      "number": 31,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A project manager can defend against scope creep with a good ___________!",
-      "options": {
-        "A": "Change control process",
-        "B": "Customer satisfaction and prevention over inspection",
-        "C": "Quality assurance audits and process improvement",
-        "D": "Formal change control process with CCB approval"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Change control process\"."
-    },
-    {
-      "number": 32,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Influence means you have the right to apply resources, make decisions and give approvals.",
-      "options": {
-        "A": "Lessons learned documentation and organizational archives",
-        "B": "False",
-        "C": "Scope, cost, and schedule",
-        "D": "Scope, time, and quality"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"False\"."
-    },
-    {
-      "number": 33,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The WBS should completely depict the scope of your project that if something is not in the WBS it is because it is NOT part of the project.",
-      "options": {
-        "A": "The project manager acting as coordinator only",
-        "B": "The functional manager having full authority over resources",
-        "C": "True",
-        "D": "Historical cost relationships may no longer be applicable"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"True\"."
-    },
-    {
-      "number": 34,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The best organization to use to run a project will always be the projectized organization.",
-      "options": {
-        "A": "Top-down estimating using analogous projects",
-        "B": "Bottom-up detailed analysis of work packages",
-        "C": "Parametric statistical modeling",
-        "D": "False"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"False\"."
-    },
-    {
-      "number": 35,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Your company has just been awarded the contract for an important research project. The CEO of your company has asked you, as the project manager, to create the project charter and send it to her so that she can review and approve it. To create the project charter, you need the project's statement of work (SOW). What should you do?",
-      "options": {
-        "A": "Ask your customer to provide you with the SOW",
-        "B": "Acceptance criteria, deliverables, and project exclusions",
-        "C": "Work Breakdown Structure (WBS) and WBS Dictionary",
-        "D": "Responsibility Assignment Matrix (RACI chart)"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Ask your customer to provide you with the SOW\"."
-    },
-    {
-      "number": 36,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A project manager is leading the construction of a new office building. The project sponsor asks the project manager to email him a project document that was presented during the last project status meeting. The project sponsor states that he has forgotten the name of the document, but he remembers it contained the description, owner, source, priority, and status of product requirements. Which project document is the project sponsor requesting?",
-      "options": {
-        "A": "Stakeholder assessment and engagement matrix",
-        "B": "The requirements traceability matrix",
-        "C": "Mitigate the risk by reducing probability or impact",
-        "D": "Transfer the risk to a third party or vendor"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The requirements traceability matrix\"."
-    },
-    {
-      "number": 37,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are a project manager planning a project to develop a new payroll system, and you are currently in the process of determining, documenting, and managing stakeholder needs and requirements to meet project objectives. A project stakeholder has suggested that it would be helpful to have a visual depiction showing how people and other systems will interact with the new payroll system. You like the idea and want to address it. What is the best way to implement the stakeholder's suggestion?",
-      "options": {
-        "A": "Avoid the risk by eliminating the threat completely",
-        "B": "Active risk acceptance with contingency reserves",
-        "C": "Develop a context diagram",
-        "D": "Earned Value Management (EVM) variance analysis"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Develop a context diagram\"."
-    },
-    {
-      "number": 38,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are managing a project to develop a new robot for a mining rescue company. You are currently performing a monitoring and controlling project activity, and you have discovered that some of the project work has not been performed according to the plan. If these issues are not fixed before the next customer inspection, your project might be canceled. You have analyzed the situation, and the corrective action will only require a minor adjustment to a configuration element. What should you do first?",
-      "options": {
-        "A": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)",
-        "B": "Critical Path Method (CPM) forward and backward pass",
-        "C": "Crashing and Fast Tracking for schedule compression",
-        "D": "Submit a change request"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Submit a change request\"."
-    },
-    {
-      "number": 39,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are managing a hotel construction project, and you have asked your project team to calculate the current earned value metrics to determine the project performance. Your team reports back that the project's to-complete performance index (TCPI) is 0.9 based on the budget at completion (BAC). Which of the following is true regarding your project's current situation as reflected by this TCPI value?",
-      "options": {
-        "A": "The project is within budget",
-        "B": "Customer satisfaction and prevention over inspection",
-        "C": "Quality assurance audits and process improvement",
-        "D": "Formal change control process with CCB approval"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The project is within budget\"."
-    },
-    {
-      "number": 40,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "During an inspection of a project deliverable, the team detects the same defect in the deliverable that has already been identified during a previous inspection. The project manager is confused how this could have happened since a change request was approved to correct the defect. After discussing the issue with the team, the project manager learns that the team never implemented the approved change request. What could have helped prevent this situation?",
-      "options": {
-        "A": "Lessons learned documentation and organizational archives",
-        "B": "Holding an approved change requests review",
-        "C": "Scope, cost, and schedule",
-        "D": "Scope, time, and quality"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Holding an approved change requests review\"."
-    },
-    {
-      "number": 41,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are a project manager for a national consumer goods retailer. Currently, you are about to start the development of the assumption log for a project to build a new retail store. What should you do first?",
-      "options": {
-        "A": "The project manager acting as coordinator only",
-        "B": "The functional manager having full authority over resources",
-        "C": "Read the project business case",
-        "D": "Historical cost relationships may no longer be applicable"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Read the project business case\"."
-    },
-    {
-      "number": 42,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A project manager is about to start planning a software development project. The project sponsor would like to review any project risks that have been identified at this point. Which document should the project manager recommend the sponsor to review?",
-      "options": {
-        "A": "Top-down estimating using analogous projects",
-        "B": "Bottom-up detailed analysis of work packages",
-        "C": "Parametric statistical modeling",
-        "D": "Project charter"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Project charter\"."
-    },
-    {
-      "number": 43,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Two new team members have just joined the project you are leading. The project is large and involves many stakeholders. You want to get the new team members up to speed with the overall dynamics of the project and engage effectively with the project stakeholders. What should you do?",
-      "options": {
-        "A": "Review the stakeholder register with the new team members",
-        "B": "Acceptance criteria, deliverables, and project exclusions",
-        "C": "Work Breakdown Structure (WBS) and WBS Dictionary",
-        "D": "Responsibility Assignment Matrix (RACI chart)"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Review the stakeholder register with the new team members\"."
-    },
-    {
-      "number": 44,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Midway into project execution, one of your senior project team members is leaving the company. Due to a delay in filling the position, you have decided to assign the affected tasks to two less experienced employees. Which factor would most strongly affect the duration of their assigned tasks?",
-      "options": {
-        "A": "Stakeholder assessment and engagement matrix",
-        "B": "Number of resources",
-        "C": "Mitigate the risk by reducing probability or impact",
-        "D": "Transfer the risk to a third party or vendor"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Number of resources\"."
-    },
-    {
-      "number": 45,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are managing the development of a new blood pressure cuff for a customer who provided you with the objectives and description of the cuff. You and your team are decomposing the customer's high-level requirements to the level of detail needed to design the blood pressure cuff and therefore define the scope of the product. In what activity are you involved?",
-      "options": {
-        "A": "Avoid the risk by eliminating the threat completely",
-        "B": "Active risk acceptance with contingency reserves",
-        "C": "Product analysis",
-        "D": "Earned Value Management (EVM) variance analysis"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Product analysis\"."
-    },
-    {
-      "number": 46,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "With the start of project execution, a project manager needs to acquire the development team. However, the project sponsor indicates that of those developers who were planned for the project, one is unavailable as she is currently completing another project. What should the project manager do to understand the proposed team member's future availability?",
-      "options": {
-        "A": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)",
-        "B": "Critical Path Method (CPM) forward and backward pass",
-        "C": "Crashing and Fast Tracking for schedule compression",
-        "D": "Look at the project documents"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Look at the project documents\"."
-    },
-    {
-      "number": 47,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You have completed a nine-month project, and you are in the closing stage. The project completed on time and under budget and everyone in your department has congratulated you on your achievement. The vice president of your company heard about the success of your project and wants a summary overview of project performance so that he can talk about your success at the next board meeting. What should you provide to him?",
-      "options": {
-        "A": "Final report",
-        "B": "Customer satisfaction and prevention over inspection",
-        "C": "Quality assurance audits and process improvement",
-        "D": "Formal change control process with CCB approval"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Final report\"."
-    },
-    {
-      "number": 48,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are leading a project to construct a new runway at an existing commercial airport. After completion of the project, the residents under the flight path of the new runway are making noise complaints and want the airport to compensate them for the diminished values of their homes. What might you have missed earlier in the project?",
-      "options": {
-        "A": "Lessons learned documentation and organizational archives",
-        "B": "Stakeholder analysis including consideration for those with an interest stake in the project",
-        "C": "Scope, cost, and schedule",
-        "D": "Scope, time, and quality"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Stakeholder analysis including consideration for those with an interest stake in the project\"."
-    },
-    {
-      "number": 49,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are leading a project to develop a new web application. Together with your project team you reprioritize the product backlog, determine velocity for the past iterations, and adapt your work plans accordingly. Additionally, you facilitate retrospectives every two weeks. Which of the following processes describes the work you are performing?",
-      "options": {
-        "A": "The project manager acting as coordinator only",
-        "B": "The functional manager having full authority over resources",
-        "C": "Control Schedule",
-        "D": "Historical cost relationships may no longer be applicable"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Control Schedule\"."
-    },
-    {
-      "number": 50,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A project team performs monthly risk audits for a project in which a large number of identified risks have been realized. So far, the risk responses have been appropriate, and reserves are sufficient. An executive for the requesting organization chides the project manager for doing risk audits improperly, stating that like all audits, outside independent resources need to perform risk audits. How should the project manager respond?",
-      "options": {
-        "A": "Top-down estimating using analogous projects",
-        "B": "Bottom-up detailed analysis of work packages",
-        "C": "Parametric statistical modeling",
-        "D": "Explain that risk audits can be performed either internally or externally as long as they follow the project management plan"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Explain that risk audits can be performed either internally or externally as long as they follow the project management plan\"."
-    }
-  ],
-  "PMG201c_SU2024_2_2575": [
-    {
-      "number": 1,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Project Human Resource Management includes the processes that organize, manage, and lead the project team.",
-      "options": {
-        "A": "Work Breakdown Structure (WBS) and WBS Dictionary",
-        "B": "Responsibility Assignment Matrix (RACI chart)",
-        "C": "Stakeholder assessment and engagement matrix",
-        "D": "True"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"True\"."
-    },
-    {
-      "number": 2,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The scope management section of your project plan document would include information on:",
-      "options": {
-        "A": "Who can suggest changes to the project",
-        "B": "Mitigate the risk by reducing probability or impact",
-        "C": "Transfer the risk to a third party or vendor",
-        "D": "Avoid the risk by eliminating the threat completely"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Who can suggest changes to the project\"."
-    },
-    {
-      "number": 3,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: The WBS should completely depict the scope of your project that if something is not in the WBS it is because it is NOT part of the project",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là ĐÚNG (True). True"
-    },
-    {
-      "number": 4,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: The project Charter is a document issued by the project initiator or sponsor that formally authorizes the existence of a project. It provides the project manager with the authority to apply organizational resources to project activities",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là ĐÚNG (True). True"
-    },
-    {
-      "number": 5,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: If you are not certain who your stakeholders are, asking who will use the product of service being created can be helpful.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là ĐÚNG (True). True"
-    },
-    {
-      "number": 6,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You have a stakeholder on your project who has a reputation as being very difficult. He dislikes change and argues against any suggested updates to the way in which his department does their work. The project you are leading is going to significantly impact at least two processes used by his team. Which do you think is the best response to the situation?",
-      "options": {
-        "A": "Seek him out and begin to open communications with him about what is changing and why",
-        "B": "Scope, cost, and schedule",
-        "C": "Scope, time, and quality",
-        "D": "The project manager acting as coordinator only"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Seek him out and begin to open communications with him about what is changing and why\"."
-    },
-    {
-      "number": 7,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those who are responsible are:",
-      "options": {
-        "A": "The functional manager having full authority over resources",
-        "B": "Completing the work",
-        "C": "Historical cost relationships may no longer be applicable",
-        "D": "Top-down estimating using analogous projects"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Completing the work\"."
-    },
-    {
-      "number": 8,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: When it comes to projects, the emphasis is on strategic quality management. Quality is not an accident, quality is part of the plan, and quality is everyone's job.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là ĐÚNG (True). True"
-    },
-    {
-      "number": 9,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The Process Improvement Plan is:",
-      "options": {
-        "A": "Work Breakdown Structure (WBS) and WBS Dictionary",
-        "B": "Responsibility Assignment Matrix (RACI chart)",
-        "C": "Stakeholder assessment and engagement matrix",
-        "D": "A subsidiary, or component of the project management plan."
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"A subsidiary, or component of the project management plan.\"."
-    },
-    {
-      "number": 10,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "When you have good historical information which can be used in a reliable formula or model, you will probably use:",
-      "options": {
-        "A": "Parametric estimating",
-        "B": "Mitigate the risk by reducing probability or impact",
-        "C": "Transfer the risk to a third party or vendor",
-        "D": "Avoid the risk by eliminating the threat completely"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Parametric estimating\"."
-    },
-    {
-      "number": 11,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are preparing an estimate of the cost for an IT system expansion for a new branch office location. It is a very similar to the IT system expansion undertaken for a branch office that opened six months ago. Which technique might you use if you are pushed for a quick estimate?",
-      "options": {
-        "A": "Active risk acceptance with contingency reserves",
-        "B": "Analogous",
-        "C": "Earned Value Management (EVM) variance analysis",
-        "D": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Analogous\"."
-    },
-    {
-      "number": 12,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: The Project Budget is equal to only the cost baseline budget.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là SAI (False). False"
-    },
-    {
-      "number": 13,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "When you schedule work in a specific order because it cannot be completed any other way this is what type of dependency?",
-      "options": {
-        "A": "Quality assurance audits and process improvement",
-        "B": "Formal change control process with CCB approval",
-        "C": "Lessons learned documentation and organizational archives",
-        "D": "Mandatory"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Mandatory\"."
-    },
-    {
-      "number": 14,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "To calculate early start (ES) and early finish (EF) perform a:",
-      "options": {
-        "A": "Forward pass",
-        "B": "Scope, cost, and schedule",
-        "C": "Scope, time, and quality",
-        "D": "The project manager acting as coordinator only"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Forward pass\"."
-    },
-    {
-      "number": 15,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "All of the following are inputs to estimating activity durations except:",
-      "options": {
-        "A": "The functional manager having full authority over resources",
-        "B": "Requirements specifications",
-        "C": "Historical cost relationships may no longer be applicable",
-        "D": "Top-down estimating using analogous projects"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Requirements specifications\"."
-    },
-    {
-      "number": 16,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Once the logic of a network is laid out, the project manager will conduct a forward pass and a backward pass through the network. This will provide information regarding ______ and will identify the________.",
-      "options": {
-        "A": "Bottom-up detailed analysis of work packages",
-        "B": "Parametric statistical modeling",
-        "C": "The total duration of the project, critical path",
-        "D": "Acceptance criteria, deliverables, and project exclusions"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The total duration of the project, critical path\"."
-    },
-    {
-      "number": 17,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Upward communication is communication to/from:",
-      "options": {
-        "A": "Work Breakdown Structure (WBS) and WBS Dictionary",
-        "B": "Responsibility Assignment Matrix (RACI chart)",
-        "C": "Stakeholder assessment and engagement matrix",
-        "D": "Your senior management."
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Your senior management.\"."
-    },
-    {
-      "number": 18,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are beginning to staff your project. Which of the following will not be used in developing and/or communicating roles and responsibilities?",
-      "options": {
-        "A": "Pareto chart",
-        "B": "Mitigate the risk by reducing probability or impact",
-        "C": "Transfer the risk to a third party or vendor",
-        "D": "Avoid the risk by eliminating the threat completely"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Pareto chart\"."
-    },
-    {
-      "number": 19,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A Communications Management Plan does the following:",
-      "options": {
-        "A": "Active risk acceptance with contingency reserves",
-        "B": "Lays out the approach and method for delivering information effectively and efficiently.",
-        "C": "Earned Value Management (EVM) variance analysis",
-        "D": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Lays out the approach and method for delivering information effectively and efficiently.\"."
-    },
-    {
-      "number": 20,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "When you and your team know that a negative risk has a high likelihood of occurring and it will be very impactful if it does:",
-      "options": {
-        "A": "Critical Path Method (CPM) forward and backward pass",
-        "B": "Crashing and Fast Tracking for schedule compression",
-        "C": "You should develop a response to handle this risk.",
-        "D": "Customer satisfaction and prevention over inspection"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"You should develop a response to handle this risk.\"."
-    },
-    {
-      "number": 21,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "In a project context, risk is defined as:",
-      "options": {
-        "A": "Quality assurance audits and process improvement",
-        "B": "Formal change control process with CCB approval",
-        "C": "Lessons learned documentation and organizational archives",
-        "D": "An uncertain event that, if it occurs, will have a positive or negative effect on at least one project objective."
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"An uncertain event that, if it occurs, will have a positive or negative effect on at least one project objective.\"."
-    },
-    {
-      "number": 22,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: The primary output from the identification of risks is the risk register.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là ĐÚNG (True). True"
-    },
-    {
-      "number": 23,
       "type": "single",
       "instruction": "(Choose 1 answer)",
       "question": "True or False: Unregulated changes allow for innovation and flexibility. Regulating changes causes a lack of creativity.",
@@ -14444,26 +13428,773 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là SAI (False). False"
+      "explanation": "False."
+    },
+    {
+      "number": 9,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "A project manager can defend against scope creep with a good:",
+      "options": {
+        "A": "Procurement process",
+        "B": "Change control process",
+        "C": "Risk management plan",
+        "D": "Project management plan"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "A formal change control process prevents unauthorized scope changes (scope creep)."
+    },
+    {
+      "number": 10,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "The purpose of capturing lessons learned is:",
+      "options": {
+        "A": "To show stakeholders how difficult the project was so that next time their demands will not be so high.",
+        "B": "To capture what went well so that you can recreate the good and to capture what could have gone better so that next time it will go better.",
+        "C": "To document who performed well on the project and who did not so that poor performers can be punished.",
+        "D": "To show that you are following project management best practices and therefore you are a superior project manager."
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "Lessons learned capture both successes to repeat and areas for improvement."
+    },
+    {
+      "number": 11,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "The Project Scope Statement should include the following:",
+      "options": {
+        "A": "Project exclusions, project constraints, project plan.",
+        "B": "Project deliverables, project constraints, project team members.",
+        "C": "Project deliverables, project constraints, project assumptions.",
+        "D": "Project exclusions, project charter, project assumptions."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "The Project Scope Statement includes product scope description, deliverables, acceptance criteria, exclusions, constraints, and assumptions."
+    },
+    {
+      "number": 12,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which one is not the different between assumptions and constraints?",
+      "options": {
+        "A": "Assumptions are believed to be true, while constraints are true in nature.",
+        "B": "Constraints are believed to be true, while assumptions are true in nature.",
+        "C": "Assumptions are good for the project, while constraints are not good, most of the time.",
+        "D": "If assumptions become false, it is bad news for the project. However, if constraints are false, it is good."
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "Option B reverses the definitions: assumptions are believed to be true, while constraints are actual restrictions."
+    },
+    {
+      "number": 13,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "The WBS is used to derive all but one of the following:",
+      "options": {
+        "A": "The project schedule baseline",
+        "B": "The business need for the project",
+        "C": "The project cost performance baseline",
+        "D": "The activity list"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "The business need is defined before initiating the project (in the business case/charter), not derived from the WBS."
+    },
+    {
+      "number": 14,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "During project executing, a team member comes to the project manager because he is not sure what work he needs to accomplish on the project. Which of the following documents contains detailed descriptions of work packages?",
+      "options": {
+        "A": "WBS dictionary",
+        "B": "Activity list",
+        "C": "Project scope statement",
+        "D": "Scope management plan"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "The WBS dictionary provides detailed information about each WBS work package."
+    },
+    {
+      "number": 15,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "All of the following are inputs to estimating activity durations except:",
+      "options": {
+        "A": "Enterprise Environmental Factors & Organizational Process Assets",
+        "B": "Risk Register & Scope Statement",
+        "C": "Project Documents Updates & Requirements Specifications",
+        "D": "Resource Calendars & Resource Breakdown Structure"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Project Documents Updates is an output, not an input."
+    },
+    {
+      "number": 16,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which of the following is NOT true regarding milestones?",
+      "options": {
+        "A": "Identify major events of the project deliverables",
+        "B": "They are some points in time which have no duration",
+        "C": "They are completely defined in the project charter",
+        "D": "They are supported by activities on detail schedules"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Only summary/high-level milestones appear in the project charter; detailed milestones are defined during schedule planning."
+    },
+    {
+      "number": 17,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Your sponsor informs you that you must receive local government approval of your proposed building design before you can begin construction of your building. This dependency is:",
+      "options": {
+        "A": "Discretionary",
+        "B": "Internal",
+        "C": "Mandatory",
+        "D": "External"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "Government approval is an external dependency involving a relationship between project and non-project activities."
+    },
+    {
+      "number": 18,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: If \"develop online modules\" needs to finish before \"review online modules\" can finish, that is called a finish to finish relationship.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 19,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "To calculate early finish (EF) of an activity, you will:",
+      "options": {
+        "A": "Take its early start plus its estimated duration.",
+        "B": "Take its late start plus its estimated duration.",
+        "C": "Take its late finish minus its estimated duration.",
+        "D": "Take its late finish."
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "EF = ES + Duration."
+    },
+    {
+      "number": 20,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "In a project schedule, the sequence of activities which cannot be delayed during the course of the project without extending the project end date is referred to as the:",
+      "options": {
+        "A": "Critical path",
+        "B": "Schedule baseline",
+        "C": "Slack line",
+        "D": "Action plan"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "The critical path is the longest path through the network and has zero total float."
+    },
+    {
+      "number": 21,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Once the logic of a network is laid out, the project manager will conduct a forward pass and a backward pass through the network. This will provide information regarding ______ and will identify the ______.",
+      "options": {
+        "A": "Resource shortages, high risk activities",
+        "B": "The total duration of the project, critical path",
+        "C": "The slack for each activity, high risk activities",
+        "D": "The high risk activities, non-critical path"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "Forward and backward passes determine total project duration, activity float, and the critical path."
+    },
+    {
+      "number": 22,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which one is NOT the approach to shorten your project schedule?",
+      "options": {
+        "A": "Fast Tracking",
+        "B": "Crashing",
+        "C": "Reducing"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Fast tracking and crashing are the two schedule compression techniques; \"Reducing\" is not."
+    },
+    {
+      "number": 23,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which of the following is NOT the disadvantages of top-down estimating?",
+      "options": {
+        "A": "Costly to create",
+        "B": "Less accurate",
+        "C": "Requires considerable experience to do well",
+        "D": "Does not take into account the differences between projects"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "Top-down estimating is inexpensive/less costly to create."
     },
     {
       "number": 24,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "The purpose of capturing lessons learned is:",
+      "question": "You are building an apartment complex with four, 10,000 square foot buildings based on the same drawings you used in another city two years ago. What is the danger of estimating using the same parametric model of $50 per square foot?",
       "options": {
-        "A": "Bottom-up detailed analysis of work packages",
-        "B": "Parametric statistical modeling",
-        "C": "To capture what went well so that you can recreate the good and to capture what could have gone better so that next time it will go better.",
-        "D": "Acceptance criteria, deliverables, and project exclusions"
+        "A": "The technical design is unstable.",
+        "B": "It's not very easy to scale.",
+        "C": "Historical cost relationships may no longer be applicable.",
+        "D": "It will take much more time than a bottoms up estimating."
       },
       "answer": [
         "C"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"To capture what went well so that you can recreate the good and to capture what could have gone better so that next time it will go better.\"."
+      "explanation": "Rates from two years ago in another city may no longer apply due to inflation and regional cost differences."
     },
     {
       "number": 25,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which of the following is NOT the disadvantage of bottom-up estimating?",
+      "options": {
+        "A": "Takes time and money to use this estimating technique",
+        "B": "Requires time to break the project down into smaller pieces",
+        "C": "Requires that the project be defined and well understood before estimating begins",
+        "D": "Less accurate"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "Bottom-up estimating is more accurate, not less accurate."
+    },
+    {
+      "number": 26,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: The Cost Baseline is equal to the total of Activity Cost Estimates plus Contingency Reserves.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 27,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Earned value management integrates scope, cost, and schedule measures to:",
+      "options": {
+        "A": "assess communication effectiveness among project team members.",
+        "B": "assess whether all requirements were met.",
+        "C": "develop a preliminary budget.",
+        "D": "assess project performance and progress."
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "EVM integrates scope, schedule, and cost to objectively assess project performance and progress."
+    },
+    {
+      "number": 28,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "The discipline of quality management complements the discipline of project management. Both recognize the importance of:",
+      "options": {
+        "A": "Customer satisfaction, prevention over inspection, continuous improvement, and management responsibility",
+        "B": "Company satisfaction, prevention over inspection, continuous improvement, and management responsibility",
+        "C": "Customer satisfaction, prevention over inspection, continuous improvement, and project manager's responsibility",
+        "D": "Customer satisfaction, inspection over prevention, continuous improvement, and management responsibility",
+        "E": "Customer satisfaction, prevention over inspection, continuous improvement, and project team responsibility",
+        "F": "Customer satisfaction, inspection over prevention, continuous improvement, and project team responsibility"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "Both disciplines emphasize customer satisfaction, prevention over inspection, continuous improvement, and management responsibility."
+    },
+    {
+      "number": 29,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Project quality focuses on the project management processes used to meet project objectives.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 30,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: The Process Improvement Plan is a component of the project management plan that details how project management and development processes are to be analyzed in order to identify how to increase their value.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 31,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Performing quality assurance within the context of a project involves taking actions to eliminate causes of unsatisfactory project performance.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "False. Taking actions to eliminate causes of unsatisfactory performance is Quality Control, not Quality Assurance."
+    },
+    {
+      "number": 32,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Performing quality control within the context of a project involves taking actions to eliminate causes of unsatisfactory project performance.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 33,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Project Human Resource Management includes the processes that define the tasks and assign them to suitable resources, and motivate project team to complete the tasks.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 34,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Conflict management is the process by which the project manager uses appropriate managerial techniques to deal with the inevitable disagreements that develop among those working toward project accomplishment.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 35,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Two team members disagree on how to solve a project issue. They express their disagreement and then engage in a professional debate. This is an example of:",
+      "options": {
+        "A": "Unrealistic conflict.",
+        "B": "Unproductive conflict.",
+        "C": "Healthy conflict.",
+        "D": "Unhealthy conflict."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Healthy conflict involves constructive professional debate."
+    },
+    {
+      "number": 36,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which one of these is not the approaches to conflict discussed in the Project Human Resources Management Lesson?",
+      "options": {
+        "A": "Confronting",
+        "B": "Compromising",
+        "C": "Smoothing",
+        "D": "Forcing",
+        "E": "Avoiding",
+        "F": "Uninteresting"
+      },
+      "answer": [
+        "F"
+      ],
+      "explanation": "\"Uninteresting\" is not a conflict resolution approach."
+    },
+    {
+      "number": 37,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "What does RAM stand for:",
+      "options": {
+        "A": "Responsibility Action Matrix",
+        "B": "Responsibility Activity Matrix",
+        "C": "Responsibility Ambiguity Matrix",
+        "D": "Responsibility Assignment Matrix"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "RAM stands for Responsibility Assignment Matrix."
+    },
+    {
+      "number": 38,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or false, a project manager spend most of his/her time communicating.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True. Project managers spend roughly 90% of their time communicating."
+    },
+    {
+      "number": 39,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "You are beginning to staff your project. Which of the following will NOT be used in developing and/or communicating roles and responsibilities?",
+      "options": {
+        "A": "WBS",
+        "B": "Run chart",
+        "C": "Responsibility Assignment Matrix",
+        "D": "Organization chart"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "A run chart is a quality/trend tool, not used for defining roles and responsibilities."
+    },
+    {
+      "number": 40,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Lateral communication is communication to/from:",
+      "options": {
+        "A": "Your subordinates.",
+        "B": "Your functional management.",
+        "C": "Your line management.",
+        "D": "Your peers."
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "Lateral communication is peer-to-peer communication."
+    },
+    {
+      "number": 41,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Who should take the most responsibility for clear and effective communication?",
+      "options": {
+        "A": "The Communications Manager",
+        "B": "The receiver",
+        "C": "The sender and the receiver",
+        "D": "The sender"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "The sender bears primary responsibility for making the communication clear, complete, and understandable."
+    },
+    {
+      "number": 42,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "During status review meetings to evaluate project performance and progress, which tool or technique is NOT preferred to use?",
+      "options": {
+        "A": "Variance analysis",
+        "B": "Trend analysis",
+        "C": "Earned Value Management (EVM)",
+        "D": "Requirement analysis"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "Requirement analysis is used in scope planning, not status review performance evaluation."
+    },
+    {
+      "number": 43,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: A positive risk is an opportunity; a negative risk is a threat.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 44,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which element should NOT be included in risk management plan?",
+      "options": {
+        "A": "Budgeting",
+        "B": "Timing",
+        "C": "Roles and Responsibilities",
+        "D": "Risk Register"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "The Risk Register is a separate project document, not a section of the Risk Management Plan."
+    },
+    {
+      "number": 45,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "If the response you choose is to transfer a risk this means that:",
+      "options": {
+        "A": "You actively do not consider the risk but establish contingency plan.",
+        "B": "You change your plans so that you eliminate the risk.",
+        "C": "You change your plan so that another party will be responsible for the risk.",
+        "D": "You create your plan to reduce the probability and/or the impact of the risk."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Transferring a risk shifts the financial/management responsibility for the risk to a third party (e.g., insurance or vendor)."
+    },
+    {
+      "number": 46,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: When you choose to transfer your project risk to a third party, it will definitely rise to secondary risk.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "False. It may create secondary risk, but not definitely."
+    },
+    {
+      "number": 47,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Who is the stakeholder that will ultimately use the product or service you are creating?",
+      "options": {
+        "A": "Project Team",
+        "B": "Project Manager",
+        "C": "Customer/User",
+        "D": "Sponsor"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "The customer/user is the stakeholder who will ultimately use the product or service."
+    },
+    {
+      "number": 48,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is low interest / high power, what should the Project Manager do?",
+      "options": {
+        "A": "Monitor",
+        "B": "Keep satisfied",
+        "C": "Manage closely",
+        "D": "Keep informed"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "High Power / Low Interest = Keep Satisfied."
+    },
+    {
+      "number": 49,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "You just came from a meeting with one of your project stakeholders, he knew about your project and also its potential impacts, and he always supported for the work and its outcomes. How would you classify him?",
+      "options": {
+        "A": "Supportive",
+        "B": "Neutral",
+        "C": "Unaware",
+        "D": "Leading"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "Supportive stakeholders are aware of the project and supportive of its work and outcomes."
+    },
+    {
+      "number": 50,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: The Project Manager is responsible for stakeholder expectations management.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    }
+  ],
+  "PMG201c_SU2024_2_2575": [
+    {
+      "number": 1,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "A market demand, a business need, and a legal requirement are examples of:",
+      "options": {
+        "A": "Reasons to hire a project manager",
+        "B": "Reasons projects are initiated",
+        "C": "Reasons people or businesses become stakeholders",
+        "D": "Reasons to sponsor a project"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "Market demand, business need, and legal requirement are classic drivers/reasons for initiating projects."
+    },
+    {
+      "number": 2,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "A project manager is trying to complete a software development project, but cannot get enough attention for the project. Resources are focused on completing process-related work, and the project manager has little authority to assign resources. What form of organization must the project manager be working in?",
+      "options": {
+        "A": "Functional",
+        "B": "Matrix",
+        "C": "Projectized",
+        "D": "Coordinator"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "In a functional organization, the project manager has little or no authority and resources prioritize functional/process work."
+    },
+    {
+      "number": 3,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "A project manager's primary responsibility is to deliver the product of the project within project constraints. Actions taken and changes made to the benefit of one constraint could negatively affect another. Which of the following best describes the major constraints on a project?",
+      "options": {
+        "A": "Scope, number of resources, and cost",
+        "B": "Scope, cost, and schedule",
+        "C": "Scope, schedule, cost, quality, risk, resources, and customer satisfaction",
+        "D": "Schedule, cost, and number of changes"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "The major project constraints include scope, schedule, cost, quality, risk, resources, and customer satisfaction."
+    },
+    {
+      "number": 4,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which of the following best describes a project management plan?",
+      "options": {
+        "A": "A printout from project management software",
+        "B": "A bar chart",
+        "C": "Scope, risk, resource, and other management plan",
+        "D": "A project schedule"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "The project management plan integrates subsidiary management plans (scope, risk, resource, etc.) and baselines."
+    },
+    {
+      "number": 5,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "All the following occur during the planning process group EXCEPT:",
+      "options": {
+        "A": "Develop Project Charter",
+        "B": "Create WBS",
+        "C": "Estimate Costs",
+        "D": "Sequence Activities"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "Develop Project Charter occurs in the Initiating process group."
+    },
+    {
+      "number": 6,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: The Project Charter is a document issued by the project initiator or sponsor that formally authorizes the existence of a project. It provides the project manager with the authority to apply organizational resources to project activities.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 7,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Scope creep results in all of the followings, except:",
+      "options": {
+        "A": "Completion delays",
+        "B": "Escalation of costs",
+        "C": "Increases in project complexity",
+        "D": "Decreases in project complexity"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "Scope creep increases complexity, delays completion, and escalates costs; it does not decrease complexity."
+    },
+    {
+      "number": 8,
       "type": "single",
       "instruction": "(Choose 1 answer)",
       "question": "True or False: In the context of a project, change is always a bad thing.",
@@ -14474,502 +14205,270 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "B"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là SAI (False). False"
+      "explanation": "False."
+    },
+    {
+      "number": 9,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "During executing, the project manager determines that a change is needed to material purchased for the project. The project manager calls a meeting of the team to plan how to make the changes. This is an example of:",
+      "options": {
+        "A": "Management by objectives",
+        "B": "Lack of a change management plan",
+        "C": "Good team relations",
+        "D": "Lack of a clear work breakdown structure"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "Calling an ad-hoc meeting to plan changes instead of following a formal change control process indicates a lack of a change management plan."
+    },
+    {
+      "number": 10,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Company procedures require the creation of a lessons learned register. Which of the following is the best use of lessons learned?",
+      "options": {
+        "A": "Historical records for future projects",
+        "B": "Planning record for the current project",
+        "C": "Informing the team about what the project manager has done",
+        "D": "Informing the team about the project management plan"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "Lessons learned serve as historical records for future projects."
+    },
+    {
+      "number": 11,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Should the Project Scope Statement document include?",
+      "options": {
+        "A": "Acceptance criteria",
+        "B": "Milestones",
+        "C": "WBS (Work Breakdown Structure)",
+        "D": "WBS Dictionary"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "The Project Scope Statement includes product scope description, acceptance criteria, deliverables, exclusions, constraints, and assumptions."
+    },
+    {
+      "number": 12,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "As you plan your project, the sponsor informed you that all team members will be assigned to your project for at most 50% of their available time. This is an example of:",
+      "options": {
+        "A": "Poor planning.",
+        "B": "Wishful thinking.",
+        "C": "A project demand.",
+        "D": "A constraint."
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "A restriction imposed by the sponsor on resource availability is a constraint."
+    },
+    {
+      "number": 13,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "A new project manager has asked you for advice on creating a work breakdown structure. After you explain the process to her, she asks you what software she should use to create the WBS and what she should do with it when it is completed. You might respond that the picture is not the most valuable result of creating a WBS. The most valuable result of a WBS is:",
+      "options": {
+        "A": "A Gantt chart",
+        "B": "Team buy-in",
+        "C": "Activities",
+        "D": "A list of risks"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "Creating the WBS collaboratively builds team buy-in and shared understanding of the project scope."
+    },
+    {
+      "number": 14,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "A project manager may use ______ to make sure the team members clearly know what is included in each of their work packages.",
+      "options": {
+        "A": "The project scope statement",
+        "B": "The product scope",
+        "C": "The WBS dictionary",
+        "D": "The WBS"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "The WBS dictionary contains detailed descriptions of each work package."
+    },
+    {
+      "number": 15,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "All of the following are inputs to estimating activity durations except:",
+      "options": {
+        "A": "Organizational process assets",
+        "B": "Activity list and activity attributes",
+        "C": "Requirements specifications",
+        "D": "Resource calendars and scope statement"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Requirements specifications are not a direct input to Estimate Activity Durations."
+    },
+    {
+      "number": 16,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Project Manager should consider using milestones for high level reporting.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 17,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Your team member informs you that the test system must be refreshed with your test data before testing can begin. This dependency is:",
+      "options": {
+        "A": "Discretionary",
+        "B": "Internal",
+        "C": "Mandatory",
+        "D": "External"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "This is a mandatory dependency (hard logic) required before testing can proceed."
+    },
+    {
+      "number": 18,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: If \"review online modules\" needs to begin before \"develop online modules\" can finish, that is called a start to finish relationship.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "True. Start-to-Finish (SF) means the predecessor must start before the successor can finish."
+    },
+    {
+      "number": 19,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "To calculate late finish (LF) of an activity which has more than one successor, you will:",
+      "options": {
+        "A": "Take the earliest late start of its immediate successors.",
+        "B": "Take the earliest early start of its immediate successors.",
+        "C": "Take the earliest late finish of its immediate successors.",
+        "D": "Take the earliest early finish of its immediate successors."
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "During the backward pass, LF equals the minimum (earliest) LS of all immediate successors."
+    },
+    {
+      "number": 20,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: The critical path is made up by all zero float activities (activities have floats equal to zero) in the project network diagram.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 21,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: The Backward Pass is used through the activities to determine the critical path & available float of the project.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 22,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: The Fast Tracking is the approach to add more resources (labor, overtime, etc.) into the activities to reduce their durations.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "False. Adding resources is Crashing; Fast Tracking runs sequential activities in parallel."
+    },
+    {
+      "number": 23,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which of the following is NOT the disadvantages of top-down estimating?",
+      "options": {
+        "A": "Slow",
+        "B": "Less accurate",
+        "C": "Requires considerable experience to do well",
+        "D": "Does not take into account the differences between projects"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "Top-down estimating is quick, not slow."
+    },
+    {
+      "number": 24,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "A team member tells you that her work is too creative to provide you with a fixed single estimate for the activity. You both decide to use the average labor hours (from past, similar projects) to develop a prototype. This is an example of which of the following?",
+      "options": {
+        "A": "Parametric estimating",
+        "B": "Three-point estimating",
+        "C": "Analogous estimating",
+        "D": "One-point estimating"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Analogous estimating uses historical data from past similar projects as the basis for estimating."
+    },
+    {
+      "number": 25,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Using top-down estimating techniques when the detail is available and the accuracy is needed.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "False. Use bottom-up estimating when detail is available and high accuracy is needed."
     },
     {
       "number": 26,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A Project is defined as being unique and temporary, with an undefined start and finish.",
-      "options": {
-        "A": "False",
-        "B": "Mitigate the risk by reducing probability or impact",
-        "C": "Transfer the risk to a third party or vendor",
-        "D": "Avoid the risk by eliminating the threat completely"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"False\"."
-    },
-    {
-      "number": 27,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "An important part of the project scope statement is exclusions or out of scope items.",
-      "options": {
-        "A": "Active risk acceptance with contingency reserves",
-        "B": "True",
-        "C": "Earned Value Management (EVM) variance analysis",
-        "D": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"True\"."
-    },
-    {
-      "number": 28,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The Project Charter is a document issued by the project initiator or sponsor that formally authorizes the existence of a project. It provides the project manager with the authority to apply organizational resources to project activities.",
-      "options": {
-        "A": "Critical Path Method (CPM) forward and backward pass",
-        "B": "Crashing and Fast Tracking for schedule compression",
-        "C": "True",
-        "D": "Customer satisfaction and prevention over inspection"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"True\"."
-    },
-    {
-      "number": 29,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The Project Sponsor is responsible for stakeholder expectations management.",
-      "options": {
-        "A": "Quality assurance audits and process improvement",
-        "B": "Formal change control process with CCB approval",
-        "C": "Lessons learned documentation and organizational archives",
-        "D": "False"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"False\"."
-    },
-    {
-      "number": 30,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A project manager is leading a project to investigate the feasibility of constructing a dam to generate hydroelectric power. The project needs to be analyzed from technical, economic, and social points of view. The project manager has created the project charter on behalf of the project sponsor, and it is now approved. Which of the following processes should be performed next?",
-      "options": {
-        "A": "Identify Stakeholders",
-        "B": "Scope, cost, and schedule",
-        "C": "Scope, time, and quality",
-        "D": "The project manager acting as coordinator only"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Identify Stakeholders\"."
-    },
-    {
-      "number": 31,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are facing problems decomposing the testing work package into the final activities required to complete the work package. Detailed testing plans and activities cannot be determined until the system is at least 50% developed and more details become available. The system development work package will take at least three months to complete. What is the best way to resolve this problem?",
-      "options": {
-        "A": "The functional manager having full authority over resources",
-        "B": "Decompose the system development work package now and decompose the system testing work package later",
-        "C": "Historical cost relationships may no longer be applicable",
-        "D": "Top-down estimating using analogous projects"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Decompose the system development work package now and decompose the system testing work package later\"."
-    },
-    {
-      "number": 32,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Recently, you promoted your star programmer, Sam, to lead the development team. Sam was a fantastic software coder, and you thought the promotion would mean that he could now share his expertise with the other development team members. However, you are surprised to learn that the performance of Sam in his new role is not meeting your expectations. Which empirical rule did you forget while considering the promotion of Sam?",
-      "options": {
-        "A": "Bottom-up detailed analysis of work packages",
-        "B": "Parametric statistical modeling",
-        "C": "Peter principle",
-        "D": "Acceptance criteria, deliverables, and project exclusions"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Peter principle\"."
-    },
-    {
-      "number": 33,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A project manager is leading a process improvement project for a factory operation. Currently, the project manager and the team are performing the Monitor and Control Project Work process. Which of the following activities might the project manager and the team conduct during this process?",
-      "options": {
-        "A": "Work Breakdown Structure (WBS) and WBS Dictionary",
-        "B": "Responsibility Assignment Matrix (RACI chart)",
-        "C": "Stakeholder assessment and engagement matrix",
-        "D": "Comparing actual project performance against the project management plan"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Comparing actual project performance against the project management plan\"."
-    },
-    {
-      "number": 34,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are working with your team on estimating how much time each activity will take. One of the documents you are using contains information on categories of labor, material, and equipment required to complete your project. You are also interested to see skill levels of your labor, any certifications required, and grade levels of your supplies. Which of the following documents would you primarily refer to for this purpose?",
-      "options": {
-        "A": "Resource breakdown structure",
-        "B": "Mitigate the risk by reducing probability or impact",
-        "C": "Transfer the risk to a third party or vendor",
-        "D": "Avoid the risk by eliminating the threat completely"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Resource breakdown structure\"."
-    },
-    {
-      "number": 35,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "After taking over a project that is in the middle of execution, you are looking for information about the quality management issues that have been escalated by the team and any corrective actions that have been recommended and/or implemented. What should you do?",
-      "options": {
-        "A": "Active risk acceptance with contingency reserves",
-        "B": "Review the quality reports",
-        "C": "Earned Value Management (EVM) variance analysis",
-        "D": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Review the quality reports\"."
-    },
-    {
-      "number": 36,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are managing a project to update the packaging and digital media for a popular snack food to promote a charity fundraiser. The project is well underway, and you are currently actively collecting and storing information about each deliverable team's progress, creating forecasts for your sponsor, distributing work performance reports and planning presentations to key stakeholders, and verifying delivery. Which process are you performing?",
-      "options": {
-        "A": "Critical Path Method (CPM) forward and backward pass",
-        "B": "Crashing and Fast Tracking for schedule compression",
-        "C": "Manage Communications",
-        "D": "Customer satisfaction and prevention over inspection"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Manage Communications\"."
-    },
-    {
-      "number": 37,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You have recently been assigned to lead a project that is halfway into execution. The project has many stakeholders, and you are trying to determine how to engage them effectively. Which of the following will best help you in this effort?",
-      "options": {
-        "A": "Quality assurance audits and process improvement",
-        "B": "Formal change control process with CCB approval",
-        "C": "Lessons learned documentation and organizational archives",
-        "D": "Project management plan"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Project management plan\"."
-    },
-    {
-      "number": 38,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A project manager had originally planned to use both of the company's industrial 3D printers simultaneously for a project but has just learned that one of them will be unavailable. The project manager adjusts the schedule so that the components are created sequentially using the one remaining 3D printer. Unfortunately, this action affects the critical path and delays the planned finish date of the project. What tool or technique has the project manager used in this situation?",
-      "options": {
-        "A": "Resource leveling",
-        "B": "Scope, cost, and schedule",
-        "C": "Scope, time, and quality",
-        "D": "The project manager acting as coordinator only"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Resource leveling\"."
-    },
-    {
-      "number": 39,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are leading a project to build an oil pipeline in a foreign country, and you are looking for local contractors to outsource some of the construction work. You are in the process of preparing the bid package for prospective sellers. Which of the following documents would you leave out of the package?",
-      "options": {
-        "A": "The functional manager having full authority over resources",
-        "B": "Independent cost estimates",
-        "C": "Historical cost relationships may no longer be applicable",
-        "D": "Top-down estimating using analogous projects"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Independent cost estimates\"."
-    },
-    {
-      "number": 40,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Your risk report shows that project risk exposure overall has grown close to a negative threshold. Before the next regular meeting, you ask risk owners to present any risks and opportunities that may affect short-term activities. In the meeting, it becomes clear that risk owners from less engaged departments did not implement some of the previously approved responses. What should you do now to reduce risk exposure?",
-      "options": {
-        "A": "Bottom-up detailed analysis of work packages",
-        "B": "Parametric statistical modeling",
-        "C": "Privately confront the risk owners with the issue and collaborate to remove any impediments to the risk responses",
-        "D": "Acceptance criteria, deliverables, and project exclusions"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Privately confront the risk owners with the issue and collaborate to remove any impediments to the risk responses\"."
-    },
-    {
-      "number": 41,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Up until now, your project team has allowed the use of flextime where project team members may take time off during regular business hours and make up the time during the evening hours or weekends. Recently, excessive use of flextime has become a roadblock as some team members are not available when needed. The team feels they should set a standard that flextime is only to be used for personal emergencies. How should you handle this situation?",
-      "options": {
-        "A": "Work Breakdown Structure (WBS) and WBS Dictionary",
-        "B": "Responsibility Assignment Matrix (RACI chart)",
-        "C": "Stakeholder assessment and engagement matrix",
-        "D": "Discuss the issue with the team and update the team charter accordingly"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Discuss the issue with the team and update the team charter accordingly\"."
-    },
-    {
-      "number": 42,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "As a project manager, you are leading a software development project where the developers are colocated within rented office space. Writing the code is taking longer than anticipated, and you have contacted the office facility to ensure the office will be available for another week. Unfortunately, the office is already booked, so you need to find another solution. After capturing the problem in the project documents, what should you do next?",
-      "options": {
-        "A": "Revise the resource management plan",
-        "B": "Mitigate the risk by reducing probability or impact",
-        "C": "Transfer the risk to a third party or vendor",
-        "D": "Avoid the risk by eliminating the threat completely"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Revise the resource management plan\"."
-    },
-    {
-      "number": 43,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Following is an illustration of a project network activity node that includes some information about activity Given the information provided, what is the total float of activity D?",
-      "options": {
-        "A": "Active risk acceptance with contingency reserves",
-        "B": "16",
-        "C": "Earned Value Management (EVM) variance analysis",
-        "D": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"16\"."
-    },
-    {
-      "number": 44,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are part of a cross-functional organizational development team, piloting an adaptive approach to project management in an organization that has traditionally used a predictive approach. You realize that you have to tailor the template of the schedule management plan. Which of the following components of the template are you likely to tailor the most?",
-      "options": {
-        "A": "Critical Path Method (CPM) forward and backward pass",
-        "B": "Crashing and Fast Tracking for schedule compression",
-        "C": "The schedule model development, the release and iteration length, and the reporting formats",
-        "D": "Customer satisfaction and prevention over inspection"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The schedule model development, the release and iteration length, and the reporting formats\"."
-    },
-    {
-      "number": 45,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "With a parking garage construction project underway, you are currently creating the risk management plan. In support of this process, you need to determine the acceptable level of overall project risk exposure. What should you do first?",
-      "options": {
-        "A": "Quality assurance audits and process improvement",
-        "B": "Formal change control process with CCB approval",
-        "C": "Lessons learned documentation and organizational archives",
-        "D": "Determine the risk appetites of key project stakeholders"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Determine the risk appetites of key project stakeholders\"."
-    },
-    {
-      "number": 46,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A project manager notifies the project sponsor that the mitigation strategy for a major risk did not work. The sponsor states that the same risk response was implemented a few months ago on a similar project with the same result. How might this situation have been avoided?",
-      "options": {
-        "A": "The project manager should have researched the lessons learned repository for knowledge gained throughout similar past projects",
-        "B": "Scope, cost, and schedule",
-        "C": "Scope, time, and quality",
-        "D": "The project manager acting as coordinator only"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The project manager should have researched the lessons learned repository for knowledge gained throughout similar past projects\"."
-    },
-    {
-      "number": 47,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A project to construct a new subway line is underway, and the tunnel boring machine has slowed due to unexpected changes in rock composition. It has been decided to implement the planned risk response by increasing the speed of the machine to 100% of rated capacity. The team believes that the additional strain on the machine will not cause more downtime for its maintenance thus negating the benefit of faster boring. What should the project manager do first?",
-      "options": {
-        "A": "The functional manager having full authority over resources",
-        "B": "Revise the assumption log",
-        "C": "Historical cost relationships may no longer be applicable",
-        "D": "Top-down estimating using analogous projects"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Revise the assumption log\"."
-    },
-    {
-      "number": 48,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are part of the project team designing a new type of subway car. You have completed the last work package for the braking system; however, you are not sure what the acceptance criteria are for this particular work package. Where can you find that information?",
-      "options": {
-        "A": "Bottom-up detailed analysis of work packages",
-        "B": "Parametric statistical modeling",
-        "C": "The WBS dictionary",
-        "D": "Acceptance criteria, deliverables, and project exclusions"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The WBS dictionary\"."
-    },
-    {
-      "number": 49,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A project manager is identifying stakeholders for a new product development project. Which of the following activities is the project manager least likely to perform in the creation of the stakeholder register?",
-      "options": {
-        "A": "Work Breakdown Structure (WBS) and WBS Dictionary",
-        "B": "Responsibility Assignment Matrix (RACI chart)",
-        "C": "Stakeholder assessment and engagement matrix",
-        "D": "Submit a change request to update the stakeholder engagement plan"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Submit a change request to update the stakeholder engagement plan\"."
-    },
-    {
-      "number": 50,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A previously unknown risk surfaces on a project and creates an issue that is estimated to cost $50,000. The project manager submits a change request to adjust the schedule baseline and uses the already approved contingency reserves to address the cost. What did the project manager do wrong?",
-      "options": {
-        "A": "The project manager used contingency reserves instead of management reserves.",
-        "B": "Mitigate the risk by reducing probability or impact",
-        "C": "Transfer the risk to a third party or vendor",
-        "D": "Avoid the risk by eliminating the threat completely"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The project manager used contingency reserves instead of management reserves.\"."
-    }
-  ],
-  "PMG201c_FESP24_1814": [
-    {
-      "number": 1,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: The term resources only refers to people, it does not include money or materials or equipment.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là SAI (False). False"
-    },
-    {
-      "number": 2,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A work package is a/an:",
-      "options": {
-        "A": "Crashing and Fast Tracking for schedule compression",
-        "B": "Deliverable at the lowest level of the WBS",
-        "C": "Customer satisfaction and prevention over inspection",
-        "D": "Quality assurance audits and process improvement"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Deliverable at the lowest level of the WBS\"."
-    },
-    {
-      "number": 3,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The discipline of quality management complements the discipline of project management. Both recognize the importance of:",
-      "options": {
-        "A": "Formal change control process with CCB approval",
-        "B": "Lessons learned documentation and organizational archives",
-        "C": "Customer satisfaction, prevention over inspection, continuous improvement, and management responsibility",
-        "D": "Scope, cost, and schedule"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Customer satisfaction, prevention over inspection, continuous improvement, and management responsibility\"."
-    },
-    {
-      "number": 4,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: Performing quality assurance within the context of a project involves applying the planned, systematic quality activities to ensure that the project correctly employs all processes needed to meet project objectives and product requirements.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là ĐÚNG (True). True"
-    },
-    {
-      "number": 5,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: When you are concerned that your estimates might not be correct, especially if you think they are too low, you should pad the estimate and add extra.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là SAI (False). False"
-    },
-    {
-      "number": 6,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are building an apartment complex with four, 10,000 square foot buildings based on the same drawings you used in another city two years ago. What is the danger of estimating using the same parametric model of $50 per square foot?",
-      "options": {
-        "A": "Parametric statistical modeling",
-        "B": "Historical cost relationships may no longer be applicable.",
-        "C": "Acceptance criteria, deliverables, and project exclusions",
-        "D": "Work Breakdown Structure (WBS) and WBS Dictionary"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Historical cost relationships may no longer be applicable.\"."
-    },
-    {
-      "number": 7,
       "type": "single",
       "instruction": "(Choose 1 answer)",
       "question": "True or False: The S-Curve depicts the relationship between the cost baseline budget and the schedule because it shows the planned cost baseline budget across the planned project timeline.",
@@ -14980,689 +14479,1155 @@ const FE_QUESTIONS_TEXT = {
       "answer": [
         "A"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là ĐÚNG (True). True"
-    },
-    {
-      "number": 8,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: If develop online modules must be 100% completed before review online modules can begin, that is called a finish to start relationship.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là ĐÚNG (True). True"
-    },
-    {
-      "number": 9,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: The critical path is the shortest path through the network and represents the work that can be delayed without delaying the end of the project.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là SAI (False). False"
-    },
-    {
-      "number": 10,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "In a project schedule, the sequence of activities which cannot be delayed during the course of the project without extending the project end date is referred to as the:",
-      "options": {
-        "A": "Crashing and Fast Tracking for schedule compression",
-        "B": "Critical path",
-        "C": "Customer satisfaction and prevention over inspection",
-        "D": "Quality assurance audits and process improvement"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Critical path\"."
-    },
-    {
-      "number": 11,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: A project manager spends 75% of his or her time communicating.",
-      "options": {
-        "A": "True",
-        "B": "False"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Phát biểu trên là SAI (False). False"
-    },
-    {
-      "number": 12,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "When you report project status you compare actual performance to:",
-      "options": {
-        "A": "Scope, time, and quality",
-        "B": "The project manager acting as coordinator only",
-        "C": "The functional manager having full authority over resources",
-        "D": "The planned performance or baseline."
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The planned performance or baseline.\"."
-    },
-    {
-      "number": 13,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Which of the following is not likely to be documented in a communications management plan?",
-      "options": {
-        "A": "Person responsible for tracking risk events",
-        "B": "Historical cost relationships may no longer be applicable",
-        "C": "Top-down estimating using analogous projects",
-        "D": "Bottom-up detailed analysis of work packages"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Person responsible for tracking risk events\"."
-    },
-    {
-      "number": 14,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Who should take the most responsibility for clear and effective communication?",
-      "options": {
-        "A": "Parametric statistical modeling",
-        "B": "The purpose of project risk management is to:",
-        "C": "Acceptance criteria, deliverables, and project exclusions",
-        "D": "Work Breakdown Structure (WBS) and WBS Dictionary"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The purpose of project risk management is to:\"."
-    },
-    {
-      "number": 15,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "If the response you choose is to avoid a risk this means that:",
-      "options": {
-        "A": "Responsibility Assignment Matrix (RACI chart)",
-        "B": "Stakeholder assessment and engagement matrix",
-        "C": "You change your plans so that you eliminate the risk.",
-        "D": "Mitigate the risk by reducing probability or impact"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"You change your plans so that you eliminate the risk.\"."
-    },
-    {
-      "number": 16,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The Risk Management Plan is a subsidiary to the __________ document.",
-      "options": {
-        "A": "Transfer the risk to a third party or vendor",
-        "B": "Avoid the risk by eliminating the threat completely",
-        "C": "Active risk acceptance with contingency reserves",
-        "D": "Project Management Plan"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Project Management Plan\"."
-    },
-    {
-      "number": 17,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "During a risk brainstorming session a team member identifies a risk. This particular risk does not seem to belong to any of the categories in you Risk Breakdown Structure (RBS). How should you respond?",
-      "options": {
-        "A": "Record the list in the risk register, discuss potential responses and make a note to update the RBS.",
-        "B": "Earned Value Management (EVM) variance analysis",
-        "C": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)",
-        "D": "Critical Path Method (CPM) forward and backward pass"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Record the list in the risk register, discuss potential responses and make a note to update the RBS.\"."
-    },
-    {
-      "number": 18,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Which of these types of changes should be discouraged as a poor project practice:",
-      "options": {
-        "A": "Crashing and Fast Tracking for schedule compression",
-        "B": "Stakeholders did not take the time to define scope earlier in the project.",
-        "C": "Customer satisfaction and prevention over inspection",
-        "D": "Quality assurance audits and process improvement"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Stakeholders did not take the time to define scope earlier in the project.\"."
-    },
-    {
-      "number": 19,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "To ensure control over the incidence and frequency of change, the project manager establishes a:",
-      "options": {
-        "A": "Formal change control process with CCB approval",
-        "B": "Lessons learned documentation and organizational archives",
-        "C": "Change control process",
-        "D": "Scope, cost, and schedule"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Change control process\"."
-    },
-    {
-      "number": 20,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Scope creep results in:",
-      "options": {
-        "A": "Scope, time, and quality",
-        "B": "The project manager acting as coordinator only",
-        "C": "The functional manager having full authority over resources",
-        "D": "Completion delays, escalation of costs, and increase in project complexity."
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Completion delays, escalation of costs, and increase in project complexity.\"."
-    },
-    {
-      "number": 21,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The PMBOK® Guide and in the preceding lesson describes 10 Project Management Knowledge Areas. Identify 3 out of the 10:",
-      "options": {
-        "A": "Cost, Scope, Time",
-        "B": "Historical cost relationships may no longer be applicable",
-        "C": "Top-down estimating using analogous projects",
-        "D": "Bottom-up detailed analysis of work packages"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Cost, Scope, Time\"."
-    },
-    {
-      "number": 22,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "If you are not certain who your stakeholders are, asking who will use the product or service being created can be helpful.",
-      "options": {
-        "A": "Parametric statistical modeling",
-        "B": "True",
-        "C": "Acceptance criteria, deliverables, and project exclusions",
-        "D": "Work Breakdown Structure (WBS) and WBS Dictionary"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"True\"."
-    },
-    {
-      "number": 23,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A Work Breakdown Structure (WBS) is a deliverable-oriented hierarchical decomposition of the work to be executed by the project team.",
-      "options": {
-        "A": "Responsibility Assignment Matrix (RACI chart)",
-        "B": "Stakeholder assessment and engagement matrix",
-        "C": "True",
-        "D": "Mitigate the risk by reducing probability or impact"
-      },
-      "answer": [
-        "C"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"True\"."
-    },
-    {
-      "number": 24,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "While looking at the project cost baseline graph shown below, a project manager sees that the stair-step line's last point is higher than the estimate at completion (EAC). What does this relationship mean for the project?",
-      "options": {
-        "A": "Transfer the risk to a third party or vendor",
-        "B": "Avoid the risk by eliminating the threat completely",
-        "C": "Active risk acceptance with contingency reserves",
-        "D": "Total funding for the project exceeds the project's anticipated needs"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Total funding for the project exceeds the project's anticipated needs\"."
-    },
-    {
-      "number": 25,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are managing a software upgrade project for your company. Your project sponsor has a great deal of authority regarding project decisions, but you recently discovered that he doesn't have much interest in your project. To complete the project successfully, you need your project sponsor's continuous support. What stakeholder management strategy should you use with your project sponsor?",
-      "options": {
-        "A": "Keep the sponsor satisfied",
-        "B": "Earned Value Management (EVM) variance analysis",
-        "C": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)",
-        "D": "Critical Path Method (CPM) forward and backward pass"
-      },
-      "answer": [
-        "A"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Keep the sponsor satisfied\"."
-    },
-    {
-      "number": 26,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You are managing a project in Alaska to extend an existing oil pipeline, and you are about to start project planning. Due to the large size of the project along with the regulatory and environmental considerations, the development of a detailed project management plan will be critical. As a starting point for initial project planning, what is the first thing you should do?",
-      "options": {
-        "A": "Crashing and Fast Tracking for schedule compression",
-        "B": "Review the project charter to understand the high-level information about the project",
-        "C": "Customer satisfaction and prevention over inspection",
-        "D": "Quality assurance audits and process improvement"
-      },
-      "answer": [
-        "B"
-      ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Review the project charter to understand the high-level information about the project\"."
+      "explanation": "True."
     },
     {
       "number": 27,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "You have just taken over a project to overhaul the company's telecommunications network. During your first week, you determine that the engineers spend at least 80% of their time responding to unexpected requests for information from different project stakeholders. Because of these interruptions, your engineers cannot focus on their assigned project activities, which is resulting in frequent network outages. What should you do first?",
+      "question": "True or False: Earned value integrates schedule, budget and quality and uses monetary values to assess project status.",
       "options": {
-        "A": "Formal change control process with CCB approval",
-        "B": "Lessons learned documentation and organizational archives",
-        "C": "Review the communications management plan to understand how stakeholder requests should be handled",
-        "D": "Scope, cost, and schedule"
+        "A": "False",
+        "B": "True"
       },
       "answer": [
-        "C"
+        "A"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Review the communications management plan to understand how stakeholder requests should be handled\"."
+      "explanation": "False. Earned Value integrates scope, schedule, and cost/budget (not quality)."
     },
     {
       "number": 28,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "You are employed by a software development company as a project manager. Your company has a policy that a change control board (CCB) reviews all of the change requests for every project in your organization, and the CCB follows all the recommended activities outlined in the PMBOK® Guide. You and your project team do not serve as members of the CCB. Based on this scenario, which of the following activities might be performed by members of the CCB?",
+      "question": "The discipline of quality management complements the discipline of project management. Both recognize all but one of the following:",
       "options": {
-        "A": "Scope, time, and quality",
-        "B": "The project manager acting as coordinator only",
-        "C": "The functional manager having full authority over resources",
-        "D": "Creating a change request"
+        "A": "Customer satisfaction",
+        "B": "Prevention over inspection",
+        "C": "One-time improvement",
+        "D": "Management responsibility"
       },
       "answer": [
-        "D"
+        "C"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Creating a change request\"."
+      "explanation": "Continuous improvement (not one-time improvement) is recognized by both."
     },
     {
       "number": 29,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "You are managing an engineering design project. The vendor has created 50 engineering drawings. Since the project is on a tight schedule and budget, checking every drawing for accuracy and completeness would be impossible. You direct the team to randomly select 20 drawings for inspection. This exercise can best be described as an example of:",
+      "question": "True or False: Product quality focuses on the project management processes used to meet project objectives.",
       "options": {
-        "A": "Statistical sampling",
-        "B": "Historical cost relationships may no longer be applicable",
-        "C": "Top-down estimating using analogous projects",
-        "D": "Bottom-up detailed analysis of work packages"
+        "A": "False",
+        "B": "True"
       },
       "answer": [
         "A"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Statistical sampling\"."
+      "explanation": "False. Project quality focuses on project management processes; product quality focuses on the deliverable."
     },
     {
       "number": 30,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "A project manager is leading a project to streamline the manufacturing process of modular homes. The project manager researches and discovers a set of technical guidelines that will make the homes easier and cheaper to manufacture without compromising quality. The team incorporates these guidelines by designing a new modular home that reduces the total number of parts and uses more standard and multi-functional components. This is an example of:",
+      "question": "The Process Improvement Plan is:",
       "options": {
-        "A": "Parametric statistical modeling",
-        "B": "Design for X",
-        "C": "Acceptance criteria, deliverables, and project exclusions",
-        "D": "Work Breakdown Structure (WBS) and WBS Dictionary"
+        "A": "The number one component of the project management plan.",
+        "B": "A subsidiary, or component of the project management plan."
       },
       "answer": [
         "B"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Design for X\"."
+      "explanation": "The Process Improvement Plan is a subsidiary component of the project management plan."
     },
     {
       "number": 31,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path?",
+      "question": "True or False: Performing quality assurance within the context of a project involves applying the planned, systematic quality activities to ensure that the project correctly employs all processes needed to meet project objectives and product requirements.",
       "options": {
-        "A": "Responsibility Assignment Matrix (RACI chart)",
-        "B": "Stakeholder assessment and engagement matrix",
-        "C": "14",
-        "D": "Mitigate the risk by reducing probability or impact"
+        "A": "False",
+        "B": "True"
       },
       "answer": [
-        "C"
+        "B"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"14\"."
+      "explanation": "True."
     },
     {
       "number": 32,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "As a project manager, you are in the process of establishing a knowledge management system for your project. Which of the following actions will be the least beneficial in this process?",
+      "question": "True or False: Your role as the project manager during quality control is to work with a representative of quality control department who will create a test plan and test cases which will be used to test the product you are creating in order to prevent defects from reaching your customer.",
       "options": {
-        "A": "Transfer the risk to a third party or vendor",
-        "B": "Avoid the risk by eliminating the threat completely",
-        "C": "Active risk acceptance with contingency reserves",
-        "D": "Reading the requirements documentation"
+        "A": "False",
+        "B": "True"
       },
       "answer": [
-        "D"
+        "B"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Reading the requirements documentation\"."
+      "explanation": "True."
     },
     {
       "number": 33,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "A new project is starting, and the team members come from all over the world. The project manager has concerns about communications. What should the project manager do first?",
+      "question": "True or False: The term resources only refers to people, it does not include money or materials or equipment.",
       "options": {
-        "A": "Enroll the project team members in cultural training to raise cultural awareness",
-        "B": "Earned Value Management (EVM) variance analysis",
-        "C": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)",
-        "D": "Critical Path Method (CPM) forward and backward pass"
+        "A": "True",
+        "B": "False"
       },
       "answer": [
-        "A"
+        "B"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Enroll the project team members in cultural training to raise cultural awareness\"."
+      "explanation": "False. Resources include people, materials, equipment, and funds."
     },
     {
       "number": 34,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "You are developing the communications management plan for a construction project. You want to determine the information needs of the project stakeholders, specifically focusing on the type and the format of information that will be required to communicate with the stakeholders. What is your best course of action?",
+      "question": "Which one of these is the correct view of conflict?",
       "options": {
-        "A": "Crashing and Fast Tracking for schedule compression",
-        "B": "Conduct a communication requirements analysis",
-        "C": "Customer satisfaction and prevention over inspection",
-        "D": "Quality assurance audits and process improvement"
+        "A": "Inevitable",
+        "B": "Always bad",
+        "C": "Should be avoided",
+        "D": "Must be suppressed"
       },
       "answer": [
-        "B"
+        "A"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Conduct a communication requirements analysis\"."
+      "explanation": "Conflict is inevitable in projects."
     },
     {
       "number": 35,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "As part of the process to develop the scope statement for the project you are leading, you specify the deliverables for the project, include the requirements under which the deliverables will be accepted, and explicitly state what is out of project scope. What should you do next?",
+      "question": "Which one of these is an example of role conflict:",
       "options": {
-        "A": "Formal change control process with CCB approval",
-        "B": "Lessons learned documentation and organizational archives",
-        "C": "Describe product scope in the scope statement",
-        "D": "Scope, cost, and schedule"
+        "A": "When a team member does not know why he or she should do something.",
+        "B": "When a team member does not know how to do his or her job.",
+        "C": "When two team members are trying to complete the same task.",
+        "D": "When a team member is late completing a task."
       },
       "answer": [
         "C"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Describe product scope in the scope statement\"."
+      "explanation": "Role conflict occurs when roles/responsibilities overlap, such as two team members trying to do the same task."
     },
     {
       "number": 36,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "You work with your team to sequence activities on the project you are leading. You are looking for the factors, constraints, and potential dependencies among project activities that can influence the way activities are sequenced, as well as help you understand the relationship between activities and the need for leads and lags. Where could you find this information?",
+      "question": "What are the 5 approaches to conflict discussed in the Project Human Resources Management Lesson?",
       "options": {
-        "A": "Scope, time, and quality",
-        "B": "The project manager acting as coordinator only",
-        "C": "The functional manager having full authority over resources",
-        "D": "Assumption log"
+        "A": "Confronting, Compromising, Smoothing, Uninterested, Challenging.",
+        "B": "Communicating, Compromising, Smoothing, Forcing, Avoiding.",
+        "C": "Confronting, Compromising, Smoothing, Forcing, Avoiding.",
+        "D": "Confronting, Challenging, Smoothing, Forcing, Avoiding."
       },
       "answer": [
-        "D"
+        "C"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Assumption log\"."
+      "explanation": "The five conflict resolution approaches are Confronting, Compromising, Smoothing, Forcing, and Avoiding."
     },
     {
       "number": 37,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "A project manager is conducting the initial process of identifying stakeholders for a new infrastructure development project. The project manager has just compiled a list of potential stakeholders' names. What should the project manager do next?",
+      "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those informed persons are:",
       "options": {
-        "A": "Conduct stakeholder analysis",
-        "B": "Historical cost relationships may no longer be applicable",
-        "C": "Top-down estimating using analogous projects",
-        "D": "Bottom-up detailed analysis of work packages"
+        "A": "Providing subject matter expertise",
+        "B": "Making the final decision",
+        "C": "Being kept updated about project progress.",
+        "D": "Completing the work"
       },
       "answer": [
-        "A"
+        "C"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Conduct stakeholder analysis\"."
+      "explanation": "Informed (I) stakeholders are kept updated on progress and results."
     },
     {
       "number": 38,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "During a bidder conference, a supplier asks why a section is missing from the request for quotation (RFQ). The project manager, realizing that an aspect of the project is indeed missing, becomes flustered and stumbles through a brief reply. When the seller responses were received, all but three fail to address the missing section. What is the best course of action?",
+      "question": "True or False: Effective project communication management creates a bridge between stakeholders based on a shared understanding of the project and the ongoing sharing of information needed for its success.",
       "options": {
-        "A": "Parametric statistical modeling",
-        "B": "Send a revised RFQ to all prospective suppliers and allow them the opportunity to resubmit their proposals",
-        "C": "Acceptance criteria, deliverables, and project exclusions",
-        "D": "Work Breakdown Structure (WBS) and WBS Dictionary"
+        "A": "True",
+        "B": "False"
       },
       "answer": [
-        "B"
+        "A"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Send a revised RFQ to all prospective suppliers and allow them the opportunity to resubmit their proposals\"."
+      "explanation": "True."
     },
     {
       "number": 39,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Your boss is giving you a rough outline of the scope, constraints, and risks involved in a prospective client's project. The project is highly similar to another project you are currently closing. The sponsor wants to know how long this project would take your team to complete. You think your team may need two months, but what should your answer be?",
+      "question": "You are beginning to staff your project. Which of the following will NOT be used in developing and/or communicating roles and responsibilities?",
       "options": {
-        "A": "Responsibility Assignment Matrix (RACI chart)",
-        "B": "Stakeholder assessment and engagement matrix",
-        "C": "\"If it truly resembles this project we are closing, it could be six to ten weeks.\"",
-        "D": "Mitigate the risk by reducing probability or impact"
+        "A": "WBS",
+        "B": "Pareto chart",
+        "C": "Responsibility Assignment Matrix",
+        "D": "Organization chart"
       },
       "answer": [
-        "C"
+        "B"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"\"If it truly resembles this project we are closing, it could be six to ten weeks.\"\"."
+      "explanation": "A Pareto chart is a quality control tool, not used for roles and responsibilities."
     },
     {
       "number": 40,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "A project manager has just learned that the customer is not showing up to requirements meetings saying they have other more important tasks. Since this behavior has already been identified as a risk earlier in the project, the project manager escalates the issue to the stakeholder who is the risk owner responsible for communicating with the customer in such situations. The stakeholder is shocked to find out she is the assigned risk owner. What most likely went wrong?",
+      "question": "Downward communication is communication to/from:",
       "options": {
-        "A": "Transfer the risk to a third party or vendor",
-        "B": "Avoid the risk by eliminating the threat completely",
-        "C": "Active risk acceptance with contingency reserves",
-        "D": "The project manager did not notify the stakeholder that they were the risk owner"
+        "A": "Your senior management.",
+        "B": "Your social groups.",
+        "C": "Your direct reports.",
+        "D": "Your peers."
       },
       "answer": [
-        "D"
+        "C"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"The project manager did not notify the stakeholder that they were the risk owner\"."
+      "explanation": "Downward communication is from management to direct reports/subordinates."
     },
     {
       "number": 41,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "You are planning a project to construct a luxury condominium complex that will include jacuzzi tubs among its numerous features. Due to technical constraints, it has been decided to eliminate the jacuzzi tubs from the final project requirements. You document the jacuzzi tubs as an explicit scope exclusion in the project scope statement as well as update the requirements documentation to reflect this change. What should you do next?",
+      "question": "Which one is the correct matching of communication methods and the explanations?\nCommunication methods: (1) Interactive, (2) Push, (3) Pull\nExplanations: (a) Between two or more parties and multidirectional; the most efficient way to ensure common understanding. (b) Sent to recipients; does not ensure it was actually received and understood. (c) Recipients must access the information; works for large amounts of information or large audiences, each recipient accesses at their own discretion.",
       "options": {
-        "A": "Reflect the scope exclusion in the requirements traceability matrix",
-        "B": "Earned Value Management (EVM) variance analysis",
-        "C": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)",
-        "D": "Critical Path Method (CPM) forward and backward pass"
+        "A": "(1)&(a), (2)&(b), (3)&(c)",
+        "B": "(1)&(a), (2)&(c), (3)&(b)",
+        "C": "(1)&(b), (2)&(c), (3)&(a)",
+        "D": "(1)&(b), (2)&(a), (3)&(c)",
+        "E": "(1)&(c), (2)&(a), (3)&(b)",
+        "F": "(1)&(c), (2)&(b), (3)&(a)"
       },
       "answer": [
         "A"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Reflect the scope exclusion in the requirements traceability matrix\"."
+      "explanation": "Interactive = multidirectional (a); Push = sent to recipients (b); Pull = recipients access at discretion (c)."
     },
     {
       "number": 42,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "The project you have been managing for several years is now moving towards completion. Some of the project deliverables have been contracted to vendors. You begin to close the project and want to make sure all activities necessary for project closure are properly completed. Which of the following activities would you not perform as part of this process?",
+      "question": "True or False: Performance reporting aims to inform stakeholders the good achievements of the project's objectives weekly or monthly.",
       "options": {
-        "A": "Crashing and Fast Tracking for schedule compression",
-        "B": "Closing procurements with vendors",
-        "C": "Customer satisfaction and prevention over inspection",
-        "D": "Quality assurance audits and process improvement"
+        "A": "True",
+        "B": "False"
       },
       "answer": [
         "B"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Closing procurements with vendors\"."
+      "explanation": "False. Performance reporting objectively communicates actual status, progress, and forecasts (both good and bad), not just good achievements."
     },
     {
       "number": 43,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "You are leading a project team with a technology upgrade project within a project-oriented organizational structure. You were recently informed that one of your project team members falsified required certifications on their resume', and you have verified the information as accurate. You want to terminate the team member's employment. What should you do first?",
+      "question": "True or False: A positive risk is a threat; a negative risk is an opportunity.",
       "options": {
-        "A": "Formal change control process with CCB approval",
-        "B": "Lessons learned documentation and organizational archives",
-        "C": "Review the enterprise environmental factors",
-        "D": "Scope, cost, and schedule"
+        "A": "False",
+        "B": "True"
       },
       "answer": [
-        "C"
+        "A"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Review the enterprise environmental factors\"."
+      "explanation": "False. A positive risk is an opportunity; a negative risk is a threat."
     },
     {
       "number": 44,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "A project manager is facilitating a first brainstorming session to identify individual risks as well as sources of overall project risk. The meeting attendees are struggling with the task, and the meeting is becoming unproductive. What action might the project manager take to get the meeting back on track?",
+      "question": "All of the following tools and techniques can be valuable in risk identification, EXCEPT:",
       "options": {
-        "A": "Scope, time, and quality",
-        "B": "The project manager acting as coordinator only",
-        "C": "The functional manager having full authority over resources",
-        "D": "Use the RBS as a prompt list"
+        "A": "SWOT (Strengths, Opportunities, Weaknesses, Threats)",
+        "B": "Reviewing and evaluating project documents",
+        "C": "Reviewing similar projects executed in past",
+        "D": "EVM (Earned Value Management)"
       },
       "answer": [
         "D"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Use the RBS as a prompt list\"."
+      "explanation": "EVM is used for cost/schedule performance monitoring, not risk identification."
     },
     {
       "number": 45,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "A project manager for a software development project has collected the work performance data and used the requirements documentation and requirements traceability matrix to generate the work performance information regarding variances in the project work compared to the baseline. What process is the project manager performing?",
+      "question": "If the response you choose is to mitigate a risk this means that:",
       "options": {
-        "A": "Control Scope",
-        "B": "Historical cost relationships may no longer be applicable",
-        "C": "Top-down estimating using analogous projects",
-        "D": "Bottom-up detailed analysis of work packages"
+        "A": "You actively do not consider the risk but establish contingency plan.",
+        "B": "You change your plans so that you eliminate the risk.",
+        "C": "You change your plan so that another party will be responsible for the risk.",
+        "D": "You create your plan to reduce the probability and/or the impact of the risk."
       },
       "answer": [
-        "A"
+        "D"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Control Scope\"."
+      "explanation": "Mitigating a risk reduces its probability of occurrence and/or impact."
     },
     {
       "number": 46,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "A project manager is leading an infrastructure development project and is just starting the process of prioritizing individual project risks for further analysis. A stakeholder has expressed concern that the existing information about individual project risks may not be accurate and reliable. What is the best course of action?",
+      "question": "During a risk brainstorming session, a team member identifies a risk. This particular risk does not seem to belong to any of the categories in your Risk Breakdown Structure (RBS). How should you respond?",
       "options": {
-        "A": "Parametric statistical modeling",
-        "B": "Perform a risk data quality assessment",
-        "C": "Acceptance criteria, deliverables, and project exclusions",
-        "D": "Work Breakdown Structure (WBS) and WBS Dictionary"
+        "A": "Chastise him for making up risks which cannot exist because there is not a category for such risks.",
+        "B": "Ignore him and move on to another risk identified by a different team member.",
+        "C": "Thank him for his work, but inform him that the risk cannot be included because it does not fit any of the categories defined in the RBS.",
+        "D": "Record the list in the risk register, discuss potential responses and make a note to update the RBS."
       },
       "answer": [
-        "B"
+        "D"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Perform a risk data quality assessment\"."
+      "explanation": "All identified risks should be recorded in the risk register, analyzed for responses, and the RBS should be updated if a new category is needed."
     },
     {
       "number": 47,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "A project manager is meeting with Sally, the program manager, to review the decomposed deliverables for a new product. Sally reviews the work breakdown structure and requests it to be arranged in the order the work should be performed. Is Sally correct saying that the work breakdown structure should be ordered according to how the work will be performed?",
+      "question": "Who might not be your project's stakeholders?",
       "options": {
-        "A": "Responsibility Assignment Matrix (RACI chart)",
-        "B": "Stakeholder assessment and engagement matrix",
-        "C": "Sally is wrong. The chronological order of tasks is defined in the Sequence Activities process.",
-        "D": "Mitigate the risk by reducing probability or impact"
+        "A": "Project team members",
+        "B": "Project management team",
+        "C": "Customer/User",
+        "D": "Performing organizations",
+        "E": "Sponsor",
+        "F": "People that are not impacted by your project"
       },
       "answer": [
-        "C"
+        "F"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Sally is wrong. The chronological order of tasks is defined in the Sequence Activities process.\"."
+      "explanation": "Stakeholders are people or organizations impacted by or able to impact the project."
     },
     {
       "number": 48,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "You are the project manager for the construction of a new thin-crust pizza vending machine. You take all the information gathered in the project management plan to date and begin to develop a project schedule. When you reach the activity labeled as 6.5.3, you are unsure if a refrigeration specialist is needed for the installation of the cooling mechanism for the pizza dough. What project document would you reference in order to get information on the resources required for installing the cooling mechanism?",
+      "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is low interest / low power, what should the Project Manager do?",
       "options": {
-        "A": "Transfer the risk to a third party or vendor",
-        "B": "Avoid the risk by eliminating the threat completely",
-        "C": "Active risk acceptance with contingency reserves",
-        "D": "Activity attributes"
+        "A": "Monitor",
+        "B": "Keep satisfied",
+        "C": "Manage closely",
+        "D": "Keep informed"
       },
       "answer": [
-        "D"
+        "A"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Activity attributes\"."
+      "explanation": "Low Power / Low Interest = Monitor (with minimal effort)."
     },
     {
       "number": 49,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "As a project manager, you will need the assistance of other stakeholders in order to identify the risks associated with your project. You want to determine who are the individuals that might participate in the process of identifying risks to the project, as well as those who are available to act as risk owners. Where should you look?",
+      "question": "You just came from a meeting with one of your project stakeholders, he knew well about your project and also its potential impacts, and actively engaged in ensuring that the project is a success. How would you classify him?",
       "options": {
-        "A": "Stakeholder register",
-        "B": "Earned Value Management (EVM) variance analysis",
-        "C": "Cost Performance Index (CPI) and Schedule Performance Index (SPI)",
-        "D": "Critical Path Method (CPM) forward and backward pass"
+        "A": "Supportive",
+        "B": "Neutral",
+        "C": "Unaware",
+        "D": "Leading"
       },
       "answer": [
-        "A"
+        "D"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Stakeholder register\"."
+      "explanation": "A stakeholder who is aware and actively engaged in ensuring project success is classified as Leading."
     },
     {
       "number": 50,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Tom is a project manager for a large software project. During project risk planning, Tom and his team are trying to decide whether to invest $10 million to develop new software or to instead invest $5 million to upgrade the existing software. The team is uncertain how strong demand will be for their product and, therefore, must account for this uncertainty in their analysis. What would be the best tool for the project manager to use in this case?",
+      "question": "True or False: The Project Sponsor is responsible for stakeholder expectations management.",
       "options": {
-        "A": "Crashing and Fast Tracking for schedule compression",
-        "B": "Decision tree analysis",
-        "C": "Customer satisfaction and prevention over inspection",
-        "D": "Quality assurance audits and process improvement"
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "False. The Project Manager is responsible for managing stakeholder expectations."
+    }
+  ],
+  "PMG201c_FESP24_1814": [
+    {
+      "number": 1,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "A project is plagued by requested changes to the project charter. Who has the primary responsibility to decide if these changes are necessary?",
+      "options": {
+        "A": "The project manager",
+        "B": "The project team",
+        "C": "The sponsor",
+        "D": "The stakeholders"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "The project sponsor owns and approves changes to the project charter."
+    },
+    {
+      "number": 2,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "In Earned Value Management Technique, you can compute the Estimate To Completion (ETC) by applying which of following formula? (Notes: EAC: Estimate At Completion)",
+      "options": {
+        "A": "ETC = EAC - AC",
+        "B": "ETC = EAC + AC",
+        "C": "ETC = EAC * AC",
+        "D": "ETC = EAC / AC"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "Since EAC = AC + ETC, ETC = EAC - AC."
+    },
+    {
+      "number": 3,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Project Manager should consider using milestones for high level reporting.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 4,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Project scope statement is better to define inclusions (in-scope items) than identify only exclusions (out of scope items).",
+      "options": {
+        "A": "False",
+        "B": "True"
       },
       "answer": [
         "B"
       ],
-      "explanation": "Theo chuẩn PMBOK®: Đáp án chính xác là \"Decision tree analysis\"."
+      "explanation": "True."
+    },
+    {
+      "number": 5,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which one is NOT the approach to shorten your project schedule?",
+      "options": {
+        "A": "Fast Tracking",
+        "B": "Crashing",
+        "C": "Reducing"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Fast tracking and crashing are schedule compression techniques; \"Reducing\" is not."
+    },
+    {
+      "number": 6,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "A market demand, a business need, and a legal requirement are examples of:",
+      "options": {
+        "A": "Reasons to hire a project manager",
+        "B": "Reasons projects are initiated",
+        "C": "Reasons people or businesses become stakeholders",
+        "D": "Reasons to sponsor a project"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "These are classic reasons why projects are initiated."
+    },
+    {
+      "number": 7,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "You have finished planning and have begun executing the project when the client asks if you would shorten the project duration so that the project can finish 2 weeks earlier than the original plan. How are the triple constraints affected?",
+      "options": {
+        "A": "Scope and cost may both be affected",
+        "B": "Neither scope nor cost will be affected in any situation",
+        "C": "Cost will reduce as the project duration is shortened and scope is not changed",
+        "D": "There is no relevant option except the project must be cut down on scope"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "Compressing the schedule can affect both cost (e.g., crashing) and scope."
+    },
+    {
+      "number": 8,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "You are assigned as the project manager in the middle of the project. The project is within the baselines, but the customer is not happy with the performance of the project. What is the first thing you should do?",
+      "options": {
+        "A": "Discuss it with the project team",
+        "B": "Recalculate baselines",
+        "C": "Renegotiate the contract",
+        "D": "Meet with the customer"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "Meet with the customer directly to understand the root cause of their dissatisfaction."
+    },
+    {
+      "number": 9,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "In our lessons the acronym RAM stands for:",
+      "options": {
+        "A": "Responsibility Accountability Matrix",
+        "B": "Responsibility Assignment Matrix",
+        "C": "Resource Acquisition Management",
+        "D": "Resource Aligned Management",
+        "E": "Responsible Accountable Manageable"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "RAM stands for Responsibility Assignment Matrix."
+    },
+    {
+      "number": 10,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: The Backward Pass is used through the activities to determine the total duration of the project.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "False. The Forward Pass determines the total duration of the project; the Backward Pass determines late dates and float."
+    },
+    {
+      "number": 11,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "When you report project status you compare actual performance to:",
+      "options": {
+        "A": "The performance of your competitors.",
+        "B": "The performance of previous projects.",
+        "C": "The performance of other similar projects",
+        "D": "The planned performance or baseline."
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "Project status is measured by comparing actual performance against the planned performance (baseline)."
+    },
+    {
+      "number": 12,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which organization structure can provide the most power for the project manager?",
+      "options": {
+        "A": "Functional",
+        "B": "Weak Matrix",
+        "C": "Balanced Matrix",
+        "D": "Strongest Matrix",
+        "E": "Projectized",
+        "F": "Medium Matrix"
+      },
+      "answer": [
+        "E"
+      ],
+      "explanation": "In a projectized organization, the project manager has the highest level of authority and control over resources."
+    },
+    {
+      "number": 13,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which project management process group generally takes the most project time and resources?",
+      "options": {
+        "A": "Initiating",
+        "B": "Planning",
+        "C": "Executing",
+        "D": "Monitoring and controlling",
+        "E": "Closing"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "The Executing process group consumes the majority of project time and resources."
+    },
+    {
+      "number": 14,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Each group of persons involved in the project should be assigned, and always needs to know their role and responsibility.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 15,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which one is not the causes of scope creep?",
+      "options": {
+        "A": "Poorly defined objectives",
+        "B": "Lack of defined change control process",
+        "C": "Changing stakeholder perspectives",
+        "D": "Increased understanding of what it takes to get it done",
+        "E": "Ability to say \"NO\""
+      },
+      "answer": [
+        "E"
+      ],
+      "explanation": "The ability to say \"NO\" prevents scope creep."
+    },
+    {
+      "number": 16,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Project quality focuses on the project management processes used to meet project objectives.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 17,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Lateral communication is NOT communication to/from:",
+      "options": {
+        "A": "Your customers.",
+        "B": "Your friends.",
+        "C": "Your subordinates.",
+        "D": "Your peers."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Communication with subordinates is downward communication, not lateral."
+    },
+    {
+      "number": 18,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: In the context of a project, change is always a bad thing.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "False."
+    },
+    {
+      "number": 19,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Project scope differs from product scope in that:",
+      "options": {
+        "A": "Project scope is the work that needs to be accomplished to deliver a product, service, or result",
+        "B": "Project scope completion is measured against the features, functions, and product requirements.",
+        "C": "Product scope completion is measured against the project management plan including all subsidiary plans.",
+        "D": "Product scope is the work that needs to be accomplished to complete a project"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "Project scope is the work performed to deliver a product, service, or result (measured against the project management plan); product scope refers to the features and functions of the product (measured against product requirements)."
+    },
+    {
+      "number": 20,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Your project had a team of which consists of yourself, a tester, five developers and a communicator. As the project is behind schedule so one more developer has been assigned to your team. How many communication channels on your team now?",
+      "options": {
+        "A": "8",
+        "B": "9",
+        "C": "28",
+        "D": "36"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "Original team = 8; adding 1 developer makes N = 9. Channels = 9 * 8 / 2 = 36."
+    },
+    {
+      "number": 21,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: The Cost Baseline is equal to the total of Activity Cost Estimates plus Contingency Reserves.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 22,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: The danger of estimating using the same parametric model is the no longer applicable of historical data.",
+      "options": {
+        "A": "True",
+        "B": "False"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 23,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "All of the following are inputs to estimating activity durations except:",
+      "options": {
+        "A": "Enterprise Environmental Factors & Organizational Process Assets",
+        "B": "Risk Register & Scope Statement",
+        "C": "Project Documents Updates & Requirements Specifications",
+        "D": "Resource Calendars & Resource Breakdown Structure"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Project Documents Updates is an output, not an input."
+    },
+    {
+      "number": 24,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "You just came from a meeting with one of your project stakeholders, he knew about your project and also its potential impacts, and he always supported for the work and its outcomes. How would you classify him?",
+      "options": {
+        "A": "Supportive",
+        "B": "Neutral",
+        "C": "Unaware",
+        "D": "Leading"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "A stakeholder aware of the project who supports the work and outcomes is Supportive."
+    },
+    {
+      "number": 25,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "What are the 5 approaches to conflict discussed in the Project Human Resources Management Lesson?",
+      "options": {
+        "A": "Confronting, Compromising, Smoothing, Uninterested, Challenging.",
+        "B": "Communicating, Compromising, Smoothing, Forcing, Avoiding.",
+        "C": "Confronting, Compromising, Smoothing, Forcing, Avoiding.",
+        "D": "Confronting, Challenging, Smoothing, Forcing, Avoiding."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "The five approaches are Confronting, Compromising, Smoothing, Forcing, and Avoiding."
+    },
+    {
+      "number": 26,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "As you plan your project, you do so thinking that all team members will be assigned to your project for at least 50% of their available time. This is an example of:",
+      "options": {
+        "A": "Poor planning.",
+        "B": "Wishful thinking.",
+        "C": "A project demand.",
+        "D": "An assumption."
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "An assumption."
+    },
+    {
+      "number": 27,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which of the following is the most correct statement regarding management and contingency reserves?",
+      "options": {
+        "A": "Both of them are included into the cost budget of the project.",
+        "B": "Both of them are not included into the cost budget of the project.",
+        "C": "Management reserve is included into the cost budget but contingency reserve is not.",
+        "D": "Contingency reserve is included into the cost budget but management reserve is not."
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "Contingency reserve is included in the cost baseline/budget managed by the PM, whereas management reserve is held outside the cost baseline."
+    },
+    {
+      "number": 28,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "All the following occur during the planning process group EXCEPT:",
+      "options": {
+        "A": "Develop Project Charter",
+        "B": "Create WBS",
+        "C": "Estimate Costs",
+        "D": "Sequence Activities"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "Develop Project Charter occurs in the Initiating process group."
+    },
+    {
+      "number": 29,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Influence means you have the right to apply resources, make decisions and give approvals.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "False. That describes Authority, not Influence."
+    },
+    {
+      "number": 30,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which item would most likely NOT be part of a basic communication plan:",
+      "options": {
+        "A": "What they need to know.",
+        "B": "The amount of their annual bonus.",
+        "C": "With whom to communicate.",
+        "D": "The best medium for the communication."
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "Compensation/bonus details are not part of a project communication plan."
+    },
+    {
+      "number": 31,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "To calculate late start (LS) of an activity, you will:",
+      "options": {
+        "A": "Take its late finish minus its estimated duration.",
+        "B": "Take its early finish minus its estimated duration.",
+        "C": "Take its early start plus its estimated duration.",
+        "D": "Take its early start."
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "LS = LF - Duration."
+    },
+    {
+      "number": 32,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which of the components below do you think NOT belong in the cost management plan?",
+      "options": {
+        "A": "Units of measure",
+        "B": "Earned value rules",
+        "C": "Control thresholds",
+        "D": "RACI matrix"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "The RACI matrix belongs in the Human Resource / Resource Management Plan, not the Cost Management Plan."
+    },
+    {
+      "number": 33,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Conflict management is the process by which the project manager uses appropriate managerial techniques to deal with the inevitable disagreements that develop among those working toward project accomplishment.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 34,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "You are scheduling an activity which involves a government agency. What type of dependency are you working with?",
+      "options": {
+        "A": "Discretionary",
+        "B": "Internal",
+        "C": "Mandatory",
+        "D": "External"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "Dependencies involving external parties such as a government agency are External dependencies."
+    },
+    {
+      "number": 35,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "You have a project to build a new fence. The fence will form a square. Each side is to take one day to build, and $1,000 has been budgeted per side. The sides are planned to be completed one after the other. Today is the end of day 3. Using the following project status chart to calculate project current SV:\n(Side 1: Complete, spent $1,000; Side 2: Complete, spent $900; Side 3: 50% done, spent $600; Side 4: 75% done, spent $600)",
+      "options": {
+        "A": "SV = $250",
+        "B": "SV = $300",
+        "C": "SV = $150",
+        "D": "SV = $200",
+        "E": "SV = $50",
+        "F": "SV = $100"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "At end of Day 3: PV = $3,000 (Sides 1, 2, 3 planned). EV = $1,000 + $1,000 + $500 + $750 = $3,250. SV = EV - PV = $3,250 - $3,000 = $250."
+    },
+    {
+      "number": 36,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Project Human Resource Management includes the processes that organize, manage, and lead the project team.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 37,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "A project manager can defend against scope creep with a good:",
+      "options": {
+        "A": "Procurement process",
+        "B": "Change control process",
+        "C": "Risk management plan",
+        "D": "Project management plan"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "A formal change control process defends against scope creep."
+    },
+    {
+      "number": 38,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Your stakeholder register is your primary output and should at least contain:",
+      "options": {
+        "A": "Job descriptions, identification information, and stakeholder classification",
+        "B": "Assessment information, scope information, and stakeholder classification",
+        "C": "Assessment information, identification information, and stakeholder classification",
+        "D": "Assessment information, identification information, and risk classification"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "The stakeholder register contains identification information, assessment information, and stakeholder classification."
+    },
+    {
+      "number": 39,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Once you and your team identify and assess risks and develop responses you:",
+      "options": {
+        "A": "Pay close attention to the risks identified and do not look for new risks.",
+        "B": "Only update your risk register when you are preparing to share it with your stakeholders.",
+        "C": "Have completed your risk management responsibilities.",
+        "D": "Continue to identify and monitor risks for the remainder of the project."
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "Risk management is an ongoing process throughout the entire project lifecycle."
+    },
+    {
+      "number": 40,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "If \"review online modules\" needs to begin before \"develop online modules\" can finish, that is called:",
+      "options": {
+        "A": "Finish to start relationship.",
+        "B": "Start to finish relationship.",
+        "C": "Finish to finish relationship.",
+        "D": "Start to start relationship."
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "Start-to-Finish (SF) means the predecessor must start before the successor can finish."
+    },
+    {
+      "number": 41,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: The Project Sponsor is responsible for stakeholder expectations management.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "False. The Project Manager is responsible for managing stakeholder expectations."
+    },
+    {
+      "number": 42,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "To manage a project effectively, work should be broken down into small pieces. Which of the following does not describe how far to decompose the work?",
+      "options": {
+        "A": "Until it has a meaningful conclusion",
+        "B": "Until it cannot be logically subdivided further",
+        "C": "Until it can be done by one person",
+        "D": "Until it can be realistically estimated"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Work packages do not need to be small enough to be done by one person."
+    },
+    {
+      "number": 43,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "What description defines Bottoms Up Estimating?",
+      "options": {
+        "A": "A technique that analyzes activities on past projects and using them as a basis for estimating costs.",
+        "B": "A technique that uses a mathematical model to estimate costs.",
+        "C": "A technique that involves estimating the cost of individual work packages or individual schedule activities with the lowest level of detail."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Bottom-up estimating estimates individual work packages/activities at the lowest level of detail."
+    },
+    {
+      "number": 44,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which of the following action should not include in the Scope Management Plan?",
+      "options": {
+        "A": "Prepare a project scope statement based upon the project charter.",
+        "B": "Enable the creation and maintenance of the project work breakdown structure (WBS).",
+        "C": "Define how formal verification and acceptance of the completed project deliverables will be accomplished.",
+        "D": "Control how requests for changes to the project scope will be processed.",
+        "E": "Define how to identify and manage triple constraints."
+      },
+      "answer": [
+        "E"
+      ],
+      "explanation": "Managing triple constraints (cost/schedule/scope together) is part of overall project integration, not the Scope Management Plan."
+    },
+    {
+      "number": 45,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "The definition of a stakeholder includes:",
+      "options": {
+        "A": "People and organizations that are not impacted by your project.",
+        "B": "Organizations impacted by your project but not people, they are all part of the impacted organizations.",
+        "C": "The people or organizations that are positively or negatively impacted by your project.",
+        "D": "People who are impacted by your project, but not organizations impacted by your project."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "Stakeholders are people or organizations positively or negatively impacted by the project."
+    },
+    {
+      "number": 46,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: The Process Improvement Plan is a component of the project management plan that details how project management and development processes are to be analyzed in order to identify how to increase their value.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 47,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "True or False: Your role as the project manager during quality control is to implement the quality management plan using the appropriate tools and techniques, in order to ensure that work is being performed according to required quality standards.",
+      "options": {
+        "A": "False",
+        "B": "True"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "True."
+    },
+    {
+      "number": 48,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "The purpose of project risk management is to:",
+      "options": {
+        "A": "Minimize the likelihood or the impact of negative events or threats to your project and to increase the likelihood or impact of positive events.",
+        "B": "Neutralize the likelihood or the impact of negative events or threats to your project and to neutralize the likelihood or impact of positive events.",
+        "C": "Minimize the likelihood or the impact of positive events or threats to your project and to increase the likelihood or impact of negative events.",
+        "D": "Eliminate the likelihood or the impact of negative events or threats to your project and to decrease the likelihood or impact of positive events."
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "Risk management aims to decrease probability/impact of threats and increase probability/impact of opportunities."
+    },
+    {
+      "number": 49,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "Which element should NOT be included in risk management plan?",
+      "options": {
+        "A": "Budgeting",
+        "B": "Timing",
+        "C": "Roles and Responsibilities",
+        "D": "Risk Register"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "The Risk Register is a separate project document, not part of the Risk Management Plan."
+    },
+    {
+      "number": 50,
+      "type": "single",
+      "instruction": "(Choose 1 answer)",
+      "question": "An estimate created by looking at a similar project or activity and then adding or subtracting to or from the estimate based on the differences between the two is called:",
+      "options": {
+        "A": "Parametric estimating",
+        "B": "Analogous estimating",
+        "C": "Bottom-up estimating",
+        "D": "Exact estimating"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "Analogous estimating uses historical data from a similar project/activity adjusted for known differences."
     }
   ],
   "PMG201c_RESP24_1862": [
