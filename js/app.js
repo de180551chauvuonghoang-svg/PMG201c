@@ -1518,10 +1518,35 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
   // FE MODULE (FINAL EXAM - TRẮC NGHIỆM)
   // =========================================================================
   function initFEModule() {
+    // Sort FE Exams chronologically (2023 -> 2024 -> 2025 -> 2026)
+    function getExamChronologicalScore(exam) {
+      const id = (exam.id || '').toUpperCase();
+      let year = 2024;
+      if (/2023|SU23|FA23/.test(id)) year = 2023;
+      else if (/2024|SP24|SU24|FA24/.test(id)) year = 2024;
+      else if (/2025|SP25|SU25|FA25/.test(id)) year = 2025;
+      else if (/2026|SP26|SU26|FA26/.test(id)) year = 2026;
+      
+      let term = 2; // SP=1, SU=2, FA=3
+      if (/SP/.test(id)) term = 1;
+      else if (/SU/.test(id)) term = 2;
+      else if (/FA/.test(id)) term = 3;
+      
+      let type = 1; // FE=1, RE=2
+      if (/RE/.test(id)) type = 2;
+      
+      const match = id.match(/_(\d+)$/);
+      const code = match ? parseInt(match[1], 10) : 0;
+      return year * 10000000 + term * 1000000 + type * 100000 + code;
+    }
+
+    APP_DATA.feExams.sort((a, b) => getExamChronologicalScore(a) - getExamChronologicalScore(b));
+
     // Populate FE Exams
-    elements.feExamSelect.innerHTML = APP_DATA.feExams.map(e =>
-      `<option value="${e.id}">${e.title} (${e.totalQuestions} câu)</option>`
-    ).join('');
+    elements.feExamSelect.innerHTML = APP_DATA.feExams.map(e => {
+      const cleanTitle = (e.title || '').replace(/\s*\(\d+\s*câu\)/gi, '').trim();
+      return `<option value="${e.id}">${cleanTitle} (${e.totalQuestions} câu)</option>`;
+    }).join('');
 
     elements.feExamSelect.addEventListener('change', () => {
       state.fePracticeSubset = 'all';
@@ -1832,15 +1857,23 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
     // Keyboard Shortcuts
     window.addEventListener('keydown', handleKeyboardShortcuts);
 
-    // Initial load first exam
-    if (APP_DATA.feExams.length > 0) {
-      loadFEExam(APP_DATA.feExams[0].id);
+    // Initial load first exam (or restore last active exam)
+    const savedExamId = localStorage.getItem('pmg201c_last_fe_exam');
+    const initialExamId = (savedExamId && APP_DATA.feExams.some(e => e.id === savedExamId))
+      ? savedExamId
+      : (APP_DATA.feExams.length > 0 ? APP_DATA.feExams[0].id : null);
+
+    if (initialExamId) {
+      loadFEExam(initialExamId);
     }
   }
 
   function loadFEExam(examId) {
     state.feExamId = examId;
     elements.feExamSelect.value = examId;
+    try {
+      localStorage.setItem('pmg201c_last_fe_exam', examId);
+    } catch (e) {}
     state.feQuestionIndex = 0;
     state.feZoomLevel = 1.0;
 
