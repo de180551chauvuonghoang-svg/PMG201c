@@ -1538,6 +1538,8 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
     // Sort FE Exams chronologically (2023 -> 2024 -> 2025 -> 2026)
     function getExamChronologicalScore(exam) {
       const id = (exam.id || '').toUpperCase();
+      if (id.includes('SPECIAL')) return -1000; // Pinned to the very top
+
       let year = 2024;
       if (/2023|SU23|FA23/.test(id)) year = 2023;
       else if (/2024|SP24|SU24|FA24/.test(id)) year = 2024;
@@ -1937,8 +1939,18 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
 
     const qIndex = state.feQuestionIndex;
     const totalQ = exam.questions.length;
+
+    // Get Text Question Data first to resolve potential custom imagePath
+    let qData = null;
+    if (typeof getFEQuestionText === 'function') {
+      qData = getFEQuestionText(state.feExamId, qIndex);
+    }
+
     const filename = exam.questions[qIndex] || `Cau_${String(qIndex + 1).padStart(2, '0')}.webp`;
-    const imagePath = `${exam.folder}/${filename}?v=4.1`;
+    let imagePath = `${exam.folder}/${filename}?v=4.1`;
+    if (qData && qData.imagePath) {
+      imagePath = qData.imagePath.startsWith('FE/') ? `${qData.imagePath}?v=4.1` : `FE/${qData.imagePath}?v=4.1`;
+    }
 
     elements.feQuestionNumber.textContent = qIndex + 1;
     elements.feQuestionImage.src = imagePath;
@@ -1947,12 +1959,6 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
     // Reset zoom
     state.feZoomLevel = 1.0;
     applyFEZoom();
-
-    // Get Text Question Data
-    let qData = null;
-    if (typeof getFEQuestionText === 'function') {
-      qData = getFEQuestionText(state.feExamId, qIndex);
-    }
 
     // Toggle Text vs Image View
     // Nếu ở chế độ image, hoặc câu hỏi này chưa có text -> Bật chế độ xem ảnh chụp gốc
