@@ -18205,3 +18205,45 @@ const FE_QUESTIONS_TEXT = {
     }
   ]
 };
+
+// Helper: Lấy dữ liệu text cho câu hỏi của một đề thi
+function getFEQuestionText(examId, questionIndex) {
+  // 1. Kiểm tra trong localStorage xem người dùng có nạp text tùy chỉnh không
+  if (typeof localStorage !== 'undefined') {
+    try {
+      const customExam = localStorage.getItem('pmg201c_fe_custom_text_' + examId);
+      if (customExam) {
+        const parsed = JSON.parse(customExam);
+        if (parsed && parsed[questionIndex]) {
+          return parsed[questionIndex];
+        }
+      }
+    } catch (e) {
+      console.error('Error loading custom question text:', e);
+    }
+  }
+
+  // 2. Kiểm tra bộ dữ liệu theo đề thi chính xác
+  if (FE_QUESTIONS_TEXT[examId] && FE_QUESTIONS_TEXT[examId][questionIndex]) {
+    return FE_QUESTIONS_TEXT[examId][questionIndex];
+  }
+
+  // ĐÃ LOẠI BỎ FALLBACK MÙ QUÁNG SANG default_pmg201c!
+  // Nếu đề chưa có text, trả về null để giao diện tự động bật ảnh gốc của chính đề đó.
+  return null;
+}
+
+// Helper: Kiểm tra một đề thi có dữ liệu text rõ nét hay không
+function hasFEExamText(examId) {
+  if (typeof localStorage !== 'undefined') {
+    try {
+      const customExam = localStorage.getItem('pmg201c_fe_custom_text_' + examId);
+      if (customExam) {
+        const parsed = JSON.parse(customExam);
+        if (Array.isArray(parsed) && parsed.length > 0) return true;
+      }
+    } catch (e) {}
+  }
+
+  return !!(FE_QUESTIONS_TEXT[examId] && Array.isArray(FE_QUESTIONS_TEXT[examId]) && FE_QUESTIONS_TEXT[examId].length > 0);
+}
