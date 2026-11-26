@@ -1871,7 +1871,7 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
     const qIndex = state.feQuestionIndex;
     const totalQ = exam.questions.length;
     const filename = exam.questions[qIndex] || `Cau_${String(qIndex + 1).padStart(2, '0')}.webp`;
-    const imagePath = `${exam.folder}/${filename}`;
+    const imagePath = `${exam.folder}/${filename}?v=4.0`;
 
     elements.feQuestionNumber.textContent = qIndex + 1;
     elements.feQuestionImage.src = imagePath;
