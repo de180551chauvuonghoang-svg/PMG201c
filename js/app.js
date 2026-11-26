@@ -127,6 +127,23 @@
     feTimerDisplay: document.getElementById('feTimerDisplay'),
     feSubmitBtn: document.getElementById('feSubmitBtn'),
     feResetExamBtn: document.getElementById('feResetExamBtn'),
+    feSaveBtn: document.getElementById('feSaveBtn'),
+    feSaveBtnSidebar: document.getElementById('feSaveBtnSidebar'),
+    feSaveIndicator: document.getElementById('feSaveIndicator'),
+    feSaveText: document.getElementById('feSaveText'),
+    feBackupBtn: document.getElementById('feBackupBtn'),
+    feBackupModal: document.getElementById('feBackupModal'),
+    closeBackupModalBtn: document.getElementById('closeBackupModalBtn'),
+    cancelBackupModalBtn: document.getElementById('cancelBackupModalBtn'),
+    btnExportCurrentExam: document.getElementById('btnExportCurrentExam'),
+    btnExportAllExams: document.getElementById('btnExportAllExams'),
+    btnTriggerImportBackup: document.getElementById('btnTriggerImportBackup'),
+    feImportBackupFile: document.getElementById('feImportBackupFile'),
+    feBackupCurrentExamTitle: document.getElementById('feBackupCurrentExamTitle'),
+    feBackupDoneCount: document.getElementById('feBackupDoneCount'),
+    feBackupFlagCount: document.getElementById('feBackupFlagCount'),
+    feBackupStatusText: document.getElementById('feBackupStatusText'),
+    feBackupLastSaved: document.getElementById('feBackupLastSaved'),
     btnInstantFeedbackToggle: document.getElementById('btnInstantFeedbackToggle'),
     instantFeedbackText: document.getElementById('instantFeedbackText'),
     feInstantResultBar: document.getElementById('feInstantResultBar'),
@@ -1849,10 +1866,27 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
       });
     }
 
-    // Submit
+    // Submit & Reset & Save
     elements.feSubmitBtn.addEventListener('click', submitFEExam);
     elements.feSubmitBtnSidebar.addEventListener('click', submitFEExam);
     elements.feResetExamBtn.addEventListener('click', resetFEExam);
+
+    if (elements.feSaveBtn) elements.feSaveBtn.addEventListener('click', handleManualFESave);
+    if (elements.feSaveBtnSidebar) elements.feSaveBtnSidebar.addEventListener('click', handleManualFESave);
+    if (elements.feBackupBtn) elements.feBackupBtn.addEventListener('click', openBackupModal);
+    if (elements.closeBackupModalBtn) elements.closeBackupModalBtn.addEventListener('click', closeBackupModal);
+    if (elements.cancelBackupModalBtn) elements.cancelBackupModalBtn.addEventListener('click', closeBackupModal);
+    if (elements.btnExportCurrentExam) elements.btnExportCurrentExam.addEventListener('click', () => exportExamProgress(false));
+    if (elements.btnExportAllExams) elements.btnExportAllExams.addEventListener('click', () => exportExamProgress(true));
+    if (elements.btnTriggerImportBackup) elements.btnTriggerImportBackup.addEventListener('click', () => elements.feImportBackupFile.click());
+    if (elements.feImportBackupFile) {
+      elements.feImportBackupFile.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files[0]) {
+          importExamProgress(e.target.files[0]);
+          e.target.value = '';
+        }
+      });
+    }
 
     // Keyboard Shortcuts
     window.addEventListener('keydown', handleKeyboardShortcuts);
@@ -2569,9 +2603,131 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
       localStorage.setItem('pmg_fe_flags', JSON.stringify(state.feFlags));
       localStorage.setItem('pmg_fe_notes', JSON.stringify(state.feNotes));
       localStorage.setItem('pmg_fe_results', JSON.stringify(state.feExamResults));
+
+      if (elements.feSaveIndicator && elements.feSaveText) {
+        const now = new Date();
+        const timeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+        elements.feSaveIndicator.className = 'save-indicator saved';
+        elements.feSaveText.textContent = `Đã lưu (${timeStr})`;
+      }
     } catch (e) {
       console.warn('LocalStorage save failed:', e);
     }
+  }
+
+  function handleManualFESave() {
+    saveFEPersistence();
+    const answers = state.feAnswers[state.feExamId] || {};
+    const doneCount = Object.keys(answers).filter(k => answers[k] && answers[k].length > 0).length;
+    const now = new Date();
+    const timeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+    
+    if (elements.feSaveText) {
+      elements.feSaveText.textContent = `Đã lưu (${timeStr})`;
+    }
+    if (elements.feSaveIndicator) {
+      elements.feSaveIndicator.className = 'save-indicator saved';
+    }
+    showToast(`Đã lưu bài làm thành công! (${doneCount}/50 câu đã chọn)`);
+  }
+
+  function openBackupModal() {
+    const exam = APP_DATA.feExams.find(e => e.id === state.feExamId);
+    const answers = state.feAnswers[state.feExamId] || {};
+    const flags = state.feFlags[state.feExamId] || {};
+    const results = state.feExamResults[state.feExamId] || {};
+    const doneCount = Object.keys(answers).filter(k => answers[k] && answers[k].length > 0).length;
+    const flagCount = Object.keys(flags).filter(k => !!flags[k]).length;
+    const hasResults = Object.keys(results).length > 0;
+
+    if (elements.feBackupCurrentExamTitle) {
+      const cleanTitle = exam ? (exam.title || '').replace(/\s*\(\d+\s*câu\)/gi, '').trim() : state.feExamId;
+      elements.feBackupCurrentExamTitle.textContent = `Bộ đề hiện tại: ${cleanTitle}`;
+    }
+    if (elements.feBackupDoneCount) elements.feBackupDoneCount.textContent = `${doneCount}/50 câu`;
+    if (elements.feBackupFlagCount) elements.feBackupFlagCount.textContent = `${flagCount} câu`;
+    if (elements.feBackupStatusText) elements.feBackupStatusText.textContent = hasResults ? 'Đã nộp & chấm điểm' : (doneCount > 0 ? 'Đang làm dở' : 'Chưa bắt đầu');
+    if (elements.feBackupLastSaved) {
+      const now = new Date();
+      elements.feBackupLastSaved.textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+    }
+
+    if (elements.feBackupModal) elements.feBackupModal.classList.add('active');
+  }
+
+  function closeBackupModal() {
+    if (elements.feBackupModal) elements.feBackupModal.classList.remove('active');
+  }
+
+  function exportExamProgress(allExams = false) {
+    const exportData = {
+      app: 'PMG201c_Hub',
+      version: '5.3',
+      exportDate: new Date().toISOString(),
+      type: allExams ? 'all_exams' : 'single_exam',
+      examId: allExams ? null : state.feExamId,
+      answers: allExams ? state.feAnswers : { [state.feExamId]: state.feAnswers[state.feExamId] || {} },
+      modes: allExams ? state.feQuestionModes : { [state.feExamId]: state.feQuestionModes[state.feExamId] || {} },
+      flags: allExams ? state.feFlags : { [state.feExamId]: state.feFlags[state.feExamId] || {} },
+      notes: allExams ? state.feNotes : { [state.feExamId]: state.feNotes[state.feExamId] || {} },
+      results: allExams ? state.feExamResults : { [state.feExamId]: state.feExamResults[state.feExamId] || {} }
+    };
+
+    const filename = allExams 
+      ? `PMG201c_ToanBoBaiLam_${new Date().toISOString().slice(0, 10)}.json`
+      : `PMG201c_${state.feExamId}_BaiLam_${new Date().toISOString().slice(0, 10)}.json`;
+
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    showToast('Đã xuất file bài làm thành công!');
+  }
+
+  function importExamProgress(file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const data = JSON.parse(e.target.result);
+        if (!data || !data.answers) {
+          showToast('File không đúng định dạng bài làm PMG201c!', 'error');
+          return;
+        }
+
+        if (data.type === 'all_exams' || !data.examId) {
+          Object.assign(state.feAnswers, data.answers || {});
+          if (data.modes) Object.assign(state.feQuestionModes, data.modes || {});
+          if (data.flags) Object.assign(state.feFlags, data.flags || {});
+          if (data.notes) Object.assign(state.feNotes, data.notes || {});
+          if (data.results) Object.assign(state.feExamResults, data.results || {});
+        } else {
+          const id = data.examId;
+          const examAnswers = data.answers[id] || data.answers;
+          state.feAnswers[id] = Object.assign({}, state.feAnswers[id] || {}, examAnswers);
+          if (data.modes) state.feQuestionModes[id] = Object.assign({}, state.feQuestionModes[id] || {}, data.modes[id] || data.modes);
+          if (data.flags) state.feFlags[id] = Object.assign({}, state.feFlags[id] || {}, data.flags[id] || data.flags);
+          if (data.notes) state.feNotes[id] = Object.assign({}, state.feNotes[id] || {}, data.notes[id] || data.notes);
+          if (data.results) state.feExamResults[id] = Object.assign({}, state.feExamResults[id] || {}, data.results[id] || data.results);
+        }
+
+        saveFEPersistence();
+        loadCurrentQuestion();
+        renderPalette();
+        updateSubsetCounts();
+        closeBackupModal();
+        showToast('Đã nạp và khôi phục bài làm thành công!');
+      } catch (err) {
+        console.error(err);
+        showToast('Lỗi đọc file bài làm: ' + err.message, 'error');
+      }
+    };
+    reader.readAsText(file);
   }
 
   function startFETimer() {
@@ -2873,6 +3029,18 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
 
   // Keyboard shortcut listener
   function handleKeyboardShortcuts(e) {
+    // Ctrl + S (or Cmd + S) -> Save Exam Progress
+    if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')) {
+      e.preventDefault();
+      if (state.currentView === 'feView') {
+        handleManualFESave();
+      } else if (state.currentView === 'peView') {
+        savePEContent();
+        showToast('Đã lưu bài thi tự luận PE thành công!');
+      }
+      return;
+    }
+
     if (state.currentView !== 'feView') return;
     // Don't trigger if typing in notes or input
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;

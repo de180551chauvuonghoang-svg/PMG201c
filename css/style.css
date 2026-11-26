@@ -504,17 +504,27 @@ body {
 }
 
 .save-indicator {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .save-indicator.saved {
   color: var(--success);
+  border-color: rgba(34, 197, 94, 0.25);
 }
 
 .save-indicator.saving {
   color: var(--warning);
+  border-color: rgba(234, 179, 8, 0.25);
 }
 
 /* ==========================================================================

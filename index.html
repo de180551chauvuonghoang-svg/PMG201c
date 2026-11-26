@@ -218,6 +218,22 @@ PROJECT CHARTER
           </div>
 
           <div class="toolbar-group">
+            <!-- Save indicator & Action -->
+            <span class="save-indicator saved" id="feSaveIndicator" title="Tiến độ làm bài được tự động lưu liên tục">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span id="feSaveText">Đã lưu tự động</span>
+            </span>
+
+            <button class="btn btn-outline btn-sm" id="feSaveBtn" title="Lưu bài làm vào bộ nhớ trình duyệt (Phím tắt: Ctrl + S)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              <span>Lưu bài</span>
+            </button>
+
+            <button class="btn btn-outline btn-sm" id="feBackupBtn" title="Sao lưu: Xuất hoặc nạp lại file bài làm (.json)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Xuất/Nạp bài</span>
+            </button>
+
             <!-- Practice vs Exam Mode Toggle -->
             <select id="feModeSelect" class="select-control">
               <option value="practice">Chế độ: Luyện tập tự do</option>
@@ -458,8 +474,12 @@ PROJECT CHARTER
               </div>
             </div>
 
-            <div class="sidebar-footer">
-              <button class="btn btn-primary" id="feSubmitBtnSidebar" style="width:100%; justify-content:center;">
+            <div class="sidebar-footer" style="display:flex; gap:6px;">
+              <button class="btn btn-outline btn-sm" id="feSaveBtnSidebar" style="flex:1; justify-content:center;" title="Lưu bài làm (Ctrl + S)">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                <span>Lưu bài</span>
+              </button>
+              <button class="btn btn-primary" id="feSubmitBtnSidebar" style="flex:2; justify-content:center;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                 <span>Nộp bài thi</span>
               </button>
@@ -697,12 +717,69 @@ D. Indefinite in scope
     </div>
   </div>
 
+  <!-- Modal: Quản lý & Lưu trữ Bài làm FE (Backup / Restore) -->
+  <div class="modal-overlay" id="feBackupModal">
+    <div class="modal-card" style="max-width:580px;">
+      <div class="modal-header">
+        <h3 class="modal-title">💾 Quản Lý & Lưu Trữ Bài Làm</h3>
+        <button class="icon-btn" id="closeBackupModalBtn">&times;</button>
+      </div>
+      <div class="modal-body" style="display:flex; flex-direction:column; gap:14px;">
+        <div style="background:var(--primary-light); padding:12px 16px; border-radius:var(--radius-sm); font-size:0.85rem; line-height:1.6; color:var(--text-main);">
+          <strong>ℹ️ Chế độ lưu bài làm thông minh:</strong>
+          <ul style="margin:4px 0 0 16px;">
+            <li>Hệ thống <strong>tự động lưu tiến độ</strong> (đáp án, cờ, ghi chú) vào trình duyệt của bạn sau mỗi câu chọn.</li>
+            <li>Bạn có thể chủ động bấm <strong>"Lưu bài"</strong> hoặc nhấn <strong>Ctrl + S</strong> bất cứ lúc nào.</li>
+            <li>Xuất file <strong>.json</strong> để lưu trữ bài làm ngoại tuyến hoặc chuyển sang máy tính khác.</li>
+          </ul>
+        </div>
+
+        <!-- Current Exam Stats Card -->
+        <div style="background:var(--bg-card); border:1px solid var(--border); padding:12px 16px; border-radius:var(--radius-sm);">
+          <div style="font-weight:700; font-size:0.9rem; margin-bottom:8px;" id="feBackupCurrentExamTitle">Bộ đề hiện tại</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; font-size:0.82rem; color:var(--text-muted);">
+            <div>• Đã trả lời: <strong id="feBackupDoneCount" style="color:var(--text-main);">0/50 câu</strong></div>
+            <div>• Đánh dấu cờ: <strong id="feBackupFlagCount" style="color:var(--warning);">0 câu</strong></div>
+            <div>• Trạng thái: <strong id="feBackupStatusText" style="color:var(--primary);">Đang làm</strong></div>
+            <div>• Lưu gần nhất: <strong id="feBackupLastSaved" style="color:var(--success);">Vừa xong</strong></div>
+          </div>
+        </div>
+
+        <!-- Action 1: Export Current Exam -->
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <label style="font-weight:700; font-size:0.85rem;">1. Xuất file bài làm về máy tính (.json):</label>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button class="btn btn-outline btn-sm" id="btnExportCurrentExam" style="flex:1;">
+              📥 Tải bài làm đề này (.json)
+            </button>
+            <button class="btn btn-outline btn-sm" id="btnExportAllExams" style="flex:1;">
+              📦 Tải toàn bộ 22 đề (.json)
+            </button>
+          </div>
+        </div>
+
+        <!-- Action 2: Import / Restore from file -->
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <label style="font-weight:700; font-size:0.85rem;">2. Khôi phục bài làm từ file đã lưu:</label>
+          <input type="file" id="feImportBackupFile" accept=".json" style="display:none;">
+          <button class="btn btn-primary btn-sm" id="btnTriggerImportBackup" style="width:100%;">
+            📂 Chọn file bài làm (.json) để nạp lại
+          </button>
+          <div style="font-size:0.75rem; color:var(--text-muted);">Hệ thống sẽ nạp lại chính xác toàn bộ đáp án đã chọn và trạng thái chấm điểm từ file của bạn.</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" id="cancelBackupModalBtn">Đóng</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Container -->
   <div class="toast-container" id="toastContainer"></div>
 
   <!-- SCRIPTS -->
-  <script src="js/data.js?v=5.2"></script>
-  <script src="js/fe_questions.js?v=5.2"></script>
-  <script src="js/app.js?v=5.2"></script>
+  <script src="js/data.js?v=5.3"></script>
+  <script src="js/fe_questions.js?v=5.3"></script>
+  <script src="js/app.js?v=5.3"></script>
 </body>
 </html>
