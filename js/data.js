@@ -1,7 +1,7 @@
 /**
  * PMG201c Exam Practice Hub Data Store
  * Generated dynamically by scanning workspace PE and FE folders
- * Updated at: 2026-11-26T04:25:03.915Z
+ * Updated at: 2026-11-26T04:34:38.058Z
  */
 
 const APP_DATA = {
@@ -1442,33 +1442,6 @@ const APP_DATA = {
         "Cau_48.webp",
         "Cau_49.webp",
         "Cau_50.webp"
-      ]
-    },
-    {
-      "id": "PMG201c_SU26_PE1_7248",
-      "title": "SU26 PE1 7248 (1 câu)",
-      "folder": "FE/PMG201c_SU26_PE1_7248",
-      "totalQuestions": 1,
-      "questions": [
-        "Cau_01.webp"
-      ]
-    },
-    {
-      "id": "PMG201c_SU26_PE2_7303",
-      "title": "SU26 PE2 7303 (1 câu)",
-      "folder": "FE/PMG201c_SU26_PE2_7303",
-      "totalQuestions": 1,
-      "questions": [
-        "Cau_01.webp"
-      ]
-    },
-    {
-      "id": "PMG201c_SU26_PEHCM_7265",
-      "title": "SU26 PEHCM 7265 (1 câu)",
-      "folder": "FE/PMG201c_SU26_PEHCM_7265",
-      "totalQuestions": 1,
-      "questions": [
-        "Cau_01.webp"
       ]
     }
   ],
