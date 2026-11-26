@@ -2284,10 +2284,16 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
 
   function clearCurrentAnswer() {
     const qIndex = state.feQuestionIndex;
-    delete state.feAnswers[state.feExamId][qIndex];
+    if (state.feAnswers[state.feExamId]) {
+      delete state.feAnswers[state.feExamId][qIndex];
+    }
+    if (state.feExamResults[state.feExamId]) {
+      delete state.feExamResults[state.feExamId][qIndex];
+    }
     saveFEPersistence();
     updateOptionsUI();
     renderPalette();
+    updateSubsetCounts();
     showToast(`Đã bỏ chọn câu ${qIndex + 1}`, 'info');
   }
 
@@ -2570,12 +2576,26 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
 
   function resetFEExam() {
     if (confirm('Bạn có chắc muốn xóa toàn bộ câu trả lời và làm lại từ đầu bộ đề này không?')) {
-      delete state.feAnswers[state.feExamId];
-      delete state.feFlags[state.feExamId];
+      state.feAnswers[state.feExamId] = {};
+      state.feFlags[state.feExamId] = {};
+      state.feExamResults[state.feExamId] = {};
+      state.feNotes[state.feExamId] = {};
+      state.fePracticeSubset = 'all';
+      if (elements.fePracticeSubsetSelect) {
+        elements.fePracticeSubsetSelect.value = 'all';
+      }
+      if (elements.feCustomPracticeBanner) {
+        elements.feCustomPracticeBanner.style.display = 'none';
+      }
+      if (state.feMode === 'exam') {
+        startFETimer();
+      }
       saveFEPersistence();
       state.feQuestionIndex = 0;
       loadCurrentQuestion();
-      showToast('Đã làm mới đề thi!', 'info');
+      renderPalette();
+      updateSubsetCounts();
+      showToast('Đã làm mới đề thi! Bạn có thể làm lại từ đầu.', 'info');
     }
   }
 
