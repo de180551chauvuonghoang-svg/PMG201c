@@ -18005,20 +18005,20 @@ const FE_QUESTIONS_TEXT = {
       "number": 7,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "On a Power/Interest grid, how should you manage stakeholders who have High Power but Low Interest?",
+      "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is low interest / high power, what should the Project Manager do?",
       "options": {
-        "A": "Keep Satisfied",
-        "B": "Manage Closely",
-        "C": "Monitor",
-        "D": "Ignore"
+        "A": "Monitor",
+        "B": "Keep satisfied",
+        "C": "Manage closely",
+        "D": "Keep informed"
       },
       "answer": [
-        "A"
+        "B"
       ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - POWER/INTEREST GRID]:\n• Từ khóa: 'High Power + Low Interest' ➔ Keep Satisfied (Làm vừa lòng, tránh họ cản trở).\n• Đáp án chuẩn: [A] Keep Satisfied\n• Nguồn gốc: Trích từ đề default_pmg201c (Câu 9)",
-      "imagePath": "default_pmg201c/Cau_09.webp",
-      "sourceExam": "default_pmg201c",
-      "sourceIndex": 9
+      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - POWER/INTEREST GRID]:\n• Từ khóa: High Power + Low Interest (Quyền lực cao nhưng ít quan tâm) ➔ Keep Satisfied (Phải làm vừa lòng họ để tránh họ cản trở dự án).\n• Đáp án chuẩn: [B] Keep satisfied\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 48)",
+      "imagePath": "PMG201c_FA2024_FE_3127/Cau_48.webp",
+      "sourceExam": "PMG201c_FA2024_FE_3127",
+      "sourceIndex": 48
     },
     {
       "number": 8,
@@ -18043,20 +18043,20 @@ const FE_QUESTIONS_TEXT = {
       "number": 9,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "On a Power/Interest grid, what strategy should the Project Manager apply to stakeholders with High Power and High Interest?",
+      "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is high interest / high power, what should the Project Manager do?",
       "options": {
-        "A": "Monitor with minimum effort",
+        "A": "Monitor",
         "B": "Keep satisfied",
-        "C": "Keep informed",
-        "D": "Manage closely"
+        "C": "Manage closely",
+        "D": "Keep informed"
       },
       "answer": [
-        "D"
+        "C"
       ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - POWER/INTEREST GRID]:\n• Từ khóa: 'High Interest + High Power' ➔ Manage Closely (Quản lý chặt chẽ sát sao nhất).\n• Đáp án chuẩn: [D] Manage closely\n• Nguồn gốc: Trích từ đề default_pmg201c (Câu 8)",
-      "imagePath": "default_pmg201c/Cau_08.webp",
-      "sourceExam": "default_pmg201c",
-      "sourceIndex": 8
+      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - POWER/INTEREST GRID]:\n• Từ khóa: High Power + High Interest (Cả quyền lực lẫn quan tâm đều cao) ➔ Manage closely (Phải quản lý bám sát chặt chẽ nhất).\n• Đáp án chuẩn: [C] Manage closely\n• Nguồn gốc: Trích từ đề PMG201c_SP2025_FE_3814 (Câu 48)",
+      "imagePath": "PMG201c_SP2025_FE_3814/Cau_48.webp",
+      "sourceExam": "PMG201c_SP2025_FE_3814",
+      "sourceIndex": 48
     },
     {
       "number": 10,
@@ -18461,20 +18461,20 @@ const FE_QUESTIONS_TEXT = {
       "number": 31,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "Which estimation technique calculates activity cost or duration by aggregating individual estimates of lower-level WBS components?",
+      "question": "Which of the following is NOT the disadvantage of bottom-up estimating?",
       "options": {
-        "A": "Bottom-up Estimating",
-        "B": "Analogous Estimating",
-        "C": "Parametric Estimating",
-        "D": "Top-down Estimating"
+        "A": "Takes time and money to use this estimating technique",
+        "B": "Requires time to break the project down into smaller pieces",
+        "C": "Requires that the project be defined and well understood before estimating begins",
+        "D": "Less accurate"
       },
       "answer": [
-        "A"
+        "D"
       ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - ESTIMATING METHODS]:\n• Từ khóa: 'Lower-level WBS components cộng dồn lên' ➔ Bottom-up Estimating (Ước tính từ dưới lên).\n• Đáp án chuẩn: [A] Bottom-up Estimating\n• Nguồn gốc: Trích từ đề default_pmg201c (Câu 26)",
-      "imagePath": "default_pmg201c/Cau_26.webp",
-      "sourceExam": "default_pmg201c",
-      "sourceIndex": 26
+      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - ESTIMATING METHODS]:\n• Từ khóa: Bottom-up Estimating là phương pháp chính xác nhất (Most accurate) do đi từ gói công việc chi tiết lên. Vì vậy \"Less accurate\" không phải là nhược điểm mà là sai bản chất của Bottom-up.\n• Đáp án chuẩn: [D] Less accurate\n• Nguồn gốc: Trích từ đề PMG201c_SU2024_1_2527 (Câu 25)",
+      "imagePath": "PMG201c_SU2024_1_2527/Cau_25.webp",
+      "sourceExam": "PMG201c_SU2024_1_2527",
+      "sourceIndex": 25
     },
     {
       "number": 32,
@@ -18818,8 +18818,8 @@ const FE_QUESTIONS_TEXT = {
         "D"
       ],
       "explanation": "💡 [CÂU HỎI CỐT LÕI QUAN TRỌNG]:\n• Đáp án chuẩn: [D] Key competitors\n• Nguồn gốc: Trích từ đề default_pmg201c (Câu 1)",
-      "imagePath": "default_pmg201c/Cau_01.webp",
-      "sourceExam": "default_pmg201c",
+      "imagePath": "PMG201_TE2_SU2023_676/Cau_01.webp",
+      "sourceExam": "PMG201_TE2_SU2023_676",
       "sourceIndex": 1
     }
   ]
