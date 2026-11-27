@@ -1987,10 +1987,10 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
       if (elements.btnToggleExplanation) elements.btnToggleExplanation.style.display = 'none';
       if (elements.feTextExplanationBox) elements.feTextExplanationBox.style.display = 'none';
     } else {
-      if (elements.feOptionsGrid) elements.feOptionsGrid.style.display = 'flex';
-      if (elements.feClearAnswerBtn) elements.feClearAnswerBtn.style.display = 'inline-flex';
-      if (elements.btnViewImage) elements.btnViewImage.style.display = 'inline-flex';
-      if (elements.btnViewText) elements.btnViewText.style.display = 'inline-flex';
+      if (elements.feOptionsGrid) elements.feOptionsGrid.style.display = '';
+      if (elements.feClearAnswerBtn) elements.feClearAnswerBtn.style.display = '';
+      if (elements.btnViewImage) elements.btnViewImage.style.display = '';
+      if (elements.btnViewText) elements.btnViewText.style.display = '';
 
       // Toggle Text vs Image View
       // Nếu ở chế độ image, hoặc câu hỏi này chưa có text -> Bật chế độ xem ảnh chụp gốc
