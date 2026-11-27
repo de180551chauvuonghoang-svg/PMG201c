@@ -6439,7 +6439,7 @@ const FE_QUESTIONS_TEXT = {
       "number": 15,
       "type": "single",
       "instruction": "(Choose 1 answer)",
-      "question": "To calculate late start (LS) of an activity, you will:",
+      "question": "To calculate early finish (EF) of an activity, you will:",
       "options": {
         "A": "Take its early start plus its estimated duration.",
         "B": "Take its late start plus its estimated duration.",
@@ -6447,9 +6447,9 @@ const FE_QUESTIONS_TEXT = {
         "D": "Take its late finish."
       },
       "answer": [
-        "C"
+        "A"
       ],
-      "explanation": "During the backward pass, Late Start (LS) = Late Finish (LF) - Duration."
+      "explanation": "During the forward pass, Early Finish (EF) = Early Start (ES) + Duration."
     },
     {
       "number": 16,
@@ -18797,17 +18797,17 @@ const FE_QUESTIONS_TEXT = {
         "instruction": "(Choose 1 answer)",
         "question": "To calculate late start (LS) of an activity, you will:",
         "options": {
-          "A": "Take its early start plus its estimated duration.",
-          "B": "Take its late start plus its estimated duration.",
-          "C": "Take its late finish minus its estimated duration.",
-          "D": "Take its late finish."
+          "A": "Take its late finish minus its estimated duration.",
+          "B": "Take its early finish minus its estimated duration.",
+          "C": "Take its early start plus its estimated duration.",
+          "D": "Take its early start."
         },
         "answer": [
-          "C"
+          "A"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 18: Công Thức Tính Tiến Độ CPM (Forward Pass & Backward Pass)]:\n• Từ khóa nhận diện: \"To calculate late start (LS) of an activity, you will:\"\n• Bí quyết giải: Công thức Backward pass tính thời điểm bắt đầu muộn: LS = LF - Duration ➔ Chọn 'Take its late finish minus its estimated duration' (Đáp án C).\n• Đáp án chuẩn: [C] Take its late finish minus its estimated duration (C)\n• Nguồn đề gốc: Trích từ đề SP26 RE 6506 (Câu 15)",
-        "imagePath": "PMG201c_SP26_RE_6506/Cau_15.webp",
-        "sourceExam": "PMG201c_SP26_RE_6506",
+        "explanation": "💡 [MẸO NHỚ CỤM 18: Công Thức Tính Tiến Độ CPM (Forward Pass & Backward Pass)]:\n• Từ khóa nhận diện: \"To calculate late start (LS) of an activity, you will:\"\n• Bí quyết giải: Công thức Backward pass tính thời điểm bắt đầu muộn: LS = LF - Duration ➔ Chọn 'Take its late finish minus its estimated duration' (Đáp án A).\n• Đáp án chuẩn: [A] Take its late finish minus its estimated duration (A)\n• Nguồn đề gốc: Trích từ đề SU25 FE 4759 (Câu 15)",
+        "imagePath": "PMG201c_SU25_FE_4759/Cau_15.webp",
+        "sourceExam": "PMG201c_SU25_FE_4759",
         "sourceIndex": 15
       },
       {

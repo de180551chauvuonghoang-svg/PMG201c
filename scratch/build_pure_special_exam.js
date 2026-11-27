@@ -475,11 +475,11 @@ const clustersDef = [
         ansDesc: "Take its early start plus its estimated duration (A)"
       },
       {
-        exam: 'PMG201c_SP26_RE_6506',
+        exam: 'PMG201c_SU25_FE_4759',
         num: 15,
         trickKeyword: "To calculate late start (LS) of an activity, you will:",
-        trickTip: "Công thức Backward pass tính thời điểm bắt đầu muộn: LS = LF - Duration ➔ Chọn 'Take its late finish minus its estimated duration' (Đáp án C).",
-        ansDesc: "Take its late finish minus its estimated duration (C)"
+        trickTip: "Công thức Backward pass tính thời điểm bắt đầu muộn: LS = LF - Duration ➔ Chọn 'Take its late finish minus its estimated duration' (Đáp án A).",
+        ansDesc: "Take its late finish minus its estimated duration (A)"
       },
       {
         exam: 'PMG201c_FA2024_FE_3127',

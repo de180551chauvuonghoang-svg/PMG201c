@@ -470,13 +470,13 @@
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 48**
   * **Đề gốc `SU2024 1 2527`** ➔ **Câu 19**
 
-### 2. Câu "To calculate late start (LS) of an activity, you will:" ➔ Đáp án: `C` (Take its late finish minus its estimated duration (C))
+### 2. Câu "To calculate late start (LS) of an activity, you will:" ➔ Đáp án: `A` (Take its late finish minus its estimated duration (A))
 - **Câu hỏi trong đề:** *"To calculate late start (LS) of an activity, you will:"*
 - **Từ khóa then chốt:** `To calculate late start (LS) of an activity, you will:`
-- **Mẹo nhớ siêu tốc:** Công thức Backward pass tính thời điểm bắt đầu muộn: LS = LF - Duration ➔ Chọn 'Take its late finish minus its estimated duration' (Đáp án C).
+- **Mẹo nhớ siêu tốc:** Công thức Backward pass tính thời điểm bắt đầu muộn: LS = LF - Duration ➔ Chọn 'Take its late finish minus its estimated duration' (Đáp án A).
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 49**
-  * **Đề gốc `SP26 RE 6506`** ➔ **Câu 15**
+  * **Đề gốc `SU25 FE 4759`** ➔ **Câu 15**
 
 ### 3. Câu "Activity list critical path: A(2), B(4), C(6), D(3), E(7), F(2)" ➔ Đáp án: `D` (14 (D))
 - **Câu hỏi trong đề:** *"The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? (A=2 [Start], B=4 [A,E], C=6 [A], D=3 [B,C], E=7 [Start], F=2 [E], End=- [D,F])"*
