@@ -17917,7 +17917,7 @@ const FE_QUESTIONS_TEXT = {
         "answer": [
           "A"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 1: 5 Quy Trình Dự Án (Process Groups)]:\n• Từ khóa nhận diện: \"Best time to assign a project manager\"\n• Bí quyết giải: Thời điểm lý tưởng nhất để bổ nhiệm Project Manager là ngay trong giai đoạn Khởi tạo (Initiating), tốt nhất là trước hoặc khi viết Project Charter.\n• Đáp án chuẩn: [A] Initiating (A)\n• Nguồn đề gốc: Trích từ đề RESP24 1862 (Câu 4)",
+        "explanation": "💡 [MẸO NHỚ CỤM 1: 5 Quy Trình Dự Án (Process Groups)]:\n• Từ khóa nhận diện: \"Best time to assign a project manager\"\n• Bí quyết giải: Thời điểm lý tưởng nhất để bổ nhiệm Project Manager là ngay trong giai đoạn Khởi tạo (Initiating).\n• Đáp án chuẩn: [A] Initiating (A)\n• Nguồn đề gốc: Trích từ đề RESP24 1862 (Câu 4)",
         "imagePath": "PMG201c_RESP24_1862/Cau_04.webp",
         "sourceExam": "PMG201c_RESP24_1862",
         "sourceIndex": 4
@@ -18015,7 +18015,7 @@ const FE_QUESTIONS_TEXT = {
         "answer": [
           "B"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 2: Ma Trận Quyền Hạn & Mức Độ Quan Tâm (Power / Interest Grid)]:\n• Từ khóa nhận diện: \"low interest / high power (hoặc high power / low interest)\"\n• Bí quyết giải: Quyền lực cao nhưng ít quan tâm ➔ Làm họ hài lòng (Keep Satisfied) để không bị phủ quyết/cản trở.\n• Đáp án chuẩn: [B] Keep Satisfied (B)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 48)",
+        "explanation": "💡 [MẸO NHỚ CỤM 2: Ma Trận Quyền Hạn & Mức Độ Quan Tâm (Power / Interest Grid)]:\n• Từ khóa nhận diện: \"low interest / high power (hoặc high power / low interest)\"\n• Bí quyết giải: Quyền lực cao nhưng ít quan tâm ➔ Làm họ hài lòng (Keep Satisfied) để không bị cản trở.\n• Đáp án chuẩn: [B] Keep Satisfied (B)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 48)",
         "imagePath": "PMG201c_FA2024_FE_3127/Cau_48.webp",
         "sourceExam": "PMG201c_FA2024_FE_3127",
         "sourceIndex": 48
@@ -18119,19 +18119,19 @@ const FE_QUESTIONS_TEXT = {
         "number": 13,
         "type": "single",
         "instruction": "(Choose 1 answer)",
-        "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those informed persons are:",
+        "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those responsible persons are:",
         "options": {
           "A": "Providing subject matter expertise",
-          "B": "Making the final decision",
-          "C": "Being kept updated about project progress.",
+          "B": "Supervising the work",
+          "C": "Not completing the work",
           "D": "Completing the work"
         },
         "answer": [
-          "C"
+          "D"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)]:\n• Từ khóa nhận diện: \"those informed persons are\"\n• Bí quyết giải: Informed (I) = Người được cập nhật tiến độ dự án (Being kept updated about project progress).\n• Đáp án chuẩn: [C] Being kept updated about project progress (C)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 37)",
-        "imagePath": "PMG201c_FA2024_FE_3127/Cau_37.webp",
-        "sourceExam": "PMG201c_FA2024_FE_3127",
+        "explanation": "💡 [MẸO NHỚ CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)]:\n• Từ khóa nhận diện: \"those responsible persons are\"\n• Bí quyết giải: Responsible (R) = Người trực tiếp bắt tay thực hiện công việc (Completing the work - Đáp án D).\n• Đáp án chuẩn: [D] Completing the work (D)\n• Nguồn đề gốc: Trích từ đề SU26 FEHCM 7269 (Câu 37)",
+        "imagePath": "PMG201c_SU26_FEHCM_7269/Cau_37.webp",
+        "sourceExam": "PMG201c_SU26_FEHCM_7269",
         "sourceIndex": 37
       },
       {
@@ -18148,33 +18148,13 @@ const FE_QUESTIONS_TEXT = {
         "answer": [
           "B"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)]:\n• Từ khóa nhận diện: \"those accountable persons are\"\n• Bí quyết giải: Accountable (A) = Người chịu trách nhiệm giải trình cuối cùng / ra quyết định chốt (Making the final decision).\n• Đáp án chuẩn: [B] Making the final decision (B)\n• Nguồn đề gốc: Trích từ đề SU25 RE 4834 (Câu 6)",
+        "explanation": "💡 [MẸO NHỚ CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)]:\n• Từ khóa nhận diện: \"those accountable persons are\"\n• Bí quyết giải: Accountable (A) = Người chịu trách nhiệm giải trình cuối cùng / ra quyết định chốt (Making the final decision - Đáp án B).\n• Đáp án chuẩn: [B] Making the final decision (B)\n• Nguồn đề gốc: Trích từ đề SU25 RE 4834 (Câu 6)",
         "imagePath": "PMG201c_SU25_RE_4834/Cau_06.webp",
         "sourceExam": "PMG201c_SU25_RE_4834",
         "sourceIndex": 6
       },
       {
         "number": 15,
-        "type": "single",
-        "instruction": "(Choose 1 answer)",
-        "question": "A project manager is currently managing a manufacturing process improvement project that will be completed in five phases. The project manager has prepared the following status chart of the project by the end of 10/31. Based on the information provided, what is the actual cost of the project? [Status Chart at 10/31: - Define: Planned Value = $2,000, Actual Cost = $2,100, Percent Complete = 100% - Measure: Planned Value = $3,000, Actual Cost = $2,900, Percent Complete = 100% - Analyze: Planned Value = $3,000, Actual Cost = $2,750, Percent Complete = 75% - Improve: Planned Value = $4,000, Actual Cost = $0, Percent Complete = 0% - Control: Planned Value = $2,000, Actual Cost = $0, Percent Complete = 0%]",
-        "options": {
-          "A": "AC = $7,750",
-          "B": "AC= $9,000",
-          "C": "AC = $7,025",
-          "D": "AC= $8,000",
-          "E": "AC = $5,200"
-        },
-        "answer": [
-          "A"
-        ],
-        "explanation": "💡 [MẸO NHỚ CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)]:\n• Từ khóa nhận diện: \"those responsible persons are\"\n• Bí quyết giải: Responsible (R) = Người trực tiếp bắt tay thực hiện công việc (Completing the work).\n• Đáp án chuẩn: [A] Completing the work (A)\n• Nguồn đề gốc: Trích từ đề SP26 RE 6506 (Câu 49)",
-        "imagePath": "PMG201c_SP26_RE_6506/Cau_49.webp",
-        "sourceExam": "PMG201c_SP26_RE_6506",
-        "sourceIndex": 49
-      },
-      {
-        "number": 16,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those consulted persons are:",
@@ -18187,10 +18167,29 @@ const FE_QUESTIONS_TEXT = {
         "answer": [
           "A"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)]:\n• Từ khóa nhận diện: \"those consulted persons are\"\n• Bí quyết giải: Consulted (C) = Chuyên gia cố vấn, tham vấn ý kiến chuyên môn (Providing subject matter expertise).\n• Đáp án chuẩn: [A] Providing subject matter expertise (A)\n• Nguồn đề gốc: Trích từ đề SP26 FE 6358 (Câu 2)",
+        "explanation": "💡 [MẸO NHỚ CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)]:\n• Từ khóa nhận diện: \"those consulted persons are\"\n• Bí quyết giải: Consulted (C) = Chuyên gia cố vấn, tham vấn ý kiến chuyên môn (Providing subject matter expertise - Đáp án A).\n• Đáp án chuẩn: [A] Providing subject matter expertise (A)\n• Nguồn đề gốc: Trích từ đề SP26 FE 6358 (Câu 2)",
         "imagePath": "PMG201c_SP26_FE_6358/Cau_02.webp",
         "sourceExam": "PMG201c_SP26_FE_6358",
         "sourceIndex": 2
+      },
+      {
+        "number": 16,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those informed persons are:",
+        "options": {
+          "A": "Providing subject matter expertise",
+          "B": "Making the final decision",
+          "C": "Being kept updated about project progress.",
+          "D": "Completing the work"
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)]:\n• Từ khóa nhận diện: \"those informed persons are\"\n• Bí quyết giải: Informed (I) = Người được cập nhật tiến độ dự án (Being kept updated about project progress - Đáp án C).\n• Đáp án chuẩn: [C] Being kept updated about project progress (C)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 37)",
+        "imagePath": "PMG201c_FA2024_FE_3127/Cau_37.webp",
+        "sourceExam": "PMG201c_FA2024_FE_3127",
+        "sourceIndex": 37
       },
       {
         "number": 17,
@@ -18206,7 +18205,7 @@ const FE_QUESTIONS_TEXT = {
         "answer": [
           "C"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 5: Phân Loại Quan Hệ Phụ Thuộc (Dependency Types)]:\n• Từ khóa nhận diện: \"cannot be completed any other way\"\n• Bí quyết giải: Bản chất vật lý hoặc quy định hợp đồng bắt buộc, không thể làm cách nào khác ➔ Mandatory (Bắt buộc / Hard logic).\n• Đáp án chuẩn: [C] Mandatory (C)\n• Nguồn đề gốc: Trích từ đề FA2024 RE 3167 (Câu 4)",
+        "explanation": "💡 [MẸO NHỚ CỤM 5: Phân Loại Quan Hệ Phụ Thuộc (Dependency Types)]:\n• Từ khóa nhận diện: \"cannot be completed any other way\"\n• Bí quyết giải: Bản chất vật lý hoặc quy định bắt buộc, không thể làm cách nào khác ➔ Mandatory (Bắt buộc / Hard logic).\n• Đáp án chuẩn: [C] Mandatory (C)\n• Nguồn đề gốc: Trích từ đề FA2024 RE 3167 (Câu 4)",
         "imagePath": "PMG201c_FA2024_RE_3167/Cau_04.webp",
         "sourceExam": "PMG201c_FA2024_RE_3167",
         "sourceIndex": 4
@@ -18244,32 +18243,13 @@ const FE_QUESTIONS_TEXT = {
         "answer": [
           "B"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 5: Phân Loại Quan Hệ Phụ Thuộc (Dependency Types)]:\n• Từ khóa nhận diện: \"test system must be refreshed with your test data\"\n• Bí quyết giải: Đội dự án tự chuẩn bị dữ liệu kiểm thử trước khi chạy test ➔ Phụ thuộc nội bộ bên trong dự án quản lý ➔ Internal (Nội bộ - Đáp án B).\n• Đáp án chuẩn: [B] Internal (B)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 17)",
+        "explanation": "💡 [MẸO NHỚ CỤM 5: Phân Loại Quan Hệ Phụ Thuộc (Dependency Types)]:\n• Từ khóa nhận diện: \"test system must be refreshed with your test data\"\n• Bí quyết giải: Đội dự án tự chuẩn bị dữ liệu kiểm thử trước khi chạy test ➔ Phụ thuộc nội bộ do chính dự án kiểm soát ➔ Internal (Nội bộ - Đáp án B).\n• Đáp án chuẩn: [B] Internal (B)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 17)",
         "imagePath": "PMG201c_FA2024_FE_3127/Cau_17.webp",
         "sourceExam": "PMG201c_FA2024_FE_3127",
         "sourceIndex": 17
       },
       {
         "number": 20,
-        "type": "single",
-        "instruction": "(Choose 1 answer)",
-        "question": "You are scheduling an activity which involves a government agency. What type of dependency are you working with?",
-        "options": {
-          "A": "Discretionary",
-          "B": "Internal",
-          "C": "Mandatory",
-          "D": "External"
-        },
-        "answer": [
-          "D"
-        ],
-        "explanation": "💡 [MẸO NHỚ CỤM 5: Phân Loại Quan Hệ Phụ Thuộc (Dependency Types)]:\n• Từ khóa nhận diện: \"activity which involves a government agency\"\n• Bí quyết giải: Dính tới cơ quan công quyền / nhà nước ➔ External dependency.\n• Đáp án chuẩn: [D] External (D)\n• Nguồn đề gốc: Trích từ đề FESP24 1814 (Câu 34)",
-        "imagePath": "PMG201c_FESP24_1814/Cau_34.webp",
-        "sourceExam": "PMG201c_FESP24_1814",
-        "sourceIndex": 34
-      },
-      {
-        "number": 21,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "You and another project manager disagree over whether a team member should work on your team or on her team. You decide that the team member can work for the other project manager in the afternoon and the other project manager says it is OK for the team member to work for you in the morning. The truth is you both wanted this person fulltime. The conflict resolution approach you have both used is:",
@@ -18288,7 +18268,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 20
       },
       {
-        "number": 22,
+        "number": 21,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "You and another project manager disagree over whether a team member should work on your team or on her team. You decide that the team member can work for the other project manager and suppose that the other project manager will support you in the future. The truth is you wanted this person working on your project. The conflict resolution approach you have used is:",
@@ -18307,7 +18287,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 36
       },
       {
-        "number": 23,
+        "number": 22,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "If \"review online modules\" needs to begin before \"develop online modules” can finish, that is called a:",
@@ -18326,7 +18306,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 18
       },
       {
-        "number": 24,
+        "number": 23,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "If \"develop online modules\" needs to begin before \"review online modules\" can begin, that is called a",
@@ -18345,7 +18325,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 14
       },
       {
-        "number": 25,
+        "number": 24,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "if 'develop online modules' needs to finish before 'review online modules' can finish, that is called a",
@@ -18364,7 +18344,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 5
       },
       {
-        "number": 26,
+        "number": 25,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "If the response you choose is to accept a risk this means that:",
@@ -18381,6 +18361,25 @@ const FE_QUESTIONS_TEXT = {
         "imagePath": "PMG201c_FA2024_FE_3127/Cau_45.webp",
         "sourceExam": "PMG201c_FA2024_FE_3127",
         "sourceIndex": 45
+      },
+      {
+        "number": 26,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "If the response you choose is to transfer a risk this means that:",
+        "options": {
+          "A": "You actively do not consider the risk but establish contingency plan",
+          "B": "You change your plans so that you eliminate the risk.",
+          "C": "You change your plan so that another party will be responsible for the risk.",
+          "D": "You create your plan to reduce the probability and/or the impact of the risk"
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 8: Chiến Lược Ứng Phó Rủi Ro Tiêu Cực (Negative Risks / Threats)]:\n• Từ khóa nhận diện: \"transfer a risk\"\n• Bí quyết giải: Chuyển giao rủi ro = Thay đổi kế hoạch để bên thứ ba chịu trách nhiệm về rủi ro (another party will be responsible for the risk - ví dụ mua bảo hiểm, thuê ngoài).\n• Đáp án chuẩn: [C] Transfer (C)\n• Nguồn đề gốc: Trích từ đề SP26 FE 6358 (Câu 26)",
+        "imagePath": "PMG201c_SP26_FE_6358/Cau_26.webp",
+        "sourceExam": "PMG201c_SP26_FE_6358",
+        "sourceIndex": 26
       },
       {
         "number": 27,
@@ -18548,7 +18547,7 @@ const FE_QUESTIONS_TEXT = {
         "answer": [
           "D"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 12: Ràng Buộc (Constraint) vs Giả Định (Assumption)]:\n• Từ khóa nhận diện: \"sponsor informed you: assigned AT MOST 50%\"\n• Bí quyết giải: Nhà tài trợ áp đặt mức trần tối đa không được vượt quá ➔ Ràng buộc do cấp trên đặt ra: A constraint (Đáp án D).\n• Đáp án chuẩn: [D] A constraint (D)\n• Nguồn đề gốc: Trích từ đề RESP24 1862 (Câu 37)",
+        "explanation": "💡 [MẸO NHỚ CỤM 12: Ràng Buộc (Constraint) vs Giả Định (Assumption)]:\n• Từ khóa nhận diện: \"sponsor informed you: assigned AT MOST 50%\"\n• Bí quyết giải: Nhà tài trợ áp đặt mức trần tối đa không được vượt quá ➔ Ràng buộc: A constraint (Đáp án D).\n• Đáp án chuẩn: [D] A constraint (D)\n• Nguồn đề gốc: Trích từ đề RESP24 1862 (Câu 37)",
         "imagePath": "PMG201c_RESP24_1862/Cau_37.webp",
         "sourceExam": "PMG201c_RESP24_1862",
         "sourceIndex": 37
@@ -18567,7 +18566,7 @@ const FE_QUESTIONS_TEXT = {
         "answer": [
           "D"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 12: Ràng Buộc (Constraint) vs Giả Định (Assumption)]:\n• Từ khóa nhận diện: \"you do so thinking that: assigned AT LEAST 50%\"\n• Bí quyết giải: Bạn tự suy nghĩ/kỳ vọng trong lúc lên kế hoạch mà chưa được xác thực ➔ Giả định của bạn: An assumption (Đáp án D).\n• Đáp án chuẩn: [D] An assumption (D)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 12)",
+        "explanation": "💡 [MẸO NHỚ CỤM 12: Ràng Buộc (Constraint) vs Giả Định (Assumption)]:\n• Từ khóa nhận diện: \"you do so thinking that: assigned AT LEAST 50%\"\n• Bí quyết giải: Bạn tự suy nghĩ/kỳ vọng trong lúc lên kế hoạch mà chưa được xác thực ➔ Giả định: An assumption (Đáp án D).\n• Đáp án chuẩn: [D] An assumption (D)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 12)",
         "imagePath": "PMG201c_FA2024_FE_3127/Cau_12.webp",
         "sourceExam": "PMG201c_FA2024_FE_3127",
         "sourceIndex": 12
@@ -18624,7 +18623,7 @@ const FE_QUESTIONS_TEXT = {
         "answer": [
           "B"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 13: Phương Pháp Ước Tính (Estimating Techniques)]:\n• Từ khóa nhận diện: \"NOT been previously done by company\"\n• Bí quyết giải: Công ty chưa từng làm bao giờ, độ bất định cao ➔ Ước tính 3 điểm: Three-point estimating (Optimistic, Most Likely, Pessimistic - Đáp án B).\n• Đáp án chuẩn: [B] Three-point (B)\n• Nguồn đề gốc: Trích từ đề SU26 FE 7251 (Câu 48)",
+        "explanation": "💡 [MẸO NHỚ CỤM 13: Phương Pháp Ước Tính (Estimating Techniques)]:\n• Từ khóa nhận diện: \"NOT been previously done by company\"\n• Bí quyết giải: Công ty chưa từng làm bao giờ, độ bất định cao ➔ Ước tính 3 điểm: Three-point estimating (Đáp án B).\n• Đáp án chuẩn: [B] Three-point (B)\n• Nguồn đề gốc: Trích từ đề SU26 FE 7251 (Câu 48)",
         "imagePath": "PMG201c_SU26_FE_7251/Cau_48.webp",
         "sourceExam": "PMG201c_SU26_FE_7251",
         "sourceIndex": 48
@@ -18754,7 +18753,7 @@ const FE_QUESTIONS_TEXT = {
           "A",
           "B"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 17: Phân Loại Chi Phí (Cost Categories: Direct/Indirect & Variable/Fixed)]:\n• Từ khóa nhận diện: \"A cost can be either direct or indirect\"\n• Bí quyết giải: Direct cost: gắn trực tiếp vào công việc dự án (lương, vật liệu). Indirect cost: chi phí chung/overhead (thuế, điện, mặt bằng) (Đáp án A, B).\n• Đáp án chuẩn: [A, B] Direct: attributable, Indirect: overhead (A, B)\n• Nguồn đề gốc: Trích từ đề SP26 FE 6358 (Câu 3)",
+        "explanation": "💡 [MẸO NHỚ CỤM 17: Phân Loại Chi Phí (Cost Categories: Direct/Indirect & Variable/Fixed)]:\n• Từ khóa nhận diện: \"A cost can be either direct or indirect\"\n• Bí quyết giải: Direct cost: trực tiếp vào dự án. Indirect cost: chi phí chung/overhead (Đáp án A, B).\n• Đáp án chuẩn: [A, B] Direct: attributable, Indirect: overhead (A, B)\n• Nguồn đề gốc: Trích từ đề SP26 FE 6358 (Câu 3)",
         "imagePath": "PMG201c_SP26_FE_6358/Cau_03.webp",
         "sourceExam": "PMG201c_SP26_FE_6358",
         "sourceIndex": 3
@@ -18774,13 +18773,51 @@ const FE_QUESTIONS_TEXT = {
           "A",
           "B"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 17: Phân Loại Chi Phí (Cost Categories: Direct/Indirect & Variable/Fixed)]:\n• Từ khóa nhận diện: \"A cost can be either variable or fixed\"\n• Bí quyết giải: Variable cost: thay đổi theo sản lượng (nguyên vật liệu). Fixed cost: không đổi theo sản lượng (tiền thuê nhà, khấu hao) (Đáp án A, B).\n• Đáp án chuẩn: [A, B] Variable: changes, Fixed: does not change (A, B)\n• Nguồn đề gốc: Trích từ đề SU25 FE 4759 (Câu 18)",
+        "explanation": "💡 [MẸO NHỚ CỤM 17: Phân Loại Chi Phí (Cost Categories: Direct/Indirect & Variable/Fixed)]:\n• Từ khóa nhận diện: \"A cost can be either variable or fixed\"\n• Bí quyết giải: Variable cost: thay đổi theo sản lượng. Fixed cost: không đổi theo sản lượng (Đáp án A, B).\n• Đáp án chuẩn: [A, B] Variable: changes, Fixed: does not change (A, B)\n• Nguồn đề gốc: Trích từ đề SU25 FE 4759 (Câu 18)",
         "imagePath": "PMG201c_SU25_FE_4759/Cau_18.webp",
         "sourceExam": "PMG201c_SU25_FE_4759",
         "sourceIndex": 18
       },
       {
         "number": 48,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "To calculate early finish (EF) of an activity, you will:",
+        "options": {
+          "A": "Take its early start plus its estimated duration.",
+          "B": "Take its late start plus its estimated duration.",
+          "C": "Take its late finish minus its estimated duration.",
+          "D": "Take its late finish."
+        },
+        "answer": [
+          "A"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 18: Công Thức Tính Tiến Độ CPM (Forward Pass & Backward Pass)]:\n• Từ khóa nhận diện: \"To calculate early finish (EF) of an activity, you will:\"\n• Bí quyết giải: Công thức Forward pass tính thời điểm kết thúc sớm: EF = ES + Duration ➔ Chọn 'Take its early start plus its estimated duration' (Đáp án A).\n• Đáp án chuẩn: [A] Take its early start plus its estimated duration (A)\n• Nguồn đề gốc: Trích từ đề SU2024 1 2527 (Câu 19)",
+        "imagePath": "PMG201c_SU2024_1_2527/Cau_19.webp",
+        "sourceExam": "PMG201c_SU2024_1_2527",
+        "sourceIndex": 19
+      },
+      {
+        "number": 49,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "To calculate late start (LS) of an activity, you will:",
+        "options": {
+          "A": "Take its early start plus its estimated duration.",
+          "B": "Take its late start plus its estimated duration.",
+          "C": "Take its late finish minus its estimated duration.",
+          "D": "Take its late finish."
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 18: Công Thức Tính Tiến Độ CPM (Forward Pass & Backward Pass)]:\n• Từ khóa nhận diện: \"To calculate late start (LS) of an activity, you will:\"\n• Bí quyết giải: Công thức Backward pass tính thời điểm bắt đầu muộn: LS = LF - Duration ➔ Chọn 'Take its late finish minus its estimated duration' (Đáp án C).\n• Đáp án chuẩn: [C] Take its late finish minus its estimated duration (C)\n• Nguồn đề gốc: Trích từ đề SP26 RE 6506 (Câu 15)",
+        "imagePath": "PMG201c_SP26_RE_6506/Cau_15.webp",
+        "sourceExam": "PMG201c_SP26_RE_6506",
+        "sourceIndex": 15
+      },
+      {
+        "number": 50,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? (A=2 [Start], B=4 [A,E], C=6 [A], D=3 [B,C], E=7 [Start], F=2 [E], End=- [D,F])",
@@ -18793,47 +18830,9 @@ const FE_QUESTIONS_TEXT = {
         "answer": [
           "D"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 18: Tính Độ Dài Đường Găng Critical Path Trên Bảng Activity List]:\n• Từ khóa nhận diện: \"Activity list duration critical path (Start=A, E; A=2, B=4, C=6, D=3, E=7, F=2)\"\n• Bí quyết giải: Đường dài nhất: E(7) + B(4) + D(3) = 14 ngày ➔ Đáp án D (14).\n• Đáp án chuẩn: [D] 14 (D)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 20)",
+        "explanation": "💡 [MẸO NHỚ CỤM 18: Công Thức Tính Tiến Độ CPM (Forward Pass & Backward Pass)]:\n• Từ khóa nhận diện: \"Activity list critical path: A(2), B(4), C(6), D(3), E(7), F(2)\"\n• Bí quyết giải: Bài toán Critical Path kinh điển: Các đường Start-End gồm: (1) A-C-D=11; (2) A-B-D=9; (3) E-B-D=14; (4) E-F=9. Đường dài nhất là 14 ngày (Start ➔ E ➔ B ➔ D ➔ End). Giá trị đường găng luôn luôn bằng 14!\n• Đáp án chuẩn: [D] 14 (D)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 20)",
         "imagePath": "PMG201c_FA2024_FE_3127/Cau_20.webp",
         "sourceExam": "PMG201c_FA2024_FE_3127",
-        "sourceIndex": 20
-      },
-      {
-        "number": 49,
-        "type": "single",
-        "instruction": "(Choose 1 answer)",
-        "question": "The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? Activity A (2, Start), B (4, A,E), C (6, A), D (3, B,C), E (7, Start), F (2, E), End (-, D,F).",
-        "options": {
-          "A": "11",
-          "B": "14",
-          "C": "9",
-          "D": "13"
-        },
-        "answer": [
-          "B"
-        ],
-        "explanation": "💡 [MẸO NHỚ CỤM 18: Tính Độ Dài Đường Găng Critical Path Trên Bảng Activity List]:\n• Từ khóa nhận diện: \"Activity list critical path (Start=A, E; E=7, F=2, End=D, F)\"\n• Bí quyết giải: Dạng bài bảng hoạt động với tổng đường găng ra 9 ngày ➔ Đáp án B (9).\n• Đáp án chuẩn: [B] 9 (B)\n• Nguồn đề gốc: Trích từ đề SU26 FEHCM 7269 (Câu 20)",
-        "imagePath": "PMG201c_SU26_FEHCM_7269/Cau_20.webp",
-        "sourceExam": "PMG201c_SU26_FEHCM_7269",
-        "sourceIndex": 20
-      },
-      {
-        "number": 50,
-        "type": "single",
-        "instruction": "(Choose 1 answer)",
-        "question": "The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path?\n(Table: A:2 [Start], B:4 [A,E], C:6 [A], D:3 [B,C], E:7 [Start], F:2 [E], End:- [D,F])",
-        "options": {
-          "A": "11",
-          "B": "13",
-          "C": "14",
-          "D": "9"
-        },
-        "answer": [
-          "C"
-        ],
-        "explanation": "💡 [MẸO NHỚ CỤM 18: Tính Độ Dài Đường Găng Critical Path Trên Bảng Activity List]:\n• Từ khóa nhận diện: \"Activity list critical path variant\"\n• Bí quyết giải: Dạng bài bảng hoạt động với tổng đường găng ra 11 ngày ➔ Đáp án C (11).\n• Đáp án chuẩn: [C] 11 (C)\n• Nguồn đề gốc: Trích từ đề SP2025 RE 3866 (Câu 20)",
-        "imagePath": "PMG201c_SP2025_RE_3866/Cau_20.webp",
-        "sourceExam": "PMG201c_SP2025_RE_3866",
         "sourceIndex": 20
       }
     ]

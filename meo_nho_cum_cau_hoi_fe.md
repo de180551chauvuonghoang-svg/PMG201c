@@ -38,6 +38,14 @@
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 4**
   * **Đề gốc `SU25 RE 4834`** ➔ **Câu 41**
 
+### 5. Câu "Completing the requirements of the project" ➔ Đáp án: `C` (Executing (C))
+- **Câu hỏi trong đề:** *"Which process group focuses on completing the requirements of the project?"*
+- **Từ khóa then chốt:** `Completing the requirements of the project`
+- **Mẹo nhớ siêu tốc:** Tập trung hoàn thành các yêu cầu công việc thực tế của dự án là quy trình Thực thi (Executing).
+- **Vị trí tìm thấy:**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 5**
+  * **Đề gốc `RESP24 1862`** ➔ **Câu 42**
+
 ---
 
 ## 📌 CỤM 2: Ma Trận Quyền Hạn & Mức Độ Quan Tâm (Power / Interest Grid)
@@ -48,7 +56,7 @@
 - **Từ khóa then chốt:** `low interest / low power`
 - **Mẹo nhớ siêu tốc:** Thấp cả hai ➔ Chỉ cần theo dõi tối thiểu (Monitor with minimum effort).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 5**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 6**
   * **Đề gốc `SP26 FE 6358`** ➔ **Câu 46**
 
 ### 2. Câu "low interest / high power (hoặc high power / low interest)" ➔ Đáp án: `B` (Keep Satisfied (B))
@@ -56,7 +64,7 @@
 - **Từ khóa then chốt:** `low interest / high power (hoặc high power / low interest)`
 - **Mẹo nhớ siêu tốc:** Quyền lực cao nhưng ít quan tâm ➔ Làm họ hài lòng (Keep Satisfied) để không bị cản trở.
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 6**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 7**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 48**
 
 ### 3. Câu "high interest / low power" ➔ Đáp án: `D` (Keep Informed (D))
@@ -64,7 +72,7 @@
 - **Từ khóa then chốt:** `high interest / low power`
 - **Mẹo nhớ siêu tốc:** Quan tâm nhiều nhưng quyền lực thấp ➔ Luôn cập nhật thông tin cho họ (Keep Informed).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 7**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 8**
   * **Đề gốc `SU26 FE 7251`** ➔ **Câu 44**
 
 ### 4. Câu "high interest / high power" ➔ Đáp án: `C` (Manage Closely (C))
@@ -72,7 +80,7 @@
 - **Từ khóa then chốt:** `high interest / high power`
 - **Mẹo nhớ siêu tốc:** Cả hai đều cao (nhân vật VIP/quyết định) ➔ Quản lý chặt chẽ, sát sao nhất (Manage Closely).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 8**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 9**
   * **Đề gốc `SP2025 FE 3814`** ➔ **Câu 48**
 
 ---
@@ -85,7 +93,7 @@
 - **Từ khóa then chốt:** `willing to assist you in any way`
 - **Mẹo nhớ siêu tốc:** Sẵn sàng hỗ trợ bạn mọi cách khi cần ➔ Supportive (Ủng hộ).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 9**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 10**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 49**
 
 ### 2. Câu "talking to people outside the team to explain the benefits" ➔ Đáp án: `D` (Leading (D))
@@ -93,7 +101,7 @@
 - **Từ khóa then chốt:** `talking to people outside the team to explain the benefits`
 - **Mẹo nhớ siêu tốc:** Chủ động đi truyền bá, giải thích lợi ích dự án ra bên ngoài ➔ Leading (Dẫn dắt / Tiên phong).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 10**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 11**
   * **Đề gốc `SP26 FE 6358`** ➔ **Câu 14**
 
 ### 3. Câu "neither opposed to your project nor is supportive" ➔ Đáp án: `B` (Neutral (B))
@@ -101,7 +109,7 @@
 - **Từ khóa then chốt:** `neither opposed to your project nor is supportive`
 - **Mẹo nhớ siêu tốc:** Không phản đối cũng không nhiệt tình ủng hộ ➔ Neutral (Trung lập).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 11**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 12**
   * **Đề gốc `FA2024 RE 3167`** ➔ **Câu 50**
 
 ---
@@ -109,37 +117,37 @@
 ## 📌 CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)
 **Bộ Options nhận diện chung:** `Completing the work (R) | Making the final decision (A) | Providing subject matter expertise (C) | Being kept updated about project progress (I)`
 
-### 1. Câu "those informed persons are" ➔ Đáp án: `C` (Being kept updated about project progress (C))
-- **Câu hỏi trong đề:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those informed persons are:"*
-- **Từ khóa then chốt:** `those informed persons are`
-- **Mẹo nhớ siêu tốc:** Informed (I) = Người được cập nhật tiến độ dự án (Being kept updated about project progress).
+### 1. Câu "those responsible persons are" ➔ Đáp án: `D` (Completing the work (D))
+- **Câu hỏi trong đề:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those responsible persons are:"*
+- **Từ khóa then chốt:** `those responsible persons are`
+- **Mẹo nhớ siêu tốc:** Responsible (R) = Người trực tiếp bắt tay thực hiện công việc (Completing the work - Đáp án D).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 12**
-  * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 37**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 13**
+  * **Đề gốc `SU26 FEHCM 7269`** ➔ **Câu 37**
 
 ### 2. Câu "those accountable persons are" ➔ Đáp án: `B` (Making the final decision (B))
 - **Câu hỏi trong đề:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those accountable persons are:"*
 - **Từ khóa then chốt:** `those accountable persons are`
-- **Mẹo nhớ siêu tốc:** Accountable (A) = Người chịu trách nhiệm giải trình cuối cùng / ra quyết định chốt (Making the final decision).
-- **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 13**
-  * **Đề gốc `SU25 RE 4834`** ➔ **Câu 6**
-
-### 3. Câu "those responsible persons are" ➔ Đáp án: `A` (Completing the work (A))
-- **Câu hỏi trong đề:** *"A project manager is currently managing a manufacturing process improvement project that will be completed in five phases. The project manager has prepared the following status chart of the project by the end of 10/31. Based on the information provided, what is the actual cost of the project? [Status Chart at 10/31: - Define: Planned Value = $2,000, Actual Cost = $2,100, Percent Complete = 100% - Measure: Planned Value = $3,000, Actual Cost = $2,900, Percent Complete = 100% - Analyze: Planned Value = $3,000, Actual Cost = $2,750, Percent Complete = 75% - Improve: Planned Value = $4,000, Actual Cost = $0, Percent Complete = 0% - Control: Planned Value = $2,000, Actual Cost = $0, Percent Complete = 0%]"*
-- **Từ khóa then chốt:** `those responsible persons are`
-- **Mẹo nhớ siêu tốc:** Responsible (R) = Người trực tiếp bắt tay thực hiện công việc (Completing the work).
+- **Mẹo nhớ siêu tốc:** Accountable (A) = Người chịu trách nhiệm giải trình cuối cùng / ra quyết định chốt (Making the final decision - Đáp án B).
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 14**
-  * **Đề gốc `SP26 RE 6506`** ➔ **Câu 49**
+  * **Đề gốc `SU25 RE 4834`** ➔ **Câu 6**
 
-### 4. Câu "those consulted persons are" ➔ Đáp án: `A` (Providing subject matter expertise (A))
+### 3. Câu "those consulted persons are" ➔ Đáp án: `A` (Providing subject matter expertise (A))
 - **Câu hỏi trong đề:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those consulted persons are:"*
 - **Từ khóa then chốt:** `those consulted persons are`
-- **Mẹo nhớ siêu tốc:** Consulted (C) = Chuyên gia cố vấn, tham vấn ý kiến chuyên môn (Providing subject matter expertise).
+- **Mẹo nhớ siêu tốc:** Consulted (C) = Chuyên gia cố vấn, tham vấn ý kiến chuyên môn (Providing subject matter expertise - Đáp án A).
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 15**
   * **Đề gốc `SP26 FE 6358`** ➔ **Câu 2**
+
+### 4. Câu "those informed persons are" ➔ Đáp án: `C` (Being kept updated about project progress (C))
+- **Câu hỏi trong đề:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those informed persons are:"*
+- **Từ khóa then chốt:** `those informed persons are`
+- **Mẹo nhớ siêu tốc:** Informed (I) = Người được cập nhật tiến độ dự án (Being kept updated about project progress - Đáp án C).
+- **Vị trí tìm thấy:**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 16**
+  * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 37**
 
 ---
 
@@ -151,7 +159,7 @@
 - **Từ khóa then chốt:** `cannot be completed any other way`
 - **Mẹo nhớ siêu tốc:** Bản chất vật lý hoặc quy định bắt buộc, không thể làm cách nào khác ➔ Mandatory (Bắt buộc / Hard logic).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 16**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 17**
   * **Đề gốc `FA2024 RE 3167`** ➔ **Câu 4**
 
 ### 2. Câu "local government approval of proposed building design" ➔ Đáp án: `D` (External (D))
@@ -159,7 +167,7 @@
 - **Từ khóa then chốt:** `local government approval of proposed building design`
 - **Mẹo nhớ siêu tốc:** Phụ thuộc vào cơ quan chính quyền bên ngoài quyền hạn của đội dự án ➔ External (Bên ngoài).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 17**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 18**
   * **Đề gốc `SU26 FEHCM 7269`** ➔ **Câu 17**
 
 ### 3. Câu "test system must be refreshed with your test data" ➔ Đáp án: `B` (Internal (B))
@@ -167,16 +175,8 @@
 - **Từ khóa then chốt:** `test system must be refreshed with your test data`
 - **Mẹo nhớ siêu tốc:** Đội dự án tự chuẩn bị dữ liệu kiểm thử trước khi chạy test ➔ Phụ thuộc nội bộ do chính dự án kiểm soát ➔ Internal (Nội bộ - Đáp án B).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 18**
-  * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 17**
-
-### 4. Câu "activity which involves a government agency" ➔ Đáp án: `D` (External (D))
-- **Câu hỏi trong đề:** *"You are scheduling an activity which involves a government agency. What type of dependency are you working with?"*
-- **Từ khóa then chốt:** `activity which involves a government agency`
-- **Mẹo nhớ siêu tốc:** Dính tới cơ quan công quyền / nhà nước ➔ External dependency.
-- **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 19**
-  * **Đề gốc `FESP24 1814`** ➔ **Câu 34**
+  * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 17**
 
 ---
 
