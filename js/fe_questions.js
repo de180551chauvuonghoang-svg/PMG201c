@@ -1852,7 +1852,7 @@ const FE_QUESTIONS_TEXT = {
         "D": "External"
       },
       "answer": [
-        "C"
+        "B"
       ],
       "explanation": "A mandatory dependency (hard logic) is one that is legally or contractually required or inherent in the nature of the work."
     },
@@ -12667,7 +12667,7 @@ const FE_QUESTIONS_TEXT = {
         "D": "External"
       },
       "answer": [
-        "C"
+        "B"
       ],
       "explanation": "Testing cannot physically/logically begin without test data, making it a mandatory dependency (hard logic)."
     },
@@ -14214,7 +14214,7 @@ const FE_QUESTIONS_TEXT = {
         "D": "External"
       },
       "answer": [
-        "C"
+        "B"
       ],
       "explanation": "This is a mandatory dependency (hard logic) required before testing can proceed."
     },
@@ -18241,9 +18241,9 @@ const FE_QUESTIONS_TEXT = {
         "D": "External"
       },
       "answer": [
-        "C"
+        "B"
       ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - DEPENDENCIES]:\n• Từ khóa: 'Test system refreshed' ➔ Internal dependency (Phụ thuộc nội bộ nhóm dự án).\n• Đáp án chuẩn: [C] Mandatory\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 17)",
+      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - DEPENDENCIES]:\n• Từ khóa: \"Test system refreshed with test data\" (Nhóm dự án tự kiểm soát chuẩn bị dữ liệu test trước khi kiểm thử) ➔ Internal dependency (Phụ thuộc nội bộ bên trong dự án).\n• Đáp án chuẩn: [B] Internal\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 17)",
       "imagePath": "PMG201c_FA2024_FE_3127/Cau_17.webp",
       "sourceExam": "PMG201c_FA2024_FE_3127",
       "sourceIndex": 17

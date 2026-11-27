@@ -208,13 +208,20 @@
   * **Bộ đề `SU26 FEHCM 7269`** ➔ **Câu 17**
   * **Bộ đề `SP2025 RE 3866`** ➔ **Câu 17**
 
-### 3. Câu "Test system must be refreshed with test data" ➔ Đáp án: `Internal`
+### 3. Câu "Test system must be refreshed with test data" ➔ Đáp án: `Internal` (Đáp án B)
 - **Câu hỏi tiếng Anh:** *"Your team member informs you that the test system must be refreshed with your test data before testing can begin. This dependency is:"*
+- **Bộ 4 lựa chọn trong đề:**
+  * A. Discretionary
+  * **B. Internal** (Phụ thuộc nội bộ do nhóm dự án kiểm soát)
+  * C. Mandatory
+  * D. External
 - **Từ khóa:** `test system must be refreshed with your test data`
-- **Mẹo nhớ:** Phụ thuộc giữa các khâu nội bộ trong dự án ➔ **Internal** (Nội bộ).
+- **Mẹo nhớ:** Việc nhóm dự án tự chuẩn bị dữ liệu test trước khi kiểm thử là quan hệ thứ tự thuộc quyền kiểm soát nội bộ của đội dự án ➔ **Internal** (Nội bộ - Đáp án B).
 - **Vị trí trong đề thi:**
-  * **Bộ đề `FA2024 FE 3127`** ➔ **Câu 17**
-  * **Bộ đề `SU2024 2 2575`** ➔ **Câu 17**
+  * **Bộ đề `⭐ ĐỀ ĐẶC BIỆT`** ➔ **Câu 19** (Đáp án B)
+  * **Bộ đề `FA2024 FE 3127`** ➔ **Câu 17** (Đáp án B)
+  * **Bộ đề `SU2024 2 2575`** ➔ **Câu 17** (Đáp án B)
+  * **Bộ đề `SP2025 C2FE 3821`** ➔ **Câu 17** (Đáp án B)
 
 ---
 
