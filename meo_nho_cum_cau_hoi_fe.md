@@ -119,39 +119,71 @@
 ---
 
 ## 📌 CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)
-**Bộ Options chung:** `Responsible` | `Accountable` | `Consult` | `Inform`
+**Bộ Options chung trong đề:**
+* `Completing the work` (Trực tiếp làm việc)
+* `Making the final decision` (Ra quyết định / duyệt cuối cùng)
+* `Providing subject matter expertise` (Cung cấp chuyên môn tư vấn)
+* `Being kept updated about project progress` (Được cập nhật tiến độ)
 
-### 1. Câu "Those responsible persons are:" ➔ Đáp án: `Those who do the work`
-- **Câu hỏi tiếng Anh:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those responsible persons are:"*
-- **Từ khóa:** `responsible persons`
-- **Mẹo nhớ:** **R = Do the work** (Người thực hiện công việc).
-- **Vị trí trong đề thi:**
-  * **Bộ đề `RESP24 1862`** ➔ **Câu 45**
-  * **Bộ đề `FA2024 RE 3167`** ➔ **Câu 41**
-  * **Bộ đề `TE2 SU2023 676`** ➔ **Câu 44**
+---
 
-### 2. Câu "Those accountable persons are:" ➔ Đáp án: `Final approval / ownership / decision-making authority`
-- **Câu hỏi tiếng Anh:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those accountable persons are:"*
-- **Từ khóa:** `accountable persons`
-- **Mẹo nhớ:** **A = Final approval / Owner** (Người chịu trách nhiệm giải trình & ra quyết định cuối cùng).
+### 1. Câu hỏi về "Responsible" ➔ Đáp án: `Completing the work`
+- **Câu hỏi tiếng Anh:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those **responsible** persons are:"*
+- **Bộ 4 lựa chọn trong đề:**
+  * A. Providing subject matter expertise
+  * B. Supervising the work
+  * C. Not completing the work
+  * **D. Completing the work** (hoặc phương án tương ứng có chữ `Completing the work`)
+- **Từ khóa nhận diện:** `those responsible persons are`
+- **Mẹo nhớ:** **R = Responsible** ➔ Người trực tiếp bắt tay vào làm việc (**Completing the work**).
 - **Vị trí trong đề thi:**
-  * **Bộ đề `FE SU2023 646`** ➔ **Câu 16**
-  * **Bộ đề `SU25 RE 4834`** ➔ **Câu 6**
+  * **Bộ đề `RESP24 1862`** ➔ **Câu 45** (Đáp án D)
+  * **Bộ đề `FA2024 RE 3167`** ➔ **Câu 41** (Đáp án D)
+  * **Bộ đề `TE2 SU2023 676`** ➔ **Câu 44** (Đáp án D)
+  * **Bộ đề `SU26 FEHCM 7269`** ➔ **Câu 37** (Đáp án D)
+  * **Bộ đề `FA25 FE 5632`** ➔ **Câu 33** (Đáp án D)
 
-### 3. Câu "Those consulted persons are:" ➔ Đáp án: `Provide inputs / subject matter experts`
-- **Câu hỏi tiếng Anh:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those consulted persons are:"*
-- **Từ khóa:** `consulted persons`
-- **Mẹo nhớ:** **C = Provide inputs** (Chuyên gia tư vấn trao đổi 2 chiều).
+### 2. Câu hỏi về "Accountable" ➔ Đáp án: `Making the final decision`
+- **Câu hỏi tiếng Anh:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those **accountable** persons are:"*
+- **Bộ 4 lựa chọn trong đề:**
+  * **A/B. Making the final decision** (Người có quyền quyết định cuối cùng)
+  * Being kept updated about project progress
+  * Completing the work
+  * Providing subject matter expertise
+- **Từ khóa nhận diện:** `those accountable persons are`
+- **Mẹo nhớ:** **A = Accountable** ➔ Người duy nhất chịu trách nhiệm giải trình và duyệt/ra quyết định cuối cùng (**Making the final decision**).
 - **Vị trí trong đề thi:**
-  * **Bộ đề `SP26 FE 6358`** ➔ **Câu 2**
+  * **Bộ đề `FE SU2023 646`** ➔ **Câu 16** (Đáp án A)
+  * **Bộ đề `SU25 RE 4834`** ➔ **Câu 6** (Đáp án B)
+  * **Bộ đề `⭐ ĐỀ ĐẶC BIỆT`** ➔ **Câu 14** (Đáp án B)
 
-### 4. Câu "Those informed persons are:" ➔ Đáp án: `Kept updated on progress`
-- **Câu hỏi tiếng Anh:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those informed persons are:"*
-- **Từ khóa:** `informed persons`
-- **Mẹo nhớ:** **I = Kept updated** (Nhận thông báo cập nhật tiến độ 1 chiều).
+### 3. Câu hỏi về "Consulted" ➔ Đáp án: `Providing subject matter expertise`
+- **Câu hỏi tiếng Anh:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those **consulted** persons are:"*
+- **Bộ 4 lựa chọn trong đề:**
+  * **A. Providing subject matter expertise** (Cung cấp ý kiến chuyên môn)
+  * B. Making the final decision
+  * C. Being kept updated about project progress
+  * D. Completing the work
+- **Từ khóa nhận diện:** `those consulted persons are`
+- **Mẹo nhớ:** **C = Consulted** ➔ Chuyên gia tư vấn đóng góp ý kiến chuyên môn (**Providing subject matter expertise**).
 - **Vị trí trong đề thi:**
-  * **Bộ đề `FA2024 FE 3127`** ➔ **Câu 37**
-  * **Bộ đề `SU2024 2 2575`** ➔ **Câu 37**
+  * **Bộ đề `SP26 FE 6358`** ➔ **Câu 2** (Đáp án A)
+  * **Bộ đề `⭐ ĐỀ ĐẶC BIỆT`** ➔ **Câu 15** (Đáp án A)
+
+### 4. Câu hỏi về "Informed" ➔ Đáp án: `Being kept updated about project progress`
+- **Câu hỏi tiếng Anh:** *"When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those **informed** persons are:"*
+- **Bộ 4 lựa chọn trong đề:**
+  * A. Providing subject matter expertise
+  * B. Making the final decision
+  * **C. Being kept updated about project progress** (Được nhận thông báo cập nhật tiến độ)
+  * D. Completing the work
+- **Từ khóa nhận diện:** `those informed persons are`
+- **Mẹo nhớ:** **I = Informed** ➔ Người nhận thông báo cập nhật tiến độ 1 chiều (**Being kept updated about project progress**).
+- **Vị trí trong đề thi:**
+  * **Bộ đề `FA2024 FE 3127`** ➔ **Câu 37** (Đáp án C)
+  * **Bộ đề `SU2024 2 2575`** ➔ **Câu 37** (Đáp án C)
+  * **Bộ đề `SU26 RE 7305`** ➔ **Câu 35** (Đáp án C)
+  * **Bộ đề `SP2025 C2FE 3821`** ➔ **Câu 37** (Đáp án C)
 
 ---
 
