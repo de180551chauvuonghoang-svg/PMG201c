@@ -1,5 +1,5 @@
 # BẢNG TỔNG HỢP MẸO NHỚ 18 CỤM CÂU HỎI FE DỄ NHẦM LẪN (PMG201c)
-> **Dành cho sinh viên ôn thi FE PMG201c**: Tổng hợp đầy đủ **18 Cụm câu hỏi** có **bộ đáp án giống nhau nhưng câu hỏi khác nhau thì đáp án sẽ khác nhau**. Toàn bộ 50 câu này đã được tích hợp thành **⭐ ĐỀ ĐẶC BIỆT (50 Câu Mẹo Nhớ Cụm Dễ Nhầm)** trên hệ thống thi thử.
+> **Dành cho sinh viên ôn thi FE PMG201c**: Tổng hợp đầy đủ **18 Cụm câu hỏi** có **bộ đáp án giống nhau nhưng câu hỏi khác nhau thì đáp án sẽ khác nhau**. Toàn bộ 49 câu này đã được tích hợp thành **⭐ ĐỀ ĐẶC BIỆT (Mẹo Nhớ Cụm Dễ Nhầm - 49 câu)** trên hệ thống thi thử.
 
 ---
 
@@ -212,20 +212,12 @@
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 22**
   * **Đề gốc `SU26 FEHCM 7269`** ➔ **Câu 18**
 
-### 2. Câu "develop needs to BEGIN before review can BEGIN" ➔ Đáp án: `D` (Start to start (D))
-- **Câu hỏi trong đề:** *"If "develop online modules" needs to begin before "review online modules" can begin, that is called a"*
-- **Từ khóa then chốt:** `develop needs to BEGIN before review can BEGIN`
-- **Mẹo nhớ siêu tốc:** Bắt đầu cái này trước khi cái kia bắt đầu ➔ Start to Start (SS - Đáp án D).
-- **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 23**
-  * **Đề gốc `FA25 RE 5711`** ➔ **Câu 14**
-
-### 3. Câu "develop needs to FINISH before review can FINISH" ➔ Đáp án: `D` (Finish to finish (D))
+### 2. Câu "develop needs to FINISH before review can FINISH" ➔ Đáp án: `D` (Finish to finish (D))
 - **Câu hỏi trong đề:** *"if 'develop online modules' needs to finish before 'review online modules' can finish, that is called a"*
 - **Từ khóa then chốt:** `develop needs to FINISH before review can FINISH`
 - **Mẹo nhớ siêu tốc:** Kết thúc cái này trước khi cái kia kết thúc ➔ Finish to Finish (FF - Đáp án D).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 24**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 23**
   * **Đề gốc `FE SU2023 646`** ➔ **Câu 5**
 
 ---
@@ -238,7 +230,7 @@
 - **Từ khóa then chốt:** `accept a risk`
 - **Mẹo nhớ siêu tốc:** Chấp nhận rủi ro = Không chủ động thay đổi kế hoạch nhưng lập kế hoạch dự phòng (actively do not consider but establish contingency plan).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 25**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 24**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 45**
 
 ### 2. Câu "transfer a risk" ➔ Đáp án: `C` (Transfer (C))
@@ -246,7 +238,7 @@
 - **Từ khóa then chốt:** `transfer a risk`
 - **Mẹo nhớ siêu tốc:** Chuyển giao rủi ro = Thay đổi kế hoạch để bên thứ ba chịu trách nhiệm về rủi ro (another party will be responsible for the risk - ví dụ mua bảo hiểm, thuê ngoài).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 26**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 25**
   * **Đề gốc `SP26 FE 6358`** ➔ **Câu 26**
 
 ### 3. Câu "mitigate a risk" ➔ Đáp án: `D` (Mitigate (D))
@@ -254,7 +246,7 @@
 - **Từ khóa then chốt:** `mitigate a risk`
 - **Mẹo nhớ siêu tốc:** Giảm thiểu rủi ro = Giảm xác suất và/hoặc tác động (reduce probability and/or impact).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 27**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 26**
   * **Đề gốc `SU25 FE 4759`** ➔ **Câu 41**
 
 ---
@@ -267,7 +259,7 @@
 - **Từ khóa then chốt:** `exploit a risk / opportunity`
 - **Mẹo nhớ siêu tốc:** Khai thác cơ hội (Exploit) = Bổ sung các bước để chắc chắn 100% cơ hội xảy ra (make certain the opportunity is captured).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 28**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 27**
   * **Đề gốc `FA2024 RE 3167`** ➔ **Câu 40**
 
 ### 2. Câu "enhance a risk / opportunity" ➔ Đáp án: `D` (Enhance (D))
@@ -275,7 +267,7 @@
 - **Từ khóa then chốt:** `enhance a risk / opportunity`
 - **Mẹo nhớ siêu tốc:** Nâng cao cơ hội (Enhance) = Làm tăng xác suất và/hoặc tác động tích cực (increase the probability and/or impact).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 29**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 28**
   * **Đề gốc `SU26 FEHCM 7269`** ➔ **Câu 45**
 
 ---
@@ -288,7 +280,7 @@
 - **Từ khóa then chốt:** `Downward communication`
 - **Mẹo nhớ siêu tốc:** Giao tiếp từ trên xuống = Gửi cho cấp dưới trực tiếp (Your direct reports / subordinates).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 30**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 29**
   * **Đề gốc `SU26 FEHCM 7269`** ➔ **Câu 40**
 
 ### 2. Câu "Upward communication" ➔ Đáp án: `A` (Senior management (A))
@@ -296,7 +288,7 @@
 - **Từ khóa then chốt:** `Upward communication`
 - **Mẹo nhớ siêu tốc:** Giao tiếp từ dưới lên = Báo cáo ban lãnh đạo cấp cao (Your senior management).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 31**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 30**
   * **Đề gốc `SP26 RE 6506`** ➔ **Câu 36**
 
 ### 3. Câu "Lateral communication" ➔ Đáp án: `D` (Peers (D))
@@ -304,7 +296,7 @@
 - **Từ khóa then chốt:** `Lateral communication`
 - **Mẹo nhớ siêu tốc:** Giao tiếp ngang hàng = Trao đổi cùng đồng nghiệp ngang cấp (Your peers).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 32**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 31**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 40**
 
 ---
@@ -317,7 +309,7 @@
 - **Từ khóa then chốt:** `yourself + tester + 5 devs + communicator = 8 người`
 - **Mẹo nhớ siêu tốc:** N = 8 người ➔ Công thức 8 * 7 / 2 = 28 kênh giao tiếp (Đáp án C).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 33**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 32**
   * **Đề gốc `FA2024 RE 3167`** ➔ **Câu 33**
 
 ### 2. Câu "thêm 1 developer vì chậm tiến độ = 9 người" ➔ Đáp án: `D` (36 channels (D))
@@ -325,7 +317,7 @@
 - **Từ khóa then chốt:** `thêm 1 developer vì chậm tiến độ = 9 người`
 - **Mẹo nhớ siêu tốc:** N = 9 người ➔ Công thức 9 * 8 / 2 = 36 kênh giao tiếp (Đáp án D).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 34**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 33**
   * **Đề gốc `SP26 RE 6506`** ➔ **Câu 37**
 
 ---
@@ -338,7 +330,7 @@
 - **Từ khóa then chốt:** `sponsor informed you: assigned AT MOST 50%`
 - **Mẹo nhớ siêu tốc:** Nhà tài trợ áp đặt mức trần tối đa không được vượt quá ➔ Ràng buộc: A constraint (Đáp án D).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 35**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 34**
   * **Đề gốc `RESP24 1862`** ➔ **Câu 37**
 
 ### 2. Câu "you do so thinking that: assigned AT LEAST 50%" ➔ Đáp án: `D` (An assumption (D))
@@ -346,7 +338,7 @@
 - **Từ khóa then chốt:** `you do so thinking that: assigned AT LEAST 50%`
 - **Mẹo nhớ siêu tốc:** Bạn tự suy nghĩ/kỳ vọng trong lúc lên kế hoạch mà chưa được xác thực ➔ Giả định: An assumption (Đáp án D).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 36**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 35**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 12**
 
 ---
@@ -359,7 +351,7 @@
 - **Từ khóa then chốt:** `looking at a similar project and adding or subtracting`
 - **Mẹo nhớ siêu tốc:** Dựa vào dự án tương tự trong quá khứ rồi cộng trừ điều chỉnh ➔ Analogous estimating (Ước tính tương tự - Đáp án B).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 37**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 36**
   * **Đề gốc `FESP24 1814`** ➔ **Câu 50**
 
 ### 2. Câu "20,000 hours, 25% larger, $25 per hour" ➔ Đáp án: `A` (Parametric (A))
@@ -367,7 +359,7 @@
 - **Từ khóa then chốt:** `20,000 hours, 25% larger, $25 per hour`
 - **Mẹo nhớ siêu tốc:** Có tham số toán học và đơn giá nhân chia cụ thể ($25/h) ➔ Parametric estimating (Ước tính tham số - Đáp án A).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 38**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 37**
   * **Đề gốc `SU26 FEHCM 7269`** ➔ **Câu 23**
 
 ### 3. Câu "NOT been previously done by company" ➔ Đáp án: `B` (Three-point (B))
@@ -375,7 +367,7 @@
 - **Từ khóa then chốt:** `NOT been previously done by company`
 - **Mẹo nhớ siêu tốc:** Công ty chưa từng làm bao giờ, độ bất định cao ➔ Ước tính 3 điểm: Three-point estimating (Đáp án B).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 39**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 38**
   * **Đề gốc `SU26 FE 7251`** ➔ **Câu 48**
 
 ---
@@ -388,7 +380,7 @@
 - **Từ khóa then chốt:** `SPI is greater than 1 (> 1)`
 - **Mẹo nhớ siêu tốc:** SPI > 1 là tiến độ vượt kỳ vọng ➔ ahead of schedule (Trước tiến độ - Đáp án C).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 40**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 39**
   * **Đề gốc `FE SU2023 646`** ➔ **Câu 27**
 
 ### 2. Câu "SPI is lesser than 1 (< 1)" ➔ Đáp án: `C` (behind schedule (B))
@@ -396,7 +388,7 @@
 - **Từ khóa then chốt:** `SPI is lesser than 1 (< 1)`
 - **Mẹo nhớ siêu tốc:** SPI < 1 là tiến độ chậm ➔ behind schedule (Sau tiến độ / trễ - Đáp án B).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 41**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 40**
   * **Đề gốc `SP2025 FE 3814`** ➔ **Câu 28**
 
 ---
@@ -409,7 +401,7 @@
 - **Từ khóa then chốt:** `CPI is greater than 1 (> 1)`
 - **Mẹo nhớ siêu tốc:** CPI > 1 là chi phí tốt, ít tốn kém hơn kế hoạch ➔ under budget (Dưới ngân sách / Tiết kiệm - Đáp án B).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 42**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 41**
   * **Đề gốc `FE FA2023 1189`** ➔ **Câu 50**
 
 ### 2. Câu "CPI is lesser than 1 (< 1)" ➔ Đáp án: `C` (over budget (C))
@@ -417,7 +409,7 @@
 - **Từ khóa then chốt:** `CPI is lesser than 1 (< 1)`
 - **Mẹo nhớ siêu tốc:** CPI < 1 là chi phí tệ, tiêu hao vượt kế hoạch ➔ over budget (Vượt ngân sách - Đáp án C).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 43**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 42**
   * **Đề gốc `FA2024 RE 3167`** ➔ **Câu 49**
 
 ---
@@ -430,7 +422,7 @@
 - **Từ khóa then chốt:** `three types of matrix organizations, they are:`
 - **Mẹo nhớ siêu tốc:** 3 dạng tổ chức ma trận trong giáo trình PMBOK là: Weak, Balanced and Strong (Đáp án C).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 44**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 43**
   * **Đề gốc `TE2 SU2023 676`** ➔ **Câu 7**
 
 ### 2. Câu "the NOT mentioned one is:" ➔ Đáp án: `A` (Medium Matrix (A))
@@ -438,7 +430,7 @@
 - **Từ khóa then chốt:** `the NOT mentioned one is:`
 - **Mẹo nhớ siêu tốc:** Loại KHÔNG ĐƯỢC đề cập trong 3 loại ma trận là: Medium Matrix (Không có khái niệm ma trận vừa - Đáp án A).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 45**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 44**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 2**
 
 ---
@@ -451,7 +443,7 @@
 - **Từ khóa then chốt:** `A cost can be either direct or indirect`
 - **Mẹo nhớ siêu tốc:** Direct cost: trực tiếp vào dự án. Indirect cost: chi phí chung/overhead (Đáp án A, B).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 46**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 45**
   * **Đề gốc `SP26 FE 6358`** ➔ **Câu 3**
 
 ### 2. Câu "A cost can be either variable or fixed" ➔ Đáp án: `A, B` (Variable: changes, Fixed: does not change (A, B))
@@ -459,7 +451,7 @@
 - **Từ khóa then chốt:** `A cost can be either variable or fixed`
 - **Mẹo nhớ siêu tốc:** Variable cost: thay đổi theo sản lượng. Fixed cost: không đổi theo sản lượng (Đáp án A, B).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 47**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 46**
   * **Đề gốc `SU25 FE 4759`** ➔ **Câu 18**
 
 ---
@@ -472,7 +464,7 @@
 - **Từ khóa then chốt:** `To calculate early finish (EF) of an activity, you will:`
 - **Mẹo nhớ siêu tốc:** Công thức Forward pass tính thời điểm kết thúc sớm: EF = ES + Duration ➔ Chọn 'Take its early start plus its estimated duration' (Đáp án A).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 48**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 47**
   * **Đề gốc `SU2024 1 2527`** ➔ **Câu 19**
 
 ### 2. Câu "To calculate late start (LS) of an activity, you will:" ➔ Đáp án: `C` (Take its late finish minus its estimated duration (C))
@@ -480,7 +472,7 @@
 - **Từ khóa then chốt:** `To calculate late start (LS) of an activity, you will:`
 - **Mẹo nhớ siêu tốc:** Công thức Backward pass tính thời điểm bắt đầu muộn: LS = LF - Duration ➔ Chọn 'Take its late finish minus its estimated duration' (Đáp án C).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 49**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 48**
   * **Đề gốc `SP26 RE 6506`** ➔ **Câu 15**
 
 ### 3. Câu "Activity list critical path: A(2), B(4), C(6), D(3), E(7), F(2)" ➔ Đáp án: `D` (14 (D))
@@ -488,7 +480,7 @@
 - **Từ khóa then chốt:** `Activity list critical path: A(2), B(4), C(6), D(3), E(7), F(2)`
 - **Mẹo nhớ siêu tốc:** Bài toán Critical Path kinh điển: Các đường Start-End gồm: (1) A-C-D=11; (2) A-B-D=9; (3) E-B-D=14; (4) E-F=9. Đường dài nhất là 14 ngày (Start ➔ E ➔ B ➔ D ➔ End). Giá trị đường găng luôn luôn bằng 14!
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 50**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 49**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 20**
 
 ---

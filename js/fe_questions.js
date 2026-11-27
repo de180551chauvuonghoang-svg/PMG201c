@@ -18309,25 +18309,6 @@ const FE_QUESTIONS_TEXT = {
         "number": 23,
         "type": "single",
         "instruction": "(Choose 1 answer)",
-        "question": "If \"develop online modules\" needs to begin before \"review online modules\" can begin, that is called a",
-        "options": {
-          "A": "Finish to start relationship.",
-          "B": "Start to finish relationship.",
-          "C": "Finish to finish relationship.",
-          "D": "Start to start relationship."
-        },
-        "answer": [
-          "D"
-        ],
-        "explanation": "💡 [MẸO NHỚ CỤM 7: Mối Quan Hệ Thứ Tự PDM (Precedence Diagramming Method)]:\n• Từ khóa nhận diện: \"develop needs to BEGIN before review can BEGIN\"\n• Bí quyết giải: Bắt đầu cái này trước khi cái kia bắt đầu ➔ Start to Start (SS - Đáp án D).\n• Đáp án chuẩn: [D] Start to start (D)\n• Nguồn đề gốc: Trích từ đề FA25 RE 5711 (Câu 14)",
-        "imagePath": "PMG201c_FA25_RE_5711/Cau_14.webp",
-        "sourceExam": "PMG201c_FA25_RE_5711",
-        "sourceIndex": 14
-      },
-      {
-        "number": 24,
-        "type": "single",
-        "instruction": "(Choose 1 answer)",
         "question": "if 'develop online modules' needs to finish before 'review online modules' can finish, that is called a",
         "options": {
           "A": "Finish to start relationship.",
@@ -18344,7 +18325,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 5
       },
       {
-        "number": 25,
+        "number": 24,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "If the response you choose is to accept a risk this means that:",
@@ -18363,7 +18344,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 45
       },
       {
-        "number": 26,
+        "number": 25,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "If the response you choose is to transfer a risk this means that:",
@@ -18382,7 +18363,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 26
       },
       {
-        "number": 27,
+        "number": 26,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "If the response you choose is to mitigate a risk this means that",
@@ -18401,7 +18382,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 41
       },
       {
-        "number": 28,
+        "number": 27,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "If the response you choose is to exploit a risk this means that:",
@@ -18420,7 +18401,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 40
       },
       {
-        "number": 29,
+        "number": 28,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "If the response you choose is to enhance a risk this means that:",
@@ -18439,7 +18420,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 45
       },
       {
-        "number": 30,
+        "number": 29,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "Downward communication is communication to/from:",
@@ -18458,7 +18439,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 40
       },
       {
-        "number": 31,
+        "number": 30,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "Upward communication is communication to/from",
@@ -18477,7 +18458,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 36
       },
       {
-        "number": 32,
+        "number": 31,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "Lateral communication is communication to/from:",
@@ -18496,7 +18477,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 40
       },
       {
-        "number": 33,
+        "number": 32,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "Your project has a team of which consists of yourself, a tester, five developers and a communicator. How many communication channels on your team?",
@@ -18515,7 +18496,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 33
       },
       {
-        "number": 34,
+        "number": 33,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "Your project had a team of which consists of yourself, a tester, five developers and a communicator. As the project is behind schedule so one more developer has been assigned to your team. How many communication channels on your team now?",
@@ -18534,7 +18515,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 37
       },
       {
-        "number": 35,
+        "number": 34,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "As you plan your project, the sponsor informed you that all team members will be assigned to your project for at most 50% of their available time. This is an example of:",
@@ -18553,7 +18534,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 37
       },
       {
-        "number": 36,
+        "number": 35,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "As you plan your project, you do so thinking that all team members will be assigned to your project for at least 50% of their available time. This is an example of:",
@@ -18572,7 +18553,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 12
       },
       {
-        "number": 37,
+        "number": 36,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "An estimate created by looking at a similar project or activity and then adding or subtracting to or from the estimate based on the differences between the two is called:",
@@ -18591,7 +18572,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 50
       },
       {
-        "number": 38,
+        "number": 37,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "A past project took 20,000 hours to complete. Your new project is adding some additional scope and that scope is estimated to take 10,000 additional hours. There is some work that was completed in the previous project that will not be completed in this project. That work is estimated at 5,000 hours. Labor rates have increased 10%, the old rate was $25 per hour. Your estimate for the new project is $687,500. Which estimating method is used?",
@@ -18610,7 +18591,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 23
       },
       {
-        "number": 39,
+        "number": 38,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "The team is helping the project manager to estimate activities on their project. There are several activities they need to estimate that have not been previously done by the company. What is the best method of estimating these activities?",
@@ -18629,7 +18610,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 48
       },
       {
-        "number": 40,
+        "number": 39,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "Your Schedule Performance Index (SPI) is greater than 1 means you are:",
@@ -18647,7 +18628,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 27
       },
       {
-        "number": 41,
+        "number": 40,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "Your Schedule Performance Index (SPI) is greater than 1 means you are:",
@@ -18665,7 +18646,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 28
       },
       {
-        "number": 42,
+        "number": 41,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "Your Cost Performance Index (CPI) is greater than 1 means you are:",
@@ -18683,7 +18664,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 50
       },
       {
-        "number": 43,
+        "number": 42,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "Your Cost Performance Index (CPI) is lesser than 1 means you are:",
@@ -18701,7 +18682,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 49
       },
       {
-        "number": 44,
+        "number": 43,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "We discussed three types of matrix organizations, they are:",
@@ -18720,7 +18701,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 7
       },
       {
-        "number": 45,
+        "number": 44,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "We discussed three types of matrix organizations, the not mentioned one is:",
@@ -18739,7 +18720,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 2
       },
       {
-        "number": 46,
+        "number": 45,
         "type": "multi",
         "instruction": "(Choose 2 answers)",
         "question": "A cost can be either direct or indirect. Which of the following statements are correct ?",
@@ -18759,7 +18740,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 3
       },
       {
-        "number": 47,
+        "number": 46,
         "type": "multi",
         "instruction": "(Choose 2 answers)",
         "question": "A cost can be either variable or fixed. Which of the following statements are correct (choose 2 answers)?",
@@ -18779,7 +18760,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 18
       },
       {
-        "number": 48,
+        "number": 47,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "To calculate early finish (EF) of an activity, you will:",
@@ -18798,7 +18779,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 19
       },
       {
-        "number": 49,
+        "number": 48,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "To calculate late start (LS) of an activity, you will:",
@@ -18817,7 +18798,7 @@ const FE_QUESTIONS_TEXT = {
         "sourceIndex": 15
       },
       {
-        "number": 50,
+        "number": 49,
         "type": "single",
         "instruction": "(Choose 1 answer)",
         "question": "The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? (A=2 [Start], B=4 [A,E], C=6 [A], D=3 [B,C], E=7 [Start], F=2 [E], End=- [D,F])",

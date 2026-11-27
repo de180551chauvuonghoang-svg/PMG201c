@@ -167,9 +167,9 @@ const APP_DATA = {
   "feExams": [
     {
       "id": "PMG201c_SPECIAL_TRICK_EXAM",
-      "title": "⭐ ĐỀ ĐẶC BIỆT: 50 Câu Mẹo Nhớ Cụm Dễ Nhầm",
+      "title": "⭐ ĐỀ ĐẶC BIỆT: Mẹo Nhớ Cụm Dễ Nhầm (49 câu)",
       "folder": "FE",
-      "totalQuestions": 50,
+      "totalQuestions": 49,
       "questions": [
         "Cau_01.webp",
         "Cau_02.webp",
@@ -219,8 +219,7 @@ const APP_DATA = {
         "Cau_46.webp",
         "Cau_47.webp",
         "Cau_48.webp",
-        "Cau_49.webp",
-        "Cau_50.webp"
+        "Cau_49.webp"
       ]
     },
     {
