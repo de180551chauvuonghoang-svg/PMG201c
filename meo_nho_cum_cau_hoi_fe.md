@@ -386,13 +386,13 @@
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 40**
   * **Đề gốc `FE SU2023 646`** ➔ **Câu 27**
 
-### 2. Câu "SPI is lesser than 1 (< 1)" ➔ Đáp án: `C` (behind schedule (B))
-- **Câu hỏi trong đề:** *"Your Schedule Performance Index (SPI) is greater than 1 means you are:"*
+### 2. Câu "SPI is lesser than 1 (< 1)" ➔ Đáp án: `B` (behind schedule (B))
+- **Câu hỏi trong đề:** *"Your Schedule Performance Index (SPI) is lesser than 1 means you are:"*
 - **Từ khóa then chốt:** `SPI is lesser than 1 (< 1)`
 - **Mẹo nhớ siêu tốc:** SPI < 1 là tiến độ chậm ➔ behind schedule (Sau tiến độ / trễ - Đáp án B).
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 41**
-  * **Đề gốc `SP2025 FE 3814`** ➔ **Câu 28**
+  * **Đề gốc `TE2 SU2023 676`** ➔ **Câu 33**
 
 ---
 

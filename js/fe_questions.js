@@ -18644,19 +18644,19 @@ const FE_QUESTIONS_TEXT = {
         "number": 41,
         "type": "single",
         "instruction": "(Choose 1 answer)",
-        "question": "Your Schedule Performance Index (SPI) is greater than 1 means you are:",
+        "question": "Your Schedule Performance Index (SPI) is lesser than 1 means you are:",
         "options": {
           "A": "on schedule.",
           "B": "behind schedule.",
           "C": "ahead of schedule."
         },
         "answer": [
-          "C"
+          "B"
         ],
-        "explanation": "💡 [MẸO NHỚ CỤM 14: Chỉ Số Tiến Độ SPI (Schedule Performance Index)]:\n• Từ khóa nhận diện: \"SPI is lesser than 1 (< 1)\"\n• Bí quyết giải: SPI < 1 là tiến độ chậm ➔ behind schedule (Sau tiến độ / trễ - Đáp án B).\n• Đáp án chuẩn: [C] behind schedule (B)\n• Nguồn đề gốc: Trích từ đề SP2025 FE 3814 (Câu 28)",
-        "imagePath": "PMG201c_SP2025_FE_3814/Cau_28.webp",
-        "sourceExam": "PMG201c_SP2025_FE_3814",
-        "sourceIndex": 28
+        "explanation": "💡 [MẸO NHỚ CỤM 14: Chỉ Số Tiến Độ SPI (Schedule Performance Index)]:\n• Từ khóa nhận diện: \"SPI is lesser than 1 (< 1)\"\n• Bí quyết giải: SPI < 1 là tiến độ chậm ➔ behind schedule (Sau tiến độ / trễ - Đáp án B).\n• Đáp án chuẩn: [B] behind schedule (B)\n• Nguồn đề gốc: Trích từ đề TE2 SU2023 676 (Câu 33)",
+        "imagePath": "PMG201_TE2_SU2023_676/Cau_33.webp",
+        "sourceExam": "PMG201_TE2_SU2023_676",
+        "sourceIndex": 33
       },
       {
         "number": 42,
