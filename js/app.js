@@ -1960,19 +1960,52 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
     state.feZoomLevel = 1.0;
     applyFEZoom();
 
-    // Toggle Text vs Image View
-    // Nếu ở chế độ image, hoặc câu hỏi này chưa có text -> Bật chế độ xem ảnh chụp gốc
-    const showImage = (state.feViewMode === 'image') || (!qData);
-    if (showImage) {
-      if (elements.feTextContainer) elements.feTextContainer.style.display = 'none';
-      if (elements.feImageWrapper) elements.feImageWrapper.style.display = 'flex';
-      if (elements.btnViewImage) elements.btnViewImage.classList.add('active');
-      if (elements.btnViewText) elements.btnViewText.classList.remove('active');
-    } else {
+    // Kiểm tra xem câu này có bị vô hiệu hóa / loại bỏ theo yêu cầu không
+    const isQuestionDisabled = !!(qData && qData.disabled);
+
+    if (isQuestionDisabled) {
       if (elements.feTextContainer) elements.feTextContainer.style.display = 'flex';
       if (elements.feImageWrapper) elements.feImageWrapper.style.display = 'none';
-      if (elements.btnViewText) elements.btnViewText.classList.add('active');
-      if (elements.btnViewImage) elements.btnViewImage.classList.remove('active');
+      if (elements.feOptionsGrid) elements.feOptionsGrid.style.display = 'none';
+      if (elements.feClearAnswerBtn) elements.feClearAnswerBtn.style.display = 'none';
+      if (elements.btnViewImage) elements.btnViewImage.style.display = 'none';
+      if (elements.btnViewText) elements.btnViewText.style.display = 'none';
+
+      if (elements.feTextInstruction) {
+        elements.feTextInstruction.textContent = '(Câu đã loại bỏ)';
+      }
+      if (elements.feTextContent) {
+        elements.feTextContent.innerHTML = `
+          <div style="text-align:center; padding: 48px 16px; color: var(--text-muted); line-height: 1.8;">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">🚫</div>
+            <h3 style="color: var(--text-main); margin-bottom: 8px;">Câu ${qIndex + 1} đã được loại bỏ khỏi đề thi</h3>
+            <p style="font-size: 0.95rem;">Câu này không hiển thị ảnh, không có đáp án và không tính điểm để bảo toàn tuyệt đối thứ tự 50 câu.<br>Bạn hãy nhấn <strong>[Câu tiếp (➔)]</strong> hoặc bấm trên Bảng Câu Hỏi để làm tiếp <strong>Câu ${qIndex + 2}</strong>.</p>
+          </div>
+        `;
+      }
+      if (elements.feTextOptionsList) elements.feTextOptionsList.innerHTML = '';
+      if (elements.btnToggleExplanation) elements.btnToggleExplanation.style.display = 'none';
+      if (elements.feTextExplanationBox) elements.feTextExplanationBox.style.display = 'none';
+    } else {
+      if (elements.feOptionsGrid) elements.feOptionsGrid.style.display = 'flex';
+      if (elements.feClearAnswerBtn) elements.feClearAnswerBtn.style.display = 'inline-flex';
+      if (elements.btnViewImage) elements.btnViewImage.style.display = 'inline-flex';
+      if (elements.btnViewText) elements.btnViewText.style.display = 'inline-flex';
+
+      // Toggle Text vs Image View
+      // Nếu ở chế độ image, hoặc câu hỏi này chưa có text -> Bật chế độ xem ảnh chụp gốc
+      const showImage = (state.feViewMode === 'image') || (!qData);
+      if (showImage) {
+        if (elements.feTextContainer) elements.feTextContainer.style.display = 'none';
+        if (elements.feImageWrapper) elements.feImageWrapper.style.display = 'flex';
+        if (elements.btnViewImage) elements.btnViewImage.classList.add('active');
+        if (elements.btnViewText) elements.btnViewText.classList.remove('active');
+      } else {
+        if (elements.feTextContainer) elements.feTextContainer.style.display = 'flex';
+        if (elements.feImageWrapper) elements.feImageWrapper.style.display = 'none';
+        if (elements.btnViewText) elements.btnViewText.classList.add('active');
+        if (elements.btnViewImage) elements.btnViewImage.classList.remove('active');
+      }
     }
 
     if (qData) {
@@ -2580,7 +2613,16 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
       if (isCorrect) btn.classList.add('correct');
 
       // If active custom practice subset is on, highlight/fade items
-      if (state.fePracticeSubset !== 'all' && !activeIndices.includes(idx)) {
+      let isQuestionDisabled = false;
+      if (typeof getFEQuestionText === 'function') {
+        const qd = getFEQuestionText(state.feExamId, idx);
+        if (qd && qd.disabled) isQuestionDisabled = true;
+      }
+
+      if (isQuestionDisabled) {
+        btn.style.opacity = '0.35';
+        btn.title = 'Câu này đã được loại bỏ khỏi đề thi';
+      } else if (state.fePracticeSubset !== 'all' && !activeIndices.includes(idx)) {
         btn.style.opacity = '0.35';
       } else {
         btn.style.opacity = '1';
@@ -2819,9 +2861,15 @@ Roles: PM (Project Manager), BA (Business Analyst), DEV (Developers), QA (Tester
       if (isFlag) flaggedCount++;
 
       let correctKey = null;
+      let qData = null;
       if (typeof getFEQuestionText === 'function') {
-        const qData = getFEQuestionText(state.feExamId, i);
+        qData = getFEQuestionText(state.feExamId, i);
         if (qData && qData.answer) correctKey = qData.answer;
+      }
+
+      if (qData && qData.disabled) {
+        state.feExamResults[state.feExamId][i] = 'skipped';
+        continue;
       }
 
       let evalStatus = 'unanswered';
