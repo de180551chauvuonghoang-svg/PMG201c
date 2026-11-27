@@ -236,14 +236,20 @@
   * **Bộ đề `FE FA2023 1189`** ➔ **Câu 42**
   * **Bộ đề `SU25 RE 4834`** ➔ **Câu 20**
 
-### 2. Câu "Hoping other PM support in future" ➔ Đáp án: `Smoothing / Accommodating`
-- **Câu hỏi tiếng Anh:** *"You decide that the team member can work for the other project manager and suppose that the other project manager will support you in the future. The conflict resolution approach you have used is:"*
+### 2. Câu "Hoping other PM support in future" ➔ Đáp án: `Smoothing / Accommodating` (Đáp án B)
+- **Câu hỏi tiếng Anh:** *"You and another project manager disagree over whether a team member should work on your team or on her team. You decide that the team member can work for the other project manager and suppose that the other project manager will support you in the future. The truth is you wanted this person working on your project. The conflict resolution approach you have used is:"*
+- **Bộ 4 lựa chọn trong đề:**
+  * A. Compromising
+  * **B. Smoothing** (Nhượng bộ, xoa dịu để giữ hòa khí và mong được hỗ trợ về sau)
+  * C. Confronting
+  * D. Forcing
 - **Từ khóa:** `suppose that other PM will support you in the future`
-- **Mẹo nhớ:** Nhường người để giữ hòa khí ➔ **Smoothing / Accommodating** (Xoa dịu / Nhượng bộ).
+- **Mẹo nhớ:** Nhường hẳn người cho PM khác với hy vọng sau này được ủng hộ lại ➔ **Smoothing / Accommodating** (Xoa dịu / Nhượng bộ - Đáp án B).
 - **Vị trí trong đề thi:**
-  * **Bộ đề `FA2024 FE 3127`** ➔ **Câu 36**
-  * **Bộ đề `SP2025 FE 3814`** ➔ **Câu 36**
-  * **Bộ đề `SU26 FE 7251`** ➔ **Câu 32**
+  * **Bộ đề `⭐ ĐỀ ĐẶC BIỆT`** ➔ **Câu 21** (Đáp án B)
+  * **Bộ đề `FA2024 FE 3127`** ➔ **Câu 36** (Đáp án B)
+  * **Bộ đề `SP2025 FE 3814`** ➔ **Câu 36** (Đáp án B)
+  * **Bộ đề `SU26 FE 7251`** ➔ **Câu 32** (Đáp án B)
 
 ---
 

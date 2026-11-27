@@ -2132,9 +2132,9 @@ const FE_QUESTIONS_TEXT = {
         "D": "Forcing"
       },
       "answer": [
-        "A"
+        "B"
       ],
-      "explanation": "Compromising involves give-and-take where both parties give up something or trade support."
+      "explanation": "Smoothing (accommodating) emphasizes agreement and yields to preserve goodwill or future support."
     },
     {
       "number": 37,
@@ -18279,9 +18279,9 @@ const FE_QUESTIONS_TEXT = {
         "D": "Forcing"
       },
       "answer": [
-        "A"
+        "B"
       ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CONFLICT RESOLUTION]:\n• Từ khóa: 'Nhường người với hy vọng sau này được hỗ trợ lại' ➔ Smoothing / Accommodating (Xoa dịu / Nhượng bộ giữ hòa khí).\n• Đáp án chuẩn: [A] Compromising\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 36)",
+      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CONFLICT RESOLUTION]:\n• Từ khóa: 'Nhường người với hy vọng sau này được hỗ trợ lại' ➔ Smoothing / Accommodating (Xoa dịu / Nhượng bộ giữ hòa khí).\n• Đáp án chuẩn: [B] Smoothing\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 36)",
       "imagePath": "PMG201c_FA2024_FE_3127/Cau_36.webp",
       "sourceExam": "PMG201c_FA2024_FE_3127",
       "sourceIndex": 36
