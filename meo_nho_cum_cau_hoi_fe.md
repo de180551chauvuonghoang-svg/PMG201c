@@ -17,7 +17,7 @@
 ### 2. Câu "Best time to assign a project manager" ➔ Đáp án: `A` (Initiating (A))
 - **Câu hỏi trong đề:** *"The best time to assign a project manager to a project is during:"*
 - **Từ khóa then chốt:** `Best time to assign a project manager`
-- **Mẹo nhớ siêu tốc:** Thời điểm lý tưởng nhất để bổ nhiệm Project Manager là ngay trong giai đoạn Khởi tạo (Initiating), tốt nhất là trước hoặc khi viết Project Charter.
+- **Mẹo nhớ siêu tốc:** Thời điểm lý tưởng nhất để bổ nhiệm Project Manager là ngay trong giai đoạn Khởi tạo (Initiating).
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 2**
   * **Đề gốc `RESP24 1862`** ➔ **Câu 4**
@@ -38,14 +38,6 @@
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 4**
   * **Đề gốc `SU25 RE 4834`** ➔ **Câu 41**
 
-### 5. Câu "Completing the requirements of the project" ➔ Đáp án: `C` (Executing (C))
-- **Câu hỏi trong đề:** *"Which process group focuses on completing the requirements of the project?"*
-- **Từ khóa then chốt:** `Completing the requirements of the project`
-- **Mẹo nhớ siêu tốc:** Tập trung hoàn thành các yêu cầu công việc thực tế của dự án là quy trình Thực thi (Executing).
-- **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 5**
-  * **Đề gốc `RESP24 1862`** ➔ **Câu 42**
-
 ---
 
 ## 📌 CỤM 2: Ma Trận Quyền Hạn & Mức Độ Quan Tâm (Power / Interest Grid)
@@ -56,15 +48,15 @@
 - **Từ khóa then chốt:** `low interest / low power`
 - **Mẹo nhớ siêu tốc:** Thấp cả hai ➔ Chỉ cần theo dõi tối thiểu (Monitor with minimum effort).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 6**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 5**
   * **Đề gốc `SP26 FE 6358`** ➔ **Câu 46**
 
 ### 2. Câu "low interest / high power (hoặc high power / low interest)" ➔ Đáp án: `B` (Keep Satisfied (B))
 - **Câu hỏi trong đề:** *"One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is low interest / high power, what should the Project Manager do?"*
 - **Từ khóa then chốt:** `low interest / high power (hoặc high power / low interest)`
-- **Mẹo nhớ siêu tốc:** Quyền lực cao nhưng ít quan tâm ➔ Làm họ hài lòng (Keep Satisfied) để không bị phủ quyết/cản trở.
+- **Mẹo nhớ siêu tốc:** Quyền lực cao nhưng ít quan tâm ➔ Làm họ hài lòng (Keep Satisfied) để không bị cản trở.
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 7**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 6**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 48**
 
 ### 3. Câu "high interest / low power" ➔ Đáp án: `D` (Keep Informed (D))
@@ -72,7 +64,7 @@
 - **Từ khóa then chốt:** `high interest / low power`
 - **Mẹo nhớ siêu tốc:** Quan tâm nhiều nhưng quyền lực thấp ➔ Luôn cập nhật thông tin cho họ (Keep Informed).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 8**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 7**
   * **Đề gốc `SU26 FE 7251`** ➔ **Câu 44**
 
 ### 4. Câu "high interest / high power" ➔ Đáp án: `C` (Manage Closely (C))
@@ -80,7 +72,7 @@
 - **Từ khóa then chốt:** `high interest / high power`
 - **Mẹo nhớ siêu tốc:** Cả hai đều cao (nhân vật VIP/quyết định) ➔ Quản lý chặt chẽ, sát sao nhất (Manage Closely).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 9**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 8**
   * **Đề gốc `SP2025 FE 3814`** ➔ **Câu 48**
 
 ---
@@ -93,7 +85,7 @@
 - **Từ khóa then chốt:** `willing to assist you in any way`
 - **Mẹo nhớ siêu tốc:** Sẵn sàng hỗ trợ bạn mọi cách khi cần ➔ Supportive (Ủng hộ).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 10**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 9**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 49**
 
 ### 2. Câu "talking to people outside the team to explain the benefits" ➔ Đáp án: `D` (Leading (D))
@@ -101,7 +93,7 @@
 - **Từ khóa then chốt:** `talking to people outside the team to explain the benefits`
 - **Mẹo nhớ siêu tốc:** Chủ động đi truyền bá, giải thích lợi ích dự án ra bên ngoài ➔ Leading (Dẫn dắt / Tiên phong).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 11**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 10**
   * **Đề gốc `SP26 FE 6358`** ➔ **Câu 14**
 
 ### 3. Câu "neither opposed to your project nor is supportive" ➔ Đáp án: `B` (Neutral (B))
@@ -109,7 +101,7 @@
 - **Từ khóa then chốt:** `neither opposed to your project nor is supportive`
 - **Mẹo nhớ siêu tốc:** Không phản đối cũng không nhiệt tình ủng hộ ➔ Neutral (Trung lập).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 12**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 11**
   * **Đề gốc `FA2024 RE 3167`** ➔ **Câu 50**
 
 ---
@@ -122,7 +114,7 @@
 - **Từ khóa then chốt:** `those informed persons are`
 - **Mẹo nhớ siêu tốc:** Informed (I) = Người được cập nhật tiến độ dự án (Being kept updated about project progress).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 13**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 12**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 37**
 
 ### 2. Câu "those accountable persons are" ➔ Đáp án: `B` (Making the final decision (B))
@@ -130,7 +122,7 @@
 - **Từ khóa then chốt:** `those accountable persons are`
 - **Mẹo nhớ siêu tốc:** Accountable (A) = Người chịu trách nhiệm giải trình cuối cùng / ra quyết định chốt (Making the final decision).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 14**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 13**
   * **Đề gốc `SU25 RE 4834`** ➔ **Câu 6**
 
 ### 3. Câu "those responsible persons are" ➔ Đáp án: `A` (Completing the work (A))
@@ -138,7 +130,7 @@
 - **Từ khóa then chốt:** `those responsible persons are`
 - **Mẹo nhớ siêu tốc:** Responsible (R) = Người trực tiếp bắt tay thực hiện công việc (Completing the work).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 15**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 14**
   * **Đề gốc `SP26 RE 6506`** ➔ **Câu 49**
 
 ### 4. Câu "those consulted persons are" ➔ Đáp án: `A` (Providing subject matter expertise (A))
@@ -146,7 +138,7 @@
 - **Từ khóa then chốt:** `those consulted persons are`
 - **Mẹo nhớ siêu tốc:** Consulted (C) = Chuyên gia cố vấn, tham vấn ý kiến chuyên môn (Providing subject matter expertise).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 16**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 15**
   * **Đề gốc `SP26 FE 6358`** ➔ **Câu 2**
 
 ---
@@ -157,9 +149,9 @@
 ### 1. Câu "cannot be completed any other way" ➔ Đáp án: `C` (Mandatory (C))
 - **Câu hỏi trong đề:** *"When you schedule work in a specific order because it cannot be completed any other way, what is the type of dependency used?"*
 - **Từ khóa then chốt:** `cannot be completed any other way`
-- **Mẹo nhớ siêu tốc:** Bản chất vật lý hoặc quy định hợp đồng bắt buộc, không thể làm cách nào khác ➔ Mandatory (Bắt buộc / Hard logic).
+- **Mẹo nhớ siêu tốc:** Bản chất vật lý hoặc quy định bắt buộc, không thể làm cách nào khác ➔ Mandatory (Bắt buộc / Hard logic).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 17**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 16**
   * **Đề gốc `FA2024 RE 3167`** ➔ **Câu 4**
 
 ### 2. Câu "local government approval of proposed building design" ➔ Đáp án: `D` (External (D))
@@ -167,15 +159,15 @@
 - **Từ khóa then chốt:** `local government approval of proposed building design`
 - **Mẹo nhớ siêu tốc:** Phụ thuộc vào cơ quan chính quyền bên ngoài quyền hạn của đội dự án ➔ External (Bên ngoài).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 18**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 17**
   * **Đề gốc `SU26 FEHCM 7269`** ➔ **Câu 17**
 
 ### 3. Câu "test system must be refreshed with your test data" ➔ Đáp án: `B` (Internal (B))
 - **Câu hỏi trong đề:** *"Your team member informs you that the test system must be refreshed with your test data before testing can begin. This dependency is:"*
 - **Từ khóa then chốt:** `test system must be refreshed with your test data`
-- **Mẹo nhớ siêu tốc:** Đội dự án tự chuẩn bị dữ liệu kiểm thử trước khi chạy test ➔ Phụ thuộc nội bộ bên trong dự án quản lý ➔ Internal (Nội bộ - Đáp án B).
+- **Mẹo nhớ siêu tốc:** Đội dự án tự chuẩn bị dữ liệu kiểm thử trước khi chạy test ➔ Phụ thuộc nội bộ do chính dự án kiểm soát ➔ Internal (Nội bộ - Đáp án B).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 19**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 18**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 17**
 
 ### 4. Câu "activity which involves a government agency" ➔ Đáp án: `D` (External (D))
@@ -183,7 +175,7 @@
 - **Từ khóa then chốt:** `activity which involves a government agency`
 - **Mẹo nhớ siêu tốc:** Dính tới cơ quan công quyền / nhà nước ➔ External dependency.
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 20**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 19**
   * **Đề gốc `FESP24 1814`** ➔ **Câu 34**
 
 ---
@@ -196,7 +188,7 @@
 - **Từ khóa then chốt:** `work in the morning and afternoon (cưa đôi mỗi bên nửa ngày)`
 - **Mẹo nhớ siêu tốc:** Mỗi bên chịu thiệt nhượng bộ một nửa để chia sẻ nguồn lực ➔ Compromising (Thỏa hiệp - Đáp án A).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 21**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 20**
   * **Đề gốc `SU25 RE 4834`** ➔ **Câu 20**
 
 ### 2. Câu "suppose that the other project manager will support you in the future" ➔ Đáp án: `B` (Smoothing (B))
@@ -204,7 +196,7 @@
 - **Từ khóa then chốt:** `suppose that the other project manager will support you in the future`
 - **Mẹo nhớ siêu tốc:** Nhường hẳn nhân sự cho đối phương để giữ hòa khí và hy vọng tương lai được hỗ trợ lại ➔ Smoothing / Accommodating (Xoa dịu / Nhượng bộ - Đáp án B).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 22**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 21**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 36**
 
 ---
@@ -217,7 +209,7 @@
 - **Từ khóa then chốt:** `review needs to BEGIN before develop can FINISH`
 - **Mẹo nhớ siêu tốc:** Bắt đầu cái này trước khi cái kia kết thúc ➔ Start to Finish (SF - Đáp án B).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 23**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 22**
   * **Đề gốc `SU26 FEHCM 7269`** ➔ **Câu 18**
 
 ### 2. Câu "develop needs to BEGIN before review can BEGIN" ➔ Đáp án: `D` (Start to start (D))
@@ -225,7 +217,7 @@
 - **Từ khóa then chốt:** `develop needs to BEGIN before review can BEGIN`
 - **Mẹo nhớ siêu tốc:** Bắt đầu cái này trước khi cái kia bắt đầu ➔ Start to Start (SS - Đáp án D).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 24**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 23**
   * **Đề gốc `FA25 RE 5711`** ➔ **Câu 14**
 
 ### 3. Câu "develop needs to FINISH before review can FINISH" ➔ Đáp án: `D` (Finish to finish (D))
@@ -233,7 +225,7 @@
 - **Từ khóa then chốt:** `develop needs to FINISH before review can FINISH`
 - **Mẹo nhớ siêu tốc:** Kết thúc cái này trước khi cái kia kết thúc ➔ Finish to Finish (FF - Đáp án D).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 25**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 24**
   * **Đề gốc `FE SU2023 646`** ➔ **Câu 5**
 
 ---
@@ -246,10 +238,18 @@
 - **Từ khóa then chốt:** `accept a risk`
 - **Mẹo nhớ siêu tốc:** Chấp nhận rủi ro = Không chủ động thay đổi kế hoạch nhưng lập kế hoạch dự phòng (actively do not consider but establish contingency plan).
 - **Vị trí tìm thấy:**
-  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 26**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 25**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 45**
 
-### 2. Câu "mitigate a risk" ➔ Đáp án: `D` (Mitigate (D))
+### 2. Câu "transfer a risk" ➔ Đáp án: `C` (Transfer (C))
+- **Câu hỏi trong đề:** *"If the response you choose is to transfer a risk this means that:"*
+- **Từ khóa then chốt:** `transfer a risk`
+- **Mẹo nhớ siêu tốc:** Chuyển giao rủi ro = Thay đổi kế hoạch để bên thứ ba chịu trách nhiệm về rủi ro (another party will be responsible for the risk - ví dụ mua bảo hiểm, thuê ngoài).
+- **Vị trí tìm thấy:**
+  * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 26**
+  * **Đề gốc `SP26 FE 6358`** ➔ **Câu 26**
+
+### 3. Câu "mitigate a risk" ➔ Đáp án: `D` (Mitigate (D))
 - **Câu hỏi trong đề:** *"If the response you choose is to mitigate a risk this means that"*
 - **Từ khóa then chốt:** `mitigate a risk`
 - **Mẹo nhớ siêu tốc:** Giảm thiểu rủi ro = Giảm xác suất và/hoặc tác động (reduce probability and/or impact).
@@ -336,7 +336,7 @@
 ### 1. Câu "sponsor informed you: assigned AT MOST 50%" ➔ Đáp án: `D` (A constraint (D))
 - **Câu hỏi trong đề:** *"As you plan your project, the sponsor informed you that all team members will be assigned to your project for at most 50% of their available time. This is an example of:"*
 - **Từ khóa then chốt:** `sponsor informed you: assigned AT MOST 50%`
-- **Mẹo nhớ siêu tốc:** Nhà tài trợ áp đặt mức trần tối đa không được vượt quá ➔ Ràng buộc do cấp trên đặt ra: A constraint (Đáp án D).
+- **Mẹo nhớ siêu tốc:** Nhà tài trợ áp đặt mức trần tối đa không được vượt quá ➔ Ràng buộc: A constraint (Đáp án D).
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 35**
   * **Đề gốc `RESP24 1862`** ➔ **Câu 37**
@@ -344,7 +344,7 @@
 ### 2. Câu "you do so thinking that: assigned AT LEAST 50%" ➔ Đáp án: `D` (An assumption (D))
 - **Câu hỏi trong đề:** *"As you plan your project, you do so thinking that all team members will be assigned to your project for at least 50% of their available time. This is an example of:"*
 - **Từ khóa then chốt:** `you do so thinking that: assigned AT LEAST 50%`
-- **Mẹo nhớ siêu tốc:** Bạn tự suy nghĩ/kỳ vọng trong lúc lên kế hoạch mà chưa được xác thực ➔ Giả định của bạn: An assumption (Đáp án D).
+- **Mẹo nhớ siêu tốc:** Bạn tự suy nghĩ/kỳ vọng trong lúc lên kế hoạch mà chưa được xác thực ➔ Giả định: An assumption (Đáp án D).
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 36**
   * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 12**
@@ -373,7 +373,7 @@
 ### 3. Câu "NOT been previously done by company" ➔ Đáp án: `B` (Three-point (B))
 - **Câu hỏi trong đề:** *"The team is helping the project manager to estimate activities on their project. There are several activities they need to estimate that have not been previously done by the company. What is the best method of estimating these activities?"*
 - **Từ khóa then chốt:** `NOT been previously done by company`
-- **Mẹo nhớ siêu tốc:** Công ty chưa từng làm bao giờ, độ bất định cao ➔ Ước tính 3 điểm: Three-point estimating (Optimistic, Most Likely, Pessimistic - Đáp án B).
+- **Mẹo nhớ siêu tốc:** Công ty chưa từng làm bao giờ, độ bất định cao ➔ Ước tính 3 điểm: Three-point estimating (Đáp án B).
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 39**
   * **Đề gốc `SU26 FE 7251`** ➔ **Câu 48**
@@ -449,7 +449,7 @@
 ### 1. Câu "A cost can be either direct or indirect" ➔ Đáp án: `A, B` (Direct: attributable, Indirect: overhead (A, B))
 - **Câu hỏi trong đề:** *"A cost can be either direct or indirect. Which of the following statements are correct ?"*
 - **Từ khóa then chốt:** `A cost can be either direct or indirect`
-- **Mẹo nhớ siêu tốc:** Direct cost: gắn trực tiếp vào công việc dự án (lương, vật liệu). Indirect cost: chi phí chung/overhead (thuế, điện, mặt bằng) (Đáp án A, B).
+- **Mẹo nhớ siêu tốc:** Direct cost: trực tiếp vào dự án. Indirect cost: chi phí chung/overhead (Đáp án A, B).
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 46**
   * **Đề gốc `SP26 FE 6358`** ➔ **Câu 3**
@@ -457,40 +457,39 @@
 ### 2. Câu "A cost can be either variable or fixed" ➔ Đáp án: `A, B` (Variable: changes, Fixed: does not change (A, B))
 - **Câu hỏi trong đề:** *"A cost can be either variable or fixed. Which of the following statements are correct (choose 2 answers)?"*
 - **Từ khóa then chốt:** `A cost can be either variable or fixed`
-- **Mẹo nhớ siêu tốc:** Variable cost: thay đổi theo sản lượng (nguyên vật liệu). Fixed cost: không đổi theo sản lượng (tiền thuê nhà, khấu hao) (Đáp án A, B).
+- **Mẹo nhớ siêu tốc:** Variable cost: thay đổi theo sản lượng. Fixed cost: không đổi theo sản lượng (Đáp án A, B).
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 47**
   * **Đề gốc `SU25 FE 4759`** ➔ **Câu 18**
 
 ---
 
-## 📌 CỤM 18: Tính Độ Dài Đường Găng Critical Path Trên Bảng Activity List
-**Bộ Options nhận diện chung:** `13 | 9 | 11 | 14`
+## 📌 CỤM 18: Công Thức Tính Tiến Độ CPM (Forward Pass & Backward Pass)
+**Bộ Options nhận diện chung:** `Take early start plus duration (EF) | Take late finish minus duration (LS)`
 
-### 1. Câu "Activity list duration critical path (Start=A, E; A=2, B=4, C=6, D=3, E=7, F=2)" ➔ Đáp án: `D` (14 (D))
-- **Câu hỏi trong đề:** *"The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? (A=2 [Start], B=4 [A,E], C=6 [A], D=3 [B,C], E=7 [Start], F=2 [E], End=- [D,F])"*
-- **Từ khóa then chốt:** `Activity list duration critical path (Start=A, E; A=2, B=4, C=6, D=3, E=7, F=2)`
-- **Mẹo nhớ siêu tốc:** Đường dài nhất: E(7) + B(4) + D(3) = 14 ngày ➔ Đáp án D (14).
+### 1. Câu "To calculate early finish (EF) of an activity, you will:" ➔ Đáp án: `A` (Take its early start plus its estimated duration (A))
+- **Câu hỏi trong đề:** *"To calculate early finish (EF) of an activity, you will:"*
+- **Từ khóa then chốt:** `To calculate early finish (EF) of an activity, you will:`
+- **Mẹo nhớ siêu tốc:** Công thức Forward pass tính thời điểm kết thúc sớm: EF = ES + Duration ➔ Chọn 'Take its early start plus its estimated duration' (Đáp án A).
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 48**
-  * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 20**
+  * **Đề gốc `SU2024 1 2527`** ➔ **Câu 19**
 
-### 2. Câu "Activity list critical path (Start=A, E; E=7, F=2, End=D, F)" ➔ Đáp án: `B` (9 (B))
-- **Câu hỏi trong đề:** *"The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? Activity A (2, Start), B (4, A,E), C (6, A), D (3, B,C), E (7, Start), F (2, E), End (-, D,F)."*
-- **Từ khóa then chốt:** `Activity list critical path (Start=A, E; E=7, F=2, End=D, F)`
-- **Mẹo nhớ siêu tốc:** Dạng bài bảng hoạt động với tổng đường găng ra 9 ngày ➔ Đáp án B (9).
+### 2. Câu "To calculate late start (LS) of an activity, you will:" ➔ Đáp án: `C` (Take its late finish minus its estimated duration (C))
+- **Câu hỏi trong đề:** *"To calculate late start (LS) of an activity, you will:"*
+- **Từ khóa then chốt:** `To calculate late start (LS) of an activity, you will:`
+- **Mẹo nhớ siêu tốc:** Công thức Backward pass tính thời điểm bắt đầu muộn: LS = LF - Duration ➔ Chọn 'Take its late finish minus its estimated duration' (Đáp án C).
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 49**
-  * **Đề gốc `SU26 FEHCM 7269`** ➔ **Câu 20**
+  * **Đề gốc `SP26 RE 6506`** ➔ **Câu 15**
 
-### 3. Câu "Activity list critical path variant" ➔ Đáp án: `C` (11 (C))
-- **Câu hỏi trong đề:** *"The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path?
-(Table: A:2 [Start], B:4 [A,E], C:6 [A], D:3 [B,C], E:7 [Start], F:2 [E], End:- [D,F])"*
-- **Từ khóa then chốt:** `Activity list critical path variant`
-- **Mẹo nhớ siêu tốc:** Dạng bài bảng hoạt động với tổng đường găng ra 11 ngày ➔ Đáp án C (11).
+### 3. Câu "Activity list critical path: A(2), B(4), C(6), D(3), E(7), F(2)" ➔ Đáp án: `D` (14 (D))
+- **Câu hỏi trong đề:** *"The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? (A=2 [Start], B=4 [A,E], C=6 [A], D=3 [B,C], E=7 [Start], F=2 [E], End=- [D,F])"*
+- **Từ khóa then chốt:** `Activity list critical path: A(2), B(4), C(6), D(3), E(7), F(2)`
+- **Mẹo nhớ siêu tốc:** Bài toán Critical Path kinh điển: Các đường Start-End gồm: (1) A-C-D=11; (2) A-B-D=9; (3) E-B-D=14; (4) E-F=9. Đường dài nhất là 14 ngày (Start ➔ E ➔ B ➔ D ➔ End). Giá trị đường găng luôn luôn bằng 14!
 - **Vị trí tìm thấy:**
   * **Bộ đề ⭐ ĐỀ ĐẶC BIỆT** ➔ **Câu 50**
-  * **Đề gốc `SP2025 RE 3866`** ➔ **Câu 20**
+  * **Đề gốc `FA2024 FE 3127`** ➔ **Câu 20**
 
 ---
 
