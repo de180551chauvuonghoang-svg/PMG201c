@@ -17882,947 +17882,961 @@ const FE_QUESTIONS_TEXT = {
     }
   ],
   "PMG201c_SPECIAL_TRICK_EXAM": [
-    {
-      "number": 1,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Which project management process group generally takes the most project time and resources?",
-      "options": {
-        "A": "Initiating",
-        "B": "Planning",
-        "C": "Executing",
-        "D": "Monitoring and controlling",
-        "E": "Closing"
+      {
+        "number": 1,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Which project management process group generally takes the most project time and resources?",
+        "options": {
+          "A": "Initiating",
+          "B": "Planning",
+          "C": "Executing",
+          "D": "Monitoring and controlling",
+          "E": "Closing"
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 1: 5 Quy Trình Dự Án (Process Groups)]:\n• Từ khóa nhận diện: \"Time and resources\"\n• Bí quyết giải: Giai đoạn tốn nhiều thời gian và tài nguyên nhất của dự án luôn là Executing (Thực thi).\n• Đáp án chuẩn: [C] Executing (C)\n• Nguồn đề gốc: Trích từ đề FESP24 1814 (Câu 13)",
+        "imagePath": "PMG201c_FESP24_1814/Cau_13.webp",
+        "sourceExam": "PMG201c_FESP24_1814",
+        "sourceIndex": 13
       },
-      "answer": [
-        "C"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - PROCESS GROUPS]:\n• Từ khóa: 'Time and resources' ➔ Thực thi (Executing) tốn nhiều thời gian và chi phí nhất.\n• Đáp án chuẩn: [C] Executing\n• Nguồn gốc: Trích từ đề PMG201c_FESP24_1814 (Câu 13)",
-      "imagePath": "PMG201c_FESP24_1814/Cau_13.webp",
-      "sourceExam": "PMG201c_FESP24_1814",
-      "sourceIndex": 13
-    },
-    {
-      "number": 2,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The best time to assign a project manager to a project is during:",
-      "options": {
-        "A": "Initiating",
-        "B": "Planning",
-        "C": "Executing",
-        "D": "Integration",
-        "E": "Project selection"
+      {
+        "number": 2,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "The best time to assign a project manager to a project is during:",
+        "options": {
+          "A": "Initiating",
+          "B": "Planning",
+          "C": "Executing",
+          "D": "Integration",
+          "E": "Project selection"
+        },
+        "answer": [
+          "A"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 1: 5 Quy Trình Dự Án (Process Groups)]:\n• Từ khóa nhận diện: \"Best time to assign a project manager\"\n• Bí quyết giải: Thời điểm lý tưởng nhất để bổ nhiệm Project Manager là ngay trong giai đoạn Khởi tạo (Initiating), tốt nhất là trước hoặc khi viết Project Charter.\n• Đáp án chuẩn: [A] Initiating (A)\n• Nguồn đề gốc: Trích từ đề RESP24 1862 (Câu 4)",
+        "imagePath": "PMG201c_RESP24_1862/Cau_04.webp",
+        "sourceExam": "PMG201c_RESP24_1862",
+        "sourceIndex": 4
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - PROCESS GROUPS]:\n• Từ khóa: 'Best time to assign PM' ➔ Khởi tạo (Initiating) chỉ định PM ngay từ đầu.\n• Đáp án chuẩn: [A] Initiating\n• Nguồn gốc: Trích từ đề PMG201c_FA25_RE_5711 (Câu 4)",
-      "imagePath": "PMG201c_FA25_RE_5711/Cau_04.webp",
-      "sourceExam": "PMG201c_FA25_RE_5711",
-      "sourceIndex": 4
-    },
-    {
-      "number": 3,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "During which part of the project management process is the Project Scope Statement created?",
-      "options": {
-        "A": "Initiating",
-        "B": "Planning",
-        "C": "Executing",
-        "D": "Monitoring and Controlling",
-        "E": "Closing"
+      {
+        "number": 3,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "During which part of the project management process is the Project Scope Statement created?",
+        "options": {
+          "A": "Initiating",
+          "B": "Planning",
+          "C": "Executing",
+          "D": "Monitoring and Controlling",
+          "E": "Closing"
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 1: 5 Quy Trình Dự Án (Process Groups)]:\n• Từ khóa nhận diện: \"Project Scope Statement created\"\n• Bí quyết giải: Bản tuyên bố phạm vi dự án (Project Scope Statement) được lập trong giai đoạn Lập kế hoạch (Planning).\n• Đáp án chuẩn: [B] Planning (B)\n• Nguồn đề gốc: Trích từ đề SP26 FE 6358 (Câu 24)",
+        "imagePath": "PMG201c_SP26_FE_6358/Cau_24.webp",
+        "sourceExam": "PMG201c_SP26_FE_6358",
+        "sourceIndex": 24
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - PROCESS GROUPS]:\n• Từ khóa: 'Project Scope Statement' ➔ Lập kế hoạch (Planning) xác định phạm vi chi tiết.\n• Đáp án chuẩn: [B] Planning\n• Nguồn gốc: Trích từ đề PMG201c_SP26_FE_6358 (Câu 24)",
-      "imagePath": "PMG201c_SP26_FE_6358/Cau_24.webp",
-      "sourceExam": "PMG201c_SP26_FE_6358",
-      "sourceIndex": 24
-    },
-    {
-      "number": 4,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A project manager has received some help from the team, and she needs help from them again so that she can create a detailed project budget. Which project management process group is she in?",
-      "options": {
-        "A": "Initiating",
-        "B": "Planning",
-        "C": "Executing",
-        "D": "Monitoring and controlling",
-        "E": "Closing"
+      {
+        "number": 4,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "A project manager has received some help from the team, and she needs help from them again so that she can create a detailed project budget. Which project management process group is she in?",
+        "options": {
+          "A": "Initiating",
+          "B": "Planning",
+          "C": "Executing",
+          "D": "Monitoring and controlling",
+          "E": "Closing"
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 1: 5 Quy Trình Dự Án (Process Groups)]:\n• Từ khóa nhận diện: \"Create a detailed project budget\"\n• Bí quyết giải: Lập dự toán ngân sách chi tiết (Detailed Project Budget) thuộc giai đoạn Lập kế hoạch (Planning).\n• Đáp án chuẩn: [B] Planning (B)\n• Nguồn đề gốc: Trích từ đề SU25 RE 4834 (Câu 41)",
+        "imagePath": "PMG201c_SU25_RE_4834/Cau_41.webp",
+        "sourceExam": "PMG201c_SU25_RE_4834",
+        "sourceIndex": 41
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - PROCESS GROUPS]:\n• Từ khóa: 'Project budget' ➔ Lập kế hoạch (Planning) tính toán chi phí và lập ngân sách.\n• Đáp án chuẩn: [B] Planning\n• Nguồn gốc: Trích từ đề PMG201c_SU25_RE_4834 (Câu 41)",
-      "imagePath": "PMG201c_SU25_RE_4834/Cau_41.webp",
-      "sourceExam": "PMG201c_SU25_RE_4834",
-      "sourceIndex": 41
-    },
-    {
-      "number": 5,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Which process group focuses on completing the requirements of the project?",
-      "options": {
-        "A": "Initiating",
-        "B": "Planning",
-        "C": "Executing",
-        "D": "Monitoring and controlling",
-        "E": "Closing"
+      {
+        "number": 5,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Which process group focuses on completing the requirements of the project?",
+        "options": {
+          "A": "Initiating",
+          "B": "Planning",
+          "C": "Executing",
+          "D": "Monitoring and controlling",
+          "E": "Closing"
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 1: 5 Quy Trình Dự Án (Process Groups)]:\n• Từ khóa nhận diện: \"Completing the requirements of the project\"\n• Bí quyết giải: Tập trung hoàn thành các yêu cầu công việc thực tế của dự án là quy trình Thực thi (Executing).\n• Đáp án chuẩn: [C] Executing (C)\n• Nguồn đề gốc: Trích từ đề RESP24 1862 (Câu 42)",
+        "imagePath": "PMG201c_RESP24_1862/Cau_42.webp",
+        "sourceExam": "PMG201c_RESP24_1862",
+        "sourceIndex": 42
       },
-      "answer": [
-        "C"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - PROCESS GROUPS]:\n• Từ khóa: 'Completing the requirements' ➔ Thực thi (Executing) triển khai để đáp ứng yêu cầu.\n• Đáp án chuẩn: [C] Executing\n• Nguồn gốc: Trích từ đề PMG201c_RESP24_1862 (Câu 42)",
-      "imagePath": "PMG201c_RESP24_1862/Cau_42.webp",
-      "sourceExam": "PMG201c_RESP24_1862",
-      "sourceIndex": 42
-    },
-    {
-      "number": 6,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is low interest / low power, what should the Project Manager do?",
-      "options": {
-        "A": "Monitor os or",
-        "B": "Keep satisfied",
-        "C": "Manage closely",
-        "D": "Keep informed [="
+      {
+        "number": 6,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is low interest / low power, what should the Project Manager do?",
+        "options": {
+          "A": "Monitor",
+          "B": "Keep satisfied",
+          "C": "Manage closely",
+          "D": "Keep informed"
+        },
+        "answer": [
+          "A"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 2: Ma Trận Quyền Hạn & Mức Độ Quan Tâm (Power / Interest Grid)]:\n• Từ khóa nhận diện: \"low interest / low power\"\n• Bí quyết giải: Thấp cả hai ➔ Chỉ cần theo dõi tối thiểu (Monitor with minimum effort).\n• Đáp án chuẩn: [A] Monitor (A)\n• Nguồn đề gốc: Trích từ đề SP26 FE 6358 (Câu 46)",
+        "imagePath": "PMG201c_SP26_FE_6358/Cau_46.webp",
+        "sourceExam": "PMG201c_SP26_FE_6358",
+        "sourceIndex": 46
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - POWER/INTEREST GRID]:\n• Từ khóa: 'Low Interest + Low Power' ➔ Monitor (Giám sát với nỗ lực tối thiểu).\n• Đáp án chuẩn: [A] Monitor os or\n• Nguồn gốc: Trích từ đề PMG201_TE2_SU2023_676 (Câu 46)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_46.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 46
-    },
-    {
-      "number": 7,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is low interest / high power, what should the Project Manager do?",
-      "options": {
-        "A": "Monitor",
-        "B": "Keep satisfied",
-        "C": "Manage closely",
-        "D": "Keep informed"
+      {
+        "number": 7,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is low interest / high power, what should the Project Manager do?",
+        "options": {
+          "A": "Monitor",
+          "B": "Keep satisfied",
+          "C": "Manage closely",
+          "D": "Keep informed"
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 2: Ma Trận Quyền Hạn & Mức Độ Quan Tâm (Power / Interest Grid)]:\n• Từ khóa nhận diện: \"low interest / high power (hoặc high power / low interest)\"\n• Bí quyết giải: Quyền lực cao nhưng ít quan tâm ➔ Làm họ hài lòng (Keep Satisfied) để không bị phủ quyết/cản trở.\n• Đáp án chuẩn: [B] Keep Satisfied (B)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 48)",
+        "imagePath": "PMG201c_FA2024_FE_3127/Cau_48.webp",
+        "sourceExam": "PMG201c_FA2024_FE_3127",
+        "sourceIndex": 48
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - POWER/INTEREST GRID]:\n• Từ khóa: High Power + Low Interest (Quyền lực cao nhưng ít quan tâm) ➔ Keep Satisfied (Phải làm vừa lòng họ để tránh họ cản trở dự án).\n• Đáp án chuẩn: [B] Keep satisfied\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 48)",
-      "imagePath": "PMG201c_FA2024_FE_3127/Cau_48.webp",
-      "sourceExam": "PMG201c_FA2024_FE_3127",
-      "sourceIndex": 48
-    },
-    {
-      "number": 8,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is high interest / low power, what should the Project Manager do?",
-      "options": {
-        "A": "Monitor",
-        "B": "Keep satisfied",
-        "C": "Manage closely",
-        "D": "Keep informed"
+      {
+        "number": 8,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is high interest / low power, what should the Project Manager do?",
+        "options": {
+          "A": "Monitor",
+          "B": "Keep satisfied",
+          "C": "Manage closely",
+          "D": "Keep informed"
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 2: Ma Trận Quyền Hạn & Mức Độ Quan Tâm (Power / Interest Grid)]:\n• Từ khóa nhận diện: \"high interest / low power\"\n• Bí quyết giải: Quan tâm nhiều nhưng quyền lực thấp ➔ Luôn cập nhật thông tin cho họ (Keep Informed).\n• Đáp án chuẩn: [D] Keep Informed (D)\n• Nguồn đề gốc: Trích từ đề SU26 FE 7251 (Câu 44)",
+        "imagePath": "PMG201c_SU26_FE_7251/Cau_44.webp",
+        "sourceExam": "PMG201c_SU26_FE_7251",
+        "sourceIndex": 44
       },
-      "answer": [
-        "D"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - POWER/INTEREST GRID]:\n• Từ khóa: 'High Interest + Low Power' ➔ Keep Informed (Thường xuyên gửi thông tin cập nhật).\n• Đáp án chuẩn: [D] Keep informed\n• Nguồn gốc: Trích từ đề PMG201c_SU26_FE_7251 (Câu 44)",
-      "imagePath": "PMG201c_SU26_FE_7251/Cau_44.webp",
-      "sourceExam": "PMG201c_SU26_FE_7251",
-      "sourceIndex": 44
-    },
-    {
-      "number": 9,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is high interest / high power, what should the Project Manager do?",
-      "options": {
-        "A": "Monitor",
-        "B": "Keep satisfied",
-        "C": "Manage closely",
-        "D": "Keep informed"
+      {
+        "number": 9,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "One way to classify your stakeholders is to use the Power/Interest Grid. If a stakeholder is high interest / high power, what should the Project Manager do?",
+        "options": {
+          "A": "Monitor",
+          "B": "Keep satisfied",
+          "C": "Manage closely",
+          "D": "Keep informed"
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 2: Ma Trận Quyền Hạn & Mức Độ Quan Tâm (Power / Interest Grid)]:\n• Từ khóa nhận diện: \"high interest / high power\"\n• Bí quyết giải: Cả hai đều cao (nhân vật VIP/quyết định) ➔ Quản lý chặt chẽ, sát sao nhất (Manage Closely).\n• Đáp án chuẩn: [C] Manage Closely (C)\n• Nguồn đề gốc: Trích từ đề SP2025 FE 3814 (Câu 48)",
+        "imagePath": "PMG201c_SP2025_FE_3814/Cau_48.webp",
+        "sourceExam": "PMG201c_SP2025_FE_3814",
+        "sourceIndex": 48
       },
-      "answer": [
-        "C"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - POWER/INTEREST GRID]:\n• Từ khóa: High Power + High Interest (Cả quyền lực lẫn quan tâm đều cao) ➔ Manage closely (Phải quản lý bám sát chặt chẽ nhất).\n• Đáp án chuẩn: [C] Manage closely\n• Nguồn gốc: Trích từ đề PMG201c_SP2025_FE_3814 (Câu 48)",
-      "imagePath": "PMG201c_SP2025_FE_3814/Cau_48.webp",
-      "sourceExam": "PMG201c_SP2025_FE_3814",
-      "sourceIndex": 48
-    },
-    {
-      "number": 10,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You just came from a meeting with one of your project stakeholders, he knew about your project and also its potential impacts, and he always supported for the work and its outcomes. How would you classify him?",
-      "options": {
-        "A": "Supportive 5 ippor Ge",
-        "B": "Neutral oh",
-        "C": "Unaware",
-        "D": "Leading Bt"
+      {
+        "number": 10,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "You just came from a meeting with one of your project stakeholders, he knew about your project and also its potential impacts, and he always supported for the work and its outcomes. How would you classify him?",
+        "options": {
+          "A": "Supportive",
+          "B": "Neutral",
+          "C": "Unaware",
+          "D": "Leading"
+        },
+        "answer": [
+          "A"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 3: Mức Độ Tham Gia Của Stakeholder (Stakeholder Engagement Levels)]:\n• Từ khóa nhận diện: \"willing to assist you in any way\"\n• Bí quyết giải: Sẵn sàng hỗ trợ bạn mọi cách khi cần ➔ Supportive (Ủng hộ).\n• Đáp án chuẩn: [A] Supportive (A)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 49)",
+        "imagePath": "PMG201c_FA2024_FE_3127/Cau_49.webp",
+        "sourceExam": "PMG201c_FA2024_FE_3127",
+        "sourceIndex": 49
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - STAKEHOLDER ENGAGEMENT]:\n• Từ khóa: 'Always supported' ➔ Supportive (Luôn ủng hộ kết quả dự án).\n• Đáp án chuẩn: [A] Supportive 5 ippor Ge\n• Nguồn gốc: Trích từ đề PMG201_TE2_SU2023_676 (Câu 39)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_39.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 39
-    },
-    {
-      "number": 11,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You just came from a meeting with one of your project stakeholders, he knew well about your project and also its potential impacts, and actively engaged in ensuring that the project is a success. How would you classify him?",
-      "options": {
-        "A": "Supportive",
-        "B": "Neutral",
-        "C": "Unaware",
-        "D": "Leading"
+      {
+        "number": 11,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "You just came from a meeting with one of your project stakeholders, he knew well about your project and also its potential impacts, and actively engaged in ensuring that the project is a success. How would you classify him?",
+        "options": {
+          "A": "Supportive",
+          "B": "Neutral",
+          "C": "Unaware",
+          "D": "Leading"
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 3: Mức Độ Tham Gia Của Stakeholder (Stakeholder Engagement Levels)]:\n• Từ khóa nhận diện: \"talking to people outside the team to explain the benefits\"\n• Bí quyết giải: Chủ động đi truyền bá, giải thích lợi ích dự án ra bên ngoài ➔ Leading (Dẫn dắt / Tiên phong).\n• Đáp án chuẩn: [D] Leading (D)\n• Nguồn đề gốc: Trích từ đề SP26 FE 6358 (Câu 14)",
+        "imagePath": "PMG201c_SP26_FE_6358/Cau_14.webp",
+        "sourceExam": "PMG201c_SP26_FE_6358",
+        "sourceIndex": 14
       },
-      "answer": [
-        "D"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - STAKEHOLDER ENGAGEMENT]:\n• Từ khóa: 'Actively engaged in ensuring success' ➔ Leading (Chủ động dẫn dắt đảm bảo thành công).\n• Đáp án chuẩn: [D] Leading\n• Nguồn gốc: Trích từ đề PMG201c_SP26_FE_6358 (Câu 14)",
-      "imagePath": "PMG201c_SP26_FE_6358/Cau_14.webp",
-      "sourceExam": "PMG201c_SP26_FE_6358",
-      "sourceIndex": 14
-    },
-    {
-      "number": 12,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You just came from a meeting with one of your project stakeholders, he knew about your project and was not against it, but did not seem to be particularly interested in it either. How would you classify him?",
-      "options": {
-        "A": "Supportive",
-        "B": "Neutral",
-        "C": "Unaware",
-        "D": "Resistant"
+      {
+        "number": 12,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "You just came from a meeting with one of your project stakeholders, he knew about your project and was not against it, but did not seem to be particularly interested in it either. How would you classify him?",
+        "options": {
+          "A": "Supportive",
+          "B": "Neutral",
+          "C": "Unaware",
+          "D": "Resistant"
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 3: Mức Độ Tham Gia Của Stakeholder (Stakeholder Engagement Levels)]:\n• Từ khóa nhận diện: \"neither opposed to your project nor is supportive\"\n• Bí quyết giải: Không phản đối cũng không nhiệt tình ủng hộ ➔ Neutral (Trung lập).\n• Đáp án chuẩn: [B] Neutral (B)\n• Nguồn đề gốc: Trích từ đề FA2024 RE 3167 (Câu 50)",
+        "imagePath": "PMG201c_FA2024_RE_3167/Cau_50.webp",
+        "sourceExam": "PMG201c_FA2024_RE_3167",
+        "sourceIndex": 50
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - STAKEHOLDER ENGAGEMENT]:\n• Từ khóa: 'Not against, not interested' ➔ Neutral (Trung lập, không ủng hộ cũng không chống đối).\n• Đáp án chuẩn: [B] Neutral\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_RE_3167 (Câu 50)",
-      "imagePath": "PMG201c_FA2024_RE_3167/Cau_50.webp",
-      "sourceExam": "PMG201c_FA2024_RE_3167",
-      "sourceIndex": 50
-    },
-    {
-      "number": 13,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those responsible persons are:",
-      "options": {
-        "A": "Providing subject matter expertise",
-        "B": "Supervising the work oh",
-        "C": "Not completing the work",
-        "D": "Completing the work x"
+      {
+        "number": 13,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those informed persons are:",
+        "options": {
+          "A": "Providing subject matter expertise",
+          "B": "Making the final decision",
+          "C": "Being kept updated about project progress.",
+          "D": "Completing the work"
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)]:\n• Từ khóa nhận diện: \"those informed persons are\"\n• Bí quyết giải: Informed (I) = Người được cập nhật tiến độ dự án (Being kept updated about project progress).\n• Đáp án chuẩn: [C] Being kept updated about project progress (C)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 37)",
+        "imagePath": "PMG201c_FA2024_FE_3127/Cau_37.webp",
+        "sourceExam": "PMG201c_FA2024_FE_3127",
+        "sourceIndex": 37
       },
-      "answer": [
-        "D"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - RACI MATRIX]:\n• Từ khóa: 'Responsible' ➔ Người trực tiếp thực hiện công việc (Those who do the work).\n• Đáp án chuẩn: [D] Completing the work x\n• Nguồn gốc: Trích từ đề PMG201_TE2_SU2023_676 (Câu 44)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_44.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 44
-    },
-    {
-      "number": 14,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those accountable persons are:",
-      "options": {
-        "A": "Providing subject matter expertise",
-        "B": "Making the final decision",
-        "C": "Being kept updated about project progress.",
-        "D": "Completing the work"
+      {
+        "number": 14,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those accountable persons are:",
+        "options": {
+          "A": "Providing subject matter expertise",
+          "B": "Making the final decision",
+          "C": "Being kept updated about project progress.",
+          "D": "Completing the work"
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)]:\n• Từ khóa nhận diện: \"those accountable persons are\"\n• Bí quyết giải: Accountable (A) = Người chịu trách nhiệm giải trình cuối cùng / ra quyết định chốt (Making the final decision).\n• Đáp án chuẩn: [B] Making the final decision (B)\n• Nguồn đề gốc: Trích từ đề SU25 RE 4834 (Câu 6)",
+        "imagePath": "PMG201c_SU25_RE_4834/Cau_06.webp",
+        "sourceExam": "PMG201c_SU25_RE_4834",
+        "sourceIndex": 6
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - RACI MATRIX]:\n• Từ khóa: 'Accountable' ➔ Người chịu trách nhiệm giải trình & quyền quyết định cuối cùng (Ownership / Final approval).\n• Đáp án chuẩn: [B] Making the final decision\n• Nguồn gốc: Trích từ đề PMG201c_SU25_RE_4834 (Câu 6)",
-      "imagePath": "PMG201c_SU25_RE_4834/Cau_06.webp",
-      "sourceExam": "PMG201c_SU25_RE_4834",
-      "sourceIndex": 6
-    },
-    {
-      "number": 15,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those consulted persons are:",
-      "options": {
-        "A": "Providing subject matter expertise",
-        "B": "Making the final decision",
-        "C": "Being kept updated about project progress",
-        "D": "Completing the work"
+      {
+        "number": 15,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "A project manager is currently managing a manufacturing process improvement project that will be completed in five phases. The project manager has prepared the following status chart of the project by the end of 10/31. Based on the information provided, what is the actual cost of the project? [Status Chart at 10/31: - Define: Planned Value = $2,000, Actual Cost = $2,100, Percent Complete = 100% - Measure: Planned Value = $3,000, Actual Cost = $2,900, Percent Complete = 100% - Analyze: Planned Value = $3,000, Actual Cost = $2,750, Percent Complete = 75% - Improve: Planned Value = $4,000, Actual Cost = $0, Percent Complete = 0% - Control: Planned Value = $2,000, Actual Cost = $0, Percent Complete = 0%]",
+        "options": {
+          "A": "AC = $7,750",
+          "B": "AC= $9,000",
+          "C": "AC = $7,025",
+          "D": "AC= $8,000",
+          "E": "AC = $5,200"
+        },
+        "answer": [
+          "A"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)]:\n• Từ khóa nhận diện: \"those responsible persons are\"\n• Bí quyết giải: Responsible (R) = Người trực tiếp bắt tay thực hiện công việc (Completing the work).\n• Đáp án chuẩn: [A] Completing the work (A)\n• Nguồn đề gốc: Trích từ đề SP26 RE 6506 (Câu 49)",
+        "imagePath": "PMG201c_SP26_RE_6506/Cau_49.webp",
+        "sourceExam": "PMG201c_SP26_RE_6506",
+        "sourceIndex": 49
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - RACI MATRIX]:\n• Từ khóa: 'Consulted' ➔ Chuyên gia tư vấn đóng góp ý kiến 2 chiều (Provide inputs).\n• Đáp án chuẩn: [A] Providing subject matter expertise\n• Nguồn gốc: Trích từ đề PMG201c_SP26_FE_6358 (Câu 2)",
-      "imagePath": "PMG201c_SP26_FE_6358/Cau_02.webp",
-      "sourceExam": "PMG201c_SP26_FE_6358",
-      "sourceIndex": 2
-    },
-    {
-      "number": 16,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those informed persons are:",
-      "options": {
-        "A": "Providing subject matter expertise",
-        "B": "Making the final decision",
-        "C": "Being kept updated about project progress.",
-        "D": "Completing the work"
+      {
+        "number": 16,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "When you use the RACI or Responsible, Accountable, Consult, Inform version of the RAM, those consulted persons are:",
+        "options": {
+          "A": "Providing subject matter expertise",
+          "B": "Making the final decision",
+          "C": "Being kept updated about project progress",
+          "D": "Completing the work"
+        },
+        "answer": [
+          "A"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 4: Ma Trận Phân Công Trách Nhiệm RACI (RAM)]:\n• Từ khóa nhận diện: \"those consulted persons are\"\n• Bí quyết giải: Consulted (C) = Chuyên gia cố vấn, tham vấn ý kiến chuyên môn (Providing subject matter expertise).\n• Đáp án chuẩn: [A] Providing subject matter expertise (A)\n• Nguồn đề gốc: Trích từ đề SP26 FE 6358 (Câu 2)",
+        "imagePath": "PMG201c_SP26_FE_6358/Cau_02.webp",
+        "sourceExam": "PMG201c_SP26_FE_6358",
+        "sourceIndex": 2
       },
-      "answer": [
-        "C"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - RACI MATRIX]:\n• Từ khóa: 'Informed' ➔ Người nhận thông báo 1 chiều về tiến độ (Kept updated on progress).\n• Đáp án chuẩn: [C] Being kept updated about project progress.\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 37)",
-      "imagePath": "PMG201c_FA2024_FE_3127/Cau_37.webp",
-      "sourceExam": "PMG201c_FA2024_FE_3127",
-      "sourceIndex": 37
-    },
-    {
-      "number": 17,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "When you schedule work in a specific order because it cannot be completed any other way, what is the type of dependency used?",
-      "options": {
-        "A": "Discretionary",
-        "B": "Internal",
-        "C": "Mandatory",
-        "D": "External"
+      {
+        "number": 17,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "When you schedule work in a specific order because it cannot be completed any other way, what is the type of dependency used?",
+        "options": {
+          "A": "Discretionary",
+          "B": "Internal",
+          "C": "Mandatory",
+          "D": "External"
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 5: Phân Loại Quan Hệ Phụ Thuộc (Dependency Types)]:\n• Từ khóa nhận diện: \"cannot be completed any other way\"\n• Bí quyết giải: Bản chất vật lý hoặc quy định hợp đồng bắt buộc, không thể làm cách nào khác ➔ Mandatory (Bắt buộc / Hard logic).\n• Đáp án chuẩn: [C] Mandatory (C)\n• Nguồn đề gốc: Trích từ đề FA2024 RE 3167 (Câu 4)",
+        "imagePath": "PMG201c_FA2024_RE_3167/Cau_04.webp",
+        "sourceExam": "PMG201c_FA2024_RE_3167",
+        "sourceIndex": 4
       },
-      "answer": [
-        "C"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - DEPENDENCIES]:\n• Từ khóa: 'Cannot be completed any other way' ➔ Mandatory dependency (Phụ thuộc bắt buộc / Hard logic).\n• Đáp án chuẩn: [C] Mandatory\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_RE_3167 (Câu 4)",
-      "imagePath": "PMG201c_FA2024_RE_3167/Cau_04.webp",
-      "sourceExam": "PMG201c_FA2024_RE_3167",
-      "sourceIndex": 4
-    },
-    {
-      "number": 18,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Your sponsor informs you that you must receive local government approval of your proposed building design before you can begin construction of your building. This dependency is:",
-      "options": {
-        "A": "Discretionary",
-        "B": "Internal",
-        "C": "Mandatory",
-        "D": "External"
+      {
+        "number": 18,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Your sponsor informs you that you must receive local government approval of your proposed building design before you can begin construction of your building. This dependency is:",
+        "options": {
+          "A": "Discretionary",
+          "B": "Internal",
+          "C": "Mandatory",
+          "D": "External"
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 5: Phân Loại Quan Hệ Phụ Thuộc (Dependency Types)]:\n• Từ khóa nhận diện: \"local government approval of proposed building design\"\n• Bí quyết giải: Phụ thuộc vào cơ quan chính quyền bên ngoài quyền hạn của đội dự án ➔ External (Bên ngoài).\n• Đáp án chuẩn: [D] External (D)\n• Nguồn đề gốc: Trích từ đề SU26 FEHCM 7269 (Câu 17)",
+        "imagePath": "PMG201c_SU26_FEHCM_7269/Cau_17.webp",
+        "sourceExam": "PMG201c_SU26_FEHCM_7269",
+        "sourceIndex": 17
       },
-      "answer": [
-        "D"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - DEPENDENCIES]:\n• Từ khóa: 'Local government approval / Agency' ➔ External dependency (Phụ thuộc bên ngoài dự án).\n• Đáp án chuẩn: [D] External\n• Nguồn gốc: Trích từ đề PMG201c_SU26_FEHCM_7269 (Câu 17)",
-      "imagePath": "PMG201c_SU26_FEHCM_7269/Cau_17.webp",
-      "sourceExam": "PMG201c_SU26_FEHCM_7269",
-      "sourceIndex": 17
-    },
-    {
-      "number": 19,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Your team member informs you that the test system must be refreshed with your test data before testing can begin. This dependency is:",
-      "options": {
-        "A": "Discretionary",
-        "B": "Internal",
-        "C": "Mandatory",
-        "D": "External"
+      {
+        "number": 19,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Your team member informs you that the test system must be refreshed with your test data before testing can begin. This dependency is:",
+        "options": {
+          "A": "Discretionary",
+          "B": "Internal",
+          "C": "Mandatory",
+          "D": "External"
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 5: Phân Loại Quan Hệ Phụ Thuộc (Dependency Types)]:\n• Từ khóa nhận diện: \"test system must be refreshed with your test data\"\n• Bí quyết giải: Đội dự án tự chuẩn bị dữ liệu kiểm thử trước khi chạy test ➔ Phụ thuộc nội bộ bên trong dự án quản lý ➔ Internal (Nội bộ - Đáp án B).\n• Đáp án chuẩn: [B] Internal (B)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 17)",
+        "imagePath": "PMG201c_FA2024_FE_3127/Cau_17.webp",
+        "sourceExam": "PMG201c_FA2024_FE_3127",
+        "sourceIndex": 17
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - DEPENDENCIES]:\n• Từ khóa: \"Test system refreshed with test data\" (Nhóm dự án tự kiểm soát chuẩn bị dữ liệu test trước khi kiểm thử) ➔ Internal dependency (Phụ thuộc nội bộ bên trong dự án).\n• Đáp án chuẩn: [B] Internal\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 17)",
-      "imagePath": "PMG201c_FA2024_FE_3127/Cau_17.webp",
-      "sourceExam": "PMG201c_FA2024_FE_3127",
-      "sourceIndex": 17
-    },
-    {
-      "number": 20,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You and another project manager disagree over whether a team member should work on your team or on her team. You decide that the team member can work for the other project manager in the afternoon and the other project manager says it is OK for the team member to work for you in the morning. The truth is you both wanted this person fulltime. The conflict resolution approach you have both used is:",
-      "options": {
-        "A": "Compromising",
-        "B": "Smoothing",
-        "C": "Confronting",
-        "D": "Forcing"
+      {
+        "number": 20,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "You are scheduling an activity which involves a government agency. What type of dependency are you working with?",
+        "options": {
+          "A": "Discretionary",
+          "B": "Internal",
+          "C": "Mandatory",
+          "D": "External"
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 5: Phân Loại Quan Hệ Phụ Thuộc (Dependency Types)]:\n• Từ khóa nhận diện: \"activity which involves a government agency\"\n• Bí quyết giải: Dính tới cơ quan công quyền / nhà nước ➔ External dependency.\n• Đáp án chuẩn: [D] External (D)\n• Nguồn đề gốc: Trích từ đề FESP24 1814 (Câu 34)",
+        "imagePath": "PMG201c_FESP24_1814/Cau_34.webp",
+        "sourceExam": "PMG201c_FESP24_1814",
+        "sourceIndex": 34
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CONFLICT RESOLUTION]:\n• Từ khóa: 'Morning & Afternoon (Cưa đôi mỗi bên nửa buổi)' ➔ Compromising (Thỏa hiệp, mỗi bên nhượng bộ một phần).\n• Đáp án chuẩn: [A] Compromising\n• Nguồn gốc: Trích từ đề PMG201c_SU25_RE_4834 (Câu 20)",
-      "imagePath": "PMG201c_SU25_RE_4834/Cau_20.webp",
-      "sourceExam": "PMG201c_SU25_RE_4834",
-      "sourceIndex": 20
-    },
-    {
-      "number": 21,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You and another project manager disagree over whether a team member should work on your team or on her team. You decide that the team member can work for the other project manager and suppose that the other project manager will support you in the future. The truth is you wanted this person working on your project. The conflict resolution approach you have used is:",
-      "options": {
-        "A": "Compromising",
-        "B": "Smoothing",
-        "C": "Confronting",
-        "D": "Forcing"
+      {
+        "number": 21,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "You and another project manager disagree over whether a team member should work on your team or on her team. You decide that the team member can work for the other project manager in the afternoon and the other project manager says it is OK for the team member to work for you in the morning. The truth is you both wanted this person fulltime. The conflict resolution approach you have both used is:",
+        "options": {
+          "A": "Compromising",
+          "B": "Smoothing",
+          "C": "Confronting",
+          "D": "Forcing"
+        },
+        "answer": [
+          "A"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 6: Phương Pháp Giải Quyết Xung Đột (Conflict Resolution)]:\n• Từ khóa nhận diện: \"work in the morning and afternoon (cưa đôi mỗi bên nửa ngày)\"\n• Bí quyết giải: Mỗi bên chịu thiệt nhượng bộ một nửa để chia sẻ nguồn lực ➔ Compromising (Thỏa hiệp - Đáp án A).\n• Đáp án chuẩn: [A] Compromising (A)\n• Nguồn đề gốc: Trích từ đề SU25 RE 4834 (Câu 20)",
+        "imagePath": "PMG201c_SU25_RE_4834/Cau_20.webp",
+        "sourceExam": "PMG201c_SU25_RE_4834",
+        "sourceIndex": 20
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CONFLICT RESOLUTION]:\n• Từ khóa: 'Nhường người với hy vọng sau này được hỗ trợ lại' ➔ Smoothing / Accommodating (Xoa dịu / Nhượng bộ giữ hòa khí).\n• Đáp án chuẩn: [B] Smoothing\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 36)",
-      "imagePath": "PMG201c_FA2024_FE_3127/Cau_36.webp",
-      "sourceExam": "PMG201c_FA2024_FE_3127",
-      "sourceIndex": 36
-    },
-    {
-      "number": 22,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Which one of these should be the view of conflict?",
-      "options": {
-        "A": "Caused by troublemakers",
-        "B": "Often beneficial",
-        "C": "Should be avoided",
-        "D": "Must be suppressed"
+      {
+        "number": 22,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "You and another project manager disagree over whether a team member should work on your team or on her team. You decide that the team member can work for the other project manager and suppose that the other project manager will support you in the future. The truth is you wanted this person working on your project. The conflict resolution approach you have used is:",
+        "options": {
+          "A": "Compromising",
+          "B": "Smoothing",
+          "C": "Confronting",
+          "D": "Forcing"
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 6: Phương Pháp Giải Quyết Xung Đột (Conflict Resolution)]:\n• Từ khóa nhận diện: \"suppose that the other project manager will support you in the future\"\n• Bí quyết giải: Nhường hẳn nhân sự cho đối phương để giữ hòa khí và hy vọng tương lai được hỗ trợ lại ➔ Smoothing / Accommodating (Xoa dịu / Nhượng bộ - Đáp án B).\n• Đáp án chuẩn: [B] Smoothing (B)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 36)",
+        "imagePath": "PMG201c_FA2024_FE_3127/Cau_36.webp",
+        "sourceExam": "PMG201c_FA2024_FE_3127",
+        "sourceIndex": 36
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CONFLICT RESOLUTION]:\n• Từ khóa: 'Correct view of conflict' ➔ Xung đột là tự nhiên và tất yếu (Conflict is inevitable / natural).\n• Đáp án chuẩn: [B] Often beneficial\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 34)",
-      "imagePath": "PMG201c_FA2024_FE_3127/Cau_34.webp",
-      "sourceExam": "PMG201c_FA2024_FE_3127",
-      "sourceIndex": 34
-    },
-    {
-      "number": 23,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Which one of these is not the major source of conflict that a project manager may influence?",
-      "options": {
-        "A": "Project management",
-        "B": "Project priorities",
-        "C": "Project team",
-        "D": "Project resources"
+      {
+        "number": 23,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "If \"review online modules\" needs to begin before \"develop online modules” can finish, that is called a:",
+        "options": {
+          "A": "Finish to start relationship.",
+          "B": "Start to finish relationship.",
+          "C": "Finish to finish relationship.",
+          "D": "Start to start relationship."
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 7: Mối Quan Hệ Thứ Tự PDM (Precedence Diagramming Method)]:\n• Từ khóa nhận diện: \"review needs to BEGIN before develop can FINISH\"\n• Bí quyết giải: Bắt đầu cái này trước khi cái kia kết thúc ➔ Start to Finish (SF - Đáp án B).\n• Đáp án chuẩn: [B] Start to finish (B)\n• Nguồn đề gốc: Trích từ đề SU26 FEHCM 7269 (Câu 18)",
+        "imagePath": "PMG201c_SU26_FEHCM_7269/Cau_18.webp",
+        "sourceExam": "PMG201c_SU26_FEHCM_7269",
+        "sourceIndex": 18
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CONFLICT RESOLUTION]:\n• Từ khóa: 'Major source of conflict' ➔ Lịch trình và tài nguyên (Schedules and priorities / resources).\n• Đáp án chuẩn: [A] Project management\n• Nguồn gốc: Trích từ đề PMG201c_SU26_FE_7251 (Câu 31)",
-      "imagePath": "PMG201c_SU26_FE_7251/Cau_31.webp",
-      "sourceExam": "PMG201c_SU26_FE_7251",
-      "sourceIndex": 31
-    },
-    {
-      "number": 24,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Which one of these is not the approaches to conflict discussed in the Project Human Resources Management Lesson?",
-      "options": {
-        "A": "Confronting",
-        "B": "Compromising",
-        "C": "Smoothing",
-        "D": "Forcing",
-        "E": "Avoiding",
-        "F": "Challenging"
+      {
+        "number": 24,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "If \"develop online modules\" needs to begin before \"review online modules\" can begin, that is called a",
+        "options": {
+          "A": "Finish to start relationship.",
+          "B": "Start to finish relationship.",
+          "C": "Finish to finish relationship.",
+          "D": "Start to start relationship."
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 7: Mối Quan Hệ Thứ Tự PDM (Precedence Diagramming Method)]:\n• Từ khóa nhận diện: \"develop needs to BEGIN before review can BEGIN\"\n• Bí quyết giải: Bắt đầu cái này trước khi cái kia bắt đầu ➔ Start to Start (SS - Đáp án D).\n• Đáp án chuẩn: [D] Start to start (D)\n• Nguồn đề gốc: Trích từ đề FA25 RE 5711 (Câu 14)",
+        "imagePath": "PMG201c_FA25_RE_5711/Cau_14.webp",
+        "sourceExam": "PMG201c_FA25_RE_5711",
+        "sourceIndex": 14
       },
-      "answer": [
-        "F"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CONFLICT RESOLUTION]:\n• Từ khóa: 'NOT an approach to conflict' ➔ Bất kỳ phương pháp nào ngoài 5 cách PMBOK (Confronting, Compromising, Smoothing, Forcing, Avoiding).\n• Đáp án chuẩn: [F] Challenging\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_RE_3167 (Câu 48)",
-      "imagePath": "PMG201c_FA2024_RE_3167/Cau_48.webp",
-      "sourceExam": "PMG201c_FA2024_RE_3167",
-      "sourceIndex": 48
-    },
-    {
-      "number": 25,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Downward communication is communication to/from:",
-      "options": {
-        "A": "Your senior management.",
-        "B": "Your social groups.",
-        "C": "Your direct reports.",
-        "D": "Your peers."
+      {
+        "number": 25,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "if 'develop online modules' needs to finish before 'review online modules' can finish, that is called a",
+        "options": {
+          "A": "Finish to start relationship.",
+          "B": "Start to start relationship.",
+          "C": "Start to finish relationship.",
+          "D": "Finish to finish relationship."
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 7: Mối Quan Hệ Thứ Tự PDM (Precedence Diagramming Method)]:\n• Từ khóa nhận diện: \"develop needs to FINISH before review can FINISH\"\n• Bí quyết giải: Kết thúc cái này trước khi cái kia kết thúc ➔ Finish to Finish (FF - Đáp án D).\n• Đáp án chuẩn: [D] Finish to finish (D)\n• Nguồn đề gốc: Trích từ đề FE SU2023 646 (Câu 5)",
+        "imagePath": "PMG201c_FE_SU2023_646/Cau_05.webp",
+        "sourceExam": "PMG201c_FE_SU2023_646",
+        "sourceIndex": 5
       },
-      "answer": [
-        "C"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - COMMUNICATION FLOW]:\n• Từ khóa: 'Downward (Đi xuống)' ➔ Truyền đạt cho cấp dưới trực tiếp (Your direct reports / subordinates).\n• Đáp án chuẩn: [C] Your direct reports.\n• Nguồn gốc: Trích từ đề PMG201c_SU26_FEHCM_7269 (Câu 40)",
-      "imagePath": "PMG201c_SU26_FEHCM_7269/Cau_40.webp",
-      "sourceExam": "PMG201c_SU26_FEHCM_7269",
-      "sourceIndex": 40
-    },
-    {
-      "number": 26,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Upward communication is communication to/from",
-      "options": {
-        "A": "Your senior management.",
-        "B": "Your social groups.",
-        "C": "Your direct reports.",
-        "D": "Your peers."
+      {
+        "number": 26,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "If the response you choose is to accept a risk this means that:",
+        "options": {
+          "A": "You actively do not consider the risk but establish contingency plan.",
+          "B": "You change your plans so that you eliminate the risk.",
+          "C": "You change your plan so that another party will be responsible for the risk.",
+          "D": "You create your plan to reduce the probability and/or the impact of the risk."
+        },
+        "answer": [
+          "A"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 8: Chiến Lược Ứng Phó Rủi Ro Tiêu Cực (Negative Risks / Threats)]:\n• Từ khóa nhận diện: \"accept a risk\"\n• Bí quyết giải: Chấp nhận rủi ro = Không chủ động thay đổi kế hoạch nhưng lập kế hoạch dự phòng (actively do not consider but establish contingency plan).\n• Đáp án chuẩn: [A] Accept (A)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 45)",
+        "imagePath": "PMG201c_FA2024_FE_3127/Cau_45.webp",
+        "sourceExam": "PMG201c_FA2024_FE_3127",
+        "sourceIndex": 45
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - COMMUNICATION FLOW]:\n• Từ khóa: 'Upward (Đi lên)' ➔ Báo cáo lên lãnh đạo cấp trên (Your senior management).\n• Đáp án chuẩn: [A] Your senior management.\n• Nguồn gốc: Trích từ đề PMG201c_SP26_RE_6506 (Câu 36)",
-      "imagePath": "PMG201c_SP26_RE_6506/Cau_36.webp",
-      "sourceExam": "PMG201c_SP26_RE_6506",
-      "sourceIndex": 36
-    },
-    {
-      "number": 27,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Lateral communication is communication to/from:",
-      "options": {
-        "A": "Your subordinates.",
-        "B": "Your functional management.",
-        "C": "Your line management.",
-        "D": "Your peers."
+      {
+        "number": 27,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "If the response you choose is to mitigate a risk this means that",
+        "options": {
+          "A": "You actively do not consider the risk but establish contingency plan.",
+          "B": "You change your plans so that you eliminate the risk.",
+          "C": "You change your plan so that another party will be responsible for the risk.",
+          "D": "You create your plan to reduce the probability and/or the impact of the risk."
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 8: Chiến Lược Ứng Phó Rủi Ro Tiêu Cực (Negative Risks / Threats)]:\n• Từ khóa nhận diện: \"mitigate a risk\"\n• Bí quyết giải: Giảm thiểu rủi ro = Giảm xác suất và/hoặc tác động (reduce probability and/or impact).\n• Đáp án chuẩn: [D] Mitigate (D)\n• Nguồn đề gốc: Trích từ đề SU25 FE 4759 (Câu 41)",
+        "imagePath": "PMG201c_SU25_FE_4759/Cau_41.webp",
+        "sourceExam": "PMG201c_SU25_FE_4759",
+        "sourceIndex": 41
       },
-      "answer": [
-        "D"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - COMMUNICATION FLOW]:\n• Từ khóa: 'Lateral (Ngang hàng)' ➔ Trao đổi cùng các đồng nghiệp ngang cấp (Your peers).\n• Đáp án chuẩn: [D] Your peers.\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 40)",
-      "imagePath": "PMG201c_FA2024_FE_3127/Cau_40.webp",
-      "sourceExam": "PMG201c_FA2024_FE_3127",
-      "sourceIndex": 40
-    },
-    {
-      "number": 28,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "true or false, a project manager spend most of his/her time communicating.",
-      "options": {
-        "A": "False",
-        "B": "True"
+      {
+        "number": 28,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "If the response you choose is to exploit a risk this means that:",
+        "options": {
+          "A": "You actively do not consider the risk but establish contingency plan.",
+          "B": "You add steps to your plans to make certain the opportunity is captured.",
+          "C": "You change your plan so that another party will be responsible for a partial amount of ownership of the opportunity.",
+          "D": "You create your plan to increase the probability and/or the impact of the opportunity."
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 9: Chiến Lược Ứng Phó Cơ Hội Tích Cực (Positive Risks / Opportunities)]:\n• Từ khóa nhận diện: \"exploit a risk / opportunity\"\n• Bí quyết giải: Khai thác cơ hội (Exploit) = Bổ sung các bước để chắc chắn 100% cơ hội xảy ra (make certain the opportunity is captured).\n• Đáp án chuẩn: [B] Exploit (B)\n• Nguồn đề gốc: Trích từ đề FA2024 RE 3167 (Câu 40)",
+        "imagePath": "PMG201c_FA2024_RE_3167/Cau_40.webp",
+        "sourceExam": "PMG201c_FA2024_RE_3167",
+        "sourceIndex": 40
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - COMMUNICATION FLOW]:\n• Từ khóa: 'Project manager spends 90% time' ➔ Giao tiếp (Communicating) là hoạt động chiếm nhiều thời gian nhất.\n• Đáp án chuẩn: [B] True\n• Nguồn gốc: Trích từ đề PMG201c_SU26_FE_7251 (Câu 34)",
-      "imagePath": "PMG201c_SU26_FE_7251/Cau_34.webp",
-      "sourceExam": "PMG201c_SU26_FE_7251",
-      "sourceIndex": 34
-    },
-    {
-      "number": 29,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "As you plan your project, the sponsor informed you that all team members will be assigned to your project for at most 50% of their available time. This is an example of:",
-      "options": {
-        "A": "Poor planni oi planning",
-        "B": "Wishful thinking oh",
-        "C": "A project demand.",
-        "D": "A constraint ="
+      {
+        "number": 29,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "If the response you choose is to enhance a risk this means that:",
+        "options": {
+          "A": "You actively do not consider the risk but establish contingency plan.",
+          "B": "You add steps to your plans to make certain the opportunity is captured.",
+          "C": "You change your plan so that another party will be responsible for a partial amount of ownership of the opportunity.",
+          "D": "You create your plan to increase the probability and/or the impact of the opportunity."
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 9: Chiến Lược Ứng Phó Cơ Hội Tích Cực (Positive Risks / Opportunities)]:\n• Từ khóa nhận diện: \"enhance a risk / opportunity\"\n• Bí quyết giải: Nâng cao cơ hội (Enhance) = Làm tăng xác suất và/hoặc tác động tích cực (increase the probability and/or impact).\n• Đáp án chuẩn: [D] Enhance (D)\n• Nguồn đề gốc: Trích từ đề SU26 FEHCM 7269 (Câu 45)",
+        "imagePath": "PMG201c_SU26_FEHCM_7269/Cau_45.webp",
+        "sourceExam": "PMG201c_SU26_FEHCM_7269",
+        "sourceIndex": 45
       },
-      "answer": [
-        "D"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CONSTRAINT VS ASSUMPTION]:\n• Từ khóa: 'Sponsor informed + At most 50%' ➔ A constraint (Ràng buộc do cấp trên quy định mức trần).\n• Đáp án chuẩn: [D] A constraint =\n• Nguồn gốc: Trích từ đề PMG201_TE2_SU2023_676 (Câu 45)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_45.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 45
-    },
-    {
-      "number": 30,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "As you plan your project, you do so thinking that all team members will be assigned to your project for at least 50% of their available time. This is an example of:",
-      "options": {
-        "A": "Poor planning.",
-        "B": "Wishful thinking.",
-        "C": "A project demand.",
-        "D": "An assumption."
+      {
+        "number": 30,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Downward communication is communication to/from:",
+        "options": {
+          "A": "Your senior management.",
+          "B": "Your social groups.",
+          "C": "Your direct reports.",
+          "D": "Your peers."
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 10: Chiều Hướng Giao Tiếp (Communication Flow)]:\n• Từ khóa nhận diện: \"Downward communication\"\n• Bí quyết giải: Giao tiếp từ trên xuống = Gửi cho cấp dưới trực tiếp (Your direct reports / subordinates).\n• Đáp án chuẩn: [C] Direct reports (C)\n• Nguồn đề gốc: Trích từ đề SU26 FEHCM 7269 (Câu 40)",
+        "imagePath": "PMG201c_SU26_FEHCM_7269/Cau_40.webp",
+        "sourceExam": "PMG201c_SU26_FEHCM_7269",
+        "sourceIndex": 40
       },
-      "answer": [
-        "D"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CONSTRAINT VS ASSUMPTION]:\n• Từ khóa: 'You thinking + At least 50%' ➔ An assumption (Giả định do bạn tự kỳ vọng).\n• Đáp án chuẩn: [D] An assumption.\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 12)",
-      "imagePath": "PMG201c_FA2024_FE_3127/Cau_12.webp",
-      "sourceExam": "PMG201c_FA2024_FE_3127",
-      "sourceIndex": 12
-    },
-    {
-      "number": 31,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Which of the following is NOT the disadvantage of bottom-up estimating?",
-      "options": {
-        "A": "Takes time and money to use this estimating technique",
-        "B": "Requires time to break the project down into smaller pieces",
-        "C": "Requires that the project be defined and well understood before estimating begins",
-        "D": "Less accurate"
+      {
+        "number": 31,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Upward communication is communication to/from",
+        "options": {
+          "A": "Your senior management.",
+          "B": "Your social groups.",
+          "C": "Your direct reports.",
+          "D": "Your peers."
+        },
+        "answer": [
+          "A"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 10: Chiều Hướng Giao Tiếp (Communication Flow)]:\n• Từ khóa nhận diện: \"Upward communication\"\n• Bí quyết giải: Giao tiếp từ dưới lên = Báo cáo ban lãnh đạo cấp cao (Your senior management).\n• Đáp án chuẩn: [A] Senior management (A)\n• Nguồn đề gốc: Trích từ đề SP26 RE 6506 (Câu 36)",
+        "imagePath": "PMG201c_SP26_RE_6506/Cau_36.webp",
+        "sourceExam": "PMG201c_SP26_RE_6506",
+        "sourceIndex": 36
       },
-      "answer": [
-        "D"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - ESTIMATING METHODS]:\n• Từ khóa: Bottom-up Estimating là phương pháp chính xác nhất (Most accurate) do đi từ gói công việc chi tiết lên. Vì vậy \"Less accurate\" không phải là nhược điểm mà là sai bản chất của Bottom-up.\n• Đáp án chuẩn: [D] Less accurate\n• Nguồn gốc: Trích từ đề PMG201c_SU2024_1_2527 (Câu 25)",
-      "imagePath": "PMG201c_SU2024_1_2527/Cau_25.webp",
-      "sourceExam": "PMG201c_SU2024_1_2527",
-      "sourceIndex": 25
-    },
-    {
-      "number": 32,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "An estimate created by looking at a similar project or activity and then adding or subtracting to or from the estimate based on the differences between the two is called:",
-      "options": {
-        "A": "Parametric estimating",
-        "B": "Analogous estimating",
-        "C": "Bottom-up estimating",
-        "D": "Exact estimating"
+      {
+        "number": 32,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Lateral communication is communication to/from:",
+        "options": {
+          "A": "Your subordinates.",
+          "B": "Your functional management.",
+          "C": "Your line management.",
+          "D": "Your peers."
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 10: Chiều Hướng Giao Tiếp (Communication Flow)]:\n• Từ khóa nhận diện: \"Lateral communication\"\n• Bí quyết giải: Giao tiếp ngang hàng = Trao đổi cùng đồng nghiệp ngang cấp (Your peers).\n• Đáp án chuẩn: [D] Peers (D)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 40)",
+        "imagePath": "PMG201c_FA2024_FE_3127/Cau_40.webp",
+        "sourceExam": "PMG201c_FA2024_FE_3127",
+        "sourceIndex": 40
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - ESTIMATING METHODS]:\n• Từ khóa: 'Similar project cộng trừ sai khác' ➔ Analogous Estimating (Ước tính tương tự).\n• Đáp án chuẩn: [B] Analogous estimating\n• Nguồn gốc: Trích từ đề PMG201c_SU25_RE_4834 (Câu 27)",
-      "imagePath": "PMG201c_SU25_RE_4834/Cau_27.webp",
-      "sourceExam": "PMG201c_SU25_RE_4834",
-      "sourceIndex": 27
-    },
-    {
-      "number": 33,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "A past project took 20,000 hours to complete. Your new project is adding some additional scope and that scope is estimated to take 10,000 additional hours. There is some work that was completed in the previous project that will not be completed in this project. That work is estimated at 5,000 hours. Labor rates have increased 10%, the old rate was $25 per hour. Your estimate for the new project is $687,500. Which estimating method is used?",
-      "options": {
-        "A": "Parametric estimating",
-        "B": "Analogous estimating",
-        "C": "Bottom-up estimating",
-        "D": "Three-point estimating"
+      {
+        "number": 33,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Your project has a team of which consists of yourself, a tester, five developers and a communicator. How many communication channels on your team?",
+        "options": {
+          "A": "8",
+          "B": "9",
+          "C": "28",
+          "D": "36"
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 11: Tính Số Kênh Giao Tiếp [ N*(N-1)/2 ]]:\n• Từ khóa nhận diện: \"yourself + tester + 5 devs + communicator = 8 người\"\n• Bí quyết giải: N = 8 người ➔ Công thức 8 * 7 / 2 = 28 kênh giao tiếp (Đáp án C).\n• Đáp án chuẩn: [C] 28 channels (C)\n• Nguồn đề gốc: Trích từ đề FA2024 RE 3167 (Câu 33)",
+        "imagePath": "PMG201c_FA2024_RE_3167/Cau_33.webp",
+        "sourceExam": "PMG201c_FA2024_RE_3167",
+        "sourceIndex": 33
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - ESTIMATING METHODS]:\n• Từ khóa: 'Toán học nhân đơn giá ($25/h x giờ)' ➔ Parametric / Analogous (Ước tính tham số).\n• Đáp án chuẩn: [A] Parametric estimating\n• Nguồn gốc: Trích từ đề PMG201c_SU26_FEHCM_7269 (Câu 23)",
-      "imagePath": "PMG201c_SU26_FEHCM_7269/Cau_23.webp",
-      "sourceExam": "PMG201c_SU26_FEHCM_7269",
-      "sourceIndex": 23
-    },
-    {
-      "number": 34,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The team is helping the project manager to estimate activities on their project. There are several activities they need to estimate that have not been previously done by the company. What is the best method of estimating these activities?",
-      "options": {
-        "A": "Top-down estimating",
-        "B": "Three-point estimating",
-        "C": "Parametric estimating",
-        "D": "Bottom-up estimating"
+      {
+        "number": 34,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Your project had a team of which consists of yourself, a tester, five developers and a communicator. As the project is behind schedule so one more developer has been assigned to your team. How many communication channels on your team now?",
+        "options": {
+          "A": "8",
+          "B": "9",
+          "C": "28",
+          "D": "36"
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 11: Tính Số Kênh Giao Tiếp [ N*(N-1)/2 ]]:\n• Từ khóa nhận diện: \"thêm 1 developer vì chậm tiến độ = 9 người\"\n• Bí quyết giải: N = 9 người ➔ Công thức 9 * 8 / 2 = 36 kênh giao tiếp (Đáp án D).\n• Đáp án chuẩn: [D] 36 channels (D)\n• Nguồn đề gốc: Trích từ đề SP26 RE 6506 (Câu 37)",
+        "imagePath": "PMG201c_SP26_RE_6506/Cau_37.webp",
+        "sourceExam": "PMG201c_SP26_RE_6506",
+        "sourceIndex": 37
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - ESTIMATING METHODS]:\n• Từ khóa: 'Chưa từng làm bao giờ (nhiều ẩn số)' ➔ Three-point Estimating (Ước tính 3 điểm: O, P, M).\n• Đáp án chuẩn: [B] Three-point estimating\n• Nguồn gốc: Trích từ đề PMG201c_SU26_FE_7251 (Câu 48)",
-      "imagePath": "PMG201c_SU26_FE_7251/Cau_48.webp",
-      "sourceExam": "PMG201c_SU26_FE_7251",
-      "sourceIndex": 48
-    },
-    {
-      "number": 35,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Your Schedule Performance Index (SPI) is greater than 1 means you are:",
-      "options": {
-        "A": "on schedule.",
-        "B": "behind schedule.",
-        "C": "ahead of schedule."
+      {
+        "number": 35,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "As you plan your project, the sponsor informed you that all team members will be assigned to your project for at most 50% of their available time. This is an example of:",
+        "options": {
+          "A": "Poor planning. as planning,",
+          "B": "Wishful thinking. Ob",
+          "C": "A project demand.",
+          "D": "A constraint. ="
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 12: Ràng Buộc (Constraint) vs Giả Định (Assumption)]:\n• Từ khóa nhận diện: \"sponsor informed you: assigned AT MOST 50%\"\n• Bí quyết giải: Nhà tài trợ áp đặt mức trần tối đa không được vượt quá ➔ Ràng buộc do cấp trên đặt ra: A constraint (Đáp án D).\n• Đáp án chuẩn: [D] A constraint (D)\n• Nguồn đề gốc: Trích từ đề RESP24 1862 (Câu 37)",
+        "imagePath": "PMG201c_RESP24_1862/Cau_37.webp",
+        "sourceExam": "PMG201c_RESP24_1862",
+        "sourceIndex": 37
       },
-      "answer": [
-        "C"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - EVM INDICES]:\n• Từ khóa: 'SPI > 1' ➔ Nhanh hơn tiến độ (Ahead of schedule).\n• Đáp án chuẩn: [C] ahead of schedule.\n• Nguồn gốc: Trích từ đề PMG201c_SP2025_FE_3814 (Câu 28)",
-      "imagePath": "PMG201c_SP2025_FE_3814/Cau_28.webp",
-      "sourceExam": "PMG201c_SP2025_FE_3814",
-      "sourceIndex": 28
-    },
-    {
-      "number": 36,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "Your Schedule Performance Index (SPI) is lesser than 1 means you are:",
-      "options": {
-        "A": "on schedule.",
-        "B": "behind schedule.",
-        "C": "ahead of schedule."
+      {
+        "number": 36,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "As you plan your project, you do so thinking that all team members will be assigned to your project for at least 50% of their available time. This is an example of:",
+        "options": {
+          "A": "Poor planning.",
+          "B": "Wishful thinking.",
+          "C": "A project demand.",
+          "D": "An assumption."
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 12: Ràng Buộc (Constraint) vs Giả Định (Assumption)]:\n• Từ khóa nhận diện: \"you do so thinking that: assigned AT LEAST 50%\"\n• Bí quyết giải: Bạn tự suy nghĩ/kỳ vọng trong lúc lên kế hoạch mà chưa được xác thực ➔ Giả định của bạn: An assumption (Đáp án D).\n• Đáp án chuẩn: [D] An assumption (D)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 12)",
+        "imagePath": "PMG201c_FA2024_FE_3127/Cau_12.webp",
+        "sourceExam": "PMG201c_FA2024_FE_3127",
+        "sourceIndex": 12
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - EVM INDICES]:\n• Từ khóa: 'SPI < 1' ➔ Chậm hơn tiến độ (Behind schedule).\n• Đáp án chuẩn: [B] behind schedule.\n• Nguồn gốc: Trích từ đề PMG201_TE2_SU2023_676 (Câu 33)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_33.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 33
-    },
-    {
-      "number": 37,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "You have a project to build a new fence. The fence will form a square. Each side is to take one day to build, and $1,000 has been budgeted per side. The sides are planned to be completed one after the other. Today is the end of day 3. Using the following project status chart to calculate project current SV:",
-      "options": {
-        "A": "SV = -$500",
-        "B": "SV = -$300",
-        "C": "SV = -$200",
-        "D": "SV = $200",
-        "E": "SV = $500",
-        "F": "SV = $300"
+      {
+        "number": 37,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "An estimate created by looking at a similar project or activity and then adding or subtracting to or from the estimate based on the differences between the two is called:",
+        "options": {
+          "A": "Parametric estimating",
+          "B": "Analogous estimating",
+          "C": "Bottom-up estimating",
+          "D": "Exact estimating"
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 13: Phương Pháp Ước Tính (Estimating Techniques)]:\n• Từ khóa nhận diện: \"looking at a similar project and adding or subtracting\"\n• Bí quyết giải: Dựa vào dự án tương tự trong quá khứ rồi cộng trừ điều chỉnh ➔ Analogous estimating (Ước tính tương tự - Đáp án B).\n• Đáp án chuẩn: [B] Analogous (B)\n• Nguồn đề gốc: Trích từ đề FESP24 1814 (Câu 50)",
+        "imagePath": "PMG201c_FESP24_1814/Cau_50.webp",
+        "sourceExam": "PMG201c_FESP24_1814",
+        "sourceIndex": 50
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - EVM INDICES]:\n• Từ khóa: 'CV = EV - AC' (Âm là vượt chi phí, Dương là tiết kiệm) | 'SV = EV - PV' (Âm là chậm tiến độ, Dương là nhanh).\n• Đáp án chuẩn: [A] SV = -$500\n• Nguồn gốc: Trích từ đề PMG201c_SU26_FE_7251 (Câu 49)",
-      "imagePath": "PMG201c_SU26_FE_7251/Cau_49.webp",
-      "sourceExam": "PMG201c_SU26_FE_7251",
-      "sourceIndex": 49
-    },
-    {
-      "number": 38,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: Earned value integrates quality, scope and schedule and uses monetary values to assess project status.",
-      "options": {
-        "A": "False",
-        "B": "True"
+      {
+        "number": 38,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "A past project took 20,000 hours to complete. Your new project is adding some additional scope and that scope is estimated to take 10,000 additional hours. There is some work that was completed in the previous project that will not be completed in this project. That work is estimated at 5,000 hours. Labor rates have increased 10%, the old rate was $25 per hour. Your estimate for the new project is $687,500. Which estimating method is used?",
+        "options": {
+          "A": "Parametric estimating",
+          "B": "Analogous estimating",
+          "C": "Bottom-up estimating",
+          "D": "Three-point estimating"
+        },
+        "answer": [
+          "A"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 13: Phương Pháp Ước Tính (Estimating Techniques)]:\n• Từ khóa nhận diện: \"20,000 hours, 25% larger, $25 per hour\"\n• Bí quyết giải: Có tham số toán học và đơn giá nhân chia cụ thể ($25/h) ➔ Parametric estimating (Ước tính tham số - Đáp án A).\n• Đáp án chuẩn: [A] Parametric (A)\n• Nguồn đề gốc: Trích từ đề SU26 FEHCM 7269 (Câu 23)",
+        "imagePath": "PMG201c_SU26_FEHCM_7269/Cau_23.webp",
+        "sourceExam": "PMG201c_SU26_FEHCM_7269",
+        "sourceIndex": 23
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - EVM INDICES]:\n• Từ khóa: 'Earned value integrates' ➔ Tích hợp Scope, Schedule và Cost (Budget).\n• Đáp án chuẩn: [A] False\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 27)",
-      "imagePath": "PMG201c_FA2024_FE_3127/Cau_27.webp",
-      "sourceExam": "PMG201c_FA2024_FE_3127",
-      "sourceIndex": 27
-    },
-    {
-      "number": 39,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: Performing quality assurance within the context of a project involves applying the planned, systematic quality activities to ensure that the project correctly employs all processes needed to meet project objectives and product requirements.",
-      "options": {
-        "A": "False",
-        "B": "True [="
+      {
+        "number": 39,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "The team is helping the project manager to estimate activities on their project. There are several activities they need to estimate that have not been previously done by the company. What is the best method of estimating these activities?",
+        "options": {
+          "A": "Top-down estimating",
+          "B": "Three-point estimating",
+          "C": "Parametric estimating",
+          "D": "Bottom-up estimating"
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 13: Phương Pháp Ước Tính (Estimating Techniques)]:\n• Từ khóa nhận diện: \"NOT been previously done by company\"\n• Bí quyết giải: Công ty chưa từng làm bao giờ, độ bất định cao ➔ Ước tính 3 điểm: Three-point estimating (Optimistic, Most Likely, Pessimistic - Đáp án B).\n• Đáp án chuẩn: [B] Three-point (B)\n• Nguồn đề gốc: Trích từ đề SU26 FE 7251 (Câu 48)",
+        "imagePath": "PMG201c_SU26_FE_7251/Cau_48.webp",
+        "sourceExam": "PMG201c_SU26_FE_7251",
+        "sourceIndex": 48
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - QUALITY QA VS QC]:\n• Từ khóa: 'Quality Assurance (QA)' ➔ Tập trung vào quy trình (Processes) để ngăn ngừa sai sót.\n• Đáp án chuẩn: [B] True [=\n• Nguồn gốc: Trích từ đề PMG201_TE2_SU2023_676 (Câu 10)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_10.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 10
-    },
-    {
-      "number": 40,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: Performing quality control within the context of a project involves applying the planned, systematic quality activities to ensure that the project correctly employs all processes needed to meet project objectives and product requirements.",
-      "options": {
-        "A": "False",
-        "B": "True eck"
+      {
+        "number": 40,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Your Schedule Performance Index (SPI) is greater than 1 means you are:",
+        "options": {
+          "A": "on schedule.",
+          "B": "behind schedule.",
+          "C": "ahead of schedule."
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 14: Chỉ Số Tiến Độ SPI (Schedule Performance Index)]:\n• Từ khóa nhận diện: \"SPI is greater than 1 (> 1)\"\n• Bí quyết giải: SPI > 1 là tiến độ vượt kỳ vọng ➔ ahead of schedule (Trước tiến độ - Đáp án C).\n• Đáp án chuẩn: [C] ahead of schedule (C)\n• Nguồn đề gốc: Trích từ đề FE SU2023 646 (Câu 27)",
+        "imagePath": "PMG201c_FE_SU2023_646/Cau_27.webp",
+        "sourceExam": "PMG201c_FE_SU2023_646",
+        "sourceIndex": 27
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - QUALITY QA VS QC]:\n• Từ khóa: 'Quality Control (QC)' ➔ Tập trung vào sản phẩm bàn giao (Deliverables) để phát hiện và loại bỏ lỗi.\n• Đáp án chuẩn: [A] False\n• Nguồn gốc: Trích từ đề PMG201_TE2_SU2023_676 (Câu 28)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_28.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 28
-    },
-    {
-      "number": 41,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: Product quality focuses on the project management processes used to meet project objectives.",
-      "options": {
-        "A": "False (©",
-        "B": "True se"
+      {
+        "number": 41,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Your Schedule Performance Index (SPI) is greater than 1 means you are:",
+        "options": {
+          "A": "on schedule.",
+          "B": "behind schedule.",
+          "C": "ahead of schedule."
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 14: Chỉ Số Tiến Độ SPI (Schedule Performance Index)]:\n• Từ khóa nhận diện: \"SPI is lesser than 1 (< 1)\"\n• Bí quyết giải: SPI < 1 là tiến độ chậm ➔ behind schedule (Sau tiến độ / trễ - Đáp án B).\n• Đáp án chuẩn: [C] behind schedule (B)\n• Nguồn đề gốc: Trích từ đề SP2025 FE 3814 (Câu 28)",
+        "imagePath": "PMG201c_SP2025_FE_3814/Cau_28.webp",
+        "sourceExam": "PMG201c_SP2025_FE_3814",
+        "sourceIndex": 28
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - QUALITY QA VS QC]:\n• Từ khóa: 'Product quality focuses on processes' ➔ FALSE (Product quality tập trung vào sản phẩm, Project quality mới tập trung vào quy trình).\n• Đáp án chuẩn: [A] False (©\n• Nguồn gốc: Trích từ đề PMG201_TE2_SU2023_676 (Câu 49)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_49.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 49
-    },
-    {
-      "number": 42,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: The Process Improvement Plan is a component of the project management plan that details how project management and development processes are to be analyzed in order to identify how to reduce their value.",
-      "options": {
-        "A": "False",
-        "B": "True"
+      {
+        "number": 42,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Your Cost Performance Index (CPI) is greater than 1 means you are:",
+        "options": {
+          "A": "on budget",
+          "B": "under budget",
+          "C": "over budget"
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 15: Chỉ Số Chi Phí CPI (Cost Performance Index)]:\n• Từ khóa nhận diện: \"CPI is greater than 1 (> 1)\"\n• Bí quyết giải: CPI > 1 là chi phí tốt, ít tốn kém hơn kế hoạch ➔ under budget (Dưới ngân sách / Tiết kiệm - Đáp án B).\n• Đáp án chuẩn: [B] under budget (B)\n• Nguồn đề gốc: Trích từ đề FE FA2023 1189 (Câu 50)",
+        "imagePath": "PMG201c_FE_FA2023_1189/Cau_50.webp",
+        "sourceExam": "PMG201c_FE_FA2023_1189",
+        "sourceIndex": 50
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - QUALITY QA VS QC]:\n• Từ khóa: 'Process Improvement Plan' ➔ Kế hoạch phân tích quy trình để gia tăng giá trị (Increase their value).\n• Đáp án chuẩn: [A] False\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 30)",
-      "imagePath": "PMG201c_FA2024_FE_3127/Cau_30.webp",
-      "sourceExam": "PMG201c_FA2024_FE_3127",
-      "sourceIndex": 30
-    },
-    {
-      "number": 43,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: The Backward Pass is used through the activities to determine the critical path & available float of the project.",
-      "options": {
-        "A": "True",
-        "B": "False"
+      {
+        "number": 43,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "Your Cost Performance Index (CPI) is lesser than 1 means you are:",
+        "options": {
+          "A": "on budget.",
+          "B": "under budget.",
+          "C": "over budget."
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 15: Chỉ Số Chi Phí CPI (Cost Performance Index)]:\n• Từ khóa nhận diện: \"CPI is lesser than 1 (< 1)\"\n• Bí quyết giải: CPI < 1 là chi phí tệ, tiêu hao vượt kế hoạch ➔ over budget (Vượt ngân sách - Đáp án C).\n• Đáp án chuẩn: [C] over budget (C)\n• Nguồn đề gốc: Trích từ đề FA2024 RE 3167 (Câu 49)",
+        "imagePath": "PMG201c_FA2024_RE_3167/Cau_49.webp",
+        "sourceExam": "PMG201c_FA2024_RE_3167",
+        "sourceIndex": 49
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - SCHEDULE & CRITICAL PATH]:\n• Từ khóa: 'Backward Pass' ➔ Dùng để tính Late Start (LS), Late Finish (LF) và độ trễ (Float/Slack).\n• Đáp án chuẩn: [A] True\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_RE_3167 (Câu 12)",
-      "imagePath": "PMG201c_FA2024_RE_3167/Cau_12.webp",
-      "sourceExam": "PMG201c_FA2024_RE_3167",
-      "sourceIndex": 12
-    },
-    {
-      "number": 44,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: If \"develop online modules\" needs to finish before \"review online modules\" can finish, that is called a finish to finish relationship.",
-      "options": {
-        "A": "True",
-        "B": "False"
+      {
+        "number": 44,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "We discussed three types of matrix organizations, they are:",
+        "options": {
+          "A": "Light, Medium and Heavy",
+          "B": "Weak, Medium Strength and Strong",
+          "C": "Weak, Balanced and Strong",
+          "D": "Light, Mid-strength and Strong. Bt"
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 16: Mô Hình Tổ Chức Ma Trận (Matrix Organizations)]:\n• Từ khóa nhận diện: \"three types of matrix organizations, they are:\"\n• Bí quyết giải: 3 dạng tổ chức ma trận trong giáo trình PMBOK là: Weak, Balanced and Strong (Đáp án C).\n• Đáp án chuẩn: [C] Weak, Balanced and Strong (C)\n• Nguồn đề gốc: Trích từ đề TE2 SU2023 676 (Câu 7)",
+        "imagePath": "PMG201_TE2_SU2023_676/Cau_07.webp",
+        "sourceExam": "PMG201_TE2_SU2023_676",
+        "sourceIndex": 7
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - SCHEDULE & CRITICAL PATH]:\n• Từ khóa: 'Cùng kết thúc' ➔ Finish-to-Finish (FF) relationship.\n• Đáp án chuẩn: [A] True\n• Nguồn gốc: Trích từ đề PMG201c_FA2024_FE_3127 (Câu 18)",
-      "imagePath": "PMG201c_FA2024_FE_3127/Cau_18.webp",
-      "sourceExam": "PMG201c_FA2024_FE_3127",
-      "sourceIndex": 18
-    },
-    {
-      "number": 45,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The network diagram can be used to:",
-      "options": {
-        "A": "Control the cost performance of the project",
-        "B": "Show project schedule performance over time",
-        "C": "Identify project resource requirements",
-        "D": "Identify opportunities to compress the project schedule",
-        "E": "Help to justify project quality metrics"
+      {
+        "number": 45,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "We discussed three types of matrix organizations, the not mentioned one is:",
+        "options": {
+          "A": "Medium Matrix",
+          "B": "Weak Matrix",
+          "C": "Balanced Matrix",
+          "D": "Strong Matrix"
+        },
+        "answer": [
+          "A"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 16: Mô Hình Tổ Chức Ma Trận (Matrix Organizations)]:\n• Từ khóa nhận diện: \"the NOT mentioned one is:\"\n• Bí quyết giải: Loại KHÔNG ĐƯỢC đề cập trong 3 loại ma trận là: Medium Matrix (Không có khái niệm ma trận vừa - Đáp án A).\n• Đáp án chuẩn: [A] Medium Matrix (A)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 2)",
+        "imagePath": "PMG201c_FA2024_FE_3127/Cau_02.webp",
+        "sourceExam": "PMG201c_FA2024_FE_3127",
+        "sourceIndex": 2
       },
-      "answer": [
-        "D"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - SCHEDULE & CRITICAL PATH]:\n• Từ khóa: 'Network diagram' ➔ Thể hiện mối quan hệ tuần tự giữa các công việc (Sequence activities).\n• Đáp án chuẩn: [D] Identify opportunities to compress the project schedule\n• Nguồn gốc: Trích từ đề PMG201c_SU26_FE_7251 (Câu 13)",
-      "imagePath": "PMG201c_SU26_FE_7251/Cau_13.webp",
-      "sourceExam": "PMG201c_SU26_FE_7251",
-      "sourceIndex": 13
-    },
-    {
-      "number": 46,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "True or False: Authority means you have the right to apply resources, make decisions and give approvals",
-      "options": {
-        "A": "False",
-        "B": "True ="
+      {
+        "number": 46,
+        "type": "multi",
+        "instruction": "(Choose 2 answers)",
+        "question": "A cost can be either direct or indirect. Which of the following statements are correct ?",
+        "options": {
+          "A": "Direct costs: These costs are directly attributable to the work on the project. Examples are team wages, team travel and recognition expenses, and costs of material used on the project.",
+          "B": "Indirect costs: These costs are overhead items or costs incurred for the benefit of more than one project. Examples include taxes, fringe benefits, and janitorial services",
+          "C": "Indirect costs: These costs are directly attributable to the work on the project. Examples are team wages, team travel and recognition expenses, and costs of material used on the project.",
+          "D": "Direct costs: These costs are overhead items or costs incurred for the benefit of more than one project. Examples include taxes, fringe benefits, and janitorial services"
+        },
+        "answer": [
+          "A",
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 17: Phân Loại Chi Phí (Cost Categories: Direct/Indirect & Variable/Fixed)]:\n• Từ khóa nhận diện: \"A cost can be either direct or indirect\"\n• Bí quyết giải: Direct cost: gắn trực tiếp vào công việc dự án (lương, vật liệu). Indirect cost: chi phí chung/overhead (thuế, điện, mặt bằng) (Đáp án A, B).\n• Đáp án chuẩn: [A, B] Direct: attributable, Indirect: overhead (A, B)\n• Nguồn đề gốc: Trích từ đề SP26 FE 6358 (Câu 3)",
+        "imagePath": "PMG201c_SP26_FE_6358/Cau_03.webp",
+        "sourceExam": "PMG201c_SP26_FE_6358",
+        "sourceIndex": 3
       },
-      "answer": [
-        "B"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CHARTER & BASELINE]:\n• Từ khóa: 'Authority' ➔ Quyền sử dụng tài nguyên, ra quyết định và phê duyệt (Apply resources, make decisions).\n• Đáp án chuẩn: [B] True =\n• Nguồn gốc: Trích từ đề PMG201_TE2_SU2023_676 (Câu 19)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_19.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 19
-    },
-    {
-      "number": 47,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The work breakdown structure can best be thought of as an effective aid for communications",
-      "options": {
-        "A": "Team",
-        "B": "Project manager",
-        "C": "Customer",
-        "D": "Stakeholders"
+      {
+        "number": 47,
+        "type": "multi",
+        "instruction": "(Choose 2 answers)",
+        "question": "A cost can be either variable or fixed. Which of the following statements are correct (choose 2 answers)?",
+        "options": {
+          "A": "Variable costs: These costs change with the amount of production. Examples include the cost of material, supplies, and wages.",
+          "B": "Fixed costs: These costs do not change as production changes. Examples include the cost of setup, rent, utilities, etc.",
+          "C": "Fixed costs: These costs change with the amount of production. Examples include the cost of material, supplies, and wages.",
+          "D": "Variable costs: These costs do not change as production changes. Examples include the cost of setup, rent, utilities, etc."
+        },
+        "answer": [
+          "A",
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 17: Phân Loại Chi Phí (Cost Categories: Direct/Indirect & Variable/Fixed)]:\n• Từ khóa nhận diện: \"A cost can be either variable or fixed\"\n• Bí quyết giải: Variable cost: thay đổi theo sản lượng (nguyên vật liệu). Fixed cost: không đổi theo sản lượng (tiền thuê nhà, khấu hao) (Đáp án A, B).\n• Đáp án chuẩn: [A, B] Variable: changes, Fixed: does not change (A, B)\n• Nguồn đề gốc: Trích từ đề SU25 FE 4759 (Câu 18)",
+        "imagePath": "PMG201c_SU25_FE_4759/Cau_18.webp",
+        "sourceExam": "PMG201c_SU25_FE_4759",
+        "sourceIndex": 18
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CHARTER & BASELINE]:\n• Từ khóa: 'WBS' ➔ Công cụ phân rã công việc phân cấp và là nền tảng giao tiếp hiệu quả (Communications aid).\n• Đáp án chuẩn: [A] Team\n• Nguồn gốc: Trích từ đề PMG201_TE2_SU2023_676 (Câu 43)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_43.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 43
-    },
-    {
-      "number": 48,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The three components of the triple constraint are:",
-      "options": {
-        "A": "Scope, Cost, Time @p",
-        "B": "Scope, Quality, Cost ac",
-        "C": "Scope, Performance, Cost",
-        "D": "Scope, Performance, Time Bok"
+      {
+        "number": 48,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? (A=2 [Start], B=4 [A,E], C=6 [A], D=3 [B,C], E=7 [Start], F=2 [E], End=- [D,F])",
+        "options": {
+          "A": "13",
+          "B": "9",
+          "C": "11",
+          "D": "14"
+        },
+        "answer": [
+          "D"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 18: Tính Độ Dài Đường Găng Critical Path Trên Bảng Activity List]:\n• Từ khóa nhận diện: \"Activity list duration critical path (Start=A, E; A=2, B=4, C=6, D=3, E=7, F=2)\"\n• Bí quyết giải: Đường dài nhất: E(7) + B(4) + D(3) = 14 ngày ➔ Đáp án D (14).\n• Đáp án chuẩn: [D] 14 (D)\n• Nguồn đề gốc: Trích từ đề FA2024 FE 3127 (Câu 20)",
+        "imagePath": "PMG201c_FA2024_FE_3127/Cau_20.webp",
+        "sourceExam": "PMG201c_FA2024_FE_3127",
+        "sourceIndex": 20
       },
-      "answer": [
-        "A"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CHARTER & BASELINE]:\n• Từ khóa: 'Triple constraint' ➔ Scope, Time, Cost (hoặc Scope, Cost, Quality).\n• Đáp án chuẩn: [A] Scope, Cost, Time @p\n• Nguồn gốc: Trích từ đề PMG201_TE2_SU2023_676 (Câu 32)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_32.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 32
-    },
-    {
-      "number": 49,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "The discipline of quality management complements the discipline of project management. Both recognize all but one of the following:",
-      "options": {
-        "A": "Customer satisfaction Os",
-        "B": "Prevention over inspection",
-        "C": "Continuous improvement",
-        "D": "Project team responsibilty [="
+      {
+        "number": 49,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path? Activity A (2, Start), B (4, A,E), C (6, A), D (3, B,C), E (7, Start), F (2, E), End (-, D,F).",
+        "options": {
+          "A": "11",
+          "B": "14",
+          "C": "9",
+          "D": "13"
+        },
+        "answer": [
+          "B"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 18: Tính Độ Dài Đường Găng Critical Path Trên Bảng Activity List]:\n• Từ khóa nhận diện: \"Activity list critical path (Start=A, E; E=7, F=2, End=D, F)\"\n• Bí quyết giải: Dạng bài bảng hoạt động với tổng đường găng ra 9 ngày ➔ Đáp án B (9).\n• Đáp án chuẩn: [B] 9 (B)\n• Nguồn đề gốc: Trích từ đề SU26 FEHCM 7269 (Câu 20)",
+        "imagePath": "PMG201c_SU26_FEHCM_7269/Cau_20.webp",
+        "sourceExam": "PMG201c_SU26_FEHCM_7269",
+        "sourceIndex": 20
       },
-      "answer": [
-        "D"
-      ],
-      "explanation": "💡 [MẸO NHỚ CỤM DỄ NHẦM - CHARTER & BASELINE]:\n• Từ khóa: 'Quality & Project Management complement' ➔ Customer satisfaction, Prevention over inspection, Continuous improvement.\n• Đáp án chuẩn: [D] Project team responsibilty [=\n• Nguồn gốc: Trích từ đề PMG201_TE2_SU2023_676 (Câu 14)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_14.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 14
-    },
-    {
-      "number": 50,
-      "type": "single",
-      "instruction": "(Choose 1 answer)",
-      "question": "All of the following is responsible for documenting lessons learned, except:",
-      "options": {
-        "A": "Project manager",
-        "B": "Project team",
-        "C": "Key stakeholders",
-        "D": "Key competitors"
-      },
-      "answer": [
-        "D"
-      ],
-      "explanation": "💡 [CÂU HỎI CỐT LÕI QUAN TRỌNG]:\n• Đáp án chuẩn: [D] Key competitors\n• Nguồn gốc: Trích từ đề default_pmg201c (Câu 1)",
-      "imagePath": "PMG201_TE2_SU2023_676/Cau_01.webp",
-      "sourceExam": "PMG201_TE2_SU2023_676",
-      "sourceIndex": 1
-    }
-  ]
+      {
+        "number": 50,
+        "type": "single",
+        "instruction": "(Choose 1 answer)",
+        "question": "The following table is an activity list that includes the duration and predecessor for a series of project activities. What is the duration of the critical path?\n(Table: A:2 [Start], B:4 [A,E], C:6 [A], D:3 [B,C], E:7 [Start], F:2 [E], End:- [D,F])",
+        "options": {
+          "A": "11",
+          "B": "13",
+          "C": "14",
+          "D": "9"
+        },
+        "answer": [
+          "C"
+        ],
+        "explanation": "💡 [MẸO NHỚ CỤM 18: Tính Độ Dài Đường Găng Critical Path Trên Bảng Activity List]:\n• Từ khóa nhận diện: \"Activity list critical path variant\"\n• Bí quyết giải: Dạng bài bảng hoạt động với tổng đường găng ra 11 ngày ➔ Đáp án C (11).\n• Đáp án chuẩn: [C] 11 (C)\n• Nguồn đề gốc: Trích từ đề SP2025 RE 3866 (Câu 20)",
+        "imagePath": "PMG201c_SP2025_RE_3866/Cau_20.webp",
+        "sourceExam": "PMG201c_SP2025_RE_3866",
+        "sourceIndex": 20
+      }
+    ]
 };
 
 function getFEQuestionText(examId, index) {
